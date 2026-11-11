@@ -1,0 +1,23 @@
+{
+  "name": "spreadjs-excel-formula-compat",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A reproducible compatibility lab: compare SpreadJS formula calculation results with Microsoft Excel.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "check": "node src/pipeline.mjs check",
+    "refresh": "node src/pipeline.mjs refresh",
+    "report": "node src/pipeline.mjs report",
+    "validate": "node src/validate.mjs cases/public/starter.json",
+    "test": "node --test tests/*.test.mjs",
+    "release-check": "node scripts/release-check.mjs"
+  },
+  "dependencies": {
+    "@grapecity-software/spread-sheets": "19.2.2",
+    "playwright-core": "1.65.0"
+  }
+}

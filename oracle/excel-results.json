@@ -1,0 +1,604 @@
+{
+  "engine": "excel",
+  "engineVersion": "16.0",
+  "casesSha256": "34307d9a97fe2923f4a86f39cd435aea826e899057acf2394d67318d1480c8c2",
+  "startedAt": "2026-11-11T06:00:55.0178186Z",
+  "finishedAt": "2026-11-11T06:00:58.8275119Z",
+  "caseCount": 29,
+  "totalElapsedMs": 1101.0,
+  "meta": {
+    "excelVersion": "16.0",
+    "excelBuild": "20527",
+    "operatingSystem": "Windows (64-bit) NT 10.00",
+    "date1904": false,
+    "calculation": -4105,
+    "culture": "zh-CN",
+    "workbookSheets": 30,
+    "dynamicArraySpill": "readRange cases use CSE array formulas; native spill behavior is not tested",
+    "totalMs": 1101.0,
+    "avgCaseMs": 37.966
+  },
+  "selfCheck": {
+    "formula": "=1+1",
+    "value": {
+      "type": "number",
+      "value": 2.0
+    }
+  },
+  "results": {
+    "TC-ADDIN-001": {
+      "status": "formulaError",
+      "value": {
+        "type": "error",
+        "value": "#NAME?"
+      },
+      "displayText": "#NAME?",
+      "range": null,
+      "elapsedMs": 96.902,
+      "message": "",
+      "inputs": []
+    },
+    "TC-COMPAT-229": {
+      "status": "ok",
+      "value": {
+        "type": "number",
+        "value": 2.2281388519862744
+      },
+      "displayText": "2.228138852",
+      "range": null,
+      "elapsedMs": 25.975,
+      "message": "",
+      "inputs": []
+    },
+    "TC-DATE-032": {
+      "status": "ok",
+      "value": {
+        "type": "number",
+        "value": 2.0
+      },
+      "displayText": "2",
+      "range": null,
+      "elapsedMs": 16.016,
+      "message": "",
+      "inputs": []
+    },
+    "TC-ENG-203": {
+      "status": "ok",
+      "value": {
+        "type": "number",
+        "value": 0.421024421083418
+      },
+      "displayText": "0.421024421",
+      "range": null,
+      "elapsedMs": 22.667,
+      "message": "",
+      "inputs": []
+    },
+    "TC-ENG-204": {
+      "status": "ok",
+      "value": {
+        "type": "number",
+        "value": 0.08825697139770806
+      },
+      "displayText": "0.088256971",
+      "range": null,
+      "elapsedMs": 30.108,
+      "message": "",
+      "inputs": []
+    },
+    "TC-ENG-216": {
+      "status": "ok",
+      "value": {
+        "type": "text",
+        "value": "0.642092615934331"
+      },
+      "displayText": "0.642092615934331",
+      "range": null,
+      "elapsedMs": 18.6,
+      "message": "",
+      "inputs": []
+    },
+    "TC-ENG-217": {
+      "status": "ok",
+      "value": {
+        "type": "text",
+        "value": "1.18839510577812"
+      },
+      "displayText": "1.18839510577812",
+      "range": null,
+      "elapsedMs": 16.872,
+      "message": "",
+      "inputs": []
+    },
+    "TC-ENG-218": {
+      "status": "ok",
+      "value": {
+        "type": "text",
+        "value": "0.850918128239322"
+      },
+      "displayText": "0.850918128239322",
+      "range": null,
+      "elapsedMs": 16.785,
+      "message": "",
+      "inputs": []
+    },
+    "TC-FIN-239": {
+      "status": "ok",
+      "value": {
+        "type": "number",
+        "value": 16.71232876712329
+      },
+      "displayText": "16.71232877",
+      "range": null,
+      "elapsedMs": 31.924,
+      "message": "",
+      "inputs": []
+    },
+    "TC-INFO-010": {
+      "status": "ok",
+      "value": {
+        "type": "bool",
+        "value": false
+      },
+      "displayText": "FALSE",
+      "range": null,
+      "elapsedMs": 29.376,
+      "message": "",
+      "inputs": []
+    },
+    "TC-LOOKUP-211": {
+      "status": "formulaError",
+      "value": {
+        "type": "error",
+        "value": "#VALUE!"
+      },
+      "displayText": "#VALUE!",
+      "range": null,
+      "elapsedMs": 20.487,
+      "message": "",
+      "inputs": []
+    },
+    "TC-MATH-003": {
+      "status": "ok",
+      "value": {
+        "type": "number",
+        "value": 5.0
+      },
+      "displayText": "5",
+      "range": null,
+      "elapsedMs": 162.721,
+      "message": "",
+      "inputs": [
+        [
+          {
+            "type": "number",
+            "value": 1.0
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "5"
+          }
+        ],
+        [
+          {
+            "type": "empty"
+          }
+        ],
+        [
+          {
+            "type": "number",
+            "value": 4.0
+          }
+        ]
+      ]
+    },
+    "TC-MATH-074": {
+      "status": "ok",
+      "value": {
+        "type": "text",
+        "value": "FF"
+      },
+      "displayText": "FF",
+      "range": null,
+      "elapsedMs": 26.662,
+      "message": "",
+      "inputs": []
+    },
+    "TC-STAT-079": {
+      "status": "ok",
+      "value": {
+        "type": "number",
+        "value": 1.9999999999999998
+      },
+      "displayText": "2",
+      "range": [
+        [
+          {
+            "type": "number",
+            "value": 1.9999999999999998
+          },
+          {
+            "type": "number",
+            "value": 8.881784197001252E-16
+          }
+        ],
+        [
+          {
+            "type": "number",
+            "value": 1.8577584504832502E-16
+          },
+          {
+            "type": "number",
+            "value": 6.161487731364981E-16
+          }
+        ],
+        [
+          {
+            "type": "number",
+            "value": 1.0
+          },
+          {
+            "type": "number",
+            "value": 5.874748045952207E-16
+          }
+        ],
+        [
+          {
+            "type": "number",
+            "value": 1.1589948344943812E+32
+          },
+          {
+            "type": "number",
+            "value": 3.0
+          }
+        ],
+        [
+          {
+            "type": "number",
+            "value": 40.0
+          },
+          {
+            "type": "number",
+            "value": 1.035379938102578E-30
+          }
+        ]
+      ],
+      "elapsedMs": 178.439,
+      "message": "",
+      "inputs": [
+        [
+          {
+            "type": "number",
+            "value": 1.0
+          },
+          {
+            "type": "number",
+            "value": 2.0
+          }
+        ],
+        [
+          {
+            "type": "number",
+            "value": 2.0
+          },
+          {
+            "type": "number",
+            "value": 4.0
+          }
+        ],
+        [
+          {
+            "type": "number",
+            "value": 3.0
+          },
+          {
+            "type": "number",
+            "value": 6.0
+          }
+        ],
+        [
+          {
+            "type": "number",
+            "value": 4.0
+          },
+          {
+            "type": "number",
+            "value": 8.0
+          }
+        ],
+        [
+          {
+            "type": "number",
+            "value": 5.0
+          },
+          {
+            "type": "number",
+            "value": 10.0
+          }
+        ]
+      ]
+    },
+    "TC-TEXT-204": {
+      "status": "ok",
+      "value": {
+        "type": "text",
+        "value": "¥1,234.57"
+      },
+      "displayText": "¥1,234.57",
+      "range": null,
+      "elapsedMs": 20.812,
+      "message": "",
+      "inputs": []
+    },
+    "TC-TEXT-205": {
+      "status": "ok",
+      "value": {
+        "type": "text",
+        "value": "¥-1,234.50"
+      },
+      "displayText": "¥-1,234.50",
+      "range": null,
+      "elapsedMs": 15.034,
+      "message": "",
+      "inputs": []
+    },
+    "TC-TEXT-211": {
+      "status": "ok",
+      "value": {
+        "type": "text",
+        "value": "文"
+      },
+      "displayText": "文",
+      "range": null,
+      "elapsedMs": 27.78,
+      "message": "",
+      "inputs": []
+    },
+    "PUB-MATH-001": {
+      "status": "ok",
+      "value": {
+        "type": "number",
+        "value": 20.0
+      },
+      "displayText": "20",
+      "range": null,
+      "elapsedMs": 54.463,
+      "message": "",
+      "inputs": [
+        [
+          {
+            "type": "number",
+            "value": 12.0
+          }
+        ],
+        [
+          {
+            "type": "number",
+            "value": 3.0
+          }
+        ],
+        [
+          {
+            "type": "number",
+            "value": -2.0
+          }
+        ],
+        [
+          {
+            "type": "number",
+            "value": 7.0
+          }
+        ]
+      ]
+    },
+    "PUB-MATH-002": {
+      "status": "ok",
+      "value": {
+        "type": "number",
+        "value": 12.35
+      },
+      "displayText": "12.35",
+      "range": null,
+      "elapsedMs": 16.106,
+      "message": "",
+      "inputs": []
+    },
+    "PUB-TEXT-001": {
+      "status": "ok",
+      "value": {
+        "type": "text",
+        "value": "spread"
+      },
+      "displayText": "spread",
+      "range": null,
+      "elapsedMs": 18.617,
+      "message": "",
+      "inputs": []
+    },
+    "PUB-LOGIC-001": {
+      "status": "ok",
+      "value": {
+        "type": "text",
+        "value": "yes"
+      },
+      "displayText": "yes",
+      "range": null,
+      "elapsedMs": 17.168,
+      "message": "",
+      "inputs": []
+    },
+    "PUB-DATE-001": {
+      "status": "ok",
+      "value": {
+        "type": "number",
+        "value": 45351.0
+      },
+      "displayText": "2024/2/29",
+      "range": null,
+      "elapsedMs": 14.423,
+      "message": "",
+      "inputs": []
+    },
+    "PUB-LOOKUP-001": {
+      "status": "ok",
+      "value": {
+        "type": "number",
+        "value": 20.0
+      },
+      "displayText": "20",
+      "range": null,
+      "elapsedMs": 57.744,
+      "message": "",
+      "inputs": [
+        [
+          {
+            "type": "text",
+            "value": "a"
+          },
+          {
+            "type": "number",
+            "value": 10.0
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "b"
+          },
+          {
+            "type": "number",
+            "value": 20.0
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "c"
+          },
+          {
+            "type": "number",
+            "value": 30.0
+          }
+        ]
+      ]
+    },
+    "PUB-ERROR-001": {
+      "status": "formulaError",
+      "value": {
+        "type": "error",
+        "value": "#NUM!"
+      },
+      "displayText": "#NUM!",
+      "range": null,
+      "elapsedMs": 23.551,
+      "message": "",
+      "inputs": []
+    },
+    "PUB-ARRAY-001": {
+      "status": "ok",
+      "value": {
+        "type": "text",
+        "value": "a"
+      },
+      "displayText": "a",
+      "range": [
+        [
+          {
+            "type": "text",
+            "value": "a"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "b"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "c"
+          }
+        ]
+      ],
+      "elapsedMs": 63.635,
+      "message": "",
+      "inputs": [
+        [
+          {
+            "type": "text",
+            "value": "a"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "b"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "a"
+          }
+        ],
+        [
+          {
+            "type": "text",
+            "value": "c"
+          }
+        ]
+      ]
+    },
+    "CFG-COUNT-001": {
+      "status": "ok",
+      "value": {
+        "type": "number",
+        "value": 2.0
+      },
+      "displayText": "2",
+      "range": null,
+      "elapsedMs": 18.934,
+      "message": "",
+      "inputs": []
+    },
+    "CFG-AVG-001": {
+      "status": "ok",
+      "value": {
+        "type": "number",
+        "value": 3.0
+      },
+      "displayText": "3",
+      "range": null,
+      "elapsedMs": 14.014,
+      "message": "",
+      "inputs": []
+    },
+    "CFG-ISNUM-001": {
+      "status": "ok",
+      "value": {
+        "type": "bool",
+        "value": false
+      },
+      "displayText": "FALSE",
+      "range": null,
+      "elapsedMs": 14.598,
+      "message": "",
+      "inputs": []
+    },
+    "CFG-SUM-001": {
+      "status": "ok",
+      "value": {
+        "type": "number",
+        "value": 3.0
+      },
+      "displayText": "3",
+      "range": null,
+      "elapsedMs": 17.651,
+      "message": "",
+      "inputs": []
+    }
+  }
+}

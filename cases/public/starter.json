@@ -1,0 +1,373 @@
+{
+  "name": "public-starter",
+  "description": "Starter corpus: public baselines plus the known-difference seeds carried over from the 2026-10 pilot.",
+  "cases": [
+    {
+      "id": "TC-ADDIN-001",
+      "category": "加载项函数",
+      "function": "EUROCONVERT",
+      "scenario": "把 1 欧元按固定汇率转换为德国马克",
+      "formula": "=EUROCONVERT(1,\"EUR\",\"DEM\")",
+      "formulaCell": "H1",
+      "expectError": true,
+      "priority": "P2",
+      "note": "Excel 本机未安装欧洲货币工具加载项时返回 #NAME?，SpreadJS 返回 1.96，两侧不一致",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "TC-COMPAT-229",
+      "category": "兼容函数",
+      "function": "TINV",
+      "scenario": "由双尾概率反解 t 分布临界值",
+      "formula": "=TINV(0.05,10)",
+      "formulaCell": "H1",
+      "priority": "P1",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "TC-DATE-032",
+      "category": "日期与时间函数",
+      "function": "DAYS",
+      "scenario": "1900 闰年 bug 使 2 月 28 日到 3 月 1 日相差 2 天",
+      "formula": "=DAYS(DATE(1900,3,1),DATE(1900,2,28))",
+      "formulaCell": "H1",
+      "priority": "P1",
+      "note": "Excel 因 1900 闰年 bug 返回 2",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "TC-ENG-203",
+      "category": "工程函数",
+      "function": "BESSELK",
+      "scenario": "零阶修正贝塞尔函数 K 在 x=1 处的取值",
+      "formula": "=BESSELK(1,0)",
+      "formulaCell": "H1",
+      "priority": "P1",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "TC-ENG-204",
+      "category": "工程函数",
+      "function": "BESSELY",
+      "scenario": "零阶贝塞尔函数 Y 在 x=1 处的取值",
+      "formula": "=BESSELY(1,0)",
+      "formulaCell": "H1",
+      "priority": "P1",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "TC-ENG-216",
+      "category": "工程函数",
+      "function": "IMCOT",
+      "scenario": "复数 1 的余切值",
+      "formula": "=IMCOT(\"1\")",
+      "formulaCell": "H1",
+      "priority": "P1",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "TC-ENG-217",
+      "category": "工程函数",
+      "function": "IMCSC",
+      "scenario": "复数 1 的余割值",
+      "formula": "=IMCSC(\"1\")",
+      "formulaCell": "H1",
+      "priority": "P1",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "TC-ENG-218",
+      "category": "工程函数",
+      "function": "IMCSCH",
+      "scenario": "复数 1 的双曲余割值",
+      "formula": "=IMCSCH(\"1\")",
+      "formulaCell": "H1",
+      "priority": "P1",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "TC-FIN-239",
+      "category": "财务函数",
+      "function": "ACCRINT",
+      "scenario": "季度付息、basis 3（实际/365）的应计利息边界",
+      "formula": "=ACCRINT(DATE(2008,3,1),DATE(2008,6,1),DATE(2008,5,1),0.1,1000,4,3)",
+      "formulaCell": "H1",
+      "priority": "P2",
+      "note": "已确认引擎差异：basis=2/3（实际/360、实际/365）下 SpreadJS 的 ACCRINT/PRICE/YIELD 计息天数处理与 Excel 不同（本用例 rel≈8.2e-3），作为已知差异保留",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "TC-INFO-010",
+      "category": "信息函数",
+      "function": "ISNUMBER",
+      "scenario": "文本形式的数字不算数值",
+      "formula": "=ISNUMBER(\"123\")",
+      "formulaCell": "H1",
+      "priority": "P1",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "TC-LOOKUP-211",
+      "category": "查找与引用函数",
+      "function": "IMAGE",
+      "scenario": "IMAGE 空图片源错误登记（两侧实现差异）",
+      "formula": "=IMAGE(\"\")",
+      "formulaCell": "H1",
+      "expectError": true,
+      "priority": "P2",
+      "note": "SpreadJS 图片为占位对象返回空值，Excel 对空源返回 #VALUE!；无两侧一致的有效调用，故登记错误用例",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "TC-MATH-003",
+      "category": "数学与三角函数",
+      "function": "SUM",
+      "scenario": "区域含文本数字与空单元格时只累加数值",
+      "formula": "=SUM(A1:A4)",
+      "data": [
+        [
+          1
+        ],
+        [
+          "5"
+        ],
+        [
+          null
+        ],
+        [
+          4
+        ]
+      ],
+      "formulaCell": "H1",
+      "priority": "P1",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "TC-MATH-074",
+      "category": "数学与三角函数",
+      "function": "BASE",
+      "scenario": "十进制 255 转十六进制文本",
+      "formula": "=BASE(255,16)",
+      "formulaCell": "H1",
+      "priority": "P2",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "TC-STAT-079",
+      "category": "统计函数",
+      "function": "LINEST",
+      "scenario": "完美共线样本的回归参数数组读取",
+      "formula": "=LINEST(B1:B5,A1:A5,TRUE,TRUE)",
+      "data": [
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          3,
+          6
+        ],
+        [
+          4,
+          8
+        ],
+        [
+          5,
+          10
+        ]
+      ],
+      "formulaCell": "H1",
+      "readRange": "H1:I5",
+      "priority": "P2",
+      "note": "完美共线（y=2x）：两侧首格均为 2；区域第 4 行第 1 列（F 统计量）Excel 因浮点残差得到 1.16E+32，SpreadJS 残差恰为 0 返回 #NUM!，其余单元格一致（差异 <1e-15）。",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "TC-TEXT-204",
+      "category": "文本函数",
+      "function": "DOLLAR",
+      "scenario": "金额按两位小数格式化为美元文本",
+      "formula": "=DOLLAR(1234.567,2)",
+      "formulaCell": "H1",
+      "priority": "P1",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "TC-TEXT-205",
+      "category": "文本函数",
+      "function": "DOLLAR",
+      "scenario": "负数金额的美元货币格式文本",
+      "formula": "=DOLLAR(-1234.5,2)",
+      "formulaCell": "H1",
+      "priority": "P2",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "TC-TEXT-211",
+      "category": "文本函数",
+      "function": "MIDB",
+      "scenario": "从第 3 个字节起截取 2 个字节",
+      "formula": "=MIDB(\"中文文本\",3,2)",
+      "formulaCell": "H1",
+      "priority": "P2",
+      "source": "pilot-2026-10"
+    },
+    {
+      "id": "PUB-MATH-001",
+      "category": "数学与三角函数",
+      "function": "SUM",
+      "scenario": "对一列数值求和",
+      "formula": "=SUM(A1:A4)",
+      "data": [
+        [
+          12
+        ],
+        [
+          3
+        ],
+        [
+          -2
+        ],
+        [
+          7
+        ]
+      ],
+      "priority": "P0",
+      "source": "public-starter"
+    },
+    {
+      "id": "PUB-MATH-002",
+      "category": "数学与三角函数",
+      "function": "ROUND",
+      "scenario": "四舍五入到两位小数",
+      "formula": "=ROUND(12.345,2)",
+      "priority": "P0",
+      "source": "public-starter"
+    },
+    {
+      "id": "PUB-TEXT-001",
+      "category": "文本函数",
+      "function": "LEFT",
+      "scenario": "截取文本前 6 个字符",
+      "formula": "=LEFT(\"spreadsheet\",6)",
+      "priority": "P0",
+      "source": "public-starter"
+    },
+    {
+      "id": "PUB-LOGIC-001",
+      "category": "逻辑函数",
+      "function": "IF",
+      "scenario": "条件为真时返回 yes",
+      "formula": "=IF(3>2,\"yes\",\"no\")",
+      "priority": "P0",
+      "source": "public-starter"
+    },
+    {
+      "id": "PUB-DATE-001",
+      "category": "日期与时间函数",
+      "function": "DATE",
+      "scenario": "构造闰日 2024-02-29",
+      "formula": "=DATE(2024,2,29)",
+      "priority": "P0",
+      "source": "public-starter"
+    },
+    {
+      "id": "PUB-LOOKUP-001",
+      "category": "查找与引用函数",
+      "function": "VLOOKUP",
+      "scenario": "在表中精确查找 b",
+      "formula": "=VLOOKUP(\"b\",A1:B3,2,FALSE)",
+      "data": [
+        [
+          "a",
+          10
+        ],
+        [
+          "b",
+          20
+        ],
+        [
+          "c",
+          30
+        ]
+      ],
+      "priority": "P0",
+      "source": "public-starter"
+    },
+    {
+      "id": "PUB-ERROR-001",
+      "category": "信息函数",
+      "function": "SQRT",
+      "scenario": "负数开方返回 #NUM!",
+      "formula": "=SQRT(-1)",
+      "expectError": true,
+      "priority": "P1",
+      "source": "public-starter"
+    },
+    {
+      "id": "PUB-ARRAY-001",
+      "category": "查找与引用函数",
+      "function": "UNIQUE",
+      "scenario": "返回一列去重结果",
+      "formula": "=UNIQUE(A1:A4)",
+      "data": [
+        [
+          "a"
+        ],
+        [
+          "b"
+        ],
+        [
+          "a"
+        ],
+        [
+          "c"
+        ]
+      ],
+      "formulaCell": "H1",
+      "readRange": "H1:H3",
+      "priority": "P1",
+      "source": "public-starter"
+    },
+    {
+      "id": "CFG-COUNT-001",
+      "category": "统计函数",
+      "function": "COUNT",
+      "scenario": "直接参数中的文本数字与布尔值",
+      "formula": "=COUNT(\"2\",TRUE)",
+      "priority": "P1",
+      "source": "config-sensitive"
+    },
+    {
+      "id": "CFG-AVG-001",
+      "category": "统计函数",
+      "function": "AVERAGE",
+      "scenario": "直接参数中的文本数字",
+      "formula": "=AVERAGE(2,\"4\")",
+      "priority": "P1",
+      "source": "config-sensitive"
+    },
+    {
+      "id": "CFG-ISNUM-001",
+      "category": "信息函数",
+      "function": "ISNUMBER",
+      "scenario": "判断文本 2 是否为数值",
+      "formula": "=ISNUMBER(\"2\")",
+      "priority": "P1",
+      "source": "config-sensitive"
+    },
+    {
+      "id": "CFG-SUM-001",
+      "category": "数学与三角函数",
+      "function": "SUM",
+      "scenario": "直接参数中的文本数字求和",
+      "formula": "=SUM(1,\"2\")",
+      "priority": "P1",
+      "source": "config-sensitive"
+    }
+  ]
+}

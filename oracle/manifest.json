@@ -1,0 +1,18 @@
+{
+  "generatedAt": "2026-11-11T06:00:59.450Z",
+  "casesFile": "cases/public/starter.json",
+  "casesSha256": "34307d9a97fe2923f4a86f39cd435aea826e899057acf2394d67318d1480c8c2",
+  "caseCount": 29,
+  "excel": {
+    "version": "16.0",
+    "build": "20527",
+    "culture": "zh-CN",
+    "dateSystem1904": false,
+    "calculation": -4105,
+    "totalElapsedMs": 1101
+  },
+  "spreadjs": {
+    "package": "@grapecity-software/spread-sheets",
+    "version": "19.2.2"
+  }
+}

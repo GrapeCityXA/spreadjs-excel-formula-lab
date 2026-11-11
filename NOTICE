@@ -1,0 +1,10 @@
+This project compares calculation results of two independent products.
+
+- SpreadJS is a commercial product of MESCIUS inc. / GrapeCity. It is installed from npm as a
+  dependency and is not redistributed by this repository. Use of SpreadJS is governed by its
+  own license terms.
+- Microsoft and Excel are trademarks of the Microsoft group of companies. Excel is used only
+  as a local calculation baseline when a maintainer runs the optional baseline refresh.
+- Numbers, formulas and calculated values in this repository are test data. Nothing in this
+  repository is an official statement of compatibility, support or endorsement by MESCIUS,
+  GrapeCity or Microsoft.
