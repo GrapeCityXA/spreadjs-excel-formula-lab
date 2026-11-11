@@ -35,13 +35,51 @@ const caseMap = Object.fromEntries(casesDoc.cases.map(item => [item.id, item]));
 const oracle = readJson(ORACLE);
 const manifest = existsSync(MANIFEST) ? readJson(MANIFEST) : null;
 
+// Keep only portable environment facts in the published report: no local
+// executable paths, user agents or other machine-specific values.
+function sanitizeEnvironment(environment) {
+  const excel = environment?.excel || {};
+  const spreadjs = environment?.spreadjs || {};
+  return {
+    excel: {
+      version: excel.version,
+      build: excel.excelBuild,
+      culture: excel.culture,
+      date1904: excel.date1904,
+      calculation: excel.calculation,
+    },
+    spreadjs: {
+      version: spreadjs.version,
+      culture: spreadjs.culture,
+      excelCompatibleCalcMode: spreadjs.excelCompatibleCalcMode,
+      registeredFunctionCount: spreadjs.registeredFunctionCount,
+      bundleBytes: spreadjs.bundleBytes,
+    },
+  };
+}
+
+// Engine error messages may contain local paths or stack traces; the report only
+// needs the comparison facts.
+function pickResult(result) {
+  if (!result) return result;
+  return {
+    status: result.status,
+    value: result.value,
+    displayText: result.displayText,
+    range: result.range,
+    inputs: result.inputs,
+    spill: result.spill,
+    elapsedMs: result.elapsedMs,
+  };
+}
+
 const modes = MODES.map(mode => {
   const comparison = readJson(path.join(ROOT, 'out', mode.id, 'comparison.json'));
   return {
     ...mode,
     counts: comparison.counts,
     classificationCounts: comparison.classificationCounts,
-    environment: comparison.environment,
+    environment: sanitizeEnvironment(comparison.environment),
     rows: comparison.rows.map(row => ({
       id: row.id,
       category: row.category,
@@ -53,8 +91,8 @@ const modes = MODES.map(mode => {
       reason: row.reason || '',
       classification: row.classification || null,
       differences: row.differences || null,
-      excel: row.excel,
-      spreadjs: row.spreadjs,
+      excel: pickResult(row.excel),
+      spreadjs: pickResult(row.spreadjs),
     })),
   };
 });

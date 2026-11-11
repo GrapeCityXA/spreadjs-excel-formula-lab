@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-11T06:03:47.831Z",
+  "generatedAt": "2026-11-11T06:04:54.434Z",
   "product": {
     "name": "spreadjs-excel-formula-compat",
     "version": "0.1.0"
@@ -425,630 +425,17 @@
       "environment": {
         "excel": {
           "version": "16.0",
-          "excelVersion": "16.0",
-          "excelBuild": "20527",
-          "operatingSystem": "Windows (64-bit) NT 10.00",
-          "date1904": false,
-          "calculation": -4105,
+          "build": "20527",
           "culture": "zh-CN",
-          "workbookSheets": 30,
-          "dynamicArraySpill": "readRange cases use CSE array formulas; native spill behavior is not tested",
-          "totalMs": 1101,
-          "avgCaseMs": 37.966
+          "date1904": false,
+          "calculation": -4105
         },
         "spreadjs": {
           "version": "19.2.2",
-          "chromiumVersion": "157.0.8103.39",
-          "chromiumExecutable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
-          "spreadjsVersion": "19.2.2",
-          "bundlePath": "node_modules/@grapecity-software/spread-sheets/dist/gc.spread.sheets.all.min.js",
-          "bundleBytes": 6184592,
-          "registeredFunctionCount": 583,
-          "registeredFunctions": [
-            "@",
-            "ABS",
-            "ACCRINT",
-            "ACCRINTM",
-            "ACOS",
-            "ACOSH",
-            "ACOT",
-            "ACOTH",
-            "ADDRESS",
-            "AGGREGATE",
-            "AMORDEGRC",
-            "AMORLINC",
-            "ANCHORARRAY",
-            "AND",
-            "ARABIC",
-            "AREAS",
-            "AREASPARKLINE",
-            "ARRAYTOTEXT",
-            "ASC",
-            "ASIN",
-            "ASINH",
-            "ATAN",
-            "ATAN2",
-            "ATANH",
-            "AVEDEV",
-            "AVERAGE",
-            "AVERAGEA",
-            "AVERAGEIF",
-            "AVERAGEIFS",
-            "BAHTTEXT",
-            "BASE",
-            "BESSELI",
-            "BESSELJ",
-            "BESSELK",
-            "BESSELY",
-            "BETA.DIST",
-            "BETA.INV",
-            "BETADIST",
-            "BETAINV",
-            "BIN2DEC",
-            "BIN2HEX",
-            "BIN2OCT",
-            "BINOM.DIST",
-            "BINOM.DIST.RANGE",
-            "BINOM.INV",
-            "BINOMDIST",
-            "BITAND",
-            "BITLSHIFT",
-            "BITOR",
-            "BITRSHIFT",
-            "BITXOR",
-            "BOXPLOTSPARKLINE",
-            "BULLETSPARKLINE",
-            "BYCOL",
-            "BYROW",
-            "CALCULATE",
-            "CASCADESPARKLINE",
-            "CEILING",
-            "CEILING.MATH",
-            "CEILING.PRECISE",
-            "CHAR",
-            "CHIDIST",
-            "CHIINV",
-            "CHILDREN",
-            "CHISQ.DIST",
-            "CHISQ.DIST.RT",
-            "CHISQ.INV",
-            "CHISQ.INV.RT",
-            "CHISQ.TEST",
-            "CHITEST",
-            "CHOOSE",
-            "CHOOSECOLS",
-            "CHOOSEROWS",
-            "CLEAN",
-            "CODE",
-            "COLUMN",
-            "COLUMNS",
-            "COLUMNSPARKLINE",
-            "COMBIN",
-            "COMBINA",
-            "COMPLEX",
-            "CONCAT",
-            "CONCATENATE",
-            "CONFIDENCE",
-            "CONFIDENCE.NORM",
-            "CONFIDENCE.T",
-            "CONVERT",
-            "CORREL",
-            "COS",
-            "COSH",
-            "COT",
-            "COTH",
-            "COUNT",
-            "COUNTA",
-            "COUNTBLANK",
-            "COUNTIF",
-            "COUNTIFS",
-            "COUPDAYBS",
-            "COUPDAYS",
-            "COUPDAYSNC",
-            "COUPNCD",
-            "COUPNUM",
-            "COUPPCD",
-            "COVAR",
-            "COVARIANCE.P",
-            "COVARIANCE.S",
-            "CRITBINOM",
-            "CSC",
-            "CSCH",
-            "CUMEDIST",
-            "CUMIPMT",
-            "CUMPRINC",
-            "DATE",
-            "DATEDIF",
-            "DATEPART",
-            "DATEVALUE",
-            "DAVERAGE",
-            "DAY",
-            "DAYS",
-            "DAYS360",
-            "DB",
-            "DBCS",
-            "DCOUNT",
-            "DCOUNTA",
-            "DDB",
-            "DEC2BIN",
-            "DEC2HEX",
-            "DEC2OCT",
-            "DECIMAL",
-            "DEGREES",
-            "DELTA",
-            "DENSERANK",
-            "DEVSQ",
-            "DGET",
-            "DISC",
-            "DMAX",
-            "DMIN",
-            "DOLLAR",
-            "DOLLARDE",
-            "DOLLARFR",
-            "DPRODUCT",
-            "DROP",
-            "DSTDEV",
-            "DSTDEVP",
-            "DSUM",
-            "DURATION",
-            "DVAR",
-            "DVARP",
-            "EDATE",
-            "EFFECT",
-            "ENCODEURL",
-            "EOMONTH",
-            "ERF",
-            "ERF.PRECISE",
-            "ERFC",
-            "ERFC.PRECISE",
-            "ERROR.TYPE",
-            "EURO",
-            "EUROCONVERT",
-            "EVEN",
-            "EXACT",
-            "EXP",
-            "EXPAND",
-            "EXPON.DIST",
-            "EXPONDIST",
-            "F.DIST",
-            "F.DIST.RT",
-            "F.INV",
-            "F.INV.RT",
-            "F.TEST",
-            "FACT",
-            "FACTDOUBLE",
-            "FALSE",
-            "FDIST",
-            "FILTER",
-            "FILTERJSON",
-            "FILTERXML",
-            "FIND",
-            "FINDB",
-            "FINV",
-            "FIRSTVALUE",
-            "FISHER",
-            "FISHERINV",
-            "FIXED",
-            "FLOOR",
-            "FLOOR.MATH",
-            "FLOOR.PRECISE",
-            "FORECAST",
-            "FORMULATEXT",
-            "FRAMEGROUPS",
-            "FRAMERANGE",
-            "FRAMEROWS",
-            "FREQUENCY",
-            "FTEST",
-            "FV",
-            "FVSCHEDULE",
-            "GAMMA",
-            "GAMMA.DIST",
-            "GAMMA.INV",
-            "GAMMADIST",
-            "GAMMAINV",
-            "GAMMALN",
-            "GAMMALN.PRECISE",
-            "GAUGEKPISPARKLINE",
-            "GAUSS",
-            "GC.REGEXEXTRACT",
-            "GC.REGEXMATCH",
-            "GC.REGEXREPLACE",
-            "GCD",
-            "GEOMEAN",
-            "GESTEP",
-            "GETPIVOTDATA",
-            "GROUPBY",
-            "GROWTH",
-            "HARMEAN",
-            "HBARSPARKLINE",
-            "HEX2BIN",
-            "HEX2DEC",
-            "HEX2OCT",
-            "HISTOGRAMSPARKLINE",
-            "HLOOKUP",
-            "HOUR",
-            "HSTACK",
-            "HYPERLINK",
-            "HYPGEOM.DIST",
-            "HYPGEOMDIST",
-            "IF",
-            "IFERROR",
-            "IFNA",
-            "IFS",
-            "IMABS",
-            "IMAGE",
-            "IMAGINARY",
-            "IMARGUMENT",
-            "IMCONJUGATE",
-            "IMCOS",
-            "IMCOSH",
-            "IMCOT",
-            "IMCSC",
-            "IMCSCH",
-            "IMDIV",
-            "IMEXP",
-            "IMLN",
-            "IMLOG10",
-            "IMLOG2",
-            "IMPOWER",
-            "IMPRODUCT",
-            "IMREAL",
-            "IMSEC",
-            "IMSECH",
-            "IMSIN",
-            "IMSINH",
-            "IMSQRT",
-            "IMSUB",
-            "IMSUM",
-            "IMTAN",
-            "INDEX",
-            "INDIRECT",
-            "INT",
-            "INTERCEPT",
-            "INTRATE",
-            "IPMT",
-            "IRR",
-            "ISBLANK",
-            "ISERR",
-            "ISERROR",
-            "ISEVEN",
-            "ISFORMULA",
-            "ISLOGICAL",
-            "ISNA",
-            "ISNONTEXT",
-            "ISNUMBER",
-            "ISO.CEILING",
-            "ISODD",
-            "ISOMITTED",
-            "ISOWEEKNUM",
-            "ISPMT",
-            "ISREF",
-            "ISTEXT",
-            "KURT",
-            "LAG",
-            "LAMBDA",
-            "LARGE",
-            "LASTVALUE",
-            "LCM",
-            "LEAD",
-            "LEFT",
-            "LEFTB",
-            "LEN",
-            "LENB",
-            "LET",
-            "LEVEL",
-            "LEVELROWNUMBER",
-            "LINESPARKLINE",
-            "LINEST",
-            "LN",
-            "LOG",
-            "LOG10",
-            "LOGEST",
-            "LOGINV",
-            "LOGNORM.DIST",
-            "LOGNORM.INV",
-            "LOGNORMDIST",
-            "LOLLIPOPVARISPARKLINE",
-            "LOOKUP",
-            "LOWER",
-            "MAKEARRAY",
-            "MAP",
-            "MATCH",
-            "MAX",
-            "MAXA",
-            "MAXIFS",
-            "MDETERM",
-            "MDURATION",
-            "MEDIAN",
-            "MID",
-            "MIDB",
-            "MIN",
-            "MINA",
-            "MINIFS",
-            "MINUTE",
-            "MINVERSE",
-            "MIRR",
-            "MMULT",
-            "MOD",
-            "MODE",
-            "MODE.MULT",
-            "MODE.SNGL",
-            "MONTH",
-            "MONTHSPARKLINE",
-            "MROUND",
-            "MULTINOMIAL",
-            "MUNIT",
-            "N",
-            "NA",
-            "NEGBINOM.DIST",
-            "NEGBINOMDIST",
-            "NETWORKDAYS",
-            "NETWORKDAYS.INTL",
-            "NOMINAL",
-            "NORM.DIST",
-            "NORM.INV",
-            "NORM.S.DIST",
-            "NORM.S.INV",
-            "NORMDIST",
-            "NORMINV",
-            "NORMSDIST",
-            "NORMSINV",
-            "NOT",
-            "NOW",
-            "NPER",
-            "NPV",
-            "NTHVALUE",
-            "NTILE",
-            "OBJECT",
-            "OCT2BIN",
-            "OCT2DEC",
-            "OCT2HEX",
-            "ODD",
-            "ODDFPRICE",
-            "ODDFYIELD",
-            "ODDLPRICE",
-            "ODDLYIELD",
-            "OFFSET",
-            "ONLYCHILDREN",
-            "OR",
-            "ORDERASC",
-            "ORDERBY",
-            "ORDERDESC",
-            "PARENT",
-            "PARETOSPARKLINE",
-            "PARTITIONBY",
-            "PDURATION",
-            "PEARSON",
-            "PERCENTILE",
-            "PERCENTILE.EXC",
-            "PERCENTILE.INC",
-            "PERCENTOF",
-            "PERCENTRANK",
-            "PERCENTRANK.EXC",
-            "PERCENTRANK.INC",
-            "PERMUT",
-            "PERMUTATIONA",
-            "PHI",
-            "PI",
-            "PIESPARKLINE",
-            "PIVOTBY",
-            "PMT",
-            "POISSON",
-            "POISSON.DIST",
-            "POWER",
-            "PPMT",
-            "PRICE",
-            "PRICEDISC",
-            "PRICEMAT",
-            "PROB",
-            "PRODUCT",
-            "PROGRESSSPARKLINE",
-            "PROPER",
-            "PROPERTY",
-            "PV",
-            "QUARTILE",
-            "QUARTILE.EXC",
-            "QUARTILE.INC",
-            "QUERY",
-            "QUOTIENT",
-            "R.A",
-            "R.CUMULATIVE",
-            "R.CURRENTPAGE",
-            "R.INDEX",
-            "R.MOM",
-            "R.PAGECOUNT",
-            "R.PAGESCOUNT",
-            "R.PROPORTION",
-            "R.R",
-            "R.RANK",
-            "R.V",
-            "R.YOY",
-            "RADIANS",
-            "RAND",
-            "RANDARRAY",
-            "RANDBETWEEN",
-            "RANGEBLOCKSPARKLINE",
-            "RANK",
-            "RANK.AVG",
-            "RANK.EQ",
-            "RATE",
-            "RECEIVED",
-            "REDUCE",
-            "REFRESH",
-            "REGEXEXTRACT",
-            "REGEXREPLACE",
-            "REGEXTEST",
-            "REMOVEFILTERS",
-            "REPLACE",
-            "REPLACEB",
-            "REPT",
-            "RIGHT",
-            "RIGHTB",
-            "ROMAN",
-            "ROUND",
-            "ROUNDDOWN",
-            "ROUNDUP",
-            "ROW",
-            "ROWNUMBER",
-            "ROWS",
-            "RRI",
-            "RSQ",
-            "SCAN",
-            "SCATTERSPARKLINE",
-            "SEARCH",
-            "SEARCHB",
-            "SEC",
-            "SECH",
-            "SECOND",
-            "SEQUENCE",
-            "SERIESSUM",
-            "SHEET",
-            "SHEETS",
-            "SIGN",
-            "SIN",
-            "SINH",
-            "SJS.DISTINCTCOUNT",
-            "SJS.ENDWITH",
-            "SJS.FISCALYEAR",
-            "SJS.REGEXEXTRACT",
-            "SJS.REGEXMATCH",
-            "SJS.REGEXREPLACE",
-            "SJS.STARTWITH",
-            "SJS.TABLE",
-            "SJS.UUID",
-            "SKEW",
-            "SKEW.P",
-            "SLN",
-            "SLOPE",
-            "SMALL",
-            "SORT",
-            "SORTBY",
-            "SPREADSPARKLINE",
-            "SQRT",
-            "SQRTPI",
-            "STACKEDSPARKLINE",
-            "STANDARDIZE",
-            "STDEV",
-            "STDEV.P",
-            "STDEV.S",
-            "STDEVA",
-            "STDEVP",
-            "STDEVPA",
-            "STEYX",
-            "SUBSTITUTE",
-            "SUBTOTAL",
-            "SUM",
-            "SUMIF",
-            "SUMIFS",
-            "SUMPRODUCT",
-            "SUMSQ",
-            "SUMX2MY2",
-            "SUMX2PY2",
-            "SUMXMY2",
-            "SWITCH",
-            "SYD",
-            "T",
-            "T.DIST",
-            "T.DIST.2T",
-            "T.DIST.RT",
-            "T.INV",
-            "T.INV.2T",
-            "T.TEST",
-            "TAKE",
-            "TAN",
-            "TANH",
-            "TBILLEQ",
-            "TBILLPRICE",
-            "TBILLYIELD",
-            "TDIST",
-            "TEXT",
-            "TEXTAFTER",
-            "TEXTBEFORE",
-            "TEXTJOIN",
-            "TEXTSPLIT",
-            "TIME",
-            "TIMEVALUE",
-            "TINV",
-            "TOCOL",
-            "TODAY",
-            "TOROW",
-            "TRANSPOSE",
-            "TREND",
-            "TRIGGERFIELDVALUE",
-            "TRIM",
-            "TRIMMEAN",
-            "TRIMRANGE",
-            "TRUE",
-            "TRUNC",
-            "TTEST",
-            "TYPE",
-            "UNICHAR",
-            "UNICODE",
-            "UNIQUE",
-            "UPPER",
-            "VALUE",
-            "VALUETOTEXT",
-            "VAR",
-            "VAR.P",
-            "VAR.S",
-            "VARA",
-            "VARISPARKLINE",
-            "VARP",
-            "VARPA",
-            "VBARSPARKLINE",
-            "VDB",
-            "VLOOKUP",
-            "VSTACK",
-            "WEBSERVICE",
-            "WEEKDAY",
-            "WEEKNUM",
-            "WEIBULL",
-            "WEIBULL.DIST",
-            "WINDOW",
-            "WINDOWDEF",
-            "WINDOWOVERDECONSTRUCT",
-            "WINLOSSSPARKLINE",
-            "WORKDAY",
-            "WORKDAY.INTL",
-            "WRAPCOLS",
-            "WRAPROWS",
-            "W_PERCENTRANK",
-            "W_RANK",
-            "XIRR",
-            "XLOOKUP",
-            "XMATCH",
-            "XNPV",
-            "XOR",
-            "YEAR",
-            "YEARFRAC",
-            "YEARSPARKLINE",
-            "YIELD",
-            "YIELDDISC",
-            "YIELDMAT",
-            "Z.TEST",
-            "ZTEST",
-            "_SUBTOTALFORSTATUSBAR"
-          ],
-          "sheetName": "Sheet1",
-          "allowDynamicArray": true,
           "culture": "zh-CN",
-          "cultureApplied": true,
           "excelCompatibleCalcMode": false,
-          "cultureError": null,
-          "dateSystem": "1900",
-          "formulaLanguage": "A1",
-          "paintSuspendedDuringBatch": true,
-          "resetStrategy": "explicit: setFormula(null)+setValue(null) on previous formula anchor; setArray nulls over previous data rectangle (sheet.clear is a no-op in this bundle)",
-          "node": "v24.13.0",
-          "platform": "win32 x64",
-          "totalElapsedMs": 4077.442,
-          "launchMs": 416.19,
-          "pageLoadMs": 2341.143,
-          "batchMs": 37.5,
-          "caseElapsedSumMs": 36.9,
-          "avgCaseMs": 1.272,
-          "productInfo": null
+          "registeredFunctionCount": 583,
+          "bundleBytes": 6184592
         }
       },
       "rows": [
@@ -1075,9 +462,8 @@
             },
             "displayText": "#NAME?",
             "range": null,
-            "elapsedMs": 96.902,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 96.902
           },
           "spreadjs": {
             "status": "ok",
@@ -1085,10 +471,9 @@
               "type": "number",
               "value": 1.96
             },
-            "inputs": [],
             "displayText": "1.96",
-            "elapsedMs": 3.4,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 2.5
           }
         },
         {
@@ -1116,9 +501,8 @@
             },
             "displayText": "2.228138852",
             "range": null,
-            "elapsedMs": 25.975,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 25.975
           },
           "spreadjs": {
             "status": "ok",
@@ -1126,10 +510,9 @@
               "type": "number",
               "value": 2.22813884482571
             },
-            "inputs": [],
             "displayText": "2.22813884482571",
-            "elapsedMs": 2,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1.6
           }
         },
         {
@@ -1157,9 +540,8 @@
             },
             "displayText": "2",
             "range": null,
-            "elapsedMs": 16.016,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 16.016
           },
           "spreadjs": {
             "status": "ok",
@@ -1167,10 +549,9 @@
               "type": "number",
               "value": 1
             },
-            "inputs": [],
             "displayText": "1",
-            "elapsedMs": 1.3,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1.1
           }
         },
         {
@@ -1198,9 +579,8 @@
             },
             "displayText": "0.421024421",
             "range": null,
-            "elapsedMs": 22.667,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 22.667
           },
           "spreadjs": {
             "status": "ok",
@@ -1208,10 +588,9 @@
               "type": "number",
               "value": 0.421024438240708
             },
-            "inputs": [],
             "displayText": "0.421024438240708",
-            "elapsedMs": 0.9,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.8
           }
         },
         {
@@ -1239,9 +618,8 @@
             },
             "displayText": "0.088256971",
             "range": null,
-            "elapsedMs": 30.108,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 30.108
           },
           "spreadjs": {
             "status": "ok",
@@ -1249,10 +627,9 @@
               "type": "number",
               "value": 0.088256964215677
             },
-            "inputs": [],
             "displayText": "0.088256964215677",
-            "elapsedMs": 1,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.8
           }
         },
         {
@@ -1278,9 +655,8 @@
             },
             "displayText": "0.642092615934331",
             "range": null,
-            "elapsedMs": 18.6,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 18.6
           },
           "spreadjs": {
             "status": "ok",
@@ -1288,10 +664,9 @@
               "type": "text",
               "value": "0.6420926159343308"
             },
-            "inputs": [],
             "displayText": "0.6420926159343308",
-            "elapsedMs": 0.9,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.9
           }
         },
         {
@@ -1317,9 +692,8 @@
             },
             "displayText": "1.18839510577812",
             "range": null,
-            "elapsedMs": 16.872,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 16.872
           },
           "spreadjs": {
             "status": "ok",
@@ -1327,10 +701,9 @@
               "type": "text",
               "value": "1.1883951057781212"
             },
-            "inputs": [],
             "displayText": "1.1883951057781212",
-            "elapsedMs": 0.7,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.5
           }
         },
         {
@@ -1356,9 +729,8 @@
             },
             "displayText": "0.850918128239322",
             "range": null,
-            "elapsedMs": 16.785,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 16.785
           },
           "spreadjs": {
             "status": "ok",
@@ -1366,10 +738,9 @@
               "type": "text",
               "value": "0.8509181282393216"
             },
-            "inputs": [],
             "displayText": "0.8509181282393216",
-            "elapsedMs": 1,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.8
           }
         },
         {
@@ -1397,9 +768,8 @@
             },
             "displayText": "16.71232877",
             "range": null,
-            "elapsedMs": 31.924,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 31.924
           },
           "spreadjs": {
             "status": "ok",
@@ -1407,10 +777,9 @@
               "type": "number",
               "value": 16.5760869565217
             },
-            "inputs": [],
             "displayText": "16.5760869565217",
-            "elapsedMs": 1.7,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1
           }
         },
         {
@@ -1436,9 +805,8 @@
             },
             "displayText": "FALSE",
             "range": null,
-            "elapsedMs": 29.376,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 29.376
           },
           "spreadjs": {
             "status": "ok",
@@ -1446,10 +814,9 @@
               "type": "bool",
               "value": true
             },
-            "inputs": [],
             "displayText": "TRUE",
-            "elapsedMs": 0.9,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.6
           }
         },
         {
@@ -1475,19 +842,17 @@
             },
             "displayText": "#VALUE!",
             "range": null,
-            "elapsedMs": 20.487,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 20.487
           },
           "spreadjs": {
             "status": "ok",
             "value": {
               "type": "empty"
             },
-            "inputs": [],
             "displayText": "Picture",
-            "elapsedMs": 0.6,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.6
           }
         },
         {
@@ -1515,40 +880,6 @@
             },
             "displayText": "5",
             "range": null,
-            "elapsedMs": 162.721,
-            "message": "",
-            "inputs": [
-              [
-                {
-                  "type": "number",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "type": "text",
-                  "value": "5"
-                }
-              ],
-              [
-                {
-                  "type": "empty"
-                }
-              ],
-              [
-                {
-                  "type": "number",
-                  "value": 4
-                }
-              ]
-            ]
-          },
-          "spreadjs": {
-            "status": "ok",
-            "value": {
-              "type": "number",
-              "value": 10
-            },
             "inputs": [
               [
                 {
@@ -1574,9 +905,41 @@
                 }
               ]
             ],
+            "elapsedMs": 162.721
+          },
+          "spreadjs": {
+            "status": "ok",
+            "value": {
+              "type": "number",
+              "value": 10
+            },
             "displayText": "10",
-            "elapsedMs": 3.8,
-            "message": ""
+            "inputs": [
+              [
+                {
+                  "type": "number",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "value": "5"
+                }
+              ],
+              [
+                {
+                  "type": "empty"
+                }
+              ],
+              [
+                {
+                  "type": "number",
+                  "value": 4
+                }
+              ]
+            ],
+            "elapsedMs": 3.1
           }
         },
         {
@@ -1602,9 +965,8 @@
             },
             "displayText": "FF",
             "range": null,
-            "elapsedMs": 26.662,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 26.662
           },
           "spreadjs": {
             "status": "ok",
@@ -1612,10 +974,9 @@
               "type": "text",
               "value": "ff"
             },
-            "inputs": [],
             "displayText": "ff",
-            "elapsedMs": 1.6,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1.1
           }
         },
         {
@@ -1705,67 +1066,6 @@
                 }
               ]
             ],
-            "elapsedMs": 178.439,
-            "message": "",
-            "inputs": [
-              [
-                {
-                  "type": "number",
-                  "value": 1
-                },
-                {
-                  "type": "number",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "type": "number",
-                  "value": 2
-                },
-                {
-                  "type": "number",
-                  "value": 4
-                }
-              ],
-              [
-                {
-                  "type": "number",
-                  "value": 3
-                },
-                {
-                  "type": "number",
-                  "value": 6
-                }
-              ],
-              [
-                {
-                  "type": "number",
-                  "value": 4
-                },
-                {
-                  "type": "number",
-                  "value": 8
-                }
-              ],
-              [
-                {
-                  "type": "number",
-                  "value": 5
-                },
-                {
-                  "type": "number",
-                  "value": 10
-                }
-              ]
-            ]
-          },
-          "spreadjs": {
-            "status": "ok",
-            "value": {
-              "type": "number",
-              "value": 2
-            },
             "inputs": [
               [
                 {
@@ -1818,9 +1118,15 @@
                 }
               ]
             ],
+            "elapsedMs": 178.439
+          },
+          "spreadjs": {
+            "status": "ok",
+            "value": {
+              "type": "number",
+              "value": 2
+            },
             "displayText": "2",
-            "elapsedMs": 3.4,
-            "message": "",
             "range": [
               [
                 {
@@ -1872,7 +1178,60 @@
                   "value": 0
                 }
               ]
-            ]
+            ],
+            "inputs": [
+              [
+                {
+                  "type": "number",
+                  "value": 1
+                },
+                {
+                  "type": "number",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "type": "number",
+                  "value": 2
+                },
+                {
+                  "type": "number",
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "type": "number",
+                  "value": 3
+                },
+                {
+                  "type": "number",
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "type": "number",
+                  "value": 4
+                },
+                {
+                  "type": "number",
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "type": "number",
+                  "value": 5
+                },
+                {
+                  "type": "number",
+                  "value": 10
+                }
+              ]
+            ],
+            "elapsedMs": 2.5
           }
         },
         {
@@ -1898,9 +1257,8 @@
             },
             "displayText": "¥1,234.57",
             "range": null,
-            "elapsedMs": 20.812,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 20.812
           },
           "spreadjs": {
             "status": "ok",
@@ -1908,10 +1266,9 @@
               "type": "text",
               "value": "$1,234.57"
             },
-            "inputs": [],
             "displayText": "$1,234.57",
-            "elapsedMs": 1.5,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1.2
           }
         },
         {
@@ -1937,9 +1294,8 @@
             },
             "displayText": "¥-1,234.50",
             "range": null,
-            "elapsedMs": 15.034,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 15.034
           },
           "spreadjs": {
             "status": "ok",
@@ -1947,10 +1303,9 @@
               "type": "text",
               "value": "($1,234.5)"
             },
-            "inputs": [],
             "displayText": "($1,234.5)",
-            "elapsedMs": 0.5,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.4
           }
         },
         {
@@ -1976,9 +1331,8 @@
             },
             "displayText": "文",
             "range": null,
-            "elapsedMs": 27.78,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 27.78
           },
           "spreadjs": {
             "status": "formulaError",
@@ -1986,10 +1340,9 @@
               "type": "error",
               "value": "#VALUE!"
             },
-            "inputs": [],
             "displayText": "#VALUE!",
-            "elapsedMs": 2.3,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1.8
           }
         },
         {
@@ -2011,41 +1364,6 @@
             },
             "displayText": "20",
             "range": null,
-            "elapsedMs": 54.463,
-            "message": "",
-            "inputs": [
-              [
-                {
-                  "type": "number",
-                  "value": 12
-                }
-              ],
-              [
-                {
-                  "type": "number",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "type": "number",
-                  "value": -2
-                }
-              ],
-              [
-                {
-                  "type": "number",
-                  "value": 7
-                }
-              ]
-            ]
-          },
-          "spreadjs": {
-            "status": "ok",
-            "value": {
-              "type": "number",
-              "value": 20
-            },
             "inputs": [
               [
                 {
@@ -2072,9 +1390,42 @@
                 }
               ]
             ],
+            "elapsedMs": 54.463
+          },
+          "spreadjs": {
+            "status": "ok",
+            "value": {
+              "type": "number",
+              "value": 20
+            },
             "displayText": "20",
-            "elapsedMs": 0.8,
-            "message": ""
+            "inputs": [
+              [
+                {
+                  "type": "number",
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "type": "number",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "type": "number",
+                  "value": -2
+                }
+              ],
+              [
+                {
+                  "type": "number",
+                  "value": 7
+                }
+              ]
+            ],
+            "elapsedMs": 0.7
           }
         },
         {
@@ -2096,9 +1447,8 @@
             },
             "displayText": "12.35",
             "range": null,
-            "elapsedMs": 16.106,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 16.106
           },
           "spreadjs": {
             "status": "ok",
@@ -2106,10 +1456,9 @@
               "type": "number",
               "value": 12.35
             },
-            "inputs": [],
             "displayText": "12.35",
-            "elapsedMs": 0.5,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.5
           }
         },
         {
@@ -2131,9 +1480,8 @@
             },
             "displayText": "spread",
             "range": null,
-            "elapsedMs": 18.617,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 18.617
           },
           "spreadjs": {
             "status": "ok",
@@ -2141,10 +1489,9 @@
               "type": "text",
               "value": "spread"
             },
-            "inputs": [],
             "displayText": "spread",
-            "elapsedMs": 0.4,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.4
           }
         },
         {
@@ -2166,9 +1513,8 @@
             },
             "displayText": "yes",
             "range": null,
-            "elapsedMs": 17.168,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 17.168
           },
           "spreadjs": {
             "status": "ok",
@@ -2176,10 +1522,9 @@
               "type": "text",
               "value": "yes"
             },
-            "inputs": [],
             "displayText": "yes",
-            "elapsedMs": 0.9,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.9
           }
         },
         {
@@ -2201,9 +1546,8 @@
             },
             "displayText": "2024/2/29",
             "range": null,
-            "elapsedMs": 14.423,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 14.423
           },
           "spreadjs": {
             "status": "ok",
@@ -2211,10 +1555,9 @@
               "type": "date",
               "value": 45351
             },
-            "inputs": [],
             "displayText": "2024/2/29",
-            "elapsedMs": 1.2,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1.2
           }
         },
         {
@@ -2236,47 +1579,6 @@
             },
             "displayText": "20",
             "range": null,
-            "elapsedMs": 57.744,
-            "message": "",
-            "inputs": [
-              [
-                {
-                  "type": "text",
-                  "value": "a"
-                },
-                {
-                  "type": "number",
-                  "value": 10
-                }
-              ],
-              [
-                {
-                  "type": "text",
-                  "value": "b"
-                },
-                {
-                  "type": "number",
-                  "value": 20
-                }
-              ],
-              [
-                {
-                  "type": "text",
-                  "value": "c"
-                },
-                {
-                  "type": "number",
-                  "value": 30
-                }
-              ]
-            ]
-          },
-          "spreadjs": {
-            "status": "ok",
-            "value": {
-              "type": "number",
-              "value": 20
-            },
             "inputs": [
               [
                 {
@@ -2309,9 +1611,48 @@
                 }
               ]
             ],
+            "elapsedMs": 57.744
+          },
+          "spreadjs": {
+            "status": "ok",
+            "value": {
+              "type": "number",
+              "value": 20
+            },
             "displayText": "20",
-            "elapsedMs": 1.8,
-            "message": ""
+            "inputs": [
+              [
+                {
+                  "type": "text",
+                  "value": "a"
+                },
+                {
+                  "type": "number",
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "value": "b"
+                },
+                {
+                  "type": "number",
+                  "value": 20
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "value": "c"
+                },
+                {
+                  "type": "number",
+                  "value": 30
+                }
+              ]
+            ],
+            "elapsedMs": 2.8
           }
         },
         {
@@ -2333,9 +1674,8 @@
             },
             "displayText": "#NUM!",
             "range": null,
-            "elapsedMs": 23.551,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 23.551
           },
           "spreadjs": {
             "status": "formulaError",
@@ -2343,10 +1683,9 @@
               "type": "error",
               "value": "#NUM!"
             },
-            "inputs": [],
             "displayText": "#NUM!",
-            "elapsedMs": 0.8,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1.1
           }
         },
         {
@@ -2387,41 +1726,6 @@
                 }
               ]
             ],
-            "elapsedMs": 63.635,
-            "message": "",
-            "inputs": [
-              [
-                {
-                  "type": "text",
-                  "value": "a"
-                }
-              ],
-              [
-                {
-                  "type": "text",
-                  "value": "b"
-                }
-              ],
-              [
-                {
-                  "type": "text",
-                  "value": "a"
-                }
-              ],
-              [
-                {
-                  "type": "text",
-                  "value": "c"
-                }
-              ]
-            ]
-          },
-          "spreadjs": {
-            "status": "ok",
-            "value": {
-              "type": "text",
-              "value": "a"
-            },
             "inputs": [
               [
                 {
@@ -2448,9 +1752,15 @@
                 }
               ]
             ],
+            "elapsedMs": 63.635
+          },
+          "spreadjs": {
+            "status": "ok",
+            "value": {
+              "type": "text",
+              "value": "a"
+            },
             "displayText": "a",
-            "elapsedMs": 1.1,
-            "message": "",
             "range": [
               [
                 {
@@ -2470,7 +1780,34 @@
                   "value": "c"
                 }
               ]
-            ]
+            ],
+            "inputs": [
+              [
+                {
+                  "type": "text",
+                  "value": "a"
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "value": "b"
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "value": "a"
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "value": "c"
+                }
+              ]
+            ],
+            "elapsedMs": 1.2
           }
         },
         {
@@ -2498,9 +1835,8 @@
             },
             "displayText": "2",
             "range": null,
-            "elapsedMs": 18.934,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 18.934
           },
           "spreadjs": {
             "status": "ok",
@@ -2508,10 +1844,9 @@
               "type": "number",
               "value": 0
             },
-            "inputs": [],
             "displayText": "0",
-            "elapsedMs": 1,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1.1
           }
         },
         {
@@ -2537,9 +1872,8 @@
             },
             "displayText": "3",
             "range": null,
-            "elapsedMs": 14.014,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 14.014
           },
           "spreadjs": {
             "status": "formulaError",
@@ -2547,10 +1881,9 @@
               "type": "error",
               "value": "#VALUE!"
             },
-            "inputs": [],
             "displayText": "#VALUE!",
-            "elapsedMs": 0.3,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.5
           }
         },
         {
@@ -2576,9 +1909,8 @@
             },
             "displayText": "FALSE",
             "range": null,
-            "elapsedMs": 14.598,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 14.598
           },
           "spreadjs": {
             "status": "ok",
@@ -2586,10 +1918,9 @@
               "type": "bool",
               "value": true
             },
-            "inputs": [],
             "displayText": "TRUE",
-            "elapsedMs": 0.3,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.3
           }
         },
         {
@@ -2611,9 +1942,8 @@
             },
             "displayText": "3",
             "range": null,
-            "elapsedMs": 17.651,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 17.651
           },
           "spreadjs": {
             "status": "ok",
@@ -2621,10 +1951,9 @@
               "type": "number",
               "value": 3
             },
-            "inputs": [],
             "displayText": "3",
-            "elapsedMs": 0.3,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.3
           }
         }
       ]
@@ -2652,630 +1981,17 @@
       "environment": {
         "excel": {
           "version": "16.0",
-          "excelVersion": "16.0",
-          "excelBuild": "20527",
-          "operatingSystem": "Windows (64-bit) NT 10.00",
-          "date1904": false,
-          "calculation": -4105,
+          "build": "20527",
           "culture": "zh-CN",
-          "workbookSheets": 30,
-          "dynamicArraySpill": "readRange cases use CSE array formulas; native spill behavior is not tested",
-          "totalMs": 1101,
-          "avgCaseMs": 37.966
+          "date1904": false,
+          "calculation": -4105
         },
         "spreadjs": {
           "version": "19.2.2",
-          "chromiumVersion": "157.0.8103.39",
-          "chromiumExecutable": "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe",
-          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
-          "spreadjsVersion": "19.2.2",
-          "bundlePath": "node_modules/@grapecity-software/spread-sheets/dist/gc.spread.sheets.all.min.js",
-          "bundleBytes": 6184592,
-          "registeredFunctionCount": 583,
-          "registeredFunctions": [
-            "@",
-            "ABS",
-            "ACCRINT",
-            "ACCRINTM",
-            "ACOS",
-            "ACOSH",
-            "ACOT",
-            "ACOTH",
-            "ADDRESS",
-            "AGGREGATE",
-            "AMORDEGRC",
-            "AMORLINC",
-            "ANCHORARRAY",
-            "AND",
-            "ARABIC",
-            "AREAS",
-            "AREASPARKLINE",
-            "ARRAYTOTEXT",
-            "ASC",
-            "ASIN",
-            "ASINH",
-            "ATAN",
-            "ATAN2",
-            "ATANH",
-            "AVEDEV",
-            "AVERAGE",
-            "AVERAGEA",
-            "AVERAGEIF",
-            "AVERAGEIFS",
-            "BAHTTEXT",
-            "BASE",
-            "BESSELI",
-            "BESSELJ",
-            "BESSELK",
-            "BESSELY",
-            "BETA.DIST",
-            "BETA.INV",
-            "BETADIST",
-            "BETAINV",
-            "BIN2DEC",
-            "BIN2HEX",
-            "BIN2OCT",
-            "BINOM.DIST",
-            "BINOM.DIST.RANGE",
-            "BINOM.INV",
-            "BINOMDIST",
-            "BITAND",
-            "BITLSHIFT",
-            "BITOR",
-            "BITRSHIFT",
-            "BITXOR",
-            "BOXPLOTSPARKLINE",
-            "BULLETSPARKLINE",
-            "BYCOL",
-            "BYROW",
-            "CALCULATE",
-            "CASCADESPARKLINE",
-            "CEILING",
-            "CEILING.MATH",
-            "CEILING.PRECISE",
-            "CHAR",
-            "CHIDIST",
-            "CHIINV",
-            "CHILDREN",
-            "CHISQ.DIST",
-            "CHISQ.DIST.RT",
-            "CHISQ.INV",
-            "CHISQ.INV.RT",
-            "CHISQ.TEST",
-            "CHITEST",
-            "CHOOSE",
-            "CHOOSECOLS",
-            "CHOOSEROWS",
-            "CLEAN",
-            "CODE",
-            "COLUMN",
-            "COLUMNS",
-            "COLUMNSPARKLINE",
-            "COMBIN",
-            "COMBINA",
-            "COMPLEX",
-            "CONCAT",
-            "CONCATENATE",
-            "CONFIDENCE",
-            "CONFIDENCE.NORM",
-            "CONFIDENCE.T",
-            "CONVERT",
-            "CORREL",
-            "COS",
-            "COSH",
-            "COT",
-            "COTH",
-            "COUNT",
-            "COUNTA",
-            "COUNTBLANK",
-            "COUNTIF",
-            "COUNTIFS",
-            "COUPDAYBS",
-            "COUPDAYS",
-            "COUPDAYSNC",
-            "COUPNCD",
-            "COUPNUM",
-            "COUPPCD",
-            "COVAR",
-            "COVARIANCE.P",
-            "COVARIANCE.S",
-            "CRITBINOM",
-            "CSC",
-            "CSCH",
-            "CUMEDIST",
-            "CUMIPMT",
-            "CUMPRINC",
-            "DATE",
-            "DATEDIF",
-            "DATEPART",
-            "DATEVALUE",
-            "DAVERAGE",
-            "DAY",
-            "DAYS",
-            "DAYS360",
-            "DB",
-            "DBCS",
-            "DCOUNT",
-            "DCOUNTA",
-            "DDB",
-            "DEC2BIN",
-            "DEC2HEX",
-            "DEC2OCT",
-            "DECIMAL",
-            "DEGREES",
-            "DELTA",
-            "DENSERANK",
-            "DEVSQ",
-            "DGET",
-            "DISC",
-            "DMAX",
-            "DMIN",
-            "DOLLAR",
-            "DOLLARDE",
-            "DOLLARFR",
-            "DPRODUCT",
-            "DROP",
-            "DSTDEV",
-            "DSTDEVP",
-            "DSUM",
-            "DURATION",
-            "DVAR",
-            "DVARP",
-            "EDATE",
-            "EFFECT",
-            "ENCODEURL",
-            "EOMONTH",
-            "ERF",
-            "ERF.PRECISE",
-            "ERFC",
-            "ERFC.PRECISE",
-            "ERROR.TYPE",
-            "EURO",
-            "EUROCONVERT",
-            "EVEN",
-            "EXACT",
-            "EXP",
-            "EXPAND",
-            "EXPON.DIST",
-            "EXPONDIST",
-            "F.DIST",
-            "F.DIST.RT",
-            "F.INV",
-            "F.INV.RT",
-            "F.TEST",
-            "FACT",
-            "FACTDOUBLE",
-            "FALSE",
-            "FDIST",
-            "FILTER",
-            "FILTERJSON",
-            "FILTERXML",
-            "FIND",
-            "FINDB",
-            "FINV",
-            "FIRSTVALUE",
-            "FISHER",
-            "FISHERINV",
-            "FIXED",
-            "FLOOR",
-            "FLOOR.MATH",
-            "FLOOR.PRECISE",
-            "FORECAST",
-            "FORMULATEXT",
-            "FRAMEGROUPS",
-            "FRAMERANGE",
-            "FRAMEROWS",
-            "FREQUENCY",
-            "FTEST",
-            "FV",
-            "FVSCHEDULE",
-            "GAMMA",
-            "GAMMA.DIST",
-            "GAMMA.INV",
-            "GAMMADIST",
-            "GAMMAINV",
-            "GAMMALN",
-            "GAMMALN.PRECISE",
-            "GAUGEKPISPARKLINE",
-            "GAUSS",
-            "GC.REGEXEXTRACT",
-            "GC.REGEXMATCH",
-            "GC.REGEXREPLACE",
-            "GCD",
-            "GEOMEAN",
-            "GESTEP",
-            "GETPIVOTDATA",
-            "GROUPBY",
-            "GROWTH",
-            "HARMEAN",
-            "HBARSPARKLINE",
-            "HEX2BIN",
-            "HEX2DEC",
-            "HEX2OCT",
-            "HISTOGRAMSPARKLINE",
-            "HLOOKUP",
-            "HOUR",
-            "HSTACK",
-            "HYPERLINK",
-            "HYPGEOM.DIST",
-            "HYPGEOMDIST",
-            "IF",
-            "IFERROR",
-            "IFNA",
-            "IFS",
-            "IMABS",
-            "IMAGE",
-            "IMAGINARY",
-            "IMARGUMENT",
-            "IMCONJUGATE",
-            "IMCOS",
-            "IMCOSH",
-            "IMCOT",
-            "IMCSC",
-            "IMCSCH",
-            "IMDIV",
-            "IMEXP",
-            "IMLN",
-            "IMLOG10",
-            "IMLOG2",
-            "IMPOWER",
-            "IMPRODUCT",
-            "IMREAL",
-            "IMSEC",
-            "IMSECH",
-            "IMSIN",
-            "IMSINH",
-            "IMSQRT",
-            "IMSUB",
-            "IMSUM",
-            "IMTAN",
-            "INDEX",
-            "INDIRECT",
-            "INT",
-            "INTERCEPT",
-            "INTRATE",
-            "IPMT",
-            "IRR",
-            "ISBLANK",
-            "ISERR",
-            "ISERROR",
-            "ISEVEN",
-            "ISFORMULA",
-            "ISLOGICAL",
-            "ISNA",
-            "ISNONTEXT",
-            "ISNUMBER",
-            "ISO.CEILING",
-            "ISODD",
-            "ISOMITTED",
-            "ISOWEEKNUM",
-            "ISPMT",
-            "ISREF",
-            "ISTEXT",
-            "KURT",
-            "LAG",
-            "LAMBDA",
-            "LARGE",
-            "LASTVALUE",
-            "LCM",
-            "LEAD",
-            "LEFT",
-            "LEFTB",
-            "LEN",
-            "LENB",
-            "LET",
-            "LEVEL",
-            "LEVELROWNUMBER",
-            "LINESPARKLINE",
-            "LINEST",
-            "LN",
-            "LOG",
-            "LOG10",
-            "LOGEST",
-            "LOGINV",
-            "LOGNORM.DIST",
-            "LOGNORM.INV",
-            "LOGNORMDIST",
-            "LOLLIPOPVARISPARKLINE",
-            "LOOKUP",
-            "LOWER",
-            "MAKEARRAY",
-            "MAP",
-            "MATCH",
-            "MAX",
-            "MAXA",
-            "MAXIFS",
-            "MDETERM",
-            "MDURATION",
-            "MEDIAN",
-            "MID",
-            "MIDB",
-            "MIN",
-            "MINA",
-            "MINIFS",
-            "MINUTE",
-            "MINVERSE",
-            "MIRR",
-            "MMULT",
-            "MOD",
-            "MODE",
-            "MODE.MULT",
-            "MODE.SNGL",
-            "MONTH",
-            "MONTHSPARKLINE",
-            "MROUND",
-            "MULTINOMIAL",
-            "MUNIT",
-            "N",
-            "NA",
-            "NEGBINOM.DIST",
-            "NEGBINOMDIST",
-            "NETWORKDAYS",
-            "NETWORKDAYS.INTL",
-            "NOMINAL",
-            "NORM.DIST",
-            "NORM.INV",
-            "NORM.S.DIST",
-            "NORM.S.INV",
-            "NORMDIST",
-            "NORMINV",
-            "NORMSDIST",
-            "NORMSINV",
-            "NOT",
-            "NOW",
-            "NPER",
-            "NPV",
-            "NTHVALUE",
-            "NTILE",
-            "OBJECT",
-            "OCT2BIN",
-            "OCT2DEC",
-            "OCT2HEX",
-            "ODD",
-            "ODDFPRICE",
-            "ODDFYIELD",
-            "ODDLPRICE",
-            "ODDLYIELD",
-            "OFFSET",
-            "ONLYCHILDREN",
-            "OR",
-            "ORDERASC",
-            "ORDERBY",
-            "ORDERDESC",
-            "PARENT",
-            "PARETOSPARKLINE",
-            "PARTITIONBY",
-            "PDURATION",
-            "PEARSON",
-            "PERCENTILE",
-            "PERCENTILE.EXC",
-            "PERCENTILE.INC",
-            "PERCENTOF",
-            "PERCENTRANK",
-            "PERCENTRANK.EXC",
-            "PERCENTRANK.INC",
-            "PERMUT",
-            "PERMUTATIONA",
-            "PHI",
-            "PI",
-            "PIESPARKLINE",
-            "PIVOTBY",
-            "PMT",
-            "POISSON",
-            "POISSON.DIST",
-            "POWER",
-            "PPMT",
-            "PRICE",
-            "PRICEDISC",
-            "PRICEMAT",
-            "PROB",
-            "PRODUCT",
-            "PROGRESSSPARKLINE",
-            "PROPER",
-            "PROPERTY",
-            "PV",
-            "QUARTILE",
-            "QUARTILE.EXC",
-            "QUARTILE.INC",
-            "QUERY",
-            "QUOTIENT",
-            "R.A",
-            "R.CUMULATIVE",
-            "R.CURRENTPAGE",
-            "R.INDEX",
-            "R.MOM",
-            "R.PAGECOUNT",
-            "R.PAGESCOUNT",
-            "R.PROPORTION",
-            "R.R",
-            "R.RANK",
-            "R.V",
-            "R.YOY",
-            "RADIANS",
-            "RAND",
-            "RANDARRAY",
-            "RANDBETWEEN",
-            "RANGEBLOCKSPARKLINE",
-            "RANK",
-            "RANK.AVG",
-            "RANK.EQ",
-            "RATE",
-            "RECEIVED",
-            "REDUCE",
-            "REFRESH",
-            "REGEXEXTRACT",
-            "REGEXREPLACE",
-            "REGEXTEST",
-            "REMOVEFILTERS",
-            "REPLACE",
-            "REPLACEB",
-            "REPT",
-            "RIGHT",
-            "RIGHTB",
-            "ROMAN",
-            "ROUND",
-            "ROUNDDOWN",
-            "ROUNDUP",
-            "ROW",
-            "ROWNUMBER",
-            "ROWS",
-            "RRI",
-            "RSQ",
-            "SCAN",
-            "SCATTERSPARKLINE",
-            "SEARCH",
-            "SEARCHB",
-            "SEC",
-            "SECH",
-            "SECOND",
-            "SEQUENCE",
-            "SERIESSUM",
-            "SHEET",
-            "SHEETS",
-            "SIGN",
-            "SIN",
-            "SINH",
-            "SJS.DISTINCTCOUNT",
-            "SJS.ENDWITH",
-            "SJS.FISCALYEAR",
-            "SJS.REGEXEXTRACT",
-            "SJS.REGEXMATCH",
-            "SJS.REGEXREPLACE",
-            "SJS.STARTWITH",
-            "SJS.TABLE",
-            "SJS.UUID",
-            "SKEW",
-            "SKEW.P",
-            "SLN",
-            "SLOPE",
-            "SMALL",
-            "SORT",
-            "SORTBY",
-            "SPREADSPARKLINE",
-            "SQRT",
-            "SQRTPI",
-            "STACKEDSPARKLINE",
-            "STANDARDIZE",
-            "STDEV",
-            "STDEV.P",
-            "STDEV.S",
-            "STDEVA",
-            "STDEVP",
-            "STDEVPA",
-            "STEYX",
-            "SUBSTITUTE",
-            "SUBTOTAL",
-            "SUM",
-            "SUMIF",
-            "SUMIFS",
-            "SUMPRODUCT",
-            "SUMSQ",
-            "SUMX2MY2",
-            "SUMX2PY2",
-            "SUMXMY2",
-            "SWITCH",
-            "SYD",
-            "T",
-            "T.DIST",
-            "T.DIST.2T",
-            "T.DIST.RT",
-            "T.INV",
-            "T.INV.2T",
-            "T.TEST",
-            "TAKE",
-            "TAN",
-            "TANH",
-            "TBILLEQ",
-            "TBILLPRICE",
-            "TBILLYIELD",
-            "TDIST",
-            "TEXT",
-            "TEXTAFTER",
-            "TEXTBEFORE",
-            "TEXTJOIN",
-            "TEXTSPLIT",
-            "TIME",
-            "TIMEVALUE",
-            "TINV",
-            "TOCOL",
-            "TODAY",
-            "TOROW",
-            "TRANSPOSE",
-            "TREND",
-            "TRIGGERFIELDVALUE",
-            "TRIM",
-            "TRIMMEAN",
-            "TRIMRANGE",
-            "TRUE",
-            "TRUNC",
-            "TTEST",
-            "TYPE",
-            "UNICHAR",
-            "UNICODE",
-            "UNIQUE",
-            "UPPER",
-            "VALUE",
-            "VALUETOTEXT",
-            "VAR",
-            "VAR.P",
-            "VAR.S",
-            "VARA",
-            "VARISPARKLINE",
-            "VARP",
-            "VARPA",
-            "VBARSPARKLINE",
-            "VDB",
-            "VLOOKUP",
-            "VSTACK",
-            "WEBSERVICE",
-            "WEEKDAY",
-            "WEEKNUM",
-            "WEIBULL",
-            "WEIBULL.DIST",
-            "WINDOW",
-            "WINDOWDEF",
-            "WINDOWOVERDECONSTRUCT",
-            "WINLOSSSPARKLINE",
-            "WORKDAY",
-            "WORKDAY.INTL",
-            "WRAPCOLS",
-            "WRAPROWS",
-            "W_PERCENTRANK",
-            "W_RANK",
-            "XIRR",
-            "XLOOKUP",
-            "XMATCH",
-            "XNPV",
-            "XOR",
-            "YEAR",
-            "YEARFRAC",
-            "YEARSPARKLINE",
-            "YIELD",
-            "YIELDDISC",
-            "YIELDMAT",
-            "Z.TEST",
-            "ZTEST",
-            "_SUBTOTALFORSTATUSBAR"
-          ],
-          "sheetName": "Sheet1",
-          "allowDynamicArray": true,
           "culture": "zh-CN",
-          "cultureApplied": true,
           "excelCompatibleCalcMode": true,
-          "cultureError": null,
-          "dateSystem": "1900",
-          "formulaLanguage": "A1",
-          "paintSuspendedDuringBatch": true,
-          "resetStrategy": "explicit: setFormula(null)+setValue(null) on previous formula anchor; setArray nulls over previous data rectangle (sheet.clear is a no-op in this bundle)",
-          "node": "v24.13.0",
-          "platform": "win32 x64",
-          "totalElapsedMs": 3005.354,
-          "launchMs": 454.902,
-          "pageLoadMs": 1292.705,
-          "batchMs": 31.1,
-          "caseElapsedSumMs": 31,
-          "avgCaseMs": 1.069,
-          "productInfo": null
+          "registeredFunctionCount": 583,
+          "bundleBytes": 6184592
         }
       },
       "rows": [
@@ -3302,9 +2018,8 @@
             },
             "displayText": "#NAME?",
             "range": null,
-            "elapsedMs": 96.902,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 96.902
           },
           "spreadjs": {
             "status": "ok",
@@ -3312,10 +2027,9 @@
               "type": "number",
               "value": 1.96
             },
-            "inputs": [],
             "displayText": "1.96",
-            "elapsedMs": 2.5,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 2.3
           }
         },
         {
@@ -3343,9 +2057,8 @@
             },
             "displayText": "2.228138852",
             "range": null,
-            "elapsedMs": 25.975,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 25.975
           },
           "spreadjs": {
             "status": "ok",
@@ -3353,10 +2066,9 @@
               "type": "number",
               "value": 2.22813884482571
             },
-            "inputs": [],
             "displayText": "2.22813884482571",
-            "elapsedMs": 1.9,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1.5
           }
         },
         {
@@ -3384,9 +2096,8 @@
             },
             "displayText": "2",
             "range": null,
-            "elapsedMs": 16.016,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 16.016
           },
           "spreadjs": {
             "status": "ok",
@@ -3394,10 +2105,9 @@
               "type": "number",
               "value": 1
             },
-            "inputs": [],
             "displayText": "1",
-            "elapsedMs": 1.1,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1.6
           }
         },
         {
@@ -3425,9 +2135,8 @@
             },
             "displayText": "0.421024421",
             "range": null,
-            "elapsedMs": 22.667,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 22.667
           },
           "spreadjs": {
             "status": "ok",
@@ -3435,10 +2144,9 @@
               "type": "number",
               "value": 0.421024438240708
             },
-            "inputs": [],
             "displayText": "0.421024438240708",
-            "elapsedMs": 0.8,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1.1
           }
         },
         {
@@ -3466,9 +2174,8 @@
             },
             "displayText": "0.088256971",
             "range": null,
-            "elapsedMs": 30.108,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 30.108
           },
           "spreadjs": {
             "status": "ok",
@@ -3476,10 +2183,9 @@
               "type": "number",
               "value": 0.088256964215677
             },
-            "inputs": [],
             "displayText": "0.088256964215677",
-            "elapsedMs": 0.9,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.9
           }
         },
         {
@@ -3505,9 +2211,8 @@
             },
             "displayText": "0.642092615934331",
             "range": null,
-            "elapsedMs": 18.6,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 18.6
           },
           "spreadjs": {
             "status": "ok",
@@ -3515,10 +2220,9 @@
               "type": "text",
               "value": "0.6420926159343308"
             },
-            "inputs": [],
             "displayText": "0.6420926159343308",
-            "elapsedMs": 0.9,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1
           }
         },
         {
@@ -3544,9 +2248,8 @@
             },
             "displayText": "1.18839510577812",
             "range": null,
-            "elapsedMs": 16.872,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 16.872
           },
           "spreadjs": {
             "status": "ok",
@@ -3554,10 +2257,9 @@
               "type": "text",
               "value": "1.1883951057781212"
             },
-            "inputs": [],
             "displayText": "1.1883951057781212",
-            "elapsedMs": 0.5,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.5
           }
         },
         {
@@ -3583,9 +2285,8 @@
             },
             "displayText": "0.850918128239322",
             "range": null,
-            "elapsedMs": 16.785,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 16.785
           },
           "spreadjs": {
             "status": "ok",
@@ -3593,10 +2294,9 @@
               "type": "text",
               "value": "0.8509181282393216"
             },
-            "inputs": [],
             "displayText": "0.8509181282393216",
-            "elapsedMs": 0.4,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.6
           }
         },
         {
@@ -3624,9 +2324,8 @@
             },
             "displayText": "16.71232877",
             "range": null,
-            "elapsedMs": 31.924,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 31.924
           },
           "spreadjs": {
             "status": "ok",
@@ -3634,10 +2333,9 @@
               "type": "number",
               "value": 16.5760869565217
             },
-            "inputs": [],
             "displayText": "16.5760869565217",
-            "elapsedMs": 1.1,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1
           }
         },
         {
@@ -3659,9 +2357,8 @@
             },
             "displayText": "FALSE",
             "range": null,
-            "elapsedMs": 29.376,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 29.376
           },
           "spreadjs": {
             "status": "ok",
@@ -3669,10 +2366,9 @@
               "type": "bool",
               "value": false
             },
-            "inputs": [],
             "displayText": "FALSE",
-            "elapsedMs": 0.4,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.6
           }
         },
         {
@@ -3698,19 +2394,17 @@
             },
             "displayText": "#VALUE!",
             "range": null,
-            "elapsedMs": 20.487,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 20.487
           },
           "spreadjs": {
             "status": "ok",
             "value": {
               "type": "empty"
             },
-            "inputs": [],
             "displayText": "Picture",
-            "elapsedMs": 0.6,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.6
           }
         },
         {
@@ -3732,40 +2426,6 @@
             },
             "displayText": "5",
             "range": null,
-            "elapsedMs": 162.721,
-            "message": "",
-            "inputs": [
-              [
-                {
-                  "type": "number",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "type": "text",
-                  "value": "5"
-                }
-              ],
-              [
-                {
-                  "type": "empty"
-                }
-              ],
-              [
-                {
-                  "type": "number",
-                  "value": 4
-                }
-              ]
-            ]
-          },
-          "spreadjs": {
-            "status": "ok",
-            "value": {
-              "type": "number",
-              "value": 5
-            },
             "inputs": [
               [
                 {
@@ -3791,9 +2451,41 @@
                 }
               ]
             ],
+            "elapsedMs": 162.721
+          },
+          "spreadjs": {
+            "status": "ok",
+            "value": {
+              "type": "number",
+              "value": 5
+            },
             "displayText": "5",
-            "elapsedMs": 3.1,
-            "message": ""
+            "inputs": [
+              [
+                {
+                  "type": "number",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "value": "5"
+                }
+              ],
+              [
+                {
+                  "type": "empty"
+                }
+              ],
+              [
+                {
+                  "type": "number",
+                  "value": 4
+                }
+              ]
+            ],
+            "elapsedMs": 3.1
           }
         },
         {
@@ -3819,9 +2511,8 @@
             },
             "displayText": "FF",
             "range": null,
-            "elapsedMs": 26.662,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 26.662
           },
           "spreadjs": {
             "status": "ok",
@@ -3829,10 +2520,9 @@
               "type": "text",
               "value": "ff"
             },
-            "inputs": [],
             "displayText": "ff",
-            "elapsedMs": 1.1,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1.1
           }
         },
         {
@@ -3922,67 +2612,6 @@
                 }
               ]
             ],
-            "elapsedMs": 178.439,
-            "message": "",
-            "inputs": [
-              [
-                {
-                  "type": "number",
-                  "value": 1
-                },
-                {
-                  "type": "number",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "type": "number",
-                  "value": 2
-                },
-                {
-                  "type": "number",
-                  "value": 4
-                }
-              ],
-              [
-                {
-                  "type": "number",
-                  "value": 3
-                },
-                {
-                  "type": "number",
-                  "value": 6
-                }
-              ],
-              [
-                {
-                  "type": "number",
-                  "value": 4
-                },
-                {
-                  "type": "number",
-                  "value": 8
-                }
-              ],
-              [
-                {
-                  "type": "number",
-                  "value": 5
-                },
-                {
-                  "type": "number",
-                  "value": 10
-                }
-              ]
-            ]
-          },
-          "spreadjs": {
-            "status": "ok",
-            "value": {
-              "type": "number",
-              "value": 2
-            },
             "inputs": [
               [
                 {
@@ -4035,9 +2664,15 @@
                 }
               ]
             ],
+            "elapsedMs": 178.439
+          },
+          "spreadjs": {
+            "status": "ok",
+            "value": {
+              "type": "number",
+              "value": 2
+            },
             "displayText": "2",
-            "elapsedMs": 2.7,
-            "message": "",
             "range": [
               [
                 {
@@ -4089,7 +2724,60 @@
                   "value": 0
                 }
               ]
-            ]
+            ],
+            "inputs": [
+              [
+                {
+                  "type": "number",
+                  "value": 1
+                },
+                {
+                  "type": "number",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "type": "number",
+                  "value": 2
+                },
+                {
+                  "type": "number",
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "type": "number",
+                  "value": 3
+                },
+                {
+                  "type": "number",
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "type": "number",
+                  "value": 4
+                },
+                {
+                  "type": "number",
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "type": "number",
+                  "value": 5
+                },
+                {
+                  "type": "number",
+                  "value": 10
+                }
+              ]
+            ],
+            "elapsedMs": 2.6
           }
         },
         {
@@ -4115,9 +2803,8 @@
             },
             "displayText": "¥1,234.57",
             "range": null,
-            "elapsedMs": 20.812,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 20.812
           },
           "spreadjs": {
             "status": "ok",
@@ -4125,10 +2812,9 @@
               "type": "text",
               "value": "$1,234.57"
             },
-            "inputs": [],
             "displayText": "$1,234.57",
-            "elapsedMs": 1.5,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1.4
           }
         },
         {
@@ -4154,9 +2840,8 @@
             },
             "displayText": "¥-1,234.50",
             "range": null,
-            "elapsedMs": 15.034,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 15.034
           },
           "spreadjs": {
             "status": "ok",
@@ -4164,10 +2849,9 @@
               "type": "text",
               "value": "($1,234.5)"
             },
-            "inputs": [],
             "displayText": "($1,234.5)",
-            "elapsedMs": 0.4,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.6
           }
         },
         {
@@ -4193,9 +2877,8 @@
             },
             "displayText": "文",
             "range": null,
-            "elapsedMs": 27.78,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 27.78
           },
           "spreadjs": {
             "status": "formulaError",
@@ -4203,10 +2886,9 @@
               "type": "error",
               "value": "#VALUE!"
             },
-            "inputs": [],
             "displayText": "#VALUE!",
-            "elapsedMs": 2.1,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 2.5
           }
         },
         {
@@ -4228,41 +2910,6 @@
             },
             "displayText": "20",
             "range": null,
-            "elapsedMs": 54.463,
-            "message": "",
-            "inputs": [
-              [
-                {
-                  "type": "number",
-                  "value": 12
-                }
-              ],
-              [
-                {
-                  "type": "number",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "type": "number",
-                  "value": -2
-                }
-              ],
-              [
-                {
-                  "type": "number",
-                  "value": 7
-                }
-              ]
-            ]
-          },
-          "spreadjs": {
-            "status": "ok",
-            "value": {
-              "type": "number",
-              "value": 20
-            },
             "inputs": [
               [
                 {
@@ -4289,9 +2936,42 @@
                 }
               ]
             ],
+            "elapsedMs": 54.463
+          },
+          "spreadjs": {
+            "status": "ok",
+            "value": {
+              "type": "number",
+              "value": 20
+            },
             "displayText": "20",
-            "elapsedMs": 0.6,
-            "message": ""
+            "inputs": [
+              [
+                {
+                  "type": "number",
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "type": "number",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "type": "number",
+                  "value": -2
+                }
+              ],
+              [
+                {
+                  "type": "number",
+                  "value": 7
+                }
+              ]
+            ],
+            "elapsedMs": 0.7
           }
         },
         {
@@ -4313,9 +2993,8 @@
             },
             "displayText": "12.35",
             "range": null,
-            "elapsedMs": 16.106,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 16.106
           },
           "spreadjs": {
             "status": "ok",
@@ -4323,10 +3002,9 @@
               "type": "number",
               "value": 12.35
             },
-            "inputs": [],
             "displayText": "12.35",
-            "elapsedMs": 0.6,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.6
           }
         },
         {
@@ -4348,9 +3026,8 @@
             },
             "displayText": "spread",
             "range": null,
-            "elapsedMs": 18.617,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 18.617
           },
           "spreadjs": {
             "status": "ok",
@@ -4358,10 +3035,9 @@
               "type": "text",
               "value": "spread"
             },
-            "inputs": [],
             "displayText": "spread",
-            "elapsedMs": 0.3,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.3
           }
         },
         {
@@ -4383,9 +3059,8 @@
             },
             "displayText": "yes",
             "range": null,
-            "elapsedMs": 17.168,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 17.168
           },
           "spreadjs": {
             "status": "ok",
@@ -4393,10 +3068,9 @@
               "type": "text",
               "value": "yes"
             },
-            "inputs": [],
             "displayText": "yes",
-            "elapsedMs": 1,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1.1
           }
         },
         {
@@ -4418,9 +3092,8 @@
             },
             "displayText": "2024/2/29",
             "range": null,
-            "elapsedMs": 14.423,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 14.423
           },
           "spreadjs": {
             "status": "ok",
@@ -4428,10 +3101,9 @@
               "type": "date",
               "value": 45351
             },
-            "inputs": [],
             "displayText": "2024/2/29",
-            "elapsedMs": 1,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1.8
           }
         },
         {
@@ -4453,47 +3125,6 @@
             },
             "displayText": "20",
             "range": null,
-            "elapsedMs": 57.744,
-            "message": "",
-            "inputs": [
-              [
-                {
-                  "type": "text",
-                  "value": "a"
-                },
-                {
-                  "type": "number",
-                  "value": 10
-                }
-              ],
-              [
-                {
-                  "type": "text",
-                  "value": "b"
-                },
-                {
-                  "type": "number",
-                  "value": 20
-                }
-              ],
-              [
-                {
-                  "type": "text",
-                  "value": "c"
-                },
-                {
-                  "type": "number",
-                  "value": 30
-                }
-              ]
-            ]
-          },
-          "spreadjs": {
-            "status": "ok",
-            "value": {
-              "type": "number",
-              "value": 20
-            },
             "inputs": [
               [
                 {
@@ -4526,9 +3157,48 @@
                 }
               ]
             ],
+            "elapsedMs": 57.744
+          },
+          "spreadjs": {
+            "status": "ok",
+            "value": {
+              "type": "number",
+              "value": 20
+            },
             "displayText": "20",
-            "elapsedMs": 1.7,
-            "message": ""
+            "inputs": [
+              [
+                {
+                  "type": "text",
+                  "value": "a"
+                },
+                {
+                  "type": "number",
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "value": "b"
+                },
+                {
+                  "type": "number",
+                  "value": 20
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "value": "c"
+                },
+                {
+                  "type": "number",
+                  "value": 30
+                }
+              ]
+            ],
+            "elapsedMs": 1.8
           }
         },
         {
@@ -4550,9 +3220,8 @@
             },
             "displayText": "#NUM!",
             "range": null,
-            "elapsedMs": 23.551,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 23.551
           },
           "spreadjs": {
             "status": "formulaError",
@@ -4560,10 +3229,9 @@
               "type": "error",
               "value": "#NUM!"
             },
-            "inputs": [],
             "displayText": "#NUM!",
-            "elapsedMs": 0.8,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.8
           }
         },
         {
@@ -4604,41 +3272,6 @@
                 }
               ]
             ],
-            "elapsedMs": 63.635,
-            "message": "",
-            "inputs": [
-              [
-                {
-                  "type": "text",
-                  "value": "a"
-                }
-              ],
-              [
-                {
-                  "type": "text",
-                  "value": "b"
-                }
-              ],
-              [
-                {
-                  "type": "text",
-                  "value": "a"
-                }
-              ],
-              [
-                {
-                  "type": "text",
-                  "value": "c"
-                }
-              ]
-            ]
-          },
-          "spreadjs": {
-            "status": "ok",
-            "value": {
-              "type": "text",
-              "value": "a"
-            },
             "inputs": [
               [
                 {
@@ -4665,9 +3298,15 @@
                 }
               ]
             ],
+            "elapsedMs": 63.635
+          },
+          "spreadjs": {
+            "status": "ok",
+            "value": {
+              "type": "text",
+              "value": "a"
+            },
             "displayText": "a",
-            "elapsedMs": 1,
-            "message": "",
             "range": [
               [
                 {
@@ -4687,7 +3326,34 @@
                   "value": "c"
                 }
               ]
-            ]
+            ],
+            "inputs": [
+              [
+                {
+                  "type": "text",
+                  "value": "a"
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "value": "b"
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "value": "a"
+                }
+              ],
+              [
+                {
+                  "type": "text",
+                  "value": "c"
+                }
+              ]
+            ],
+            "elapsedMs": 1.1
           }
         },
         {
@@ -4715,9 +3381,8 @@
             },
             "displayText": "2",
             "range": null,
-            "elapsedMs": 18.934,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 18.934
           },
           "spreadjs": {
             "status": "ok",
@@ -4725,10 +3390,9 @@
               "type": "number",
               "value": 0
             },
-            "inputs": [],
             "displayText": "0",
-            "elapsedMs": 0.9,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 1.2
           }
         },
         {
@@ -4750,9 +3414,8 @@
             },
             "displayText": "3",
             "range": null,
-            "elapsedMs": 14.014,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 14.014
           },
           "spreadjs": {
             "status": "ok",
@@ -4760,10 +3423,9 @@
               "type": "number",
               "value": 3
             },
-            "inputs": [],
             "displayText": "3",
-            "elapsedMs": 0.6,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.9
           }
         },
         {
@@ -4785,9 +3447,8 @@
             },
             "displayText": "FALSE",
             "range": null,
-            "elapsedMs": 14.598,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 14.598
           },
           "spreadjs": {
             "status": "ok",
@@ -4795,10 +3456,9 @@
               "type": "bool",
               "value": false
             },
-            "inputs": [],
             "displayText": "FALSE",
-            "elapsedMs": 0.2,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.4
           }
         },
         {
@@ -4820,9 +3480,8 @@
             },
             "displayText": "3",
             "range": null,
-            "elapsedMs": 17.651,
-            "message": "",
-            "inputs": []
+            "inputs": [],
+            "elapsedMs": 17.651
           },
           "spreadjs": {
             "status": "ok",
@@ -4830,10 +3489,9 @@
               "type": "number",
               "value": 3
             },
-            "inputs": [],
             "displayText": "3",
-            "elapsedMs": 0.3,
-            "message": ""
+            "inputs": [],
+            "elapsedMs": 0.2
           }
         }
       ]
