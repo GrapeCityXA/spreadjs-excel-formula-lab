@@ -4,19 +4,21 @@
 
 [English](README.md) | 简体中文
 
+**在线报告：** https://grapecityxa.github.io/spreadjs-excel-formula-lab/
+
 一个可复现的对比工程：把同一批公式分别交给 **SpreadJS** 和 **Microsoft Excel** 计算，
 逐格比较结果，并发布一份静态的中英双语报告。仓库设计为可以 clone 后直接交给 AI 代理执行：
 不需要服务器、没有交互式提问，默认的 check 流程也不需要安装 Excel。
 
-> 状态：**M3 发布候选** — 已可公开：888 条用例、496 个函数、13 个分类、用例中英双语、
+> 状态：**M3 发布候选** — 已可公开：892 条用例、498 个函数、13 个分类、用例中英双语、
 > 两种 SpreadJS 配置、已提交 Excel 基线。
 
 ## 结果快照（SpreadJS 19.2.2，Excel 16.0 build 20527，zh-CN）
 
 | 配置 | 通过 | 差异 | 待判定 |
 | --- | --- | --- | --- |
-| 默认模式 | 856 / 888（96.4%） | 26 | 6 |
-| `ExcelCompatibleCalcMode = true` | 862 / 888（97.1%） | 20 | 6 |
+| 默认模式 | 860 / 892（96.4%） | 26 | 6 |
+| `ExcelCompatibleCalcMode = true` | 866 / 892（97.1%） | 20 | 6 |
 
 语料**故意包含** 2026-10 试点中的 17 条已知差异种子，因此这个通过率**不是**兼容性评分。
 具体差异请看报告中的逐条分类。
@@ -84,9 +86,11 @@ CLI 无交互、输出 JSON；完整机器可读结果在 `out/<mode>/comparison
   始终与环境绑定，不承诺覆盖所有 Excel 版本或全部函数。见
   [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md)（中文）或 [`docs/en/METHODOLOGY.md`](docs/en/METHODOLOGY.md)（English）。
 
-当前语料：888 条 / 496 个函数 / 13 个分类；维度分布：基线 502、引用 181、数组 57、
-精度 40、边界 28、错误 27、类型转换 14、日期 14、查找 10、文本 6、易变 6、配置 2、
-组合 1。优先级：P0 224、P1 486、P2 178。
+覆盖率审计：[docs/COVERAGE.md](docs/COVERAGE.md) / [docs/en/COVERAGE.md](docs/en/COVERAGE.md)。
+
+当前语料：892 条 / 498 个函数 / 13 个分类；维度分布：基线 504、引用 181、数组 57、
+精度 40、边界 29、错误 27、类型转换 15、日期 14、查找 10、文本 10、易变 6、配置 2、
+组合 1。优先级：P0 225、P1 489、P2 178。
 
 文档中英双语：英文在 `docs/en/`，中文在 `docs/*.md`；维护者发布步骤见 [`docs/RELEASE-CHECKLIST.md`](docs/RELEASE-CHECKLIST.md)。
 

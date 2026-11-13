@@ -9,11 +9,11 @@ English | [简体中文](../CASE-DESIGN.md)
 
 | Metric | Value |
 | --- | --- |
-| Cases | 888 |
-| Functions | 496 (supported by both Excel and SpreadJS) |
+| Cases | 892 |
+| Functions | 498 (supported by both Excel and SpreadJS) |
 | Categories | 13 |
-| Priority | P0 224 / P1 486 / P2 178 |
-| Dimensions | baseline 502, reference 181, array 57, precision 40, boundary 28, error 27, type coercion 14, date 14, lookup 10, text 6, volatile 6, config 2, composite 1 |
+| Priority | P0 225 / P1 489 / P2 178 |
+| Dimensions | baseline 504, reference 181, array 57, precision 40, boundary 29, error 27, type coercion 15, date 14, lookup 10, text 10, volatile 6, config 2, composite 1 |
 
 These numbers describe the coverage of the *current corpus*, not a compatibility verdict. When adding cases, fill in gaps in the dimension distribution rather than inflating the function count again.
 

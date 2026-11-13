@@ -3,7 +3,7 @@ English | [简体中文](../KNOWN-DIFFERENCES.md)
 # Known Differences (Pilot Seeds)
 
 > Source: 760 pilot cases from 2026-10 (SpreadJS 19.2.1 / Excel 365 16.0.20527).
-> In 2026-11 the 888-case public corpus was re-run in this repository with SpreadJS 19.2.2: **all 17 seeds reproduce in the default mode**;
+> In 2026-11 the 892-case public corpus was re-run in this repository with SpreadJS 19.2.2: **all 17 seeds reproduce in the default mode**;
 > in the compatible mode (`ExcelCompatibleCalcMode = true`), `ISNUMBER("123")` now agrees.
 > Re-verified values follow `site/` and `out/<mode>/comparison.json`.
 

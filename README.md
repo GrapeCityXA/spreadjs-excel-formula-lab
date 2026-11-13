@@ -4,21 +4,23 @@
 
 English | [简体中文](README.zh-CN.md)
 
+**Live report:** https://grapecityxa.github.io/spreadjs-excel-formula-lab/
+
 A reproducible lab for comparing **SpreadJS formula calculation results** with **Microsoft
 Excel** results. Every case is calculated by both engines, compared cell by cell, and published
 as a static bilingual report. The repository is designed to be cloned and driven by people or
 by an AI coding agent: there is no server, no interactive prompt and no Excel requirement for
 the default check.
 
-> Status: **M3 release candidate** — public-ready: 888 cases, 496 functions, 13 categories, bilingual cases,
+> Status: **M3 release candidate** — public-ready: 892 cases, 498 functions, 13 categories, bilingual cases,
 > two SpreadJS configurations, committed Excel baseline.
 
 ## Snapshot (SpreadJS 19.2.2, Excel 16.0 build 20527, zh-CN)
 
 | Configuration | Pass | Diff | Inconclusive |
 | --- | --- | --- | --- |
-| Default | 856 / 888 (96.4%) | 26 | 6 |
-| `ExcelCompatibleCalcMode = true` | 862 / 888 (97.1%) | 20 | 6 |
+| Default | 860 / 892 (96.4%) | 26 | 6 |
+| `ExcelCompatibleCalcMode = true` | 866 / 892 (97.1%) | 20 | 6 |
 
 The corpus deliberately includes the 17 known-difference seeds from the 2026-10 pilot, so this
 is **not** a compatibility score. Read the report for the per-case detail and the classification
@@ -94,9 +96,11 @@ These are the two things that matter most:
   does not claim compatibility across all Excel versions or functions. See
   [`docs/en/METHODOLOGY.md`](docs/en/METHODOLOGY.md) (English) or [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md) (中文).
 
-Current corpus: 888 cases / 496 functions, 13 categories; dimension mix: baseline 502, reference
-181, array 57, precision 40, boundary 28, error 27, type-coercion 14, date 14, lookup 10,
-text 6, volatile 6, config 2, combination 1. Priority mix: P0 224, P1 486, P2 178.
+Coverage audit: [`docs/en/COVERAGE.md`](docs/en/COVERAGE.md) / [`docs/COVERAGE.md`](docs/COVERAGE.md).
+
+Current corpus: 892 cases / 498 functions, 13 categories; dimension mix: baseline 504, reference
+181, array 57, precision 40, boundary 29, error 27, type-coercion 15, date 14, lookup 10,
+text 10, volatile 6, config 2, combination 1. Priority mix: P0 225, P1 489, P2 178.
 
 Docs are bilingual: English under `docs/en/`, Chinese at `docs/*.md`. Maintainer release steps are in [`docs/RELEASE-CHECKLIST.md`](docs/RELEASE-CHECKLIST.md).
 

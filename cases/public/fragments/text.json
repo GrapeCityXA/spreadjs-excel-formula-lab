@@ -230,6 +230,78 @@
    "source": "m2-design"
   },
   {
+   "id": "M2-TEXT-018",
+   "category": "text",
+   "function": "ARRAYTOTEXT",
+   "dimension": "baseline",
+   "priority": "P1",
+   "scenario": {
+    "zh": "把 2x2 区域转换为简洁文本",
+    "en": "Convert a 2x2 range to concise text"
+   },
+   "formula": "=ARRAYTOTEXT(A1:B2)",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "source": "m2-coverage"
+  },
+  {
+   "id": "M2-TEXT-019",
+   "category": "text",
+   "function": "ARRAYTOTEXT",
+   "dimension": "boundary",
+   "priority": "P1",
+   "scenario": {
+    "zh": "ARRAYTOTEXT 的严格格式参数",
+    "en": "ARRAYTOTEXT with the strict format argument"
+   },
+   "formula": "=ARRAYTOTEXT(A1:B2,1)",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "source": "m2-coverage"
+  },
+  {
+   "id": "M2-TEXT-020",
+   "category": "text",
+   "function": "VALUETOTEXT",
+   "dimension": "type-coercion",
+   "priority": "P0",
+   "scenario": {
+    "zh": "数值转文本",
+    "en": "Convert a number to text"
+   },
+   "formula": "=VALUETOTEXT(123)",
+   "source": "m2-coverage"
+  },
+  {
+   "id": "M2-TEXT-021",
+   "category": "text",
+   "function": "VALUETOTEXT",
+   "dimension": "baseline",
+   "priority": "P1",
+   "scenario": {
+    "zh": "文本保持原样",
+    "en": "Text is returned unchanged"
+   },
+   "formula": "=VALUETOTEXT(\"abc\")",
+   "source": "m2-coverage"
+  },
+  {
    "id": "PUB-TEXT-001",
    "category": "text",
    "function": "LEFT",
