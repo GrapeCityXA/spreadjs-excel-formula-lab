@@ -7,7 +7,6 @@
       "formula": "=EUROCONVERT(1,\"EUR\",\"DEM\")",
       "excel": "#NAME?",
       "spreadjs": "1.96",
-      "attribution": "environment",
       "zh": "Excel 未安装欧洲货币工具加载项，返回 #NAME?；SpreadJS 实现了该函数。",
       "en": "Excel without the Euro currency tools add-in returns #NAME?; SpreadJS implements the function."
     },
@@ -17,7 +16,6 @@
       "formula": "=TINV(0.05,10)",
       "excel": "2.22813885198627",
       "spreadjs": "2.22813884482571",
-      "attribution": "product",
       "zh": "逆 t 分布近似算法的精度差异（相对约 3.2e-9）。",
       "en": "Precision difference in the inverse t-distribution approximation (relative ~3.2e-9)."
     },
@@ -27,9 +25,8 @@
       "formula": "=DAYS(DATE(1900,3,1),DATE(1900,2,28))",
       "excel": "2",
       "spreadjs": "1",
-      "attribution": "excel-legacy",
-      "zh": "Excel 1900 闰年 bug 的遗留行为；按产品讨论不作为缺陷处理，仅记录差异。",
-      "en": "Legacy Excel 1900 leap-year bug behavior; recorded as a documented difference, not a defect."
+      "zh": "Excel 1900 闰年的历史行为；记录为已知差异。",
+      "en": "Historical Excel 1900 leap-year behavior; recorded as a known difference."
     },
     {
       "id": "TC-ENG-203",
@@ -37,7 +34,6 @@
       "formula": "=BESSELK(1,0)",
       "excel": "0.421024421083418",
       "spreadjs": "0.421024438240708",
-      "attribution": "product",
       "zh": "特殊函数近似算法差异（相对约 4.1e-8）。",
       "en": "Special-function approximation difference (relative ~4.1e-8)."
     },
@@ -47,7 +43,6 @@
       "formula": "=BESSELY(1,0)",
       "excel": "0.0882569713977081",
       "spreadjs": "0.088256964215677",
-      "attribution": "product",
       "zh": "特殊函数近似算法差异（相对约 8.1e-8）。",
       "en": "Special-function approximation difference (relative ~8.1e-8)."
     },
@@ -57,7 +52,6 @@
       "formula": "=IMCOT(\"1\")",
       "excel": "0.642092615934331",
       "spreadjs": "0.6420926159343308",
-      "attribution": "product",
       "zh": "复数函数返回文本结果的精度不同。",
       "en": "The text representation of a complex-number result differs in precision."
     },
@@ -67,7 +61,6 @@
       "formula": "=IMCSC(\"1\")",
       "excel": "1.18839510577812",
       "spreadjs": "1.1883951057781212",
-      "attribution": "product",
       "zh": "复数函数返回文本结果的精度不同。",
       "en": "The text representation of a complex-number result differs in precision."
     },
@@ -77,7 +70,6 @@
       "formula": "=IMCSCH(\"1\")",
       "excel": "0.850918128239322",
       "spreadjs": "0.8509181282393216",
-      "attribution": "product",
       "zh": "复数函数返回文本结果的精度不同。",
       "en": "The text representation of a complex-number result differs in precision."
     },
@@ -87,7 +79,6 @@
       "formula": "=ACCRINT(DATE(2008,3,1),DATE(2008,6,1),DATE(2008,5,1),0.1,1000,4,3)",
       "excel": "16.7123287671233",
       "spreadjs": "16.5760869565217",
-      "attribution": "product",
       "zh": "basis=2/3 时付息期计息天数处理不同。",
       "en": "Day-count handling differs for basis 2/3 in the accrual period."
     },
@@ -97,9 +88,8 @@
       "formula": "=ISNUMBER(\"123\")",
       "excel": "FALSE",
       "spreadjs": "TRUE",
-      "attribution": "config",
-      "zh": "默认模式的自动类型转换导致；开启 ExcelCompatibleCalcMode 后与 Excel 一致。",
-      "en": "Caused by default-mode automatic type conversion; matches Excel when ExcelCompatibleCalcMode is enabled."
+      "zh": "默认类型转换下的结果；兼容模式下与 Excel 一致。",
+      "en": "Result under default type conversion; agrees with Excel in compatible mode."
     },
     {
       "id": "TC-LOOKUP-211",
@@ -107,7 +97,6 @@
       "formula": "=IMAGE(\"\")",
       "excel": "#VALUE!",
       "spreadjs": "(empty)",
-      "attribution": "environment",
       "zh": "Excel 365 图片函数与 SpreadJS 不可比。",
       "en": "The Excel 365 IMAGE function is not comparable with SpreadJS."
     },
@@ -117,9 +106,8 @@
       "formula": "=SUM(A1:A4)",
       "excel": "5",
       "spreadjs": "10",
-      "attribution": "config",
-      "zh": "默认模式把区域中的文本数字转成数字参与求和；兼容模式下与 Excel 一致。",
-      "en": "Default mode coerces text numbers inside the range before summing; matches Excel in compatible mode."
+      "zh": "默认区域转换下的结果；兼容模式下与 Excel 一致。",
+      "en": "Result under default range coercion; agrees with Excel in compatible mode."
     },
     {
       "id": "TC-MATH-074",
@@ -127,7 +115,6 @@
       "formula": "=BASE(255,16)",
       "excel": "FF",
       "spreadjs": "ff",
-      "attribution": "product",
       "zh": "BASE 输出的大写/小写不一致。",
       "en": "BASE output differs in letter case."
     },
@@ -137,7 +124,6 @@
       "formula": "=LINEST(B1:B5,A1:A5,TRUE,TRUE)",
       "excel": "R4C1 = 1.1589E+32",
       "spreadjs": "R4C1 = #NUM!",
-      "attribution": "product",
       "zh": "奇异矩阵场景的数值行为不同，其余单元格一致。",
       "en": "Singular-matrix numeric behavior differs while other cells agree."
     },
@@ -147,7 +133,6 @@
       "formula": "=DOLLAR(1234.567,2)",
       "excel": "¥1,234.57",
       "spreadjs": "$1,234.57",
-      "attribution": "environment",
       "zh": "货币符号与区域设置不同。",
       "en": "Currency symbol and locale differ."
     },
@@ -157,7 +142,6 @@
       "formula": "=DOLLAR(-1234.5,2)",
       "excel": "¥-1,234.50",
       "spreadjs": "($1,234.5)",
-      "attribution": "environment",
       "zh": "负值格式、货币符号与小数补位不同。",
       "en": "Negative format, currency symbol and decimal padding differ."
     },
@@ -167,7 +151,6 @@
       "formula": "=MIDB(\"中文文本\",3,2)",
       "excel": "文",
       "spreadjs": "#VALUE!",
-      "attribution": "product",
       "zh": "DBCS 双字节边界处理不同。",
       "en": "DBCS byte-boundary handling differs."
     }

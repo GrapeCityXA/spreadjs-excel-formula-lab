@@ -43,24 +43,24 @@ refresh` 才会调用本机 Excel 重新生成基线。
   日期系统）与可打开核对的 `excel-oracle-workbook.xlsx`。
 - 运行产物（`out/`）不提交；提交的是 `oracle/` 和 `site/` 中的结果快照。
 
-## 4. 差异分类（自动初判）
+## 4. 差异分类（自动提示）
 
-| 分类 | 常见原因 | 默认归因 |
-| --- | --- | --- |
-| `EXCEL_FUNCTION_UNAVAILABLE` | Excel 未安装加载项、Excel 版本没有该函数 | 环境 |
-| `EXCEL_ERROR_ONLY` | Excel 报错而 SpreadJS 正常（也可能是函数支持差异） | 环境（需复核） |
-| `LOCALE_DIFF` | 货币符号、区域格式、DBCS 设置 | 环境 |
-| `SPREADJS_ERROR` | SpreadJS 返回错误而 Excel 正常 | 产品 |
-| `ERROR_CODE_DIFF` | 两侧都报错但错误码不同 | 产品 |
-| `TYPE_DIFF` | 结果类型不同（number/date/text/bool/error） | 产品 |
-| `VALUE_DIFF` | 数值不同且相对误差 > 1e-6 | 产品 |
-| `PRECISION_DIFF` | 数值差在 1e-9 ~ 1e-6 相对量级 | 产品（可能可接受） |
-| `TEXT_DIFF` / `BOOLEAN_DIFF` | 文本 / 布尔结果不同 | 产品 |
-| `ARRAY_VALUE_DIFF` | 区域结果有单元格不同 | 产品 |
-| `ARRAY_SHAPE_DIFF` | 动态数组实际溢出区域不同 | 产品 |
+| 分类 | 常见原因 |
+| --- | --- |
+| `EXCEL_FUNCTION_UNAVAILABLE` | Excel 未安装加载项、Excel 版本没有该函数 |
+| `EXCEL_ERROR_ONLY` | Excel 报错而 SpreadJS 正常（也可能是函数支持差异） |
+| `LOCALE_DIFF` | 货币符号、区域格式、DBCS 设置 |
+| `SPREADJS_ERROR` | SpreadJS 返回错误而 Excel 正常 |
+| `ERROR_CODE_DIFF` | 两侧都报错但错误码不同 |
+| `TYPE_DIFF` | 结果类型不同（number/date/text/bool/error） |
+| `VALUE_DIFF` | 数值不同且相对误差 > 1e-6 |
+| `PRECISION_DIFF` | 数值差在 1e-9 ~ 1e-6 相对量级 |
+| `TEXT_DIFF` / `BOOLEAN_DIFF` | 文本 / 布尔结果不同 |
+| `ARRAY_VALUE_DIFF` | 区域结果有单元格不同 |
+| `ARRAY_SHAPE_DIFF` | 动态数组实际溢出区域不同 |
 
-分类只是提示，不能替代人工归因。归因时依次排除：用例写错 → 环境/加载项 → 配置
-（`ExcelCompatibleCalcMode`、culture）→ 最后才是产品缺陷。
+分类只是提示，不能替代具体分析。出现差异时，应结合用例、Excel 版本/加载项、SpreadJS
+配置（`ExcelCompatibleCalcMode`、culture）与原始输入逐项核对。
 
 ## 5. 已知限制
 
@@ -82,5 +82,4 @@ refresh` 才会调用本机 Excel 重新生成基线。
 - `default`：SpreadJS 默认计算行为。
 - `compatible`：`GC.Spread.CalcEngine.ExcelCompatibleCalcMode = true`。
 
-同一用例在两种模式下 PASS/FAIL 不一致时，说明结论对配置敏感，应在报告中单独标注，不能
-简单算作产品缺陷。
+同一用例在两种模式下 PASS/FAIL 不一致时，说明结果对配置敏感，报告中应分别展示两种配置的结果。

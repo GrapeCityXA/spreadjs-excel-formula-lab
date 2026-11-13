@@ -13,7 +13,7 @@
 - [ ] `oracle/` 与 `site/` 由已提交语料重新生成（`npm run refresh`）。
 - [ ] `oracle/manifest.json` 记录了基线使用的 Excel 版本/build/区域。
 - [ ] `docs/known-differences.json` 与 `docs/KNOWN-DIFFERENCES.md` 和最新运行一致。
-- [ ] 报告中的每个 `FAIL` 都有分类；环境类差异没有被写成产品缺陷。
+- [ ] 报告中的每个 `FAIL` 都有分类和说明，结论与实测值一致。
 
 ## 2. 许可与商标
 

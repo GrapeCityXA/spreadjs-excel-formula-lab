@@ -13,8 +13,7 @@ Use this list before pushing the repository or publishing a new result snapshot.
 - [ ] `oracle/` and `site/` were regenerated from the committed corpus (`npm run refresh`).
 - [ ] `oracle/manifest.json` records the Excel version/build/culture used for the baseline.
 - [ ] `docs/known-differences.json` and `docs/KNOWN-DIFFERENCES.md` agree with the latest run.
-- [ ] Every `FAIL` in the report has a classification; environment-only differences are not
-      presented as product defects.
+- [ ] Every `FAIL` in the report has a classification and a note, and matches the measured values.
 
 ## 2. Licensing and trademarks
 

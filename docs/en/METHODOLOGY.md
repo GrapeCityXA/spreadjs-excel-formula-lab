@@ -41,23 +41,23 @@ cases/public/*.json
 - The Excel baseline is committed under `oracle/` and contains `manifest.json` (Excel version / build / locale / date system) together with an openable `excel-oracle-workbook.xlsx` for inspection.
 - Run artifacts (`out/`) are not committed; what is committed are the result snapshots under `oracle/` and `site/`.
 
-## 4. Difference Classification (automated first pass)
+## 4. Difference Classification (automated hint)
 
-| Classification | Common cause | Default attribution |
-| --- | --- | --- |
-| `EXCEL_FUNCTION_UNAVAILABLE` | Add-in not installed in Excel, or the Excel version lacks the function | Environment |
-| `EXCEL_ERROR_ONLY` | Excel errors while SpreadJS is fine (may also be a function-support difference) | Environment (needs review) |
-| `LOCALE_DIFF` | Currency symbol, regional format, DBCS settings | Environment |
-| `SPREADJS_ERROR` | SpreadJS returns an error while Excel is fine | Product |
-| `ERROR_CODE_DIFF` | Both sides error but the error codes differ | Product |
-| `TYPE_DIFF` | Result types differ (number/date/text/bool/error) | Product |
-| `VALUE_DIFF` | Values differ with a relative error > 1e-6 | Product |
-| `PRECISION_DIFF` | Value difference on a relative scale of 1e-9 to 1e-6 | Product (possibly acceptable) |
-| `TEXT_DIFF` / `BOOLEAN_DIFF` | Text / boolean results differ | Product |
-| `ARRAY_VALUE_DIFF` | Some cells in the range differ | Product |
-| `ARRAY_SHAPE_DIFF` | The actual spill range of a dynamic array differs | Product |
+| Classification | Common cause |
+| --- | --- |
+| `EXCEL_FUNCTION_UNAVAILABLE` | Add-in not installed in Excel, or the Excel version lacks the function |
+| `EXCEL_ERROR_ONLY` | Excel errors while SpreadJS is fine (may also be a function-support difference) |
+| `LOCALE_DIFF` | Currency symbol, regional format, DBCS settings |
+| `SPREADJS_ERROR` | SpreadJS returns an error while Excel is fine |
+| `ERROR_CODE_DIFF` | Both sides error but the error codes differ |
+| `TYPE_DIFF` | Result types differ (number/date/text/bool/error) |
+| `VALUE_DIFF` | Values differ with a relative error > 1e-6 |
+| `PRECISION_DIFF` | Value difference on a relative scale of 1e-9 to 1e-6 |
+| `TEXT_DIFF` / `BOOLEAN_DIFF` | Text / boolean results differ |
+| `ARRAY_VALUE_DIFF` | Some cells in the range differ |
+| `ARRAY_SHAPE_DIFF` | The actual spill range of a dynamic array differs |
 
-The classification is only a hint and cannot replace human attribution. When attributing, rule out in order: a miswritten case → environment/add-ins → configuration (`ExcelCompatibleCalcMode`, culture) → and only then a product defect.
+The classification is only a hint and cannot replace a case-by-case review. When a difference appears, check the case, the Excel version/add-ins, the SpreadJS configuration (`ExcelCompatibleCalcMode`, culture) and the raw inputs.
 
 ## 5. Known Limitations
 
@@ -76,4 +76,4 @@ The same corpus is always run against two SpreadJS configurations; the report pr
 - `default`: SpreadJS default calculation behaviour.
 - `compatible`: `GC.Spread.CalcEngine.ExcelCompatibleCalcMode = true`.
 
-When the same case has inconsistent PASS/FAIL across the two modes, the conclusion is sensitive to configuration; mark it separately in the report and do not simply treat it as a product defect.
+When the same case has inconsistent PASS/FAIL across the two modes, the result is configuration-sensitive; show both configurations separately in the report.

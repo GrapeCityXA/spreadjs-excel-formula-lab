@@ -22,7 +22,7 @@ the default check.
 | Default | 860 / 892 (96.4%) | 26 | 6 |
 | `ExcelCompatibleCalcMode = true` | 866 / 892 (97.1%) | 20 | 6 |
 
-The corpus deliberately includes the 17 known-difference seeds from the 2026-10 pilot, so this
+The corpus deliberately includes the 17 known differences from the 2026-10 pilot, so this
 is **not** a compatibility score. Read the report for the per-case detail and the classification
 of each difference.
 
@@ -79,7 +79,7 @@ having Excel installed.
   SpreadJS result and the automatic difference classification.
 - **Function matrix** — per-function case counts and pass/diff counts; the fastest way to spot
   functions with repeated differences.
-- **Known differences** — the pilot seed list with attribution (`environment` vs `product`).
+- **Known differences** — the pilot difference list with measured values and short notes.
 
 `site/compatibility.csv` and `.json` are machine-readable exports.
 
