@@ -1,0 +1,1287 @@
+{
+ "category": "text",
+ "description": {
+  "zh": "text 类公式用例",
+  "en": "text formula cases"
+ },
+ "cases": [
+  {
+   "id": "M2-TEXT-001",
+   "category": "text",
+   "function": "LEFT",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "LEFT 取 0 个字符",
+    "en": "LEFT with a zero character count"
+   },
+   "formula": "=LEFT(\"abc\",0)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-TEXT-002",
+   "category": "text",
+   "function": "LEFT",
+   "dimension": "error",
+   "scenario": {
+    "zh": "LEFT 负数长度返回 #VALUE!",
+    "en": "LEFT with a negative count returns #VALUE!"
+   },
+   "formula": "=LEFT(\"abc\",-1)",
+   "priority": "P1",
+   "source": "m2-design",
+   "expectError": true
+  },
+  {
+   "id": "M2-TEXT-003",
+   "category": "text",
+   "function": "MID",
+   "dimension": "error",
+   "scenario": {
+    "zh": "MID 起始位置为 0 返回 #VALUE!",
+    "en": "MID with start position 0 returns #VALUE!"
+   },
+   "formula": "=MID(\"abc\",0,1)",
+   "priority": "P1",
+   "source": "m2-design",
+   "expectError": true
+  },
+  {
+   "id": "M2-TEXT-004",
+   "category": "text",
+   "function": "LENB",
+   "dimension": "text",
+   "scenario": {
+    "zh": "zh-CN 下 LENB 按字节计数",
+    "en": "LENB counts bytes under zh-CN"
+   },
+   "formula": "=LENB(\"中文abc\")",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-TEXT-005",
+   "category": "text",
+   "function": "LEFTB",
+   "dimension": "text",
+   "scenario": {
+    "zh": "zh-CN 下 LEFTB 按字节截取",
+    "en": "LEFTB extracts by bytes under zh-CN"
+   },
+   "formula": "=LEFTB(\"中文abc\",4)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-TEXT-006",
+   "category": "text",
+   "function": "RIGHTB",
+   "dimension": "text",
+   "scenario": {
+    "zh": "zh-CN 下 RIGHTB 按字节截取",
+    "en": "RIGHTB extracts by bytes under zh-CN"
+   },
+   "formula": "=RIGHTB(\"中文abc\",3)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-TEXT-007",
+   "category": "text",
+   "function": "FINDB",
+   "dimension": "text",
+   "scenario": {
+    "zh": "FINDB 在双字节文本中定位",
+    "en": "FINDB locates text in a DBCS string"
+   },
+   "formula": "=FINDB(\"文\",\"中文文本\")",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-TEXT-008",
+   "category": "text",
+   "function": "SEARCHB",
+   "dimension": "text",
+   "scenario": {
+    "zh": "SEARCHB 在双字节文本中定位",
+    "en": "SEARCHB locates text in a DBCS string"
+   },
+   "formula": "=SEARCHB(\"文\",\"中文文本\")",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-TEXT-009",
+   "category": "text",
+   "function": "TRIM",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "TRIM 压缩多余空格",
+    "en": "TRIM collapses extra spaces"
+   },
+   "formula": "=TRIM(\"  a  b  \")",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-TEXT-010",
+   "category": "text",
+   "function": "SUBSTITUTE",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "SUBSTITUTE 删除所有连字符",
+    "en": "SUBSTITUTE removes all hyphens"
+   },
+   "formula": "=SUBSTITUTE(\"a-b-c\",\"-\",\"\")",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-TEXT-011",
+   "category": "text",
+   "function": "FIND",
+   "dimension": "error",
+   "scenario": {
+    "zh": "FIND 区分大小写导致未找到",
+    "en": "FIND is case-sensitive and fails here"
+   },
+   "formula": "=FIND(\"b\",\"ABC\")",
+   "priority": "P1",
+   "source": "m2-design",
+   "expectError": true
+  },
+  {
+   "id": "M2-TEXT-012",
+   "category": "text",
+   "function": "SEARCH",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "SEARCH 不区分大小写",
+    "en": "SEARCH is case-insensitive"
+   },
+   "formula": "=SEARCH(\"b\",\"ABC\")",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-TEXT-013",
+   "category": "text",
+   "function": "REPT",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "重复文本三次",
+    "en": "Repeat text three times"
+   },
+   "formula": "=REPT(\"ab\",3)",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-TEXT-014",
+   "category": "text",
+   "function": "CONCATENATE",
+   "dimension": "type-coercion",
+   "scenario": {
+    "zh": "拼接数字与布尔值",
+    "en": "Concatenate a number and a boolean"
+   },
+   "formula": "=CONCATENATE(1,TRUE)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-TEXT-015",
+   "category": "text",
+   "function": "LEN",
+   "dimension": "type-coercion",
+   "scenario": {
+    "zh": "LEN 对数字参数的处理",
+    "en": "LEN with a numeric argument"
+   },
+   "formula": "=LEN(123)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-TEXT-016",
+   "category": "text",
+   "function": "TEXT",
+   "dimension": "text",
+   "scenario": {
+    "zh": "用格式串格式化数字",
+    "en": "Format a number with a format string"
+   },
+   "formula": "=TEXT(1234.5,\"#,##0.00\")",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-TEXT-017",
+   "category": "text",
+   "function": "PROPER",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "PROPER 首字母大写",
+    "en": "PROPER capitalizes each word"
+   },
+   "formula": "=PROPER(\"hello world\")",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "PUB-TEXT-001",
+   "category": "text",
+   "function": "LEFT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "截取文本前 6 个字符",
+    "en": "Extract the first 6 characters of a text"
+   },
+   "formula": "=LEFT(\"spreadsheet\",6)",
+   "priority": "P0",
+   "source": "public-starter"
+  },
+  {
+   "id": "TC-TEXT-001",
+   "category": "text",
+   "function": "LEFT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "截取 SpreadJS 前 6 个字符，验证基本左侧截取",
+    "en": "Take the first 6 characters of SpreadJS to verify basic left extraction"
+   },
+   "formula": "=LEFT(\"SpreadJS\",6)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-002",
+   "category": "text",
+   "function": "LEFT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "对中文文本截取前 2 个字符，验证按字符而非字节计数",
+    "en": "Take the first 2 characters of Chinese text to verify character-based rather than byte-based counting"
+   },
+   "formula": "=LEFT(\"中文测试\",2)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-003",
+   "category": "text",
+   "function": "RIGHT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "截取 SpreadJS 后 2 个字符，验证基本右侧截取",
+    "en": "Take the last 2 characters of SpreadJS to verify basic right extraction"
+   },
+   "formula": "=RIGHT(\"SpreadJS\",2)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-004",
+   "category": "text",
+   "function": "RIGHT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "省略第二个参数时只取最右 1 个字符",
+    "en": "Omitting the second argument takes only the rightmost 1 character"
+   },
+   "formula": "=RIGHT(\"abc\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-005",
+   "category": "text",
+   "function": "MID",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "从第 2 位起截取 4 个字符，验证起点与长度参数",
+    "en": "Extract 4 characters starting at position 2 to verify the start and length arguments"
+   },
+   "formula": "=MID(\"SpreadJS\",2,4)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-006",
+   "category": "text",
+   "function": "MID",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "起始位置超出文本长度时返回空文本",
+    "en": "A start position beyond the text length returns empty text"
+   },
+   "formula": "=MID(\"abc\",10,2)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-007",
+   "category": "text",
+   "function": "LEN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "统计 Hello World 的字符数，含中间空格",
+    "en": "Count the characters in Hello World, including the space"
+   },
+   "formula": "=LEN(\"Hello World\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-008",
+   "category": "text",
+   "function": "LEN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "对数值 123.45 计长，验证数值先转文本再统计",
+    "en": "Measure the length of 123.45 to verify numbers are converted to text first"
+   },
+   "formula": "=LEN(123.45)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-009",
+   "category": "text",
+   "function": "FIND",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "区分大小写查找大写 S 首次出现的位置",
+    "en": "Case-sensitive search for the first position of uppercase S"
+   },
+   "formula": "=FIND(\"S\",\"SpreadJS\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-010",
+   "category": "text",
+   "function": "FIND",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "从第 2 位开始查找大写 S，验证起始位置参数",
+    "en": "Search for uppercase S from position 2 to verify the start position argument"
+   },
+   "formula": "=FIND(\"S\",\"SpreadJS\",2)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-011",
+   "category": "text",
+   "function": "SEARCH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "不区分大小写查找 j，命中文本中的大写 J",
+    "en": "Case-insensitive search for j matches the uppercase J in the text"
+   },
+   "formula": "=SEARCH(\"j\",\"SpreadJS\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-012",
+   "category": "text",
+   "function": "SEARCH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "指定起始位置查找，返回相对全文的位置",
+    "en": "Search with a start position and return the position relative to the whole text"
+   },
+   "formula": "=SEARCH(\"a\",\"abcabc\",2)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-013",
+   "category": "text",
+   "function": "SUBSTITUTE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "把所有连字符替换为加号",
+    "en": "Replace all hyphens with plus signs"
+   },
+   "formula": "=SUBSTITUTE(\"a-b-c\",\"-\",\"+\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-014",
+   "category": "text",
+   "function": "SUBSTITUTE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "只替换第 2 个出现的连字符",
+    "en": "Replace only the second occurrence of the hyphen"
+   },
+   "formula": "=SUBSTITUTE(\"a-b-c\",\"-\",\"+\",2)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-015",
+   "category": "text",
+   "function": "REPLACE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "把第 7 至 8 位的 JS 替换为 Sheet",
+    "en": "Replace JS at positions 7 to 8 with Sheet"
+   },
+   "formula": "=REPLACE(\"SpreadJS\",7,2,\"Sheet\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-016",
+   "category": "text",
+   "function": "REPLACE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "替换长度为 0，验证在指定位置插入文本",
+    "en": "A replacement length of 0 inserts text at the specified position"
+   },
+   "formula": "=REPLACE(\"20240115\",5,0,\"-\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-017",
+   "category": "text",
+   "function": "TRIM",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "去除首尾空格并把中间连续空格压成一个",
+    "en": "Trim leading and trailing spaces and collapse inner runs of spaces to one"
+   },
+   "formula": "=TRIM(\"  hello   world  \")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-018",
+   "category": "text",
+   "function": "TRIM",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "用 REPT 构造 5 个连续空格，验证压成单个空格",
+    "en": "Build 5 consecutive spaces with REPT and verify they collapse to a single space"
+   },
+   "formula": "=TRIM(\"a\"&REPT(\" \",5)&\"b\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-019",
+   "category": "text",
+   "function": "UPPER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "把混合大小写文本转为全大写",
+    "en": "Convert mixed-case text to all uppercase"
+   },
+   "formula": "=UPPER(\"SpreadJS\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-020",
+   "category": "text",
+   "function": "UPPER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "中文与数字混合文本只转换其中的字母部分",
+    "en": "In mixed Chinese and numeric text, convert only the letters"
+   },
+   "formula": "=UPPER(\"中文abc123\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-021",
+   "category": "text",
+   "function": "LOWER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "把混合大小写文本转为全小写",
+    "en": "Convert mixed-case text to all lowercase"
+   },
+   "formula": "=LOWER(\"SpreadJS\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-022",
+   "category": "text",
+   "function": "LOWER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "含连字符与空格的小写转换",
+    "en": "Lowercase conversion of text containing hyphens and spaces"
+   },
+   "formula": "=LOWER(\"ABC-DEF 123\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-023",
+   "category": "text",
+   "function": "PROPER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "每个单词首字母大写，其余字母小写",
+    "en": "Capitalize the first letter of each word and lowercase the remaining letters"
+   },
+   "formula": "=PROPER(\"hello world\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-024",
+   "category": "text",
+   "function": "PROPER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "撇号与连字符后的字母同样首字母大写",
+    "en": "Letters after apostrophes and hyphens are also capitalized"
+   },
+   "formula": "=PROPER(\"o'neil-sMiTh\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-025",
+   "category": "text",
+   "function": "CONCAT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "拼接三个字面量文本，无分隔符",
+    "en": "Concatenate three literal strings without a delimiter"
+   },
+   "formula": "=CONCAT(\"a\",\"b\",\"c\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-026",
+   "category": "text",
+   "function": "CONCAT",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "拼接 A1:B2 区域，数值按单元格顺序连接",
+    "en": "Concatenate the A1:B2 range, joining values in cell order"
+   },
+   "formula": "=CONCAT(A1:B2)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-027",
+   "category": "text",
+   "function": "CONCATENATE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "文本与数值拼接，验证数值隐式转文本",
+    "en": "Concatenate text and a number to verify implicit number-to-text conversion"
+   },
+   "formula": "=CONCATENATE(\"Total: \",100)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-028",
+   "category": "text",
+   "function": "CONCATENATE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "引用两个单元格拼接并插入分隔符",
+    "en": "Concatenate two cell references with a delimiter between them"
+   },
+   "formula": "=CONCATENATE(A1,\"-\",B1)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "data": [
+    [
+     "x",
+     "y"
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-029",
+   "category": "text",
+   "function": "TEXTJOIN",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "忽略区域中的空单元格，用连字符拼接",
+    "en": "Ignore blank cells in the range and join the rest with hyphens"
+   },
+   "formula": "=TEXTJOIN(\"-\",TRUE,A1:A3)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "data": [
+    [
+     "a"
+    ],
+    [
+     null
+    ],
+    [
+     "b"
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-030",
+   "category": "text",
+   "function": "TEXTJOIN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "不忽略空值时保留空参数并产生双分隔符",
+    "en": "Without ignoring blanks, empty arguments are kept and produce doubled delimiters"
+   },
+   "formula": "=TEXTJOIN(\"-\",FALSE,\"a\",\"\",\"b\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-031",
+   "category": "text",
+   "function": "TEXT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "按千分位与两位小数格式化数值",
+    "en": "Format a number with thousands separators and two decimal places"
+   },
+   "formula": "=TEXT(1234.5,\"#,##0.00\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-032",
+   "category": "text",
+   "function": "TEXT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "把小数按百分比格式化为文本",
+    "en": "Format a decimal as percentage text"
+   },
+   "formula": "=TEXT(0.1234,\"0.00%\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-033",
+   "category": "text",
+   "function": "VALUE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "带千分位分隔符的文本转为数值",
+    "en": "Convert text with thousands separators to a number"
+   },
+   "formula": "=VALUE(\"1,234.5\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-034",
+   "category": "text",
+   "function": "VALUE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "百分比文本转为对应的小数",
+    "en": "Convert percentage text to its decimal value"
+   },
+   "formula": "=VALUE(\"50%\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-035",
+   "category": "text",
+   "function": "REPT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "把 ab 重复 3 次生成文本",
+    "en": "Repeat ab 3 times to generate text"
+   },
+   "formula": "=REPT(\"ab\",3)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-036",
+   "category": "text",
+   "function": "REPT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "重复次数为 0 时返回空文本",
+    "en": "A repeat count of 0 returns empty text"
+   },
+   "formula": "=REPT(\"*\",0)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-037",
+   "category": "text",
+   "function": "EXACT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "完全相同文本比较返回真",
+    "en": "Comparing identical text returns true"
+   },
+   "formula": "=EXACT(\"abc\",\"abc\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-038",
+   "category": "text",
+   "function": "EXACT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "仅大小写不同时比较返回假",
+    "en": "Comparing text that differs only in case returns false"
+   },
+   "formula": "=EXACT(\"abc\",\"ABC\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-039",
+   "category": "text",
+   "function": "CHAR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "按 ASCII 码 65 生成字符 A",
+    "en": "Generate the character A from ASCII code 65"
+   },
+   "formula": "=CHAR(65)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-040",
+   "category": "text",
+   "function": "CHAR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "生成换行控制符，验证不可见字符",
+    "en": "Generate the line-feed control character to verify invisible characters"
+   },
+   "formula": "=CHAR(10)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1",
+   "note": {
+    "zh": "CHAR(10) 为换行控制符",
+    "en": "CHAR(10) is the line-feed control character"
+   }
+  },
+  {
+   "id": "TC-TEXT-041",
+   "category": "text",
+   "function": "CODE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "取大写字母 A 的字符代码",
+    "en": "Get the character code of uppercase A"
+   },
+   "formula": "=CODE(\"A\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-042",
+   "category": "text",
+   "function": "CODE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "取多字符文本首字符的代码",
+    "en": "Get the code of the first character of a multi-character text"
+   },
+   "formula": "=CODE(\"abc\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-043",
+   "category": "text",
+   "function": "CLEAN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "删除文本首尾的不可打印控制字符",
+    "en": "Remove non-printable control characters from both ends of the text"
+   },
+   "formula": "=CLEAN(CHAR(7)&\"abc\"&CHAR(1))",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-044",
+   "category": "text",
+   "function": "CLEAN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "删除文本中间的制表符控制字符",
+    "en": "Remove the tab control character from the middle of the text"
+   },
+   "formula": "=CLEAN(\"a\"&CHAR(9)&\"b\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-201",
+   "category": "text",
+   "function": "ASC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "全角字母与数字转换为半角文本",
+    "en": "Convert full-width letters and digits to half-width text"
+   },
+   "formula": "=ASC(\"ＡＢＣ１２３\")",
+   "priority": "P2",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-202",
+   "category": "text",
+   "function": "BAHTTEXT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "数字转换为泰铢格式文本",
+    "en": "Convert a number to Thai baht formatted text"
+   },
+   "formula": "=BAHTTEXT(1234.5)",
+   "priority": "P2",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-203",
+   "category": "text",
+   "function": "DBCS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "半角字母与数字转换为全角文本",
+    "en": "Convert half-width letters and digits to full-width text"
+   },
+   "formula": "=DBCS(\"ABC123\")",
+   "priority": "P2",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-204",
+   "category": "text",
+   "function": "DOLLAR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "金额按两位小数格式化为美元文本",
+    "en": "Format an amount as US dollar text with two decimal places"
+   },
+   "formula": "=DOLLAR(1234.567,2)",
+   "priority": "P1",
+   "source": "pilot-2026-10",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-205",
+   "category": "text",
+   "function": "DOLLAR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数金额的美元货币格式文本",
+    "en": "US dollar currency text for a negative amount"
+   },
+   "formula": "=DOLLAR(-1234.5,2)",
+   "priority": "P2",
+   "source": "pilot-2026-10",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-206",
+   "category": "text",
+   "function": "FINDB",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "按字节查找中文单字在文本中的起始位置",
+    "en": "Find the byte position where a single Chinese character starts in the text"
+   },
+   "formula": "=FINDB(\"文\",\"中文文本\")",
+   "priority": "P2",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-207",
+   "category": "text",
+   "function": "FIXED",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "数字按两位小数与千分位格式化为文本",
+    "en": "Format a number as text with two decimal places and thousands separators"
+   },
+   "formula": "=FIXED(1234.567,2)",
+   "priority": "P1",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-208",
+   "category": "text",
+   "function": "FIXED",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "关闭千分位后的固定小数位文本",
+    "en": "Fixed-decimal text with thousands separators turned off"
+   },
+   "formula": "=FIXED(1234.567,2,TRUE)",
+   "priority": "P2",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-209",
+   "category": "text",
+   "function": "LEFTB",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "按字节截取中文文本左侧两个字",
+    "en": "Extract the leftmost two Chinese characters by byte position"
+   },
+   "formula": "=LEFTB(\"中文文本\",4)",
+   "priority": "P2",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-210",
+   "category": "text",
+   "function": "LENB",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "统计中英文混合文本的字节长度",
+    "en": "Byte length of mixed Chinese and English text"
+   },
+   "formula": "=LENB(\"中文abc\")",
+   "priority": "P2",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-211",
+   "category": "text",
+   "function": "MIDB",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "从第 3 个字节起截取 2 个字节",
+    "en": "Extract 2 bytes starting at the 3rd byte"
+   },
+   "formula": "=MIDB(\"中文文本\",3,2)",
+   "priority": "P2",
+   "source": "pilot-2026-10",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-212",
+   "category": "text",
+   "function": "REGEXEXTRACT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "用正则提取订单号中的字母加数字片段",
+    "en": "Use a regular expression to extract the letter-plus-digit segment of an order number"
+   },
+   "formula": "=REGEXEXTRACT(\"订单A123\",\"[A-Z][0-9]+\")",
+   "priority": "P1",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-213",
+   "category": "text",
+   "function": "REGEXREPLACE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "用正则把文本中的数字替换为井号",
+    "en": "Use a regular expression to replace digits in the text with hash signs"
+   },
+   "formula": "=REGEXREPLACE(\"a1b2c3\",\"[0-9]\",\"#\")",
+   "priority": "P1",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-214",
+   "category": "text",
+   "function": "REGEXTEST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "用正则判断文本中是否包含数字",
+    "en": "Use a regular expression to test whether the text contains digits"
+   },
+   "formula": "=REGEXTEST(\"abc123\",\"[0-9]+\")",
+   "priority": "P1",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-215",
+   "category": "text",
+   "function": "REPLACEB",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "按字节把首字符替换为两个半角字母",
+    "en": "Replace the first character by byte position with two half-width letters"
+   },
+   "formula": "=REPLACEB(\"中文文本\",1,2,\"AB\")",
+   "priority": "P2",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-216",
+   "category": "text",
+   "function": "RIGHTB",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "按字节截取中文文本右侧两个字",
+    "en": "Extract the rightmost two Chinese characters by byte position"
+   },
+   "formula": "=RIGHTB(\"中文文本\",4)",
+   "priority": "P2",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-217",
+   "category": "text",
+   "function": "SEARCHB",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "按字节不区分大小写查找文本位置",
+    "en": "Case-insensitive byte-level search for a text position"
+   },
+   "formula": "=SEARCHB(\"文\",\"中文文本\")",
+   "priority": "P2",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-218",
+   "category": "text",
+   "function": "T",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "文本参数原样返回文本",
+    "en": "A text argument is returned unchanged"
+   },
+   "formula": "=T(\"文本\")",
+   "priority": "P1",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-219",
+   "category": "text",
+   "function": "T",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "数值参数按规则返回空文本",
+    "en": "A numeric argument returns empty text per the rules"
+   },
+   "formula": "=T(123)",
+   "priority": "P1",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-220",
+   "category": "text",
+   "function": "TEXTAFTER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "提取首个连字符之后的文本",
+    "en": "Extract the text after the first hyphen"
+   },
+   "formula": "=TEXTAFTER(\"a-b-c\",\"-\")",
+   "priority": "P1",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-221",
+   "category": "text",
+   "function": "TEXTAFTER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "提取第 2 个连字符之后的文本",
+    "en": "Extract the text after the second hyphen"
+   },
+   "formula": "=TEXTAFTER(\"a-b-c\",\"-\",2)",
+   "priority": "P2",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-222",
+   "category": "text",
+   "function": "TEXTBEFORE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "提取首个连字符之前的文本",
+    "en": "Extract the text before the first hyphen"
+   },
+   "formula": "=TEXTBEFORE(\"a-b-c\",\"-\")",
+   "priority": "P1",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-223",
+   "category": "text",
+   "function": "TEXTBEFORE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "提取第 2 个连字符之前的文本",
+    "en": "Extract the text before the second hyphen"
+   },
+   "formula": "=TEXTBEFORE(\"a-b-c\",\"-\",2)",
+   "priority": "P2",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-224",
+   "category": "text",
+   "function": "TEXTSPLIT",
+   "dimension": "array",
+   "scenario": {
+    "zh": "按逗号拆分为 1 行 3 列的溢出结果",
+    "en": "Split by comma into a 1-row, 3-column spilled result"
+   },
+   "formula": "=TEXTSPLIT(\"a,b,c\",\",\")",
+   "priority": "P1",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1",
+   "readRange": "H1:J1"
+  },
+  {
+   "id": "TC-TEXT-225",
+   "category": "text",
+   "function": "TEXTSPLIT",
+   "dimension": "array",
+   "scenario": {
+    "zh": "同时按逗号与分号拆分为 2x2 溢出结果",
+    "en": "Split by both comma and semicolon into a 2x2 spilled result"
+   },
+   "formula": "=TEXTSPLIT(\"a,b;c,d\",\",\",\";\")",
+   "priority": "P2",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1",
+   "readRange": "H1:I2"
+  },
+  {
+   "id": "TC-TEXT-226",
+   "category": "text",
+   "function": "UNICHAR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "按 Unicode 码 20013 生成汉字中",
+    "en": "Generate the Chinese character 中 from Unicode code 20013"
+   },
+   "formula": "=UNICHAR(20013)",
+   "priority": "P1",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-227",
+   "category": "text",
+   "function": "UNICODE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "取汉字中对应的 Unicode 码位",
+    "en": "Get the Unicode code point of the Chinese character 中"
+   },
+   "formula": "=UNICODE(\"中\")",
+   "priority": "P1",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-TEXT-228",
+   "category": "text",
+   "function": "UNICODE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "取 ASCII 字母 A 的 Unicode 码位",
+    "en": "Get the Unicode code point of the ASCII letter A"
+   },
+   "formula": "=UNICODE(\"A\")",
+   "priority": "P2",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  }
+ ]
+}

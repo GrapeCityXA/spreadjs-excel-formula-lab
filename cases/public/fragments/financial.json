@@ -1,0 +1,1421 @@
+{
+ "category": "financial",
+ "description": {
+  "zh": "financial 类公式用例",
+  "en": "financial formula cases"
+ },
+ "cases": [
+  {
+   "id": "M2-FIN-001",
+   "category": "financial",
+   "function": "PMT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "不同利率下的等额月供",
+    "en": "Monthly payment at another rate"
+   },
+   "formula": "=PMT(0.04/12,60,-20000)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-FIN-002",
+   "category": "financial",
+   "function": "IRR",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "数组常量现金流的内部收益率",
+    "en": "IRR of an array-constant cash flow"
+   },
+   "formula": "=IRR({-100,30,40,50})",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-FIN-003",
+   "category": "financial",
+   "function": "NPV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "两期现金流的净现值",
+    "en": "Net present value of two cash flows"
+   },
+   "formula": "=NPV(0.1,100,200)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-FIN-004",
+   "category": "financial",
+   "function": "FV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "定投的未来值",
+    "en": "Future value of regular deposits"
+   },
+   "formula": "=FV(0.05,10,-100)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-FIN-005",
+   "category": "financial",
+   "function": "RATE",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "迭代求解每期利率",
+    "en": "Iteratively solve the periodic rate"
+   },
+   "formula": "=RATE(60,-400,20000)",
+   "priority": "P1",
+   "source": "m2-design",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "M2-FIN-006",
+   "category": "financial",
+   "function": "ACCRINT",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "basis 0 的应计利息",
+    "en": "Accrued interest with day-count basis 0"
+   },
+   "formula": "=ACCRINT(DATE(2008,3,1),DATE(2008,6,1),DATE(2008,5,1),0.1,1000,4,0)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "TC-FIN-001",
+   "category": "financial",
+   "function": "PMT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "等额本息月供（年利率 5%，60 期，贷款 2 万）",
+    "en": "Equal-payment monthly installment, 5% annual rate, 60 periods, 20,000 loan"
+   },
+   "formula": "=PMT(0.05/12,60,-20000)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-002",
+   "category": "financial",
+   "function": "PMT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "零利率边界下等额本息月供",
+    "en": "Equal-payment monthly installment at the zero-rate boundary"
+   },
+   "formula": "=PMT(0,24,-1200)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-003",
+   "category": "financial",
+   "function": "PPMT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "等额本息首期本金偿还额",
+    "en": "Principal portion of the first equal-payment installment"
+   },
+   "formula": "=PPMT(0.05/12,1,60,-20000)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-004",
+   "category": "financial",
+   "function": "PPMT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "等额本息末期本金偿还额",
+    "en": "Principal portion of the last equal-payment installment"
+   },
+   "formula": "=PPMT(0.05/12,60,60,-20000)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-005",
+   "category": "financial",
+   "function": "IPMT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "等额本息首期利息偿还额",
+    "en": "Interest portion of the first equal-payment installment"
+   },
+   "formula": "=IPMT(0.05/12,1,60,-20000)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-006",
+   "category": "financial",
+   "function": "IPMT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "等额本息末期利息偿还额",
+    "en": "Interest portion of the last equal-payment installment"
+   },
+   "formula": "=IPMT(0.05/12,60,60,-20000)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-007",
+   "category": "financial",
+   "function": "PV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "等额年金现值（60 期、月供 300）",
+    "en": "Present value of an annuity with 60 periods and payment 300"
+   },
+   "formula": "=PV(0.05/12,60,-300)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-008",
+   "category": "financial",
+   "function": "PV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "零利率边界下年金现值",
+    "en": "Present value of an annuity at the zero-rate boundary"
+   },
+   "formula": "=PV(0,12,-100)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-009",
+   "category": "financial",
+   "function": "FV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "含期末一次投入的未来值",
+    "en": "Future value including a lump sum at the end of the term"
+   },
+   "formula": "=FV(0.05/12,60,-300,-5000)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-010",
+   "category": "financial",
+   "function": "FV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "零利率边界下年金未来值",
+    "en": "Future value of an annuity at the zero-rate boundary"
+   },
+   "formula": "=FV(0,12,-100)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-011",
+   "category": "financial",
+   "function": "NPER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "由月供与现值反推还款期数",
+    "en": "Derive the number of periods from the payment and present value"
+   },
+   "formula": "=NPER(0.05/12,-300,15000)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-012",
+   "category": "financial",
+   "function": "NPER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "零利率边界下反推期数",
+    "en": "Derive the number of periods at the zero-rate boundary"
+   },
+   "formula": "=NPER(0,-100,1000)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-013",
+   "category": "financial",
+   "function": "RATE",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "由期数、月供与现值反推迭代利率",
+    "en": "Iterative rate from periods, payment, and present value"
+   },
+   "formula": "=RATE(60,-300,15000)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-014",
+   "category": "financial",
+   "function": "RATE",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "一年期贷款的迭代月利率",
+    "en": "Iterative monthly rate for a one-year loan"
+   },
+   "formula": "=RATE(12,-1000,10000)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-015",
+   "category": "financial",
+   "function": "NPV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "按贴现率计算多期现金流净现值",
+    "en": "Net present value of multi-period cash flows at a discount rate"
+   },
+   "formula": "=NPV(0.1,-1000,300,400,500)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-016",
+   "category": "financial",
+   "function": "NPV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "零贴现率边界下净现值等于现金流之和",
+    "en": "At a zero discount rate, net present value equals the sum of the cash flows"
+   },
+   "formula": "=NPV(0,100,200,300)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-017",
+   "category": "financial",
+   "function": "IRR",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "数组常量现金流的内部收益率",
+    "en": "Internal rate of return for array-constant cash flows"
+   },
+   "formula": "=IRR({-1000,300,400,500})",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-018",
+   "category": "financial",
+   "function": "IRR",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "区域引用现金流的内部收益率",
+    "en": "Internal rate of return for range-referenced cash flows"
+   },
+   "formula": "=IRR(A1:A5)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     -5000
+    ],
+    [
+     1500
+    ],
+    [
+     1500
+    ],
+    [
+     1500
+    ],
+    [
+     1500
+    ]
+   ],
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-019",
+   "category": "financial",
+   "function": "XIRR",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "非定期现金流内部收益率",
+    "en": "Internal rate of return for non-periodic cash flows"
+   },
+   "formula": "=XIRR(B1:B4,A1:A4)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     44927,
+     -10000
+    ],
+    [
+     45292,
+     3000
+    ],
+    [
+     45658,
+     4000
+    ],
+    [
+     46024,
+     5000
+    ]
+   ],
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-020",
+   "category": "financial",
+   "function": "XIRR",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "两期非定期现金流内部收益率",
+    "en": "Internal rate of return for two non-periodic cash flows"
+   },
+   "formula": "=XIRR(B1:B2,A1:A2)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     44927,
+     -1000
+    ],
+    [
+     45292,
+     1100
+    ]
+   ],
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-021",
+   "category": "financial",
+   "function": "XNPV",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "非定期现金流净现值计算",
+    "en": "Net present value for non-periodic cash flows"
+   },
+   "formula": "=XNPV(0.1,B1:B4,A1:A4)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     44927,
+     -10000
+    ],
+    [
+     45292,
+     3000
+    ],
+    [
+     45658,
+     4000
+    ],
+    [
+     46024,
+     5000
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-022",
+   "category": "financial",
+   "function": "SLN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "直线折旧法单期折旧额",
+    "en": "Single-period straight-line depreciation"
+   },
+   "formula": "=SLN(10000,1000,5)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-023",
+   "category": "financial",
+   "function": "SLN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "残值高于成本时的负折旧边界",
+    "en": "Negative depreciation boundary when salvage exceeds cost"
+   },
+   "formula": "=SLN(10000,12000,5)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-024",
+   "category": "financial",
+   "function": "SYD",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "年数总和法第 1 年折旧额",
+    "en": "Sum-of-years' digits depreciation for year 1"
+   },
+   "formula": "=SYD(10000,1000,5,1)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-025",
+   "category": "financial",
+   "function": "SYD",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "年数总和法最后一年折旧额",
+    "en": "Sum-of-years' digits depreciation for the final year"
+   },
+   "formula": "=SYD(10000,1000,5,5)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-026",
+   "category": "financial",
+   "function": "DB",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "固定余额递减法第 1 期折旧",
+    "en": "Fixed-declining balance depreciation for period 1"
+   },
+   "formula": "=DB(10000,1000,5,1)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-027",
+   "category": "financial",
+   "function": "DB",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "固定余额递减法指定首年月份数",
+    "en": "Fixed-declining balance depreciation with a specified first-year month count"
+   },
+   "formula": "=DB(10000,1000,5,1,9)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-028",
+   "category": "financial",
+   "function": "DDB",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "双倍余额递减法第 1 期折旧",
+    "en": "Double-declining balance depreciation for period 1"
+   },
+   "formula": "=DDB(10000,1000,5,1)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-029",
+   "category": "financial",
+   "function": "DDB",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "双倍余额递减法自定义折旧系数",
+    "en": "Double-declining balance depreciation with a custom factor"
+   },
+   "formula": "=DDB(10000,1000,5,2,1.5)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-030",
+   "category": "financial",
+   "function": "EFFECT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "按月复利的名义利率折算有效年利率",
+    "en": "Convert a nominal rate compounded monthly to an effective annual rate"
+   },
+   "formula": "=EFFECT(0.05,12)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-031",
+   "category": "financial",
+   "function": "EFFECT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "年复利一次时有效利率等于名义利率",
+    "en": "With annual compounding the effective rate equals the nominal rate"
+   },
+   "formula": "=EFFECT(0.05,1)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-032",
+   "category": "financial",
+   "function": "NOMINAL",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "由有效年利率反推按月复利名义利率",
+    "en": "Derive the nominal rate compounded monthly from an effective annual rate"
+   },
+   "formula": "=NOMINAL(0.0512,12)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-033",
+   "category": "financial",
+   "function": "NOMINAL",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "由有效年利率反推半年复利名义利率",
+    "en": "Derive the nominal rate compounded semiannually from an effective annual rate"
+   },
+   "formula": "=NOMINAL(0.1025,2)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-201",
+   "category": "financial",
+   "function": "ACCRINT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "定期付息证券在结算日应计利息（半年付息、basis 0）",
+    "en": "Accrued interest at settlement for a periodic-payment security, semiannual, basis 0"
+   },
+   "formula": "=ACCRINT(DATE(2008,3,1),DATE(2008,8,31),DATE(2008,5,1),0.1,1000,2,0)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-202",
+   "category": "financial",
+   "function": "ACCRINTM",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "到期付息证券按实际天数累计的应计利息",
+    "en": "Accrued interest at maturity accumulated by actual days"
+   },
+   "formula": "=ACCRINTM(DATE(2008,4,1),DATE(2008,6,15),0.1,1000,3)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-203",
+   "category": "financial",
+   "function": "AMORDEGRC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "按折旧系数法计算首个会计期间折旧（period=1）",
+    "en": "Depreciation for the first accounting period by the declining balance method, period=1"
+   },
+   "formula": "=AMORDEGRC(2400,DATE(2008,8,19),DATE(2008,12,31),300,1,0.15,1)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-204",
+   "category": "financial",
+   "function": "AMORLINC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "按直线法计算首个会计期间折旧（period=1）",
+    "en": "Straight-line depreciation for the first accounting period, period=1"
+   },
+   "formula": "=AMORLINC(2400,DATE(2008,8,19),DATE(2008,12,31),300,1,0.15,1)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-205",
+   "category": "financial",
+   "function": "COUPDAYBS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "结算日到上一付息日的实际天数（半年付息、basis 1）",
+    "en": "Actual days from settlement back to the previous coupon date, semiannual, basis 1"
+   },
+   "formula": "=COUPDAYBS(DATE(2011,1,25),DATE(2011,11,15),2,1)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-206",
+   "category": "financial",
+   "function": "COUPDAYS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "包含结算日的付息期总天数（半年付息、basis 1）",
+    "en": "Total days in the coupon period containing settlement, semiannual, basis 1"
+   },
+   "formula": "=COUPDAYS(DATE(2011,1,25),DATE(2011,11,15),2,1)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-207",
+   "category": "financial",
+   "function": "COUPDAYSNC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "结算日到下一付息日的实际天数（半年付息、basis 1）",
+    "en": "Actual days from settlement to the next coupon date, semiannual, basis 1"
+   },
+   "formula": "=COUPDAYSNC(DATE(2011,1,25),DATE(2011,11,15),2,1)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-208",
+   "category": "financial",
+   "function": "COUPNCD",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "取下一付息日的年份，验证返回 2011 年（半年付息）",
+    "en": "Year of the next coupon date, expected 2011, semiannual"
+   },
+   "formula": "=YEAR(COUPNCD(DATE(2011,1,25),DATE(2011,11,15),2,1))",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-209",
+   "category": "financial",
+   "function": "COUPNUM",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "结算日至到期日之间的付息次数（半年付息）",
+    "en": "Number of coupons between settlement and maturity, semiannual"
+   },
+   "formula": "=COUPNUM(DATE(2011,1,25),DATE(2011,11,15),2,1)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-210",
+   "category": "financial",
+   "function": "COUPPCD",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "取上一付息日的年份，验证返回 2010 年（半年付息）",
+    "en": "Year of the previous coupon date, expected 2010, semiannual"
+   },
+   "formula": "=YEAR(COUPPCD(DATE(2011,1,25),DATE(2011,11,15),2,1))",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-211",
+   "category": "financial",
+   "function": "CUMIPMT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "30 年期贷款第 13~24 期累计利息（期末还款）",
+    "en": "Cumulative interest for periods 13-24 of a 30-year loan, end-of-period payments"
+   },
+   "formula": "=CUMIPMT(0.09/12,30*12,125000,13,24,0)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-212",
+   "category": "financial",
+   "function": "CUMPRINC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "30 年期贷款第 13~24 期累计本金（期末还款）",
+    "en": "Cumulative principal for periods 13-24 of a 30-year loan, end-of-period payments"
+   },
+   "formula": "=CUMPRINC(0.09/12,30*12,125000,13,24,0)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-213",
+   "category": "financial",
+   "function": "DISC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "贴现证券贴现率（basis 1 实际天数）",
+    "en": "Discount rate of a discounted security, basis 1 actual days"
+   },
+   "formula": "=DISC(DATE(2007,1,25),DATE(2007,6,15),97.975,100,1)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-214",
+   "category": "financial",
+   "function": "DOLLARDE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "分数美元价格 1.02（16 分之一）转十进制",
+    "en": "Convert a fractional dollar price of 1.02 in sixteenths to decimal"
+   },
+   "formula": "=DOLLARDE(1.02,16)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-215",
+   "category": "financial",
+   "function": "DOLLARFR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "十进制价格 1.125 转 16 分之一分数价格",
+    "en": "Convert the decimal price 1.125 to a sixteenths fractional price"
+   },
+   "formula": "=DOLLARFR(1.125,16)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-216",
+   "category": "financial",
+   "function": "DURATION",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "8 年期半年付息债券的麦考利久期（basis 1）",
+    "en": "Macaulay duration of an 8-year semiannual bond, basis 1"
+   },
+   "formula": "=DURATION(DATE(2008,1,1),DATE(2016,1,1),0.08,0.09,2,1)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-217",
+   "category": "financial",
+   "function": "FVSCHEDULE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "按 A1:A3 的利率序列计算 1 元的复利未来值",
+    "en": "Compound future value of 1 using the rate series in A1:A3"
+   },
+   "formula": "=FVSCHEDULE(1,A1:A3)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "data": [
+    [
+     0.09
+    ],
+    [
+     0.11
+    ],
+    [
+     0.1
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-218",
+   "category": "financial",
+   "function": "INTRATE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "完全投资证券的利率（basis 2 实际/360）",
+    "en": "Interest rate of a fully invested security, basis 2 actual/360"
+   },
+   "formula": "=INTRATE(DATE(2008,2,15),DATE(2008,5,15),1000000,1014420,2)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-219",
+   "category": "financial",
+   "function": "ISPMT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "等额本金贷款第一期利息（800 万、30 年、年利率 10%）",
+    "en": "First-period interest on an equal-principal loan, 8,000,000, 30 years, 10% annual rate"
+   },
+   "formula": "=ISPMT(0.1/12,1,36*12,8000000)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-220",
+   "category": "financial",
+   "function": "MDURATION",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "8 年期半年付息债券的修正久期（basis 1）",
+    "en": "Modified duration of an 8-year semiannual bond, basis 1"
+   },
+   "formula": "=MDURATION(DATE(2008,1,1),DATE(2016,1,1),0.08,0.09,2,1)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-221",
+   "category": "financial",
+   "function": "MIRR",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "5 期现金流按 10% 融资、12% 再投资的修正内部收益率",
+    "en": "Modified internal rate of return for 5-period cash flows financed at 10% and reinvested at 12%"
+   },
+   "formula": "=MIRR(A1:A5,-0.1,0.12)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "data": [
+    [
+     -120000
+    ],
+    [
+     39000
+    ],
+    [
+     30000
+    ],
+    [
+     21000
+    ],
+    [
+     37000
+    ]
+   ],
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-222",
+   "category": "financial",
+   "function": "ODDFPRICE",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "首期非整数付息证券的价格（半年付息、basis 1）",
+    "en": "Price of a security with an odd first coupon, semiannual, basis 1"
+   },
+   "formula": "=ODDFPRICE(DATE(2008,11,11),DATE(2021,3,1),DATE(2008,10,15),DATE(2009,3,1),0.0785,0.0625,100,2,1)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-223",
+   "category": "financial",
+   "function": "ODDFYIELD",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "首期非整数付息证券由价格反解收益率",
+    "en": "Yield derived from price for a security with an odd first coupon"
+   },
+   "formula": "=ODDFYIELD(DATE(2008,11,11),DATE(2021,3,1),DATE(2008,10,15),DATE(2009,3,1),0.0785,113.5977,100,2,1)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-224",
+   "category": "financial",
+   "function": "ODDLPRICE",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "末期非整数付息证券的价格（basis 0）",
+    "en": "Price of a security with an odd last coupon, basis 0"
+   },
+   "formula": "=ODDLPRICE(DATE(2008,2,7),DATE(2008,6,15),DATE(2007,10,15),0.0375,0.0405,100,2,0)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-225",
+   "category": "financial",
+   "function": "ODDLYIELD",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "末期非整数付息证券由价格反解收益率（basis 0）",
+    "en": "Yield derived from price for a security with an odd last coupon, basis 0"
+   },
+   "formula": "=ODDLYIELD(DATE(2008,2,7),DATE(2008,6,15),DATE(2007,10,15),0.0375,99.875,100,2,0)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-226",
+   "category": "financial",
+   "function": "PDURATION",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "按 2.5% 利率由 2000 增长到 2200 所需期数",
+    "en": "Periods needed to grow 2000 to 2200 at a 2.5% rate"
+   },
+   "formula": "=PDURATION(0.025,2000,2200)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-227",
+   "category": "financial",
+   "function": "PRICE",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "半年付息债券在给定收益率下的价格（basis 0）",
+    "en": "Price of a semiannual bond at a given yield, basis 0"
+   },
+   "formula": "=PRICE(DATE(2008,2,15),DATE(2017,11,15),0.0575,0.065,100,2,0)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-228",
+   "category": "financial",
+   "function": "PRICEDISC",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "贴现证券价格（折现率 5.25%、basis 2）",
+    "en": "Price of a discounted security (discount rate 5.25%, basis 2)"
+   },
+   "formula": "=PRICEDISC(DATE(2008,2,16),DATE(2008,3,1),0.0525,100,2)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-229",
+   "category": "financial",
+   "function": "PRICEMAT",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "到期付息证券价格（票面利率等于收益率、basis 0）",
+    "en": "Price of a security that pays interest at maturity (coupon rate equals yield, basis 0)"
+   },
+   "formula": "=PRICEMAT(DATE(2008,2,15),DATE(2008,4,13),DATE(2007,11,11),0.061,0.061,0)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-230",
+   "category": "financial",
+   "function": "RECEIVED",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "完全投资证券到期收回金额（basis 2）",
+    "en": "Amount received at maturity for a fully invested security (basis 2)"
+   },
+   "formula": "=RECEIVED(DATE(2008,2,15),DATE(2008,5,15),1000000,0.0575,2)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-231",
+   "category": "financial",
+   "function": "RRI",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "96 期由 10000 增长到 11000 的等效每期利率",
+    "en": "Equivalent per-period rate for growth from 10000 to 11000 over 96 periods"
+   },
+   "formula": "=RRI(96,10000,11000)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-232",
+   "category": "financial",
+   "function": "TBILLEQ",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "国库券贴现率 9.14% 对应的债券等效收益率",
+    "en": "Bond-equivalent yield for a Treasury bill discount rate of 9.14%"
+   },
+   "formula": "=TBILLEQ(DATE(2008,3,31),DATE(2008,6,1),0.0914)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-233",
+   "category": "financial",
+   "function": "TBILLPRICE",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "国库券价格（贴现率 9%）",
+    "en": "Treasury bill price (discount rate 9%)"
+   },
+   "formula": "=TBILLPRICE(DATE(2008,3,31),DATE(2008,6,1),0.09)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-234",
+   "category": "financial",
+   "function": "TBILLYIELD",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "国库券收益率（价格 98.45）",
+    "en": "Treasury bill yield (price 98.45)"
+   },
+   "formula": "=TBILLYIELD(DATE(2008,3,31),DATE(2008,6,1),98.45)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-235",
+   "category": "financial",
+   "function": "VDB",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "递减余额法计算第 1 个月折旧（life 以月计 120）",
+    "en": "First-month depreciation by declining balance (life 120 months)"
+   },
+   "formula": "=VDB(2400,300,120,0,1)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-236",
+   "category": "financial",
+   "function": "YIELD",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "半年付息债券由价格反解收益率（basis 0）",
+    "en": "Yield solved from price for a semiannual coupon bond (basis 0)"
+   },
+   "formula": "=YIELD(DATE(2008,2,15),DATE(2016,11,15),0.0575,95.04287,100,2,0)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-237",
+   "category": "financial",
+   "function": "YIELDDISC",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "贴现证券收益率（价格 99.795、basis 2）",
+    "en": "Yield of a discounted security (price 99.795, basis 2)"
+   },
+   "formula": "=YIELDDISC(DATE(2008,2,16),DATE(2008,3,1),99.795,100,2)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-238",
+   "category": "financial",
+   "function": "YIELDMAT",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "到期付息证券收益率（价格 99.875、basis 0）",
+    "en": "Yield of a security that pays interest at maturity (price 99.875, basis 0)"
+   },
+   "formula": "=YIELDMAT(DATE(2008,3,15),DATE(2008,6,30),DATE(2007,10,15),0.06125,99.875,0)",
+   "priority": "P1",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-239",
+   "category": "financial",
+   "function": "ACCRINT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "季度付息、basis 3（实际/365）的应计利息边界",
+    "en": "Accrued interest boundary with quarterly coupons and basis 3 (actual/365)"
+   },
+   "formula": "=ACCRINT(DATE(2008,3,1),DATE(2008,6,1),DATE(2008,5,1),0.1,1000,4,3)",
+   "priority": "P2",
+   "source": "pilot-2026-10",
+   "formulaCell": "H1",
+   "note": {
+    "zh": "已确认引擎差异：basis=2/3（实际/360、实际/365）下 SpreadJS 的 ACCRINT/PRICE/YIELD 计息天数处理与 Excel 不同（本用例 rel≈8.2e-3），作为已知差异保留",
+    "en": "Confirmed engine difference: with basis=2/3 (actual/360, actual/365), day-count handling in SpreadJS ACCRINT/PRICE/YIELD differs from Excel (rel≈8.2e-3 here); kept as a known difference"
+   }
+  },
+  {
+   "id": "TC-FIN-240",
+   "category": "financial",
+   "function": "PRICE",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "年付息债券价格（frequency=1、basis 0）",
+    "en": "Price of an annual coupon bond (frequency=1, basis 0)"
+   },
+   "formula": "=PRICE(DATE(2008,2,15),DATE(2017,11,15),0.0575,0.065,100,1,0)",
+   "priority": "P2",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-241",
+   "category": "financial",
+   "function": "YIELD",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "年付息债券由价格反解收益率（frequency=1、basis 0）",
+    "en": "Yield solved from price for an annual coupon bond (frequency=1, basis 0)"
+   },
+   "formula": "=YIELD(DATE(2008,2,15),DATE(2016,11,15),0.0575,95.04287,100,1,0)",
+   "priority": "P2",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-242",
+   "category": "financial",
+   "function": "VDB",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "递减余额法计算第 6~10 年折旧区间（factor 默认 2）",
+    "en": "Depreciation range for years 6 to 10 by declining balance (default factor 2)"
+   },
+   "formula": "=VDB(2400,300,10,6,10)",
+   "priority": "P2",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-243",
+   "category": "financial",
+   "function": "DOLLARDE",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "32 分之一分数价格 1.1 转十进制",
+    "en": "Convert the fractional price 1.1 in 32nds to decimal"
+   },
+   "formula": "=DOLLARDE(1.1,32)",
+   "priority": "P2",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-244",
+   "category": "financial",
+   "function": "COUPNUM",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "季度付息、更长期限的付息次数边界",
+    "en": "Coupon-count boundary with quarterly coupons and a longer term"
+   },
+   "formula": "=COUPNUM(DATE(2021,1,25),DATE(2026,11,15),4,0)",
+   "priority": "P2",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-FIN-245",
+   "category": "financial",
+   "function": "MIRR",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "同一现金流改用 8% 融资、10% 再投资的修正内部收益率",
+    "en": "Modified IRR for the same cash flows with an 8% finance rate and 10% reinvest rate"
+   },
+   "formula": "=MIRR(A1:A5,0.08,0.1)",
+   "priority": "P2",
+   "source": "cases-cov-g1-fin.json",
+   "data": [
+    [
+     -120000
+    ],
+    [
+     39000
+    ],
+    [
+     30000
+    ],
+    [
+     21000
+    ],
+    [
+     37000
+    ]
+   ],
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-246",
+   "category": "financial",
+   "function": "FVSCHEDULE",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "用数组常量作为利率序列计算复利未来值",
+    "en": "Compound-interest future value using an array constant as the rate series"
+   },
+   "formula": "=FVSCHEDULE(1,{0.09,0.11,0.1})",
+   "priority": "P2",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-FIN-247",
+   "category": "financial",
+   "function": "DURATION",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "季度付息债券的麦考利久期（frequency=4、basis 0）",
+    "en": "Macaulay duration of a quarterly coupon bond (frequency=4, basis 0)"
+   },
+   "formula": "=DURATION(DATE(2008,1,1),DATE(2016,1,1),0.08,0.09,4,0)",
+   "priority": "P2",
+   "source": "cases-cov-g1-fin.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  }
+ ]
+}

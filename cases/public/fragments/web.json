@@ -1,0 +1,52 @@
+{
+ "category": "web",
+ "description": {
+  "zh": "web 类公式用例",
+  "en": "web formula cases"
+ },
+ "cases": [
+  {
+   "id": "TC-WEB-001",
+   "category": "web",
+   "function": "ENCODEURL",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "对含中文与查询参数的 URL 做百分号编码",
+    "en": "Percent-encode a URL containing Chinese text and query parameters"
+   },
+   "formula": "=ENCODEURL(\"https://example.com/中文?a=1&b=2\")",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-WEB-002",
+   "category": "web",
+   "function": "FILTERXML",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "用 XPath 从 XML 字符串提取 item 节点值",
+    "en": "Extract the item node value from an XML string with XPath"
+   },
+   "formula": "=FILTERXML(\"<root><item>42</item></root>\",\"//item\")",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-WEB-003",
+   "category": "web",
+   "function": "WEBSERVICE",
+   "dimension": "error",
+   "scenario": {
+    "zh": "空 URL 时返回错误值，验证错误分支",
+    "en": "An empty URL returns an error value, verifying the error branch"
+   },
+   "formula": "=WEBSERVICE(\"\")",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "formulaCell": "H1",
+   "expectError": true
+  }
+ ]
+}

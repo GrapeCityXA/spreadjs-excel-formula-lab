@@ -1,0 +1,725 @@
+{
+ "category": "information",
+ "description": {
+  "zh": "information 类公式用例",
+  "en": "information formula cases"
+ },
+ "cases": [
+  {
+   "id": "CFG-ISNUM-001",
+   "category": "information",
+   "function": "ISNUMBER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "判断文本 2 是否为数值",
+    "en": "Check whether the text 2 is numeric"
+   },
+   "formula": "=ISNUMBER(\"2\")",
+   "priority": "P1",
+   "source": "config-sensitive"
+  },
+  {
+   "id": "M2-INFO-001",
+   "category": "information",
+   "function": "ISBLANK",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "真空单元格返回 TRUE",
+    "en": "ISBLANK returns TRUE for a truly empty cell"
+   },
+   "formula": "=ISBLANK(A1)",
+   "priority": "P0",
+   "source": "m2-design",
+   "data": [
+    [
+     null
+    ]
+   ]
+  },
+  {
+   "id": "M2-INFO-002",
+   "category": "information",
+   "function": "ISBLANK",
+   "dimension": "type-coercion",
+   "scenario": {
+    "zh": "空字符串不等于空单元格",
+    "en": "An empty string is not a blank cell"
+   },
+   "formula": "=ISBLANK(A1)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     ""
+    ]
+   ]
+  },
+  {
+   "id": "M2-INFO-003",
+   "category": "information",
+   "function": "ISNUMBER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "数字返回 TRUE",
+    "en": "ISNUMBER returns TRUE for a number"
+   },
+   "formula": "=ISNUMBER(1)",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-INFO-004",
+   "category": "information",
+   "function": "ISTEXT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "文本数字返回 TRUE",
+    "en": "ISTEXT returns TRUE for a text number"
+   },
+   "formula": "=ISTEXT(\"1\")",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-INFO-005",
+   "category": "information",
+   "function": "ISERROR",
+   "dimension": "error",
+   "scenario": {
+    "zh": "错误值返回 TRUE",
+    "en": "ISERROR returns TRUE for an error"
+   },
+   "formula": "=ISERROR(NA())",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-INFO-006",
+   "category": "information",
+   "function": "ISNA",
+   "dimension": "error",
+   "scenario": {
+    "zh": "仅 #N/A 返回 TRUE",
+    "en": "ISNA returns TRUE only for #N/A"
+   },
+   "formula": "=ISNA(NA())",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-INFO-007",
+   "category": "information",
+   "function": "ISEVEN",
+   "dimension": "type-coercion",
+   "scenario": {
+    "zh": "ISEVEN 截断小数部分",
+    "en": "ISEVEN truncates the fractional part"
+   },
+   "formula": "=ISEVEN(2.5)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-INFO-008",
+   "category": "information",
+   "function": "TYPE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "TYPE 识别数字",
+    "en": "TYPE identifies a number"
+   },
+   "formula": "=TYPE(1)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-INFO-009",
+   "category": "information",
+   "function": "TYPE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "TYPE 识别文本",
+    "en": "TYPE identifies text"
+   },
+   "formula": "=TYPE(\"a\")",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-INFO-010",
+   "category": "information",
+   "function": "ISLOGICAL",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "布尔值返回 TRUE",
+    "en": "ISLOGICAL returns TRUE for a boolean"
+   },
+   "formula": "=ISLOGICAL(TRUE)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "PUB-ERROR-001",
+   "category": "information",
+   "function": "SQRT",
+   "dimension": "error",
+   "scenario": {
+    "zh": "负数开方返回 #NUM!",
+    "en": "Square root of a negative number returns #NUM!"
+   },
+   "formula": "=SQRT(-1)",
+   "priority": "P1",
+   "source": "public-starter",
+   "expectError": true
+  },
+  {
+   "id": "TC-INFO-001",
+   "category": "information",
+   "function": "ISBLANK",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "A1 为真空单元格时返回真",
+    "en": "Returns true when A1 is a truly empty cell"
+   },
+   "formula": "=ISBLANK(A1)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "data": [
+    [
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-002",
+   "category": "information",
+   "function": "ISBLANK",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "空文本不是空单元格，判断返回假",
+    "en": "Empty text is not an empty cell, so the test returns false"
+   },
+   "formula": "=ISBLANK(\"\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1",
+   "note": {
+    "zh": "空文本与空单元格的区别",
+    "en": "Difference between empty text and an empty cell"
+   }
+  },
+  {
+   "id": "TC-INFO-003",
+   "category": "information",
+   "function": "ISERROR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "除零错误属于任意错误值",
+    "en": "A divide-by-zero error counts as any error value"
+   },
+   "formula": "=ISERROR(1/0)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-004",
+   "category": "information",
+   "function": "ISERROR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "普通数值 10 不是错误值",
+    "en": "The plain number 10 is not an error value"
+   },
+   "formula": "=ISERROR(10)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-005",
+   "category": "information",
+   "function": "ISERR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "除零错误属于非 N/A 的错误",
+    "en": "A divide-by-zero error is an error other than N/A"
+   },
+   "formula": "=ISERR(1/0)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-006",
+   "category": "information",
+   "function": "ISERR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "N/A 错误不算 ISERR",
+    "en": "An N/A error is not counted by ISERR"
+   },
+   "formula": "=ISERR(NA())",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-007",
+   "category": "information",
+   "function": "ISNA",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "N/A 错误被正确识别",
+    "en": "An N/A error is detected correctly"
+   },
+   "formula": "=ISNA(NA())",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-008",
+   "category": "information",
+   "function": "ISNA",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "除零错误不是 N/A",
+    "en": "A divide-by-zero error is not N/A"
+   },
+   "formula": "=ISNA(1/0)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-009",
+   "category": "information",
+   "function": "ISNUMBER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "数值常量被识别为数值",
+    "en": "A numeric constant is detected as a number"
+   },
+   "formula": "=ISNUMBER(123)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-010",
+   "category": "information",
+   "function": "ISNUMBER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "文本形式的数字不算数值",
+    "en": "A number stored as text does not count as a number"
+   },
+   "formula": "=ISNUMBER(\"123\")",
+   "priority": "P1",
+   "source": "pilot-2026-10",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-011",
+   "category": "information",
+   "function": "ISTEXT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "文本常量被识别为文本",
+    "en": "A text constant is detected as text"
+   },
+   "formula": "=ISTEXT(\"abc\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-012",
+   "category": "information",
+   "function": "ISTEXT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "数值 123 不属于文本类型",
+    "en": "The number 123 is not of text type"
+   },
+   "formula": "=ISTEXT(123)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-013",
+   "category": "information",
+   "function": "ISLOGICAL",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "TRUE 常量为逻辑值，判断返回真",
+    "en": "The TRUE constant is a logical value, so the test returns true"
+   },
+   "formula": "=ISLOGICAL(TRUE)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-014",
+   "category": "information",
+   "function": "ISLOGICAL",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "数值 1 不是逻辑值",
+    "en": "The number 1 is not a logical value"
+   },
+   "formula": "=ISLOGICAL(1)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-015",
+   "category": "information",
+   "function": "ISEVEN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "数值 4 是偶数，判断返回真",
+    "en": "4 is even, so the test returns true"
+   },
+   "formula": "=ISEVEN(4)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-016",
+   "category": "information",
+   "function": "ISEVEN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "3.9 截断为 3 后不是偶数",
+    "en": "3.9 truncates to 3, which is not even"
+   },
+   "formula": "=ISEVEN(3.9)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1",
+   "note": {
+    "zh": "ISEVEN 会截断小数部分",
+    "en": "ISEVEN truncates the decimal part"
+   }
+  },
+  {
+   "id": "TC-INFO-017",
+   "category": "information",
+   "function": "ISODD",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "数值 3 是奇数，判断返回真",
+    "en": "3 is odd, so the test returns true"
+   },
+   "formula": "=ISODD(3)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-018",
+   "category": "information",
+   "function": "ISODD",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "数值 0 不是奇数，判断返回假",
+    "en": "0 is not odd, so the test returns false"
+   },
+   "formula": "=ISODD(0)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-019",
+   "category": "information",
+   "function": "ISREF",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "A1 是单元格引用，判断返回真",
+    "en": "A1 is a cell reference, so the test returns true"
+   },
+   "formula": "=ISREF(A1)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "data": [
+    [
+     1
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-020",
+   "category": "information",
+   "function": "ISREF",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "数值常量 1 不是单元格引用",
+    "en": "The numeric constant 1 is not a cell reference"
+   },
+   "formula": "=ISREF(1)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-021",
+   "category": "information",
+   "function": "TYPE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "数值的类型代码为 1",
+    "en": "The type code of a number is 1"
+   },
+   "formula": "=TYPE(1)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-022",
+   "category": "information",
+   "function": "TYPE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "文本的类型代码为 2",
+    "en": "The type code of text is 2"
+   },
+   "formula": "=TYPE(\"a\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-023",
+   "category": "information",
+   "function": "ERROR.TYPE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "除零错误的类型代码为 2",
+    "en": "The type code of a divide-by-zero error is 2"
+   },
+   "formula": "=ERROR.TYPE(1/0)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-024",
+   "category": "information",
+   "function": "ERROR.TYPE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "N/A 错误的类型代码为 7",
+    "en": "The type code of an N/A error is 7"
+   },
+   "formula": "=ERROR.TYPE(NA())",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-025",
+   "category": "information",
+   "function": "N",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "对数值 1 调用 N 时原样返回",
+    "en": "N on the number 1 returns it unchanged"
+   },
+   "formula": "=N(1)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-026",
+   "category": "information",
+   "function": "N",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "文本 abc 经 N 转换后返回 0",
+    "en": "N converts the text abc to 0"
+   },
+   "formula": "=N(\"abc\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-027",
+   "category": "information",
+   "function": "NA",
+   "dimension": "error",
+   "scenario": {
+    "zh": "直接返回 N/A 错误值",
+    "en": "Returns the N/A error value directly"
+   },
+   "formula": "=NA()",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1",
+   "expectError": true
+  },
+  {
+   "id": "TC-INFO-028",
+   "category": "information",
+   "function": "NA",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "用 IFERROR 捕获 NA 得到 caught",
+    "en": "IFERROR catches NA and returns caught"
+   },
+   "formula": "=IFERROR(NA(),\"caught\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-201",
+   "category": "information",
+   "function": "ISFORMULA",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "数据区数值单元格不包含公式返回 FALSE",
+    "en": "A numeric cell in the data range holds no formula, so it returns FALSE"
+   },
+   "formula": "=ISFORMULA(A1)",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "data": [
+    [
+     100
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-202",
+   "category": "information",
+   "function": "ISNONTEXT",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "数值单元格不是文本返回 TRUE",
+    "en": "A numeric cell is not text, so it returns TRUE"
+   },
+   "formula": "=ISNONTEXT(A1)",
+   "priority": "P1",
+   "source": "cases-cov-g7-misc.json",
+   "data": [
+    [
+     123
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-203",
+   "category": "information",
+   "function": "ISNONTEXT",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "文本单元格是文本返回 FALSE",
+    "en": "A text cell is text, so it returns FALSE"
+   },
+   "formula": "=ISNONTEXT(A1)",
+   "priority": "P1",
+   "source": "cases-cov-g7-misc.json",
+   "data": [
+    [
+     "abc"
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-204",
+   "category": "information",
+   "function": "ISOMITTED",
+   "dimension": "error",
+   "scenario": {
+    "zh": "LAMBDA 调用完全省略参数时两侧均返回数值错误",
+    "en": "When a LAMBDA call omits all arguments, both sides return a numeric error"
+   },
+   "formula": "=LAMBDA(x,ISOMITTED(x))(,)",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "formulaCell": "H1",
+   "expectError": true
+  },
+  {
+   "id": "TC-INFO-205",
+   "category": "information",
+   "function": "ISOMITTED",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "LAMBDA 调用时传入参数返回 FALSE",
+    "en": "Passing an argument to the LAMBDA call returns FALSE"
+   },
+   "formula": "=LAMBDA(x,ISOMITTED(x))(1)",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-206",
+   "category": "information",
+   "function": "ISOMITTED",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "两个形参只传第一个时第二个为省略状态",
+    "en": "With two parameters and only the first passed, the second stays omitted"
+   },
+   "formula": "=LAMBDA(x,y,ISOMITTED(y))(1,)",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-207",
+   "category": "information",
+   "function": "SHEET",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "无参数返回公式所在工作表编号",
+    "en": "No argument returns the index of the sheet containing the formula"
+   },
+   "formula": "=SHEET()",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-INFO-208",
+   "category": "information",
+   "function": "SHEETS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "统计单工作表引用中的工作表数量",
+    "en": "Counts the number of sheets in a single-sheet reference"
+   },
+   "formula": "=SHEETS(A1:B2)",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "formulaCell": "H1"
+  }
+ ]
+}

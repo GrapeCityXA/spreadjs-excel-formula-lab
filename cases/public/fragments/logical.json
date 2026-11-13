@@ -1,0 +1,577 @@
+{
+ "category": "logical",
+ "description": {
+  "zh": "logical 类公式用例",
+  "en": "logical formula cases"
+ },
+ "cases": [
+  {
+   "id": "M2-LOGIC-001",
+   "category": "logical",
+   "function": "IF",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "IF 返回布尔分支",
+    "en": "IF returns a boolean branch"
+   },
+   "formula": "=IF(1=1,TRUE,FALSE)",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-LOGIC-002",
+   "category": "logical",
+   "function": "IF",
+   "dimension": "type-coercion",
+   "scenario": {
+    "zh": "IF 条件为文本时的行为",
+    "en": "IF with a text condition"
+   },
+   "formula": "=IF(\"x\",1,2)",
+   "priority": "P1",
+   "source": "m2-design",
+   "expectError": true
+  },
+  {
+   "id": "M2-LOGIC-003",
+   "category": "logical",
+   "function": "AND",
+   "dimension": "type-coercion",
+   "scenario": {
+    "zh": "AND 混合数字与布尔值",
+    "en": "AND with a number and a boolean"
+   },
+   "formula": "=AND(1,TRUE)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-LOGIC-004",
+   "category": "logical",
+   "function": "NOT",
+   "dimension": "type-coercion",
+   "scenario": {
+    "zh": "NOT 对 0 取反",
+    "en": "NOT applied to 0"
+   },
+   "formula": "=NOT(0)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-LOGIC-005",
+   "category": "logical",
+   "function": "OR",
+   "dimension": "type-coercion",
+   "scenario": {
+    "zh": "OR 混合布尔值与 0",
+    "en": "OR with a boolean and 0"
+   },
+   "formula": "=OR(FALSE,0)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-LOGIC-006",
+   "category": "logical",
+   "function": "IFS",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "IFS 命中第二个条件",
+    "en": "IFS matches the second condition"
+   },
+   "formula": "=IFS(1>2,\"a\",TRUE,\"b\")",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-LOGIC-007",
+   "category": "logical",
+   "function": "SWITCH",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "SWITCH 命中等于 2 的分支",
+    "en": "SWITCH matches the branch equal to 2"
+   },
+   "formula": "=SWITCH(2,1,\"a\",2,\"b\",\"c\")",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "PUB-LOGIC-001",
+   "category": "logical",
+   "function": "IF",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "条件为真时返回 yes",
+    "en": "Return yes when the condition is true"
+   },
+   "formula": "=IF(3>2,\"yes\",\"no\")",
+   "priority": "P0",
+   "source": "public-starter"
+  },
+  {
+   "id": "TC-LOGIC-001",
+   "category": "logical",
+   "function": "IF",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "条件为真时返回 ok，验证基本分支",
+    "en": "Returns ok when the condition is true, covering the basic branch"
+   },
+   "formula": "=IF(1=1,\"ok\",\"no\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-002",
+   "category": "logical",
+   "function": "IF",
+   "dimension": "error",
+   "scenario": {
+    "zh": "逻辑测试为无法转布尔的文本时返回错误值",
+    "en": "Returns an error when the logical test is text that cannot be coerced to boolean"
+   },
+   "formula": "=IF(\"abc\",1,2)",
+   "priority": "P2",
+   "source": "cases-text.json",
+   "formulaCell": "H1",
+   "expectError": true
+  },
+  {
+   "id": "TC-LOGIC-003",
+   "category": "logical",
+   "function": "IFS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "第二个条件成立时返回对应分支",
+    "en": "Returns the matching branch when the second condition holds"
+   },
+   "formula": "=IFS(1>2,\"a\",2>1,\"b\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-004",
+   "category": "logical",
+   "function": "IFS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "对 A1 的 75 分按分数段返回等级 B",
+    "en": "Returns grade B for the score 75 in A1 by score band"
+   },
+   "formula": "=IFS(A1>=90,\"A\",A1>=60,\"B\",TRUE,\"C\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "data": [
+    [
+     75
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-005",
+   "category": "logical",
+   "function": "AND",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "多个参数均为真时返回真",
+    "en": "Returns true when all arguments are true"
+   },
+   "formula": "=AND(TRUE,1,2>1)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-006",
+   "category": "logical",
+   "function": "AND",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "存在值为 0 的参数时返回假",
+    "en": "Returns false when one argument is 0"
+   },
+   "formula": "=AND(TRUE,0)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-007",
+   "category": "logical",
+   "function": "OR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "有一个参数为真时返回真",
+    "en": "Returns true when one argument is true"
+   },
+   "formula": "=OR(FALSE,0,1)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-008",
+   "category": "logical",
+   "function": "OR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "所有比较均为假时返回假",
+    "en": "Returns false when all comparisons are false"
+   },
+   "formula": "=OR(1>2,2>3)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-009",
+   "category": "logical",
+   "function": "NOT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "对数值 0 取反得到真",
+    "en": "Negating the number 0 yields true"
+   },
+   "formula": "=NOT(0)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-010",
+   "category": "logical",
+   "function": "NOT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "对 TRUE 取反得到假",
+    "en": "Negating TRUE yields false"
+   },
+   "formula": "=NOT(TRUE)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-011",
+   "category": "logical",
+   "function": "XOR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "两个真值参与异或时返回假",
+    "en": "XOR of two true values returns false"
+   },
+   "formula": "=XOR(TRUE,TRUE,FALSE)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-012",
+   "category": "logical",
+   "function": "XOR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "仅一个真值参与异或时返回真",
+    "en": "XOR with only one true value returns true"
+   },
+   "formula": "=XOR(1,0,0)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-013",
+   "category": "logical",
+   "function": "SWITCH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "匹配第 3 个分支时返回 c",
+    "en": "Returns c when the third branch matches"
+   },
+   "formula": "=SWITCH(3,1,\"a\",2,\"b\",3,\"c\",\"other\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-014",
+   "category": "logical",
+   "function": "SWITCH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "无匹配值时返回最后的默认值",
+    "en": "Returns the final default value when nothing matches"
+   },
+   "formula": "=SWITCH(9,1,\"a\",\"default\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-015",
+   "category": "logical",
+   "function": "IFERROR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "除零错误被替换为 err",
+    "en": "A divide-by-zero error is replaced with err"
+   },
+   "formula": "=IFERROR(1/0,\"err\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-016",
+   "category": "logical",
+   "function": "IFERROR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "无错误时原值透传返回",
+    "en": "The original value passes through when there is no error"
+   },
+   "formula": "=IFERROR(10,0)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-017",
+   "category": "logical",
+   "function": "IFNA",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "N/A 错误被替换为 na",
+    "en": "An N/A error is replaced with na"
+   },
+   "formula": "=IFNA(NA(),\"na\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-018",
+   "category": "logical",
+   "function": "IFNA",
+   "dimension": "error",
+   "scenario": {
+    "zh": "除零错误不被 IFNA 捕获，原样返回",
+    "en": "IFNA does not catch a divide-by-zero error and returns it unchanged"
+   },
+   "formula": "=IFNA(1/0,\"na\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1",
+   "expectError": true
+  },
+  {
+   "id": "TC-LOGIC-019",
+   "category": "logical",
+   "function": "TRUE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "无参调用返回逻辑真值",
+    "en": "Called with no arguments, returns logical true"
+   },
+   "formula": "=TRUE()",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-020",
+   "category": "logical",
+   "function": "FALSE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "无参调用返回逻辑假值",
+    "en": "Called with no arguments, returns logical false"
+   },
+   "formula": "=FALSE()",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-201",
+   "category": "logical",
+   "function": "BYCOL",
+   "dimension": "array",
+   "scenario": {
+    "zh": "BYCOL 对 2x3 区域每列求和返回单行",
+    "en": "BYCOL sums each column of a 2x3 range and returns a single row"
+   },
+   "formula": "=BYCOL(A1:C2,LAMBDA(c,SUM(c)))",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5,
+     6
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:J1"
+  },
+  {
+   "id": "TC-LOGIC-202",
+   "category": "logical",
+   "function": "BYROW",
+   "dimension": "array",
+   "scenario": {
+    "zh": "BYROW 对 3x2 区域每行求和返回单列",
+    "en": "BYROW sums each row of a 3x2 range and returns a single column"
+   },
+   "formula": "=BYROW(A1:B3,LAMBDA(r,SUM(r)))",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     5,
+     6
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H3"
+  },
+  {
+   "id": "TC-LOGIC-203",
+   "category": "logical",
+   "function": "LAMBDA",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "LAMBDA 内联定义平方函数并立即调用",
+    "en": "Defines a square function inline with LAMBDA and calls it immediately"
+   },
+   "formula": "=LAMBDA(x,x*x)(5)",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-204",
+   "category": "logical",
+   "function": "LET",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "LET 定义两个变量并计算乘积",
+    "en": "LET defines two variables and computes their product"
+   },
+   "formula": "=LET(x,2,y,3,x*y)",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-205",
+   "category": "logical",
+   "function": "MAKEARRAY",
+   "dimension": "array",
+   "scenario": {
+    "zh": "MAKEARRAY 生成 2x3 行号乘列号矩阵",
+    "en": "MAKEARRAY builds a 2x3 matrix of row number times column number"
+   },
+   "formula": "=MAKEARRAY(2,3,LAMBDA(r,c,r*c))",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "formulaCell": "H1",
+   "readRange": "H1:J2"
+  },
+  {
+   "id": "TC-LOGIC-206",
+   "category": "logical",
+   "function": "MAP",
+   "dimension": "array",
+   "scenario": {
+    "zh": "MAP 对单列三个值逐项翻倍",
+    "en": "MAP doubles each of three values in a single column"
+   },
+   "formula": "=MAP(A1:A3,LAMBDA(x,x*2))",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H3"
+  },
+  {
+   "id": "TC-LOGIC-207",
+   "category": "logical",
+   "function": "REDUCE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "REDUCE 对单列三个值累加得到总和",
+    "en": "REDUCE accumulates three values in a single column into a total"
+   },
+   "formula": "=REDUCE(0,A1:A3,LAMBDA(a,b,a+b))",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOGIC-208",
+   "category": "logical",
+   "function": "SCAN",
+   "dimension": "array",
+   "scenario": {
+    "zh": "SCAN 对单列三个值返回累积和数组",
+    "en": "SCAN returns a running-sum array for three values in a single column"
+   },
+   "formula": "=SCAN(0,A1:A3,LAMBDA(a,b,a+b))",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H3"
+  }
+ ]
+}

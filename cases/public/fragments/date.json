@@ -1,0 +1,921 @@
+{
+ "category": "date",
+ "description": {
+  "zh": "date 类公式用例",
+  "en": "date formula cases"
+ },
+ "cases": [
+  {
+   "id": "M2-DATE-001",
+   "category": "date",
+   "function": "DATE",
+   "dimension": "date",
+   "scenario": {
+    "zh": "1900-01-01 的序列值",
+    "en": "Serial value of 1900-01-01"
+   },
+   "formula": "=DATE(1900,1,1)",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-DATE-002",
+   "category": "date",
+   "function": "DATE",
+   "dimension": "date",
+   "scenario": {
+    "zh": "1900-02-28 的序列值",
+    "en": "Serial value of 1900-02-28"
+   },
+   "formula": "=DATE(1900,2,28)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-DATE-003",
+   "category": "date",
+   "function": "DATE",
+   "dimension": "date",
+   "scenario": {
+    "zh": "Excel 1900 闰年 bug 中的伪日期 1900-02-29",
+    "en": "The fake 1900-02-29 date from the Excel 1900 leap-year bug"
+   },
+   "formula": "=DATE(1900,2,29)",
+   "priority": "P1",
+   "source": "m2-design",
+   "note": {
+    "zh": "Excel 接受 1900-02-29 并返回序列值 60",
+    "en": "Excel accepts 1900-02-29 and returns serial 60"
+   }
+  },
+  {
+   "id": "M2-DATE-004",
+   "category": "date",
+   "function": "DATE",
+   "dimension": "date",
+   "scenario": {
+    "zh": "1900-03-01 的序列值",
+    "en": "Serial value of 1900-03-01"
+   },
+   "formula": "=DATE(1900,3,1)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-DATE-005",
+   "category": "date",
+   "function": "DAY",
+   "dimension": "date",
+   "scenario": {
+    "zh": "序列值 60 的日期部分",
+    "en": "Day component of serial 60"
+   },
+   "formula": "=DAY(60)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-DATE-006",
+   "category": "date",
+   "function": "MONTH",
+   "dimension": "date",
+   "scenario": {
+    "zh": "序列值 60 的月份",
+    "en": "Month component of serial 60"
+   },
+   "formula": "=MONTH(60)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-DATE-007",
+   "category": "date",
+   "function": "YEAR",
+   "dimension": "date",
+   "scenario": {
+    "zh": "序列值 60 的年份",
+    "en": "Year component of serial 60"
+   },
+   "formula": "=YEAR(60)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-DATE-008",
+   "category": "date",
+   "function": "TIME",
+   "dimension": "date",
+   "scenario": {
+    "zh": "正午对应的时间小数",
+    "en": "Noon as a day fraction"
+   },
+   "formula": "=TIME(12,0,0)",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-DATE-009",
+   "category": "date",
+   "function": "DATE",
+   "dimension": "date",
+   "scenario": {
+    "zh": "闰日加一天跨到 3 月 1 日",
+    "en": "Leap day plus one day crosses to March 1"
+   },
+   "formula": "=DATE(2024,2,29)+1",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-DATE-010",
+   "category": "date",
+   "function": "EOMONTH",
+   "dimension": "date",
+   "scenario": {
+    "zh": "2024 年 2 月的月末",
+    "en": "End of month for February 2024"
+   },
+   "formula": "=EOMONTH(DATE(2024,2,15),0)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-DATE-011",
+   "category": "date",
+   "function": "EDATE",
+   "dimension": "date",
+   "scenario": {
+    "zh": "1 月 31 日加一个月",
+    "en": "January 31 plus one month"
+   },
+   "formula": "=EDATE(DATE(2024,1,31),1)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-DATE-012",
+   "category": "date",
+   "function": "WEEKDAY",
+   "dimension": "date",
+   "scenario": {
+    "zh": "2024-01-01 的星期序号",
+    "en": "Weekday number of 2024-01-01"
+   },
+   "formula": "=WEEKDAY(DATE(2024,1,1))",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-DATE-013",
+   "category": "date",
+   "function": "DAYS",
+   "dimension": "date",
+   "scenario": {
+    "zh": "两个日期之间的天数",
+    "en": "Days between two dates"
+   },
+   "formula": "=DAYS(DATE(2024,1,1),DATE(2023,1,1))",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-DATE-014",
+   "category": "date",
+   "function": "NETWORKDAYS",
+   "dimension": "date",
+   "scenario": {
+    "zh": "一周内的工作日数量",
+    "en": "Number of workdays in one week"
+   },
+   "formula": "=NETWORKDAYS(DATE(2024,1,1),DATE(2024,1,7))",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "PUB-DATE-001",
+   "category": "date",
+   "function": "DATE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "构造闰日 2024-02-29",
+    "en": "Build the leap day 2024-02-29"
+   },
+   "formula": "=DATE(2024,2,29)",
+   "priority": "P0",
+   "source": "public-starter"
+  },
+  {
+   "id": "TC-DATE-001",
+   "category": "date",
+   "function": "DATE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "构造闰年 2 月 29 日，返回日期序列值",
+    "en": "Build February 29 of a leap year and return the date serial value"
+   },
+   "formula": "=DATE(2024,2,29)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-002",
+   "category": "date",
+   "function": "DATE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "构造 1900 年 1 月 1 日，验证日期系统起点",
+    "en": "Build 1900-01-01 to verify the start of the date system"
+   },
+   "formula": "=DATE(1900,1,1)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1",
+   "note": {
+    "zh": "Excel 序列值 1",
+    "en": "Excel serial value 1"
+   }
+  },
+  {
+   "id": "TC-DATE-003",
+   "category": "date",
+   "function": "DATE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "构造 1900 年 2 月 28 日，验证序列值边界",
+    "en": "Build 1900-02-28 to verify the serial value boundary"
+   },
+   "formula": "=DATE(1900,2,28)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1",
+   "note": {
+    "zh": "Excel 序列值 59",
+    "en": "Excel serial value 59"
+   }
+  },
+  {
+   "id": "TC-DATE-004",
+   "category": "date",
+   "function": "DATE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "构造 1900 年 3 月 1 日，验证闰年 bug 后序列值",
+    "en": "Build 1900-03-01 to verify the serial value after the leap year bug"
+   },
+   "formula": "=DATE(1900,3,1)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1",
+   "note": {
+    "zh": "Excel 序列值 61，1900 闰年 bug 使 2/29 存在",
+    "en": "Excel serial value 61; the 1900 leap year bug makes 2/29 exist"
+   }
+  },
+  {
+   "id": "TC-DATE-005",
+   "category": "date",
+   "function": "YEAR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "从闰年日期 2024-02-29 中提取年份",
+    "en": "Extract the year from the leap day 2024-02-29"
+   },
+   "formula": "=YEAR(DATE(2024,2,29))",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-006",
+   "category": "date",
+   "function": "YEAR",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "对 A1 的序列值 45351 取年份",
+    "en": "Extract the year from serial value 45351 in A1"
+   },
+   "formula": "=YEAR(A1)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "data": [
+    [
+     45351
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-007",
+   "category": "date",
+   "function": "MONTH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "从年末日期 12 月 31 日提取月份",
+    "en": "Extract the month from the year-end date December 31"
+   },
+   "formula": "=MONTH(DATE(2024,12,31))",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-008",
+   "category": "date",
+   "function": "MONTH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "取 1900 年 3 月 1 日的月份",
+    "en": "Extract the month of 1900-03-01"
+   },
+   "formula": "=MONTH(DATE(1900,3,1))",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-009",
+   "category": "date",
+   "function": "DAY",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "取 1900 年 2 月 28 日的日",
+    "en": "Extract the day of 1900-02-28"
+   },
+   "formula": "=DAY(DATE(1900,2,28))",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-010",
+   "category": "date",
+   "function": "DAY",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "取 1900 年 3 月 1 日的日",
+    "en": "Extract the day of 1900-03-01"
+   },
+   "formula": "=DAY(DATE(1900,3,1))",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-011",
+   "category": "date",
+   "function": "HOUR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "取指定时间中的小时数",
+    "en": "Extract the hour from a given time"
+   },
+   "formula": "=HOUR(TIME(14,30,15))",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-012",
+   "category": "date",
+   "function": "HOUR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "对 0.5 的序列值取小时，应为 12 点",
+    "en": "Extract the hour from serial value 0.5, which should be 12"
+   },
+   "formula": "=HOUR(0.5)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-013",
+   "category": "date",
+   "function": "MINUTE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "取指定时间中的分钟数",
+    "en": "Extract the minute from a given time"
+   },
+   "formula": "=MINUTE(TIME(14,30,15))",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-014",
+   "category": "date",
+   "function": "MINUTE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "取 23:59:59 的分钟数",
+    "en": "Extract the minute from 23:59:59"
+   },
+   "formula": "=MINUTE(TIME(23,59,59))",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-015",
+   "category": "date",
+   "function": "SECOND",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "从 14:30:15 的时间中提取秒数",
+    "en": "Extract the second from the time 14:30:15"
+   },
+   "formula": "=SECOND(TIME(14,30,15))",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-016",
+   "category": "date",
+   "function": "SECOND",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "对 0.5 取秒数，整点后应为 0",
+    "en": "Extract the second from 0.5, which should be 0"
+   },
+   "formula": "=SECOND(0.5)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-017",
+   "category": "date",
+   "function": "TIME",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "构造 14:30:15 的时间序列小数",
+    "en": "Build the time serial fraction for 14:30:15"
+   },
+   "formula": "=TIME(14,30,15)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-018",
+   "category": "date",
+   "function": "TIME",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "小时数 25 超过 24 时按回绕处理",
+    "en": "Hour 25 wraps around beyond 24"
+   },
+   "formula": "=TIME(25,0,0)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-019",
+   "category": "date",
+   "function": "TODAY",
+   "dimension": "volatile",
+   "scenario": {
+    "zh": "返回当天日期的序列值，仅校验类型与区间",
+    "en": "Return today's date serial value, checking only type and range"
+   },
+   "formula": "=TODAY()",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1",
+   "volatile": true
+  },
+  {
+   "id": "TC-DATE-020",
+   "category": "date",
+   "function": "NOW",
+   "dimension": "volatile",
+   "scenario": {
+    "zh": "返回当前日期时间序列值，仅校验类型与区间",
+    "en": "Return the current date-time serial value, checking only type and range"
+   },
+   "formula": "=NOW()",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1",
+   "volatile": true
+  },
+  {
+   "id": "TC-DATE-021",
+   "category": "date",
+   "function": "WEEKDAY",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "默认返回类型下求 2024-01-15 的星期序号",
+    "en": "Weekday number of 2024-01-15 under the default return type"
+   },
+   "formula": "=WEEKDAY(DATE(2024,1,15))",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-022",
+   "category": "date",
+   "function": "WEEKDAY",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "返回类型 2 下周一为 1，验证返回类型参数",
+    "en": "Monday is 1 under return type 2, verifying the return type argument"
+   },
+   "formula": "=WEEKDAY(DATE(2024,1,15),2)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-023",
+   "category": "date",
+   "function": "WEEKNUM",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "默认返回类型下求年初日期的周数",
+    "en": "Week number of an early-year date under the default return type"
+   },
+   "formula": "=WEEKNUM(DATE(2024,1,1))",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-024",
+   "category": "date",
+   "function": "WEEKNUM",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "返回类型 2 下计算年末日期的周数",
+    "en": "Week number of a year-end date under return type 2"
+   },
+   "formula": "=WEEKNUM(DATE(2024,12,31),2)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-025",
+   "category": "date",
+   "function": "EDATE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1 月 31 日加 1 个月落到 2 月末",
+    "en": "January 31 plus 1 month lands on the end of February"
+   },
+   "formula": "=EDATE(DATE(2024,1,31),1)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-026",
+   "category": "date",
+   "function": "EDATE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1 月 15 日减 2 个月得到上年 11 月",
+    "en": "January 15 minus 2 months gives November of the previous year"
+   },
+   "formula": "=EDATE(DATE(2024,1,15),-2)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-027",
+   "category": "date",
+   "function": "EOMONTH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "返回 2024 年 2 月的最后一天",
+    "en": "Return the last day of February 2024"
+   },
+   "formula": "=EOMONTH(DATE(2024,2,10),0)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-028",
+   "category": "date",
+   "function": "EOMONTH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "上年 12 月 31 日往前 1 个月取月末",
+    "en": "Month end 1 month before December 31 of the previous year"
+   },
+   "formula": "=EOMONTH(DATE(2023,12,31),-1)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-029",
+   "category": "date",
+   "function": "DATEDIF",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "计算两个日期之间的整年数",
+    "en": "Whole years between two dates"
+   },
+   "formula": "=DATEDIF(DATE(2024,1,15),DATE(2025,3,20),\"Y\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-030",
+   "category": "date",
+   "function": "DATEDIF",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "计算两个日期之间的整月数",
+    "en": "Whole months between two dates"
+   },
+   "formula": "=DATEDIF(DATE(2024,1,15),DATE(2024,3,14),\"M\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-031",
+   "category": "date",
+   "function": "DAYS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "计算闰年 2 月 1 日到 3 月 1 日的天数差",
+    "en": "Day difference from February 1 to March 1 in a leap year"
+   },
+   "formula": "=DAYS(DATE(2024,3,1),DATE(2024,2,1))",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-032",
+   "category": "date",
+   "function": "DAYS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1900 闰年 bug 使 2 月 28 日到 3 月 1 日相差 2 天",
+    "en": "The 1900 leap year bug makes February 28 to March 1 a 2-day difference"
+   },
+   "formula": "=DAYS(DATE(1900,3,1),DATE(1900,2,28))",
+   "priority": "P1",
+   "source": "pilot-2026-10",
+   "formulaCell": "H1",
+   "note": {
+    "zh": "Excel 因 1900 闰年 bug 返回 2",
+    "en": "Excel returns 2 because of the 1900 leap year bug"
+   }
+  },
+  {
+   "id": "TC-DATE-033",
+   "category": "date",
+   "function": "NETWORKDAYS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "统计 1 月整月的工作日数，无节假日",
+    "en": "Count workdays in the whole of January with no holidays"
+   },
+   "formula": "=NETWORKDAYS(DATE(2024,1,1),DATE(2024,1,31))",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-034",
+   "category": "date",
+   "function": "NETWORKDAYS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "把 1 月 1 日作为节假日扣除后再统计",
+    "en": "Count workdays after excluding January 1 as a holiday"
+   },
+   "formula": "=NETWORKDAYS(DATE(2024,1,1),DATE(2024,1,31),DATE(2024,1,1))",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-035",
+   "category": "date",
+   "function": "WORKDAY",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "从 1 月 1 日往后推 10 个工作日",
+    "en": "10 workdays after January 1"
+   },
+   "formula": "=WORKDAY(DATE(2024,1,1),10)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-036",
+   "category": "date",
+   "function": "WORKDAY",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "指定 1 月 1 日为节假日后推 10 个工作日",
+    "en": "10 workdays after January 1 with January 1 as a holiday"
+   },
+   "formula": "=WORKDAY(DATE(2024,1,1),10,DATE(2024,1,1))",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-037",
+   "category": "date",
+   "function": "YEARFRAC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "30/360 基准下计算半年的年分数",
+    "en": "Year fraction of half a year under the 30/360 basis"
+   },
+   "formula": "=YEARFRAC(DATE(2024,1,1),DATE(2024,7,1),0)",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-038",
+   "category": "date",
+   "function": "YEARFRAC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "实际/365 基准下计算半年的年分数",
+    "en": "Year fraction of half a year under the actual/365 basis"
+   },
+   "formula": "=YEARFRAC(DATE(2024,1,1),DATE(2024,7,1),3)",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-039",
+   "category": "date",
+   "function": "DATEVALUE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "把文本日期 2024/2/29 转为序列值",
+    "en": "Convert the text date 2024/2/29 to a serial value"
+   },
+   "formula": "=DATEVALUE(\"2024/2/29\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-040",
+   "category": "date",
+   "function": "DATEVALUE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "把文本日期 1900/3/1 转为序列值",
+    "en": "Convert the text date 1900/3/1 to a serial value"
+   },
+   "formula": "=DATEVALUE(\"1900/3/1\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1",
+   "note": {
+    "zh": "Excel 序列值 61",
+    "en": "Excel serial value 61"
+   }
+  },
+  {
+   "id": "TC-DATE-041",
+   "category": "date",
+   "function": "TIMEVALUE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "把文本时间 14:30:15 转为时间序列小数",
+    "en": "Convert the text time 14:30:15 to a time serial fraction"
+   },
+   "formula": "=TIMEVALUE(\"14:30:15\")",
+   "priority": "P0",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-042",
+   "category": "date",
+   "function": "TIMEVALUE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "把 23:59:59 文本时间转为序列小数",
+    "en": "Convert the text time 23:59:59 to a serial fraction"
+   },
+   "formula": "=TIMEVALUE(\"23:59:59\")",
+   "priority": "P1",
+   "source": "cases-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-201",
+   "category": "date",
+   "function": "DAYS360",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "美国方法计算 2024 全年 360 天制天数",
+    "en": "Days in all of 2024 under the 360-day US method"
+   },
+   "formula": "=DAYS360(DATE(2024,1,1),DATE(2024,12,31))",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-202",
+   "category": "date",
+   "function": "DAYS360",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "欧洲方法把月末 31 日按 30 日计算天数",
+    "en": "European method counts a month-end 31st as day 30"
+   },
+   "formula": "=DAYS360(DATE(2024,1,31),DATE(2024,3,31),TRUE)",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-203",
+   "category": "date",
+   "function": "ISOWEEKNUM",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "计算 2024 年 1 月 4 日所属的 ISO 周数",
+    "en": "ISO week number of 2024-01-04"
+   },
+   "formula": "=ISOWEEKNUM(DATE(2024,1,4))",
+   "priority": "P1",
+   "source": "cases-cov-g7-misc.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-204",
+   "category": "date",
+   "function": "NETWORKDAYS.INTL",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "默认周末规则统计 1 月工作日天数",
+    "en": "Count January workdays under the default weekend rule"
+   },
+   "formula": "=NETWORKDAYS.INTL(DATE(2024,1,1),DATE(2024,1,31))",
+   "priority": "P1",
+   "source": "cases-cov-g7-misc.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-205",
+   "category": "date",
+   "function": "NETWORKDAYS.INTL",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "自定义仅周日为周末时统计工作日天数",
+    "en": "Count workdays when only Sunday is a weekend"
+   },
+   "formula": "=NETWORKDAYS.INTL(DATE(2024,1,1),DATE(2024,1,31),11)",
+   "priority": "P1",
+   "source": "cases-cov-g7-misc.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-206",
+   "category": "date",
+   "function": "WORKDAY.INTL",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "默认周末规则下往后推 10 个工作日",
+    "en": "10 workdays forward under the default weekend rule"
+   },
+   "formula": "=WORKDAY.INTL(DATE(2024,1,1),10)",
+   "priority": "P1",
+   "source": "cases-cov-g7-misc.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DATE-207",
+   "category": "date",
+   "function": "WORKDAY.INTL",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "仅周日为周末时往后推 5 个工作日",
+    "en": "5 workdays forward when only Sunday is a weekend"
+   },
+   "formula": "=WORKDAY.INTL(DATE(2024,1,1),5,11)",
+   "priority": "P1",
+   "source": "cases-cov-g7-misc.json",
+   "formulaCell": "H1"
+  }
+ ]
+}

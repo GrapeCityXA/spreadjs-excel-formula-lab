@@ -1,0 +1,2369 @@
+{
+ "category": "lookup",
+ "description": {
+  "zh": "lookup 类公式用例",
+  "en": "lookup formula cases"
+ },
+ "cases": [
+  {
+   "id": "M2-ARRAY-001",
+   "category": "lookup",
+   "function": "SEQUENCE",
+   "dimension": "array",
+   "scenario": {
+    "zh": "生成 3 行的序列",
+    "en": "Generate a 3-row sequence"
+   },
+   "formula": "=SEQUENCE(3)",
+   "priority": "P1",
+   "source": "m2-design",
+   "formulaCell": "H1",
+   "readRange": "H1:H3"
+  },
+  {
+   "id": "M2-ARRAY-002",
+   "category": "lookup",
+   "function": "SEQUENCE",
+   "dimension": "array",
+   "scenario": {
+    "zh": "生成 2x2 的序列",
+    "en": "Generate a 2x2 sequence"
+   },
+   "formula": "=SEQUENCE(2,2)",
+   "priority": "P1",
+   "source": "m2-design",
+   "formulaCell": "H1",
+   "readRange": "H1:I2"
+  },
+  {
+   "id": "M2-ARRAY-003",
+   "category": "lookup",
+   "function": "SORT",
+   "dimension": "array",
+   "scenario": {
+    "zh": "对一列数值排序",
+    "en": "Sort a numeric column"
+   },
+   "formula": "=SORT(A1:A4)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     3
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     1
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H4"
+  },
+  {
+   "id": "M2-ARRAY-004",
+   "category": "lookup",
+   "function": "FILTER",
+   "dimension": "array",
+   "scenario": {
+    "zh": "过滤出大于 1 的值",
+    "en": "Filter values greater than 1"
+   },
+   "formula": "=FILTER(A1:A4,A1:A4>1)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H3"
+  },
+  {
+   "id": "M2-ARRAY-005",
+   "category": "lookup",
+   "function": "TRANSPOSE",
+   "dimension": "array",
+   "scenario": {
+    "zh": "转置 2x2 区域",
+    "en": "Transpose a 2x2 range"
+   },
+   "formula": "=TRANSPOSE(A1:B2)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I2"
+  },
+  {
+   "id": "M2-ARRAY-006",
+   "category": "lookup",
+   "function": "MMULT",
+   "dimension": "array",
+   "scenario": {
+    "zh": "矩阵常量乘法",
+    "en": "Matrix multiplication of array constants"
+   },
+   "formula": "=MMULT({1,2;3,4},{1,0;0,1})",
+   "priority": "P2",
+   "source": "m2-design",
+   "formulaCell": "H1",
+   "readRange": "H1:I2"
+  },
+  {
+   "id": "M2-ARRAY-007",
+   "category": "lookup",
+   "function": "VSTACK",
+   "dimension": "array",
+   "scenario": {
+    "zh": "纵向合并两个单列区域",
+    "en": "Stack two single-column ranges vertically"
+   },
+   "formula": "=VSTACK(A1:A2,C1:C2)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     1,
+     9
+    ],
+    [
+     2,
+     8
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H4"
+  },
+  {
+   "id": "M2-ARRAY-008",
+   "category": "lookup",
+   "function": "HSTACK",
+   "dimension": "array",
+   "scenario": {
+    "zh": "横向合并两个单列区域",
+    "en": "Stack two single-column ranges horizontally"
+   },
+   "formula": "=HSTACK(A1:A2,B1:B2)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I2"
+  },
+  {
+   "id": "M2-ARRAY-009",
+   "category": "lookup",
+   "function": "SUMPRODUCT",
+   "dimension": "array",
+   "scenario": {
+    "zh": "两个区域的乘积和",
+    "en": "Sum of products of two ranges"
+   },
+   "formula": "=SUMPRODUCT(A1:A2,B1:B2)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ]
+  },
+  {
+   "id": "M2-LOOKUP-001",
+   "category": "lookup",
+   "function": "VLOOKUP",
+   "dimension": "lookup",
+   "scenario": {
+    "zh": "近似匹配返回不大于查找值的行",
+    "en": "Approximate VLOOKUP returns the largest key not above the lookup value"
+   },
+   "formula": "=VLOOKUP(2.5,A1:B3,2,TRUE)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     1,
+     10
+    ],
+    [
+     2,
+     20
+    ],
+    [
+     3,
+     30
+    ]
+   ]
+  },
+  {
+   "id": "M2-LOOKUP-002",
+   "category": "lookup",
+   "function": "VLOOKUP",
+   "dimension": "lookup",
+   "scenario": {
+    "zh": "通配符精确匹配",
+    "en": "Wildcard exact match"
+   },
+   "formula": "=VLOOKUP(\"a*\",A1:B3,2,FALSE)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     "apple",
+     1
+    ],
+    [
+     "banana",
+     2
+    ],
+    [
+     "avocado",
+     3
+    ]
+   ]
+  },
+  {
+   "id": "M2-LOOKUP-003",
+   "category": "lookup",
+   "function": "VLOOKUP",
+   "dimension": "lookup",
+   "scenario": {
+    "zh": "重复键返回第一条匹配",
+    "en": "Duplicate keys return the first match"
+   },
+   "formula": "=VLOOKUP(\"a\",A1:B3,2,FALSE)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     "a",
+     10
+    ],
+    [
+     "a",
+     20
+    ],
+    [
+     "b",
+     30
+    ]
+   ]
+  },
+  {
+   "id": "M2-LOOKUP-004",
+   "category": "lookup",
+   "function": "MATCH",
+   "dimension": "lookup",
+   "scenario": {
+    "zh": "精确匹配数组常量",
+    "en": "Exact MATCH over an array constant"
+   },
+   "formula": "=MATCH(2,{1,2,3},0)",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-LOOKUP-005",
+   "category": "lookup",
+   "function": "MATCH",
+   "dimension": "lookup",
+   "scenario": {
+    "zh": "升序近似匹配",
+    "en": "Ascending approximate MATCH"
+   },
+   "formula": "=MATCH(2.5,{1,2,3},1)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-LOOKUP-006",
+   "category": "lookup",
+   "function": "MATCH",
+   "dimension": "lookup",
+   "scenario": {
+    "zh": "降序近似匹配",
+    "en": "Descending approximate MATCH"
+   },
+   "formula": "=MATCH(2,{3,2,1},-1)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-LOOKUP-007",
+   "category": "lookup",
+   "function": "INDEX",
+   "dimension": "lookup",
+   "scenario": {
+    "zh": "INDEX 按行列取值",
+    "en": "INDEX returns a cell by row and column"
+   },
+   "formula": "=INDEX(A1:B3,2,2)",
+   "priority": "P0",
+   "source": "m2-design",
+   "data": [
+    [
+     1,
+     10
+    ],
+    [
+     2,
+     20
+    ],
+    [
+     3,
+     30
+    ]
+   ]
+  },
+  {
+   "id": "M2-LOOKUP-008",
+   "category": "lookup",
+   "function": "HLOOKUP",
+   "dimension": "lookup",
+   "scenario": {
+    "zh": "横向精确查找",
+    "en": "Horizontal exact lookup"
+   },
+   "formula": "=HLOOKUP(\"b\",A1:C2,2,FALSE)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     "a",
+     "b",
+     "c"
+    ],
+    [
+     1,
+     2,
+     3
+    ]
+   ]
+  },
+  {
+   "id": "M2-LOOKUP-009",
+   "category": "lookup",
+   "function": "XLOOKUP",
+   "dimension": "lookup",
+   "scenario": {
+    "zh": "XLOOKUP 精确查找",
+    "en": "XLOOKUP exact match"
+   },
+   "formula": "=XLOOKUP(\"b\",A1:A3,B1:B3)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     "a",
+     10
+    ],
+    [
+     "b",
+     20
+    ],
+    [
+     "c",
+     30
+    ]
+   ]
+  },
+  {
+   "id": "M2-LOOKUP-010",
+   "category": "lookup",
+   "function": "VLOOKUP",
+   "dimension": "error",
+   "scenario": {
+    "zh": "未找到时返回 #N/A",
+    "en": "VLOOKUP returns #N/A when not found"
+   },
+   "formula": "=VLOOKUP(\"z\",A1:B3,2,FALSE)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     "a",
+     10
+    ],
+    [
+     "b",
+     20
+    ],
+    [
+     "c",
+     30
+    ]
+   ],
+   "expectError": true
+  },
+  {
+   "id": "M2-LOOKUP-011",
+   "category": "lookup",
+   "function": "LOOKUP",
+   "dimension": "lookup",
+   "scenario": {
+    "zh": "LOOKUP 向量形式",
+    "en": "Vector-form LOOKUP"
+   },
+   "formula": "=LOOKUP(2,{1,2,3},{\"a\",\"b\",\"c\"})",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "PUB-ARRAY-001",
+   "category": "lookup",
+   "function": "UNIQUE",
+   "dimension": "array",
+   "scenario": {
+    "zh": "返回一列去重结果",
+    "en": "Return a single column of unique values"
+   },
+   "formula": "=UNIQUE(A1:A4)",
+   "priority": "P1",
+   "source": "public-starter",
+   "data": [
+    [
+     "a"
+    ],
+    [
+     "b"
+    ],
+    [
+     "a"
+    ],
+    [
+     "c"
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H3"
+  },
+  {
+   "id": "PUB-LOOKUP-001",
+   "category": "lookup",
+   "function": "VLOOKUP",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "在表中精确查找 b",
+    "en": "Exact lookup of b in a table"
+   },
+   "formula": "=VLOOKUP(\"b\",A1:B3,2,FALSE)",
+   "priority": "P0",
+   "source": "public-starter",
+   "data": [
+    [
+     "a",
+     10
+    ],
+    [
+     "b",
+     20
+    ],
+    [
+     "c",
+     30
+    ]
+   ]
+  },
+  {
+   "id": "TC-LOOKUP-001",
+   "category": "lookup",
+   "function": "VLOOKUP",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "精确匹配文本键并返回第 2 列数值",
+    "en": "Exact-matches a text key and returns the value from column 2"
+   },
+   "formula": "=VLOOKUP(\"c\",A1:B4,2,FALSE)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "a",
+     1
+    ],
+    [
+     "b",
+     2
+    ],
+    [
+     "c",
+     3
+    ],
+    [
+     "d",
+     4
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-002",
+   "category": "lookup",
+   "function": "VLOOKUP",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "近似匹配数值键返回不大于查找值的最大项",
+    "en": "Approximate-matches a numeric key and returns the largest item not exceeding the lookup value"
+   },
+   "formula": "=VLOOKUP(4,A1:B4,2,TRUE)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1,
+     10
+    ],
+    [
+     3,
+     30
+    ],
+    [
+     5,
+     50
+    ],
+    [
+     7,
+     70
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-003",
+   "category": "lookup",
+   "function": "VLOOKUP",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "查找值大小写不同仍命中（不区分大小写）",
+    "en": "Matches despite a case difference in the lookup value (case-insensitive)"
+   },
+   "formula": "=VLOOKUP(\"B\",A1:B4,2,FALSE)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "a",
+     1
+    ],
+    [
+     "b",
+     2
+    ],
+    [
+     "c",
+     3
+    ],
+    [
+     "d",
+     4
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-004",
+   "category": "lookup",
+   "function": "VLOOKUP",
+   "dimension": "error",
+   "scenario": {
+    "zh": "精确匹配未命中返回 N/A 错误",
+    "en": "Returns N/A when the exact match misses"
+   },
+   "formula": "=VLOOKUP(\"z\",A1:B4,2,FALSE)",
+   "priority": "P2",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "a",
+     1
+    ],
+    [
+     "b",
+     2
+    ],
+    [
+     "c",
+     3
+    ],
+    [
+     "d",
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "expectError": true
+  },
+  {
+   "id": "TC-LOOKUP-005",
+   "category": "lookup",
+   "function": "HLOOKUP",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "横向首行精确匹配并返回第 2 行数值",
+    "en": "Exact-matches the top row horizontally and returns the value from row 2"
+   },
+   "formula": "=HLOOKUP(\"b\",A1:C2,2,FALSE)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "a",
+     "b",
+     "c"
+    ],
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-006",
+   "category": "lookup",
+   "function": "HLOOKUP",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "横向近似匹配返回不大于查找值的列",
+    "en": "Horizontal approximate match returns the column not exceeding the lookup value"
+   },
+   "formula": "=HLOOKUP(4,A1:C2,2,TRUE)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1,
+     3,
+     5
+    ],
+    [
+     10,
+     30,
+     50
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-007",
+   "category": "lookup",
+   "function": "INDEX",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "二维索引返回第 2 行第 3 列的值",
+    "en": "Two-dimensional index returns the value at row 2, column 3"
+   },
+   "formula": "=INDEX(A1:C3,2,3)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "a",
+     1,
+     10
+    ],
+    [
+     "b",
+     2,
+     20
+    ],
+    [
+     "c",
+     3,
+     30
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-008",
+   "category": "lookup",
+   "function": "INDEX",
+   "dimension": "error",
+   "scenario": {
+    "zh": "行号超出引用区域时返回引用错误",
+    "en": "A row number beyond the reference range returns a reference error"
+   },
+   "formula": "=INDEX(A1:C3,5,1)",
+   "priority": "P2",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "a",
+     1,
+     10
+    ],
+    [
+     "b",
+     2,
+     20
+    ],
+    [
+     "c",
+     3,
+     30
+    ]
+   ],
+   "formulaCell": "H1",
+   "expectError": true
+  },
+  {
+   "id": "TC-LOOKUP-009",
+   "category": "lookup",
+   "function": "INDEX",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "拼接键实现多条件查找（主函数 INDEX）",
+    "en": "Multi-condition lookup via concatenated keys (INDEX as the main function)"
+   },
+   "formula": "=INDEX(C1:C4,MATCH(\"y2\",A1:A4,0))",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "x1",
+     1,
+     10
+    ],
+    [
+     "x2",
+     2,
+     20
+    ],
+    [
+     "y1",
+     1,
+     30
+    ],
+    [
+     "y2",
+     2,
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-010",
+   "category": "lookup",
+   "function": "MATCH",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "精确匹配返回查找值在区域中的位置",
+    "en": "Exact match returns the position of the lookup value in the range"
+   },
+   "formula": "=MATCH(30,A1:A5,0)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     20
+    ],
+    [
+     30
+    ],
+    [
+     40
+    ],
+    [
+     50
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-011",
+   "category": "lookup",
+   "function": "MATCH",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "升序近似匹配返回不超过查找值的位置",
+    "en": "Ascending approximate match returns the position not exceeding the lookup value"
+   },
+   "formula": "=MATCH(35,A1:A5,1)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     20
+    ],
+    [
+     30
+    ],
+    [
+     40
+    ],
+    [
+     50
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-012",
+   "category": "lookup",
+   "function": "MATCH",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "降序区域近似匹配返回最接近的位置",
+    "en": "Approximate match in a descending range returns the closest position"
+   },
+   "formula": "=MATCH(35,A1:A5,-1)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     50
+    ],
+    [
+     40
+    ],
+    [
+     30
+    ],
+    [
+     20
+    ],
+    [
+     10
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-013",
+   "category": "lookup",
+   "function": "XLOOKUP",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "XLOOKUP 精确匹配返回对应值",
+    "en": "XLOOKUP exact match returns the corresponding value"
+   },
+   "formula": "=XLOOKUP(\"c\",A1:A4,B1:B4)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "a",
+     10
+    ],
+    [
+     "b",
+     20
+    ],
+    [
+     "c",
+     30
+    ],
+    [
+     "d",
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-014",
+   "category": "lookup",
+   "function": "XLOOKUP",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "XLOOKUP 未命中时返回自定义文本",
+    "en": "XLOOKUP returns custom text when there is no match"
+   },
+   "formula": "=XLOOKUP(\"z\",A1:A4,B1:B4,\"未找到\")",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "a",
+     10
+    ],
+    [
+     "b",
+     20
+    ],
+    [
+     "c",
+     30
+    ],
+    [
+     "d",
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-015",
+   "category": "lookup",
+   "function": "XLOOKUP",
+   "dimension": "error",
+   "scenario": {
+    "zh": "XLOOKUP 未命中且未提供替代值返回 N/A 错误",
+    "en": "XLOOKUP returns N/A when there is no match and no fallback is given"
+   },
+   "formula": "=XLOOKUP(\"z\",A1:A4,B1:B4)",
+   "priority": "P2",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "a",
+     10
+    ],
+    [
+     "b",
+     20
+    ],
+    [
+     "c",
+     30
+    ],
+    [
+     "d",
+     40
+    ]
+   ],
+   "formulaCell": "H1",
+   "expectError": true
+  },
+  {
+   "id": "TC-LOOKUP-016",
+   "category": "lookup",
+   "function": "XLOOKUP",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "XLOOKUP 匹配模式 -1 返回下一个较小项",
+    "en": "XLOOKUP match mode -1 returns the next smaller item"
+   },
+   "formula": "=XLOOKUP(25,A1:A4,B1:B4,\"\",-1)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     10,
+     100
+    ],
+    [
+     20,
+     200
+    ],
+    [
+     30,
+     300
+    ],
+    [
+     40,
+     400
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-017",
+   "category": "lookup",
+   "function": "XMATCH",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "XMATCH 精确匹配返回位置",
+    "en": "XMATCH exact match returns the position"
+   },
+   "formula": "=XMATCH(30,A1:A4)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     20
+    ],
+    [
+     30
+    ],
+    [
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-018",
+   "category": "lookup",
+   "function": "XMATCH",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "XMATCH 从后向前搜索返回最后匹配位置",
+    "en": "XMATCH searching last-to-first returns the last matching position"
+   },
+   "formula": "=XMATCH(20,A1:A4,0,-1)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     20
+    ],
+    [
+     20
+    ],
+    [
+     30
+    ],
+    [
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-019",
+   "category": "lookup",
+   "function": "LOOKUP",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "向量形式按升序近似查找返回结果向量值",
+    "en": "Vector-form ascending approximate lookup returns the result-vector value"
+   },
+   "formula": "=LOOKUP(3,A1:A4,B1:B4)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1,
+     "a"
+    ],
+    [
+     2,
+     "b"
+    ],
+    [
+     3,
+     "c"
+    ],
+    [
+     4,
+     "d"
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-020",
+   "category": "lookup",
+   "function": "LOOKUP",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "向量形式近似匹配小数返回区间结果",
+    "en": "Vector-form approximate match on a decimal returns the bracketing result"
+   },
+   "formula": "=LOOKUP(2.5,A1:A4,B1:B4)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1,
+     "a"
+    ],
+    [
+     2,
+     "b"
+    ],
+    [
+     3,
+     "c"
+    ],
+    [
+     4,
+     "d"
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-021",
+   "category": "lookup",
+   "function": "CHOOSE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "按序号从文本列表中取值",
+    "en": "Retrieves a value from a text list by index number"
+   },
+   "formula": "=CHOOSE(2,\"红色\",\"绿色\",\"蓝色\")",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-022",
+   "category": "lookup",
+   "function": "CHOOSE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "按序号从单元格引用中取值",
+    "en": "Retrieves a value from a cell reference by index number"
+   },
+   "formula": "=CHOOSE(3,A1,A2,A3)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     20
+    ],
+    [
+     30
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-023",
+   "category": "lookup",
+   "function": "OFFSET",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "从 A1 偏移 1 行 2 列返回目标单元格值",
+    "en": "Returns the target cell 1 row and 2 columns from A1"
+   },
+   "formula": "=OFFSET(A1,1,2)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5,
+     6
+    ],
+    [
+     7,
+     8,
+     9
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-024",
+   "category": "lookup",
+   "function": "OFFSET",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "偏移后的 2x2 区域求和（主函数 OFFSET）",
+    "en": "Sums the 2x2 range after offsetting (OFFSET as the main function)"
+   },
+   "formula": "=SUM(OFFSET(A1,1,1,2,2))",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5,
+     6
+    ],
+    [
+     7,
+     8,
+     9
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-025",
+   "category": "lookup",
+   "function": "INDIRECT",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "解析 A1 文本引用返回单元格值",
+    "en": "Parses the A1 text reference and returns the cell value"
+   },
+   "formula": "=INDIRECT(\"A1\")",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     42,
+     7
+    ],
+    [
+     5,
+     9
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-026",
+   "category": "lookup",
+   "function": "INDIRECT",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "解析拼接列行文本引用返回值",
+    "en": "Returns the value for a concatenated column-row text reference"
+   },
+   "formula": "=INDIRECT(\"B\"&2)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     10,
+     20
+    ],
+    [
+     30,
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-027",
+   "category": "lookup",
+   "function": "ROW",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "ROW 返回指定引用的行号",
+    "en": "ROW returns the row number of the specified reference"
+   },
+   "formula": "=ROW(A5)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-028",
+   "category": "lookup",
+   "function": "ROW",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "ROW 无参数返回公式所在行号",
+    "en": "ROW with no argument returns the row of the formula"
+   },
+   "formula": "=ROW()",
+   "priority": "P2",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1",
+   "note": {
+    "zh": "公式位于 H1，应返回 1",
+    "en": "The formula is in H1, so it should return 1"
+   }
+  },
+  {
+   "id": "TC-LOOKUP-029",
+   "category": "lookup",
+   "function": "COLUMN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "COLUMN 返回指定引用的列号",
+    "en": "COLUMN returns the column number of the specified reference"
+   },
+   "formula": "=COLUMN(D1)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-030",
+   "category": "lookup",
+   "function": "COLUMN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "COLUMN 无参数返回公式所在列号",
+    "en": "COLUMN with no argument returns the column of the formula"
+   },
+   "formula": "=COLUMN()",
+   "priority": "P2",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1",
+   "note": {
+    "zh": "公式位于 H1，应返回 8",
+    "en": "The formula is in H1, so it should return 8"
+   }
+  },
+  {
+   "id": "TC-LOOKUP-031",
+   "category": "lookup",
+   "function": "ROWS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "ROWS 返回单列区域的行数",
+    "en": "ROWS returns the row count of a single-column range"
+   },
+   "formula": "=ROWS(A1:A5)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-032",
+   "category": "lookup",
+   "function": "ROWS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "ROWS 对二维区域返回行数",
+    "en": "ROWS returns the row count of a two-dimensional range"
+   },
+   "formula": "=ROWS(A1:C3)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5,
+     6
+    ],
+    [
+     7,
+     8,
+     9
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-033",
+   "category": "lookup",
+   "function": "COLUMNS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "COLUMNS 返回单行区域的列数",
+    "en": "COLUMNS returns the column count of a single-row range"
+   },
+   "formula": "=COLUMNS(A1:D1)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1,
+     2,
+     3,
+     4
+    ],
+    [
+     5,
+     6,
+     7,
+     8
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-034",
+   "category": "lookup",
+   "function": "COLUMNS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "COLUMNS 对二维区域返回列数",
+    "en": "COLUMNS returns the column count of a two-dimensional range"
+   },
+   "formula": "=COLUMNS(A1:C2)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5,
+     6
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-035",
+   "category": "lookup",
+   "function": "TRANSPOSE",
+   "dimension": "array",
+   "scenario": {
+    "zh": "二维区域转置后溢写为 3 行 2 列",
+    "en": "Transposing a 2x3 range spills as 3 rows by 2 columns"
+   },
+   "formula": "=TRANSPOSE(A1:C2)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5,
+     6
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I3"
+  },
+  {
+   "id": "TC-LOOKUP-036",
+   "category": "lookup",
+   "function": "TRANSPOSE",
+   "dimension": "array",
+   "scenario": {
+    "zh": "单列区域转置为单行结果",
+    "en": "Transposing a single-column range yields a single row"
+   },
+   "formula": "=TRANSPOSE(A1:A3)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:J1"
+  },
+  {
+   "id": "TC-LOOKUP-037",
+   "category": "lookup",
+   "function": "UNIQUE",
+   "dimension": "array",
+   "scenario": {
+    "zh": "单列去重并按首次出现顺序溢写",
+    "en": "Deduplicates a single column and spills in first-occurrence order"
+   },
+   "formula": "=UNIQUE(A1:A5)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "c"
+    ],
+    [
+     "a"
+    ],
+    [
+     "b"
+    ],
+    [
+     "a"
+    ],
+    [
+     "c"
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H3"
+  },
+  {
+   "id": "TC-LOOKUP-038",
+   "category": "lookup",
+   "function": "UNIQUE",
+   "dimension": "array",
+   "scenario": {
+    "zh": "全部重复值去重后仅剩一行",
+    "en": "Deduplicating all-identical values leaves a single row"
+   },
+   "formula": "=UNIQUE(A1:A4)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "x"
+    ],
+    [
+     "x"
+    ],
+    [
+     "x"
+    ],
+    [
+     "x"
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H1"
+  },
+  {
+   "id": "TC-LOOKUP-039",
+   "category": "lookup",
+   "function": "SORT",
+   "dimension": "array",
+   "scenario": {
+    "zh": "单列升序排序并溢写结果",
+    "en": "Sorts a single column ascending and spills the result"
+   },
+   "formula": "=SORT(A1:A5)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     5
+    ],
+    [
+     2
+    ],
+    [
+     9
+    ],
+    [
+     1
+    ],
+    [
+     7
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H5"
+  },
+  {
+   "id": "TC-LOOKUP-040",
+   "category": "lookup",
+   "function": "SORT",
+   "dimension": "array",
+   "scenario": {
+    "zh": "按第 2 列降序排序二维区域",
+    "en": "Sorts a two-dimensional range descending by column 2"
+   },
+   "formula": "=SORT(A1:B4,2,-1)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "a",
+     3
+    ],
+    [
+     "b",
+     1
+    ],
+    [
+     "c",
+     2
+    ],
+    [
+     "d",
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I4"
+  },
+  {
+   "id": "TC-LOOKUP-041",
+   "category": "lookup",
+   "function": "SORTBY",
+   "dimension": "array",
+   "scenario": {
+    "zh": "按关键列升序排序数组",
+    "en": "Sorts an array ascending by a key column"
+   },
+   "formula": "=SORTBY(A1:A4,B1:B4)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "x",
+     3
+    ],
+    [
+     "y",
+     1
+    ],
+    [
+     "z",
+     4
+    ],
+    [
+     "w",
+     2
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H4"
+  },
+  {
+   "id": "TC-LOOKUP-042",
+   "category": "lookup",
+   "function": "SORTBY",
+   "dimension": "array",
+   "scenario": {
+    "zh": "按关键列降序排序数组",
+    "en": "Sorts an array descending by a key column"
+   },
+   "formula": "=SORTBY(A1:A4,B1:B4,-1)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "x",
+     3
+    ],
+    [
+     "y",
+     1
+    ],
+    [
+     "z",
+     4
+    ],
+    [
+     "w",
+     2
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H4"
+  },
+  {
+   "id": "TC-LOOKUP-043",
+   "category": "lookup",
+   "function": "FILTER",
+   "dimension": "array",
+   "scenario": {
+    "zh": "多列按数值条件筛选并溢写结果",
+    "en": "Filters multiple columns by a numeric condition and spills the result"
+   },
+   "formula": "=FILTER(A1:B4,B1:B4>15)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "a",
+     10
+    ],
+    [
+     "b",
+     20
+    ],
+    [
+     "c",
+     30
+    ],
+    [
+     "d",
+     40
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I3"
+  },
+  {
+   "id": "TC-LOOKUP-044",
+   "category": "lookup",
+   "function": "FILTER",
+   "dimension": "array",
+   "scenario": {
+    "zh": "无匹配项时筛选返回自定义文本",
+    "en": "Filter returns custom text when nothing matches"
+   },
+   "formula": "=FILTER(A1:B4,B1:B4>100,\"无匹配\")",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "a",
+     10
+    ],
+    [
+     "b",
+     20
+    ],
+    [
+     "c",
+     30
+    ],
+    [
+     "d",
+     40
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H1"
+  },
+  {
+   "id": "TC-LOOKUP-045",
+   "category": "lookup",
+   "function": "TAKE",
+   "dimension": "array",
+   "scenario": {
+    "zh": "TAKE 提取前 2 行全部列",
+    "en": "TAKE extracts the first 2 rows with all columns"
+   },
+   "formula": "=TAKE(A1:C4,2)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5,
+     6
+    ],
+    [
+     7,
+     8,
+     9
+    ],
+    [
+     10,
+     11,
+     12
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:J2"
+  },
+  {
+   "id": "TC-LOOKUP-046",
+   "category": "lookup",
+   "function": "TAKE",
+   "dimension": "array",
+   "scenario": {
+    "zh": "TAKE 提取全部行与前 2 列",
+    "en": "TAKE extracts all rows with the first 2 columns"
+   },
+   "formula": "=TAKE(A1:C4,4,2)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5,
+     6
+    ],
+    [
+     7,
+     8,
+     9
+    ],
+    [
+     10,
+     11,
+     12
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I4"
+  },
+  {
+   "id": "TC-LOOKUP-047",
+   "category": "lookup",
+   "function": "DROP",
+   "dimension": "array",
+   "scenario": {
+    "zh": "DROP 去掉第 1 行保留其余行",
+    "en": "DROP removes the first row and keeps the rest"
+   },
+   "formula": "=DROP(A1:C4,1)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5,
+     6
+    ],
+    [
+     7,
+     8,
+     9
+    ],
+    [
+     10,
+     11,
+     12
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:J3"
+  },
+  {
+   "id": "TC-LOOKUP-048",
+   "category": "lookup",
+   "function": "DROP",
+   "dimension": "array",
+   "scenario": {
+    "zh": "DROP 去掉第 1 行与前 2 列",
+    "en": "DROP removes the first row and the first 2 columns"
+   },
+   "formula": "=DROP(A1:C4,1,2)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5,
+     6
+    ],
+    [
+     7,
+     8,
+     9
+    ],
+    [
+     10,
+     11,
+     12
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H3"
+  },
+  {
+   "id": "TC-LOOKUP-201",
+   "category": "lookup",
+   "function": "ADDRESS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "ADDRESS 返回第 2 行第 3 列绝对引用文本",
+    "en": "ADDRESS returns the absolute reference text for row 2, column 3"
+   },
+   "formula": "=ADDRESS(2,3)",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-202",
+   "category": "lookup",
+   "function": "AREAS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "AREAS 统计单个矩形区域引用数",
+    "en": "AREAS counts the references in a single rectangular range"
+   },
+   "formula": "=AREAS(A1:B2)",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-203",
+   "category": "lookup",
+   "function": "CHOOSECOLS",
+   "dimension": "array",
+   "scenario": {
+    "zh": "CHOOSECOLS 从三列数据中取第 1、3 列",
+    "en": "CHOOSECOLS takes columns 1 and 3 from three columns of data"
+   },
+   "formula": "=CHOOSECOLS(A1:C3,1,3)",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5,
+     6
+    ],
+    [
+     7,
+     8,
+     9
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I3"
+  },
+  {
+   "id": "TC-LOOKUP-204",
+   "category": "lookup",
+   "function": "CHOOSEROWS",
+   "dimension": "array",
+   "scenario": {
+    "zh": "CHOOSEROWS 从三行数据中取第 1、3 行",
+    "en": "CHOOSEROWS takes rows 1 and 3 from three rows of data"
+   },
+   "formula": "=CHOOSEROWS(A1:C3,1,3)",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5,
+     6
+    ],
+    [
+     7,
+     8,
+     9
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:J2"
+  },
+  {
+   "id": "TC-LOOKUP-205",
+   "category": "lookup",
+   "function": "EXPAND",
+   "dimension": "array",
+   "scenario": {
+    "zh": "EXPAND 将 2x2 数组扩展为 3x3 并用 0 填充",
+    "en": "EXPAND grows a 2x2 array to 3x3 padding with 0"
+   },
+   "formula": "=EXPAND(A1:B2,3,3,0)",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:J3"
+  },
+  {
+   "id": "TC-LOOKUP-206",
+   "category": "lookup",
+   "function": "FORMULATEXT",
+   "dimension": "error",
+   "scenario": {
+    "zh": "FORMULATEXT 引用非公式单元格返回 N/A 错误",
+    "en": "FORMULATEXT on a non-formula cell returns N/A"
+   },
+   "formula": "=FORMULATEXT(A1)",
+   "priority": "P2",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     5
+    ]
+   ],
+   "formulaCell": "H1",
+   "expectError": true
+  },
+  {
+   "id": "TC-LOOKUP-207",
+   "category": "lookup",
+   "function": "GETPIVOTDATA",
+   "dimension": "error",
+   "scenario": {
+    "zh": "GETPIVOTDATA 引用非透视表区域返回引用错误",
+    "en": "GETPIVOTDATA on a non-pivot range returns a reference error"
+   },
+   "formula": "=GETPIVOTDATA(\"x\",A1)",
+   "priority": "P2",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1
+    ]
+   ],
+   "formulaCell": "H1",
+   "expectError": true
+  },
+  {
+   "id": "TC-LOOKUP-208",
+   "category": "lookup",
+   "function": "GROUPBY",
+   "dimension": "array",
+   "scenario": {
+    "zh": "GROUPBY 按文本分组求和且不含表头总计",
+    "en": "GROUPBY sums by text group without headers or grand totals"
+   },
+   "formula": "=GROUPBY(A1:A4,B1:B4,SUM,0,0)",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     "a",
+     1
+    ],
+    [
+     "a",
+     2
+    ],
+    [
+     "b",
+     3
+    ],
+    [
+     "b",
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I2"
+  },
+  {
+   "id": "TC-LOOKUP-209",
+   "category": "lookup",
+   "function": "HSTACK",
+   "dimension": "array",
+   "scenario": {
+    "zh": "HSTACK 将两个单列数组水平合并",
+    "en": "HSTACK merges two single-column arrays horizontally"
+   },
+   "formula": "=HSTACK(A1:A2,B1:B2)",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1,
+     10
+    ],
+    [
+     2,
+     20
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I2"
+  },
+  {
+   "id": "TC-LOOKUP-210",
+   "category": "lookup",
+   "function": "HYPERLINK",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "HYPERLINK 带显示文本的超链接返回值",
+    "en": "HYPERLINK with display text returns its value"
+   },
+   "formula": "=HYPERLINK(\"https://example.com\",\"示例\")",
+   "priority": "P2",
+   "source": "cases-cov-g2-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-LOOKUP-211",
+   "category": "lookup",
+   "function": "IMAGE",
+   "dimension": "error",
+   "scenario": {
+    "zh": "IMAGE 空图片源错误登记（两侧实现差异）",
+    "en": "Empty image source logged as an error case (implementation difference)"
+   },
+   "formula": "=IMAGE(\"\")",
+   "priority": "P2",
+   "source": "pilot-2026-10",
+   "formulaCell": "H1",
+   "expectError": true,
+   "note": {
+    "zh": "SpreadJS 图片为占位对象返回空值，Excel 对空源返回 #VALUE!；无两侧一致的有效调用，故登记错误用例",
+    "en": "SpreadJS returns an empty value for the image placeholder object, while Excel returns #VALUE! for an empty source; no call is valid on both sides, so this is logged as an error case"
+   }
+  },
+  {
+   "id": "TC-LOOKUP-212",
+   "category": "lookup",
+   "function": "PIVOTBY",
+   "dimension": "array",
+   "scenario": {
+    "zh": "PIVOTBY 两行两组交叉求和且不含总计行列",
+    "en": "PIVOTBY cross-tabulates two row groups by two column groups without totals"
+   },
+   "formula": "=PIVOTBY(A1:A4,B1:B4,C1:C4,SUM,,0,,0)",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     "a",
+     "x",
+     1
+    ],
+    [
+     "a",
+     "y",
+     2
+    ],
+    [
+     "b",
+     "x",
+     3
+    ],
+    [
+     "b",
+     "y",
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:J3"
+  },
+  {
+   "id": "TC-LOOKUP-213",
+   "category": "lookup",
+   "function": "TOCOL",
+   "dimension": "array",
+   "scenario": {
+    "zh": "TOCOL 将 2x2 数组按列转单列数组",
+    "en": "TOCOL converts a 2x2 array to a single column by column"
+   },
+   "formula": "=TOCOL(A1:B2)",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H4"
+  },
+  {
+   "id": "TC-LOOKUP-214",
+   "category": "lookup",
+   "function": "TOROW",
+   "dimension": "array",
+   "scenario": {
+    "zh": "TOROW 将 2x2 数组按列转单行数组",
+    "en": "TOROW converts a 2x2 array to a single row by column"
+   },
+   "formula": "=TOROW(A1:B2)",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:K1"
+  },
+  {
+   "id": "TC-LOOKUP-215",
+   "category": "lookup",
+   "function": "TRIMRANGE",
+   "dimension": "array",
+   "scenario": {
+    "zh": "TRIMRANGE 裁掉引用区域尾部的空行",
+    "en": "TRIMRANGE trims trailing blank rows from the reference range"
+   },
+   "formula": "=TRIMRANGE(A1:B3)",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I2"
+  },
+  {
+   "id": "TC-LOOKUP-216",
+   "category": "lookup",
+   "function": "VSTACK",
+   "dimension": "array",
+   "scenario": {
+    "zh": "VSTACK 将两个单行数组垂直合并",
+    "en": "VSTACK merges two single-row arrays vertically"
+   },
+   "formula": "=VSTACK(A1:B1,A2:B2)",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I2"
+  },
+  {
+   "id": "TC-LOOKUP-217",
+   "category": "lookup",
+   "function": "WRAPCOLS",
+   "dimension": "array",
+   "scenario": {
+    "zh": "WRAPCOLS 将四元单列按两行包裹成两列",
+    "en": "WRAPCOLS wraps a four-item single column into two columns of two rows"
+   },
+   "formula": "=WRAPCOLS(A1:A4,2)",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I2"
+  },
+  {
+   "id": "TC-LOOKUP-218",
+   "category": "lookup",
+   "function": "WRAPROWS",
+   "dimension": "array",
+   "scenario": {
+    "zh": "WRAPROWS 将四元单列按两列包裹成两行",
+    "en": "WRAPROWS wraps four items into two rows of two columns"
+   },
+   "formula": "=WRAPROWS(A1:A4,2)",
+   "priority": "P1",
+   "source": "cases-cov-g2-lookup.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I2"
+  }
+ ]
+}

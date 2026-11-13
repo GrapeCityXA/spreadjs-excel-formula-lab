@@ -1,0 +1,1097 @@
+{
+ "category": "engineering",
+ "description": {
+  "zh": "engineering 类公式用例",
+  "en": "engineering formula cases"
+ },
+ "cases": [
+  {
+   "id": "M2-ENG-001",
+   "category": "engineering",
+   "function": "DEC2BIN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "十进制转二进制",
+    "en": "Decimal to binary"
+   },
+   "formula": "=DEC2BIN(10)",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-ENG-002",
+   "category": "engineering",
+   "function": "HEX2DEC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "十六进制转十进制",
+    "en": "Hexadecimal to decimal"
+   },
+   "formula": "=HEX2DEC(\"FF\")",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-ENG-003",
+   "category": "engineering",
+   "function": "COMPLEX",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "构造复数文本",
+    "en": "Build a complex-number text"
+   },
+   "formula": "=COMPLEX(1,2)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-ENG-004",
+   "category": "engineering",
+   "function": "IMREAL",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "复数的实部",
+    "en": "Real part of a complex number"
+   },
+   "formula": "=IMREAL(\"1+2i\")",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "TC-ENG-001",
+   "category": "engineering",
+   "function": "BIN2DEC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "7 位二进制数转换为十进制",
+    "en": "Convert a 7-bit binary number to decimal"
+   },
+   "formula": "=BIN2DEC(\"1100100\")",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-002",
+   "category": "engineering",
+   "function": "BIN2DEC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "10 位全 1 二进制按补码解释为 -1",
+    "en": "A 10-bit all-ones binary is read as -1 in two's complement"
+   },
+   "formula": "=BIN2DEC(\"1111111111\")",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-003",
+   "category": "engineering",
+   "function": "BITAND",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "两个十进制数按位与并返回整数",
+    "en": "Bitwise AND of two decimal numbers returning an integer"
+   },
+   "formula": "=BITAND(13,25)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-004",
+   "category": "engineering",
+   "function": "BITAND",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "零与任意数按位与得零",
+    "en": "Bitwise AND of zero with any number gives zero"
+   },
+   "formula": "=BITAND(0,255)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-005",
+   "category": "engineering",
+   "function": "BITOR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "两个十进制数按位或并返回整数",
+    "en": "Bitwise OR of two decimal numbers returning an integer"
+   },
+   "formula": "=BITOR(23,10)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-006",
+   "category": "engineering",
+   "function": "BITOR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "两个相同数按位或结果不变",
+    "en": "Bitwise OR of two identical numbers is unchanged"
+   },
+   "formula": "=BITOR(7,7)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-007",
+   "category": "engineering",
+   "function": "BITXOR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "两个十进制数按位异或",
+    "en": "Bitwise XOR of two decimal numbers"
+   },
+   "formula": "=BITXOR(5,3)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-008",
+   "category": "engineering",
+   "function": "BITXOR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "两个相同数按位异或得零",
+    "en": "Bitwise XOR of two identical numbers gives zero"
+   },
+   "formula": "=BITXOR(7,7)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-009",
+   "category": "engineering",
+   "function": "COMPLEX",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "由实部虚部生成默认后缀 i 的复数",
+    "en": "Build a complex number with the default suffix i from real and imaginary parts"
+   },
+   "formula": "=COMPLEX(3,4)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-010",
+   "category": "engineering",
+   "function": "COMPLEX",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "虚部为负且后缀指定为 j 的复数",
+    "en": "Complex number with a negative imaginary part and suffix j"
+   },
+   "formula": "=COMPLEX(3,-4,\"j\")",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-011",
+   "category": "engineering",
+   "function": "CONVERT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1 公里换算为米并校验比例系数",
+    "en": "Convert 1 kilometer to meters and check the ratio factor"
+   },
+   "formula": "=CONVERT(1,\"km\",\"m\")",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-012",
+   "category": "engineering",
+   "function": "CONVERT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "摄氏度换算为华氏度（含偏移单位）",
+    "en": "Convert Celsius to Fahrenheit, an offset unit"
+   },
+   "formula": "=CONVERT(100,\"C\",\"F\")",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-013",
+   "category": "engineering",
+   "function": "DEC2BIN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "十进制数转换为二进制文本",
+    "en": "Convert a decimal number to binary text"
+   },
+   "formula": "=DEC2BIN(100)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-014",
+   "category": "engineering",
+   "function": "DEC2BIN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "指定 8 位宽度补零的二进制转换",
+    "en": "Binary conversion zero-padded to 8 characters"
+   },
+   "formula": "=DEC2BIN(9,8)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-015",
+   "category": "engineering",
+   "function": "DEC2HEX",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "十进制数转换为十六进制文本",
+    "en": "Convert a decimal number to hexadecimal text"
+   },
+   "formula": "=DEC2HEX(255)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-016",
+   "category": "engineering",
+   "function": "DEC2HEX",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数按 10 位补码转换为十六进制",
+    "en": "Convert a negative number to hexadecimal as 10-character two's complement"
+   },
+   "formula": "=DEC2HEX(-1)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-017",
+   "category": "engineering",
+   "function": "DEC2OCT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "十进制数转换为八进制文本",
+    "en": "Convert a decimal number to octal text"
+   },
+   "formula": "=DEC2OCT(100)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-018",
+   "category": "engineering",
+   "function": "DEC2OCT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数按 10 位补码转换为八进制",
+    "en": "Convert a negative number to octal as 10-character two's complement"
+   },
+   "formula": "=DEC2OCT(-1)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-019",
+   "category": "engineering",
+   "function": "DELTA",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "两个相等数值比较返回 1",
+    "en": "Comparing two equal values returns 1"
+   },
+   "formula": "=DELTA(5,5)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-020",
+   "category": "engineering",
+   "function": "DELTA",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "两个不等数值比较返回 0",
+    "en": "Comparing two unequal values returns 0"
+   },
+   "formula": "=DELTA(5,4)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-021",
+   "category": "engineering",
+   "function": "ERF",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "误差函数在 x=1 处的取值",
+    "en": "Error function at x=1"
+   },
+   "formula": "=ERF(1)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-022",
+   "category": "engineering",
+   "function": "ERF",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "误差函数在 x=0 处取值为 0",
+    "en": "Error function is 0 at x=0"
+   },
+   "formula": "=ERF(0)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-023",
+   "category": "engineering",
+   "function": "ERFC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "互补误差函数在 x=1 处的取值",
+    "en": "Complementary error function at x=1"
+   },
+   "formula": "=ERFC(1)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-024",
+   "category": "engineering",
+   "function": "ERFC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "互补误差函数在 x=0 处取值为 1",
+    "en": "Complementary error function is 1 at x=0"
+   },
+   "formula": "=ERFC(0)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-025",
+   "category": "engineering",
+   "function": "GESTEP",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "数值大于阈值时返回 1",
+    "en": "Returns 1 when the value exceeds the threshold"
+   },
+   "formula": "=GESTEP(5,4)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-026",
+   "category": "engineering",
+   "function": "GESTEP",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "数值小于阈值时返回 0",
+    "en": "Returns 0 when the value is below the threshold"
+   },
+   "formula": "=GESTEP(3,4)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-027",
+   "category": "engineering",
+   "function": "HEX2DEC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "两位十六进制数转换为十进制",
+    "en": "Convert a two-digit hexadecimal number to decimal"
+   },
+   "formula": "=HEX2DEC(\"A5\")",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-028",
+   "category": "engineering",
+   "function": "HEX2DEC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "10 位全 F 十六进制按补码解释为 -1",
+    "en": "A 10-digit all-F hexadecimal is read as -1 in two's complement"
+   },
+   "formula": "=HEX2DEC(\"FFFFFFFFFF\")",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-029",
+   "category": "engineering",
+   "function": "IMABS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "计算复数 3+4i 的模长",
+    "en": "Modulus of the complex number 3+4i"
+   },
+   "formula": "=IMABS(\"3+4i\")",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-030",
+   "category": "engineering",
+   "function": "IMABS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "纯实数文本的绝对值计算",
+    "en": "Absolute value of a purely real text"
+   },
+   "formula": "=IMABS(\"-5\")",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-031",
+   "category": "engineering",
+   "function": "IMAGINARY",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "从复数字符串中提取虚部",
+    "en": "Extract the imaginary part from a complex number string"
+   },
+   "formula": "=IMAGINARY(\"3+4i\")",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-032",
+   "category": "engineering",
+   "function": "IMAGINARY",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "纯实数文本的虚部返回 0",
+    "en": "Imaginary part of a purely real text returns 0"
+   },
+   "formula": "=IMAGINARY(\"5\")",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-033",
+   "category": "engineering",
+   "function": "IMPRODUCT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "两个复数相乘返回复数文本",
+    "en": "Multiply two complex numbers and return complex text"
+   },
+   "formula": "=IMPRODUCT(\"1+2i\",\"3+4i\")",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-034",
+   "category": "engineering",
+   "function": "IMPRODUCT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "两个纯虚数相乘得实数",
+    "en": "Multiplying two purely imaginary numbers gives a real number"
+   },
+   "formula": "=IMPRODUCT(\"0+2i\",\"0+3i\")",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-035",
+   "category": "engineering",
+   "function": "IMREAL",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "从复数字符串中提取实部",
+    "en": "Extract the real part from a complex number string"
+   },
+   "formula": "=IMREAL(\"3+4i\")",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-036",
+   "category": "engineering",
+   "function": "IMREAL",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "纯实数的实部等于自身",
+    "en": "Real part of a purely real number equals itself"
+   },
+   "formula": "=IMREAL(\"6\")",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-037",
+   "category": "engineering",
+   "function": "IMSUM",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "两个复数求和返回复数文本",
+    "en": "Add two complex numbers and return complex text"
+   },
+   "formula": "=IMSUM(\"1+2i\",\"3+4i\")",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-038",
+   "category": "engineering",
+   "function": "IMSUM",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "实部虚部分别相加的复数求和",
+    "en": "Complex sum with real and imaginary parts added separately"
+   },
+   "formula": "=IMSUM(\"5+3i\",\"2-1i\")",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-039",
+   "category": "engineering",
+   "function": "OCT2DEC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "三位八进制数转换为十进制",
+    "en": "Convert a three-digit octal number to decimal"
+   },
+   "formula": "=OCT2DEC(\"144\")",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-040",
+   "category": "engineering",
+   "function": "OCT2DEC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "10 位全 7 八进制按补码解释为 -1",
+    "en": "A 10-digit all-7 octal is read as -1 in two's complement"
+   },
+   "formula": "=OCT2DEC(\"7777777777\")",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-041",
+   "category": "engineering",
+   "function": "IMCONJUGATE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "求复数 3+4i 的共轭复数",
+    "en": "Conjugate of the complex number 3+4i"
+   },
+   "formula": "=IMCONJUGATE(\"3+4i\")",
+   "priority": "P2",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-201",
+   "category": "engineering",
+   "function": "BESSELI",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "零阶修正贝塞尔函数在 x=0 处的基线值为 1",
+    "en": "Zero-order modified Bessel function has the baseline value 1 at x=0"
+   },
+   "formula": "=BESSELI(0,0)",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-202",
+   "category": "engineering",
+   "function": "BESSELJ",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "一阶贝塞尔函数在 x=0 处返回 0",
+    "en": "First-order Bessel function returns 0 at x=0"
+   },
+   "formula": "=BESSELJ(0,1)",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-203",
+   "category": "engineering",
+   "function": "BESSELK",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "零阶修正贝塞尔函数 K 在 x=1 处的取值",
+    "en": "Zero-order modified Bessel function K at x=1"
+   },
+   "formula": "=BESSELK(1,0)",
+   "priority": "P1",
+   "source": "pilot-2026-10",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-204",
+   "category": "engineering",
+   "function": "BESSELY",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "零阶贝塞尔函数 Y 在 x=1 处的取值",
+    "en": "Zero-order Bessel function Y at x=1"
+   },
+   "formula": "=BESSELY(1,0)",
+   "priority": "P1",
+   "source": "pilot-2026-10",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-205",
+   "category": "engineering",
+   "function": "BIN2HEX",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "二进制 1111 转换为十六进制文本 F",
+    "en": "Convert binary 1111 to hexadecimal text F"
+   },
+   "formula": "=BIN2HEX(1111)",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-206",
+   "category": "engineering",
+   "function": "BIN2OCT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "二进制 1111 转换为八进制文本 17",
+    "en": "Convert binary 1111 to octal text 17"
+   },
+   "formula": "=BIN2OCT(1111)",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-207",
+   "category": "engineering",
+   "function": "BITLSHIFT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "数值 4 左移 2 位得到 16",
+    "en": "Shift 4 left by 2 bits gives 16"
+   },
+   "formula": "=BITLSHIFT(4,2)",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-208",
+   "category": "engineering",
+   "function": "BITRSHIFT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "数值 16 右移 2 位得到 4",
+    "en": "Shift 16 right by 2 bits gives 4"
+   },
+   "formula": "=BITRSHIFT(16,2)",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-209",
+   "category": "engineering",
+   "function": "ERF.PRECISE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "精确误差函数在 0 处的基线值为 0",
+    "en": "Exact error function has the baseline value 0 at 0"
+   },
+   "formula": "=ERF.PRECISE(0)",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-210",
+   "category": "engineering",
+   "function": "ERFC.PRECISE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "精确互补误差函数在 0 处的基线值为 1",
+    "en": "Exact complementary error function has the baseline value 1 at 0"
+   },
+   "formula": "=ERFC.PRECISE(0)",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-211",
+   "category": "engineering",
+   "function": "HEX2BIN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "十六进制文本 F 转换为二进制 1111",
+    "en": "Convert hexadecimal text F to binary 1111"
+   },
+   "formula": "=HEX2BIN(\"F\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-212",
+   "category": "engineering",
+   "function": "HEX2OCT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "十六进制文本 F 转换为八进制 17",
+    "en": "Convert hexadecimal text F to octal 17"
+   },
+   "formula": "=HEX2OCT(\"F\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-213",
+   "category": "engineering",
+   "function": "IMARGUMENT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "实数 1 的复数辐角为 0 弧度",
+    "en": "Complex argument of the real number 1 is 0 radians"
+   },
+   "formula": "=IMARGUMENT(\"1\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-214",
+   "category": "engineering",
+   "function": "IMCOS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "复数 0 的余弦值为实数 1",
+    "en": "Cosine of complex 0 is the real number 1"
+   },
+   "formula": "=IMCOS(\"0\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-215",
+   "category": "engineering",
+   "function": "IMCOSH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "复数 0 的双曲余弦值为实数 1",
+    "en": "Hyperbolic cosine of complex 0 is the real number 1"
+   },
+   "formula": "=IMCOSH(\"0\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-216",
+   "category": "engineering",
+   "function": "IMCOT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "复数 1 的余切值",
+    "en": "Cotangent of complex 1"
+   },
+   "formula": "=IMCOT(\"1\")",
+   "priority": "P1",
+   "source": "pilot-2026-10",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-217",
+   "category": "engineering",
+   "function": "IMCSC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "复数 1 的余割值",
+    "en": "Cosecant of complex 1"
+   },
+   "formula": "=IMCSC(\"1\")",
+   "priority": "P1",
+   "source": "pilot-2026-10",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-218",
+   "category": "engineering",
+   "function": "IMCSCH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "复数 1 的双曲余割值",
+    "en": "Hyperbolic cosecant of complex 1"
+   },
+   "formula": "=IMCSCH(\"1\")",
+   "priority": "P1",
+   "source": "pilot-2026-10",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-219",
+   "category": "engineering",
+   "function": "IMDIV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "复数 4+2i 除以实数 2 得到 2+i",
+    "en": "Complex 4+2i divided by real 2 gives 2+i"
+   },
+   "formula": "=IMDIV(\"4+2i\",\"2\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-220",
+   "category": "engineering",
+   "function": "IMEXP",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "复数 0 的指数值为实数 1",
+    "en": "Exponential of complex 0 is the real number 1"
+   },
+   "formula": "=IMEXP(\"0\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-221",
+   "category": "engineering",
+   "function": "IMLN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "复数 1 的自然对数为实数 0",
+    "en": "Natural logarithm of complex 1 is the real number 0"
+   },
+   "formula": "=IMLN(\"1\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-222",
+   "category": "engineering",
+   "function": "IMLOG10",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "实数 10 的常用对数为实数 1",
+    "en": "Common logarithm of the real number 10 is the real number 1"
+   },
+   "formula": "=IMLOG10(\"10\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-223",
+   "category": "engineering",
+   "function": "IMLOG2",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "实数 4 的二进制对数为实数 2",
+    "en": "Binary logarithm of the real number 4 is the real number 2"
+   },
+   "formula": "=IMLOG2(\"4\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-224",
+   "category": "engineering",
+   "function": "IMPOWER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "实数 2 的三次幂为实数 8",
+    "en": "Real 2 raised to the third power is the real number 8"
+   },
+   "formula": "=IMPOWER(\"2\",3)",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-225",
+   "category": "engineering",
+   "function": "IMSEC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "复数 0 的正割值为实数 1",
+    "en": "Secant of complex 0 is the real number 1"
+   },
+   "formula": "=IMSEC(\"0\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-226",
+   "category": "engineering",
+   "function": "IMSECH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "复数 0 的双曲正割值为实数 1",
+    "en": "Hyperbolic secant of complex 0 is the real number 1"
+   },
+   "formula": "=IMSECH(\"0\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-227",
+   "category": "engineering",
+   "function": "IMSIN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "复数 0 的正弦值为实数 0",
+    "en": "Sine of complex 0 is the real number 0"
+   },
+   "formula": "=IMSIN(\"0\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-228",
+   "category": "engineering",
+   "function": "IMSINH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "复数 0 的双曲正弦值为实数 0",
+    "en": "Hyperbolic sine of complex 0 is the real number 0"
+   },
+   "formula": "=IMSINH(\"0\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-229",
+   "category": "engineering",
+   "function": "IMSQRT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "实数 4 的复数平方根为实数 2",
+    "en": "Complex square root of real 4 is the real number 2"
+   },
+   "formula": "=IMSQRT(\"4\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-230",
+   "category": "engineering",
+   "function": "IMSUB",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "复数 3+4i 与 3+2i 相减得到 2i",
+    "en": "Complex 3+4i minus 3+2i gives 2i"
+   },
+   "formula": "=IMSUB(\"3+4i\",\"3+2i\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-231",
+   "category": "engineering",
+   "function": "IMTAN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "复数 0 的正切值为实数 0",
+    "en": "Tangent of complex 0 is the real number 0"
+   },
+   "formula": "=IMTAN(\"0\")",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-232",
+   "category": "engineering",
+   "function": "OCT2BIN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "八进制 17 转换为二进制 1111",
+    "en": "Convert octal 17 to binary 1111"
+   },
+   "formula": "=OCT2BIN(17)",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-ENG-233",
+   "category": "engineering",
+   "function": "OCT2HEX",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "八进制 17 转换为十六进制 F",
+    "en": "Convert octal 17 to hexadecimal F"
+   },
+   "formula": "=OCT2HEX(17)",
+   "priority": "P1",
+   "source": "cases-cov-g4-eng.json",
+   "formulaCell": "H1"
+  }
+ ]
+}

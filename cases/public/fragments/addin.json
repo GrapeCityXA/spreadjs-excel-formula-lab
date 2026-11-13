@@ -1,0 +1,28 @@
+{
+ "category": "addin",
+ "description": {
+  "zh": "addin 类公式用例",
+  "en": "addin formula cases"
+ },
+ "cases": [
+  {
+   "id": "TC-ADDIN-001",
+   "category": "addin",
+   "function": "EUROCONVERT",
+   "dimension": "error",
+   "scenario": {
+    "zh": "把 1 欧元按固定汇率转换为德国马克",
+    "en": "Convert 1 euro to German marks at a fixed rate"
+   },
+   "formula": "=EUROCONVERT(1,\"EUR\",\"DEM\")",
+   "priority": "P2",
+   "source": "pilot-2026-10",
+   "formulaCell": "H1",
+   "expectError": true,
+   "note": {
+    "zh": "Excel 本机未安装欧洲货币工具加载项时返回 #NAME?，SpreadJS 返回 1.96，两侧不一致",
+    "en": "Excel returns #NAME? when the European Currency Tools add-in is not installed locally, while SpreadJS returns 1.96, so the two results disagree"
+   }
+  }
+ ]
+}

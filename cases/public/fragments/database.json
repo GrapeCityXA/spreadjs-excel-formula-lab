@@ -1,0 +1,963 @@
+{
+ "category": "database",
+ "description": {
+  "zh": "database 类公式用例",
+  "en": "database formula cases"
+ },
+ "cases": [
+  {
+   "id": "M2-DB-001",
+   "category": "database",
+   "function": "DCOUNT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "按 >=20 的条件统计记录数",
+    "en": "DCOUNT with a >=20 criterion"
+   },
+   "formula": "=DCOUNT(A1:B5,\"Amount\",D1:D2)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     "Name",
+     "Amount",
+     null,
+     "Amount"
+    ],
+    [
+     "A",
+     10,
+     null,
+     ">=20"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "id": "M2-DB-002",
+   "category": "database",
+   "function": "DSUM",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "按 <25 的条件求和",
+    "en": "DSUM with a <25 criterion"
+   },
+   "formula": "=DSUM(A1:B5,\"Amount\",D1:D2)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     "Name",
+     "Amount",
+     null,
+     "Amount"
+    ],
+    [
+     "A",
+     10,
+     null,
+     "<25"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ]
+   ]
+  },
+  {
+   "id": "TC-DB-001",
+   "category": "database",
+   "function": "DSUM",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "按金额大于 15 的条件对 Amount 求和",
+    "en": "Sum Amount where the amount is greater than 15"
+   },
+   "formula": "=DSUM(A1:B5,\"Amount\",D1:D2)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "Name",
+     "Amount",
+     null,
+     "Amount"
+    ],
+    [
+     "A",
+     10,
+     null,
+     ">15"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-002",
+   "category": "database",
+   "function": "DSUM",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "按名称等于 A 的条件对 Amount 求和",
+    "en": "Sum Amount where the name equals A"
+   },
+   "formula": "=DSUM(A1:B5,\"Amount\",D1:D2)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "Name",
+     "Amount",
+     null,
+     "Name"
+    ],
+    [
+     "A",
+     10,
+     null,
+     "A"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-003",
+   "category": "database",
+   "function": "DAVERAGE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "按金额大于 15 的条件求平均值",
+    "en": "Average where the amount is greater than 15"
+   },
+   "formula": "=DAVERAGE(A1:B5,\"Amount\",D1:D2)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "Name",
+     "Amount",
+     null,
+     "Amount"
+    ],
+    [
+     "A",
+     10,
+     null,
+     ">15"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-004",
+   "category": "database",
+   "function": "DAVERAGE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "按名称等于 A 的条件求平均值",
+    "en": "Average where the name equals A"
+   },
+   "formula": "=DAVERAGE(A1:B5,\"Amount\",D1:D2)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "Name",
+     "Amount",
+     null,
+     "Name"
+    ],
+    [
+     "A",
+     10,
+     null,
+     "A"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-005",
+   "category": "database",
+   "function": "DCOUNT",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "统计金额大于 15 的数值单元格数",
+    "en": "Count numeric cells with an amount greater than 15"
+   },
+   "formula": "=DCOUNT(A1:B5,\"Amount\",D1:D2)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "Name",
+     "Amount",
+     null,
+     "Amount"
+    ],
+    [
+     "A",
+     10,
+     null,
+     ">15"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-006",
+   "category": "database",
+   "function": "DCOUNT",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "统计名称为 B 的数值单元格数",
+    "en": "Count numeric cells where the name is B"
+   },
+   "formula": "=DCOUNT(A1:B5,\"Amount\",D1:D2)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "Name",
+     "Amount",
+     null,
+     "Name"
+    ],
+    [
+     "A",
+     10,
+     null,
+     "B"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-007",
+   "category": "database",
+   "function": "DGET",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "提取金额大于 35 的唯一记录",
+    "en": "Extract unique records with an amount greater than 35"
+   },
+   "formula": "=DGET(A1:B5,\"Amount\",D1:D2)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "Name",
+     "Amount",
+     null,
+     "Amount"
+    ],
+    [
+     "A",
+     10,
+     null,
+     ">35"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-008",
+   "category": "database",
+   "function": "DGET",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "提取名称为 C 的唯一记录",
+    "en": "Extract unique records with the name C"
+   },
+   "formula": "=DGET(A1:B5,\"Amount\",D1:D2)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "Name",
+     "Amount",
+     null,
+     "Name"
+    ],
+    [
+     "A",
+     10,
+     null,
+     "C"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "C",
+     40,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-009",
+   "category": "database",
+   "function": "DMAX",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "按金额大于 15 的条件求最大值",
+    "en": "Max where the amount is greater than 15"
+   },
+   "formula": "=DMAX(A1:B5,\"Amount\",D1:D2)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "Name",
+     "Amount",
+     null,
+     "Amount"
+    ],
+    [
+     "A",
+     10,
+     null,
+     ">15"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-010",
+   "category": "database",
+   "function": "DMAX",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "按名称等于 A 的条件求最大值",
+    "en": "Max where the name equals A"
+   },
+   "formula": "=DMAX(A1:B5,\"Amount\",D1:D2)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "Name",
+     "Amount",
+     null,
+     "Name"
+    ],
+    [
+     "A",
+     10,
+     null,
+     "A"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-011",
+   "category": "database",
+   "function": "DMIN",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "按金额大于 15 的条件求最小值",
+    "en": "Min where the amount is greater than 15"
+   },
+   "formula": "=DMIN(A1:B5,\"Amount\",D1:D2)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "Name",
+     "Amount",
+     null,
+     "Amount"
+    ],
+    [
+     "A",
+     10,
+     null,
+     ">15"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-012",
+   "category": "database",
+   "function": "DMIN",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "按名称等于 A 的条件求最小值",
+    "en": "Min where the name equals A"
+   },
+   "formula": "=DMIN(A1:B5,\"Amount\",D1:D2)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     "Name",
+     "Amount",
+     null,
+     "Name"
+    ],
+    [
+     "A",
+     10,
+     null,
+     "A"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-201",
+   "category": "database",
+   "function": "DCOUNTA",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "统计类别为 A 的记录中非空单元格数",
+    "en": "Count non-empty cells in records with category A"
+   },
+   "formula": "=DCOUNTA(A1:B6,\"类别\",D1:D2)",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "data": [
+    [
+     "类别",
+     "金额",
+     null,
+     "类别"
+    ],
+    [
+     "A",
+     10,
+     null,
+     "A"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ],
+    [
+     "A",
+     50,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-202",
+   "category": "database",
+   "function": "DPRODUCT",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "求类别为 A 的记录金额乘积",
+    "en": "Product of amounts in records with category A"
+   },
+   "formula": "=DPRODUCT(A1:B6,\"金额\",D1:D2)",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "data": [
+    [
+     "类别",
+     "金额",
+     null,
+     "类别"
+    ],
+    [
+     "A",
+     10,
+     null,
+     "A"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ],
+    [
+     "A",
+     50,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-203",
+   "category": "database",
+   "function": "DSTDEV",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "类别为 A 的记录金额的样本标准差",
+    "en": "Sample standard deviation of amounts for category A"
+   },
+   "formula": "=DSTDEV(A1:B6,\"金额\",D1:D2)",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "data": [
+    [
+     "类别",
+     "金额",
+     null,
+     "类别"
+    ],
+    [
+     "A",
+     10,
+     null,
+     "A"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ],
+    [
+     "A",
+     50,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-204",
+   "category": "database",
+   "function": "DSTDEVP",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "类别为 A 的记录金额的总体标准差",
+    "en": "Population standard deviation of amounts for category A"
+   },
+   "formula": "=DSTDEVP(A1:B6,\"金额\",D1:D2)",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "data": [
+    [
+     "类别",
+     "金额",
+     null,
+     "类别"
+    ],
+    [
+     "A",
+     10,
+     null,
+     "A"
+    ],
+    [
+     "A",
+     10,
+     null,
+     null
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-205",
+   "category": "database",
+   "function": "DVAR",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "类别为 A 的记录金额的样本方差",
+    "en": "Sample variance of amounts for category A"
+   },
+   "formula": "=DVAR(A1:B6,\"金额\",D1:D2)",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "data": [
+    [
+     "类别",
+     "金额",
+     null,
+     "类别"
+    ],
+    [
+     "A",
+     10,
+     null,
+     "A"
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "B",
+     40,
+     null,
+     null
+    ],
+    [
+     "A",
+     50,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-DB-206",
+   "category": "database",
+   "function": "DVARP",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "类别为 A 的记录金额的总体方差",
+    "en": "Population variance of amounts for category A"
+   },
+   "formula": "=DVARP(A1:B6,\"金额\",D1:D2)",
+   "priority": "P2",
+   "source": "cases-cov-g7-misc.json",
+   "data": [
+    [
+     "类别",
+     "金额",
+     null,
+     "类别"
+    ],
+    [
+     "A",
+     10,
+     null,
+     "A"
+    ],
+    [
+     "A",
+     10,
+     null,
+     null
+    ],
+    [
+     "B",
+     20,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ],
+    [
+     "A",
+     30,
+     null,
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  }
+ ]
+}

@@ -1,0 +1,4626 @@
+{
+ "category": "statistical",
+ "description": {
+  "zh": "statistical 类公式用例",
+  "en": "statistical formula cases"
+ },
+ "cases": [
+  {
+   "id": "CFG-AVG-001",
+   "category": "statistical",
+   "function": "AVERAGE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "直接参数中的文本数字",
+    "en": "Text number passed as a direct argument"
+   },
+   "formula": "=AVERAGE(2,\"4\")",
+   "priority": "P1",
+   "source": "config-sensitive"
+  },
+  {
+   "id": "CFG-COUNT-001",
+   "category": "statistical",
+   "function": "COUNT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "直接参数中的文本数字与布尔值",
+    "en": "Text numbers and booleans passed as direct arguments"
+   },
+   "formula": "=COUNT(\"2\",TRUE)",
+   "priority": "P1",
+   "source": "config-sensitive"
+  },
+  {
+   "id": "M2-STAT-001",
+   "category": "statistical",
+   "function": "AVERAGE",
+   "dimension": "error",
+   "scenario": {
+    "zh": "空区域求平均返回 #DIV/0!",
+    "en": "AVERAGE of an empty range returns #DIV/0!"
+   },
+   "formula": "=AVERAGE(A1:A2)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     null
+    ],
+    [
+     null
+    ]
+   ],
+   "expectError": true
+  },
+  {
+   "id": "M2-STAT-002",
+   "category": "statistical",
+   "function": "COUNT",
+   "dimension": "config",
+   "scenario": {
+    "zh": "COUNT 直接参数布尔值",
+    "en": "COUNT with a boolean direct argument"
+   },
+   "formula": "=COUNT(TRUE)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-STAT-003",
+   "category": "statistical",
+   "function": "COUNT",
+   "dimension": "config",
+   "scenario": {
+    "zh": "COUNT 直接参数文本数字",
+    "en": "COUNT with a text-number direct argument"
+   },
+   "formula": "=COUNT(\"2\")",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-STAT-004",
+   "category": "statistical",
+   "function": "MAX",
+   "dimension": "type-coercion",
+   "scenario": {
+    "zh": "MAX 直接参数混合文本数字与布尔值",
+    "en": "MAX with mixed text-number and boolean arguments"
+   },
+   "formula": "=MAX(\"2\",TRUE)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-STAT-005",
+   "category": "statistical",
+   "function": "MIN",
+   "dimension": "type-coercion",
+   "scenario": {
+    "zh": "MIN 直接参数混合文本数字与布尔值",
+    "en": "MIN with mixed text-number and boolean arguments"
+   },
+   "formula": "=MIN(\"2\",TRUE)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-STAT-006",
+   "category": "statistical",
+   "function": "MEDIAN",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "偶数个数值的中位数",
+    "en": "MEDIAN of an even number of values"
+   },
+   "formula": "=MEDIAN(1,2,3,4)",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-STAT-007",
+   "category": "statistical",
+   "function": "STDEV",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "样本标准差",
+    "en": "Sample standard deviation"
+   },
+   "formula": "=STDEV(1,2,3,4)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-STAT-008",
+   "category": "statistical",
+   "function": "PERCENTILE",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "数组常量的 25% 分位",
+    "en": "25th percentile of an array constant"
+   },
+   "formula": "=PERCENTILE({1,2,3,4},0.25)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-STAT-009",
+   "category": "statistical",
+   "function": "QUARTILE",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "数组常量的第三四分位",
+    "en": "Third quartile of an array constant"
+   },
+   "formula": "=QUARTILE({1,2,3,4},3)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-STAT-010",
+   "category": "statistical",
+   "function": "RANK",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "升序排名",
+    "en": "Rank in ascending order"
+   },
+   "formula": "=RANK(1,A1:A3,1)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "M2-STAT-011",
+   "category": "statistical",
+   "function": "AVERAGEA",
+   "dimension": "type-coercion",
+   "scenario": {
+    "zh": "AVERAGEA 对文本与空单元格的处理",
+    "en": "AVERAGEA treatment of text and blanks"
+   },
+   "formula": "=AVERAGEA(A1:A3)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     1
+    ],
+    [
+     null
+    ],
+    [
+     "2"
+    ]
+   ]
+  },
+  {
+   "id": "M2-STAT-012",
+   "category": "statistical",
+   "function": "COUNTBLANK",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "COUNTBLANK 统计空单元格",
+    "en": "COUNTBLANK counts empty cells"
+   },
+   "formula": "=COUNTBLANK(A1:A3)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     null
+    ],
+    [
+     1
+    ],
+    [
+     null
+    ]
+   ]
+  },
+  {
+   "id": "M2-STAT-013",
+   "category": "statistical",
+   "function": "LARGE",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "第二大值",
+    "en": "Second largest value"
+   },
+   "formula": "=LARGE({1,2,3},2)",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-STAT-014",
+   "category": "statistical",
+   "function": "SMALL",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "第二小值",
+    "en": "Second smallest value"
+   },
+   "formula": "=SMALL({1,2,3},2)",
+   "priority": "P0",
+   "source": "m2-design"
+  },
+  {
+   "id": "TC-STAT-001",
+   "category": "statistical",
+   "function": "AVERAGE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两列四数区域求平均值的基线场景",
+    "en": "Baseline: average of a four-value, two-column range"
+   },
+   "formula": "=AVERAGE(A1:B2)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     2,
+     4
+    ],
+    [
+     6,
+     8
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-002",
+   "category": "statistical",
+   "function": "AVERAGE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "区域含文本数字与空单元格时文本被忽略",
+    "en": "Text numbers in the range are ignored alongside empty cells"
+   },
+   "formula": "=AVERAGE(A1:A4)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     "5"
+    ],
+    [
+     null
+    ],
+    [
+     4
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-003",
+   "category": "statistical",
+   "function": "COUNT",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "混合类型区域中仅统计数字单元格个数",
+    "en": "Count only numeric cells in a mixed-type range"
+   },
+   "formula": "=COUNT(A1:A5)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     "x"
+    ],
+    [
+     3
+    ],
+    [
+     null
+    ],
+    [
+     5
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-004",
+   "category": "statistical",
+   "function": "COUNT",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "区域中逻辑值与空单元格不计入数字个数",
+    "en": "Logical values and empty cells are not counted as numbers"
+   },
+   "formula": "=COUNT(A1:A5)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     true
+    ],
+    [
+     false
+    ],
+    [
+     3
+    ],
+    [
+     null
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-005",
+   "category": "statistical",
+   "function": "COUNTA",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "区域含空串与逻辑值时统计非空值个数",
+    "en": "Count non-empty values in a range containing empty strings and logical values"
+   },
+   "formula": "=COUNTA(A1:A5)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     "x"
+    ],
+    [
+     null
+    ],
+    [
+     true
+    ],
+    [
+     ""
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-006",
+   "category": "statistical",
+   "function": "COUNTA",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "字面量参数统计非空值个数的边界场景",
+    "en": "Edge case: count non-empty values from literal arguments"
+   },
+   "formula": "=COUNTA(1,\"a\",TRUE)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-007",
+   "category": "statistical",
+   "function": "COUNTBLANK",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "区域含空单元格时统计空白单元格数量",
+    "en": "Count blank cells in a range containing empty cells"
+   },
+   "formula": "=COUNTBLANK(A1:A5)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     null
+    ],
+    [
+     "x"
+    ],
+    [
+     null
+    ],
+    [
+     5
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-008",
+   "category": "statistical",
+   "function": "COUNTBLANK",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "空字符串单元格也计入空白数量的边界",
+    "en": "Edge case: empty-string cells also count as blanks"
+   },
+   "formula": "=COUNTBLANK(A1:A4)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     ""
+    ],
+    [
+     null
+    ],
+    [
+     "x"
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-009",
+   "category": "statistical",
+   "function": "MAX",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "含重复最大值的数值区域取最大值",
+    "en": "MAX over a numeric range containing a duplicated maximum"
+   },
+   "formula": "=MAX(A1:A5)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     12
+    ],
+    [
+     45
+    ],
+    [
+     7
+    ],
+    [
+     45
+    ],
+    [
+     23
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-010",
+   "category": "statistical",
+   "function": "MAX",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "区域内文本数字与逻辑值不参与取最大值",
+    "en": "Text numbers and logical values are excluded from MAX"
+   },
+   "formula": "=MAX(A1:A5)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     -5
+    ],
+    [
+     "100"
+    ],
+    [
+     true
+    ],
+    [
+     null
+    ],
+    [
+     -2
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-011",
+   "category": "statistical",
+   "function": "MIN",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "常规数值区域取最小值的基线场景",
+    "en": "Baseline: MIN over a regular numeric range"
+   },
+   "formula": "=MIN(A1:A4)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     12
+    ],
+    [
+     45
+    ],
+    [
+     7
+    ],
+    [
+     23
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-012",
+   "category": "statistical",
+   "function": "MIN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "字面量负数参数取最小值的边界场景",
+    "en": "Edge case: MIN over literal negative arguments"
+   },
+   "formula": "=MIN(-3,5,-8,2)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-013",
+   "category": "statistical",
+   "function": "MEDIAN",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "奇数个数值取中位数的基线场景",
+    "en": "Baseline: median of an odd number of values"
+   },
+   "formula": "=MEDIAN(A1:A5)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     3
+    ],
+    [
+     1
+    ],
+    [
+     4
+    ],
+    [
+     1
+    ],
+    [
+     5
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-014",
+   "category": "statistical",
+   "function": "MEDIAN",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "偶数个数值取中间两数平均值的中位数",
+    "en": "Median of an even count as the average of the two middle values"
+   },
+   "formula": "=MEDIAN(A1:A4)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     2
+    ],
+    [
+     8
+    ],
+    [
+     4
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-015",
+   "category": "statistical",
+   "function": "MODE.SNGL",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "出现次数最多的数值取众数的基线场景",
+    "en": "Baseline: mode of the most frequently occurring value"
+   },
+   "formula": "=MODE.SNGL(A1:A6)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     2
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-016",
+   "category": "statistical",
+   "function": "MODE.SNGL",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "区域含文本时忽略文本取众数的边界",
+    "en": "Edge case: text in the range is ignored when taking the mode"
+   },
+   "formula": "=MODE.SNGL(A1:A5)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     2
+    ],
+    [
+     "x"
+    ],
+    [
+     3
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-017",
+   "category": "statistical",
+   "function": "COUNTIF",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "单条件计数：统计大于 10 的数值个数",
+    "en": "Single-condition count: values greater than 10"
+   },
+   "formula": "=COUNTIF(A1:A5,\">10\")",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     5
+    ],
+    [
+     15
+    ],
+    [
+     25
+    ],
+    [
+     10
+    ],
+    [
+     30
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-018",
+   "category": "statistical",
+   "function": "COUNTIF",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "通配符条件统计以 a 开头的文本个数",
+    "en": "Wildcard criterion: count text starting with a"
+   },
+   "formula": "=COUNTIF(A1:A5,\"a*\")",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     "apple"
+    ],
+    [
+     "apricot"
+    ],
+    [
+     "banana"
+    ],
+    [
+     "avocado"
+    ],
+    [
+     "cherry"
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-019",
+   "category": "statistical",
+   "function": "COUNTIFS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "双条件计数：文本与数值范围组合",
+    "en": "Two-condition count: text criterion combined with a numeric range"
+   },
+   "formula": "=COUNTIFS(A1:A5,\"a\",B1:B5,\">10\")",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     "a",
+     10
+    ],
+    [
+     "a",
+     20
+    ],
+    [
+     "b",
+     10
+    ],
+    [
+     "b",
+     30
+    ],
+    [
+     "a",
+     10
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-020",
+   "category": "statistical",
+   "function": "COUNTIFS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "双条件计数中包含大于等于比较条件的边界",
+    "en": "Edge case: two-condition count including a greater-than-or-equal criterion"
+   },
+   "formula": "=COUNTIFS(A1:A5,\"b\",B1:B5,\">=15\")",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     "a",
+     10
+    ],
+    [
+     "b",
+     20
+    ],
+    [
+     "b",
+     15
+    ],
+    [
+     "a",
+     30
+    ],
+    [
+     "c",
+     20
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-021",
+   "category": "statistical",
+   "function": "AVERAGEIF",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "按文本条件求对应数值平均值的基线",
+    "en": "Baseline: average of values matching a text criterion"
+   },
+   "formula": "=AVERAGEIF(A1:A3,\"x\",B1:B3)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     "x",
+     10
+    ],
+    [
+     "y",
+     20
+    ],
+    [
+     "x",
+     30
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-022",
+   "category": "statistical",
+   "function": "AVERAGEIF",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "使用不等于条件的单条件平均值统计",
+    "en": "Single-criterion average using a not-equal condition"
+   },
+   "formula": "=AVERAGEIF(B1:B4,\"<>10\")",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     "a",
+     10
+    ],
+    [
+     "b",
+     20
+    ],
+    [
+     "a",
+     30
+    ],
+    [
+     "c",
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-023",
+   "category": "statistical",
+   "function": "AVERAGEIFS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "双条件平均值：指定文本条件统计",
+    "en": "Two-criterion average with specified text conditions"
+   },
+   "formula": "=AVERAGEIFS(B1:B4,A1:A4,\"x\")",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     "x",
+     10
+    ],
+    [
+     "x",
+     20
+    ],
+    [
+     "y",
+     30
+    ],
+    [
+     "y",
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-024",
+   "category": "statistical",
+   "function": "AVERAGEIFS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "平均值多条件组合：文本且数值大于 30",
+    "en": "Multi-criterion average: text match and value greater than 30"
+   },
+   "formula": "=AVERAGEIFS(B1:B4,A1:A4,\"y\",B1:B4,\">30\")",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     "x",
+     10
+    ],
+    [
+     "x",
+     20
+    ],
+    [
+     "y",
+     30
+    ],
+    [
+     "y",
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-025",
+   "category": "statistical",
+   "function": "MAXIFS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "按文本条件取最大值的基线场景",
+    "en": "Baseline: MAX with a text criterion"
+   },
+   "formula": "=MAXIFS(B1:B3,A1:A3,\"a\")",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     "a",
+     10
+    ],
+    [
+     "a",
+     25
+    ],
+    [
+     "b",
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-026",
+   "category": "statistical",
+   "function": "MAXIFS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "不等于条件筛选后取最大值的边界场景",
+    "en": "Edge case: MAX after filtering with a not-equal criterion"
+   },
+   "formula": "=MAXIFS(B1:B5,A1:A5,\"<>x\")",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     "x",
+     5
+    ],
+    [
+     "y",
+     20
+    ],
+    [
+     "x",
+     30
+    ],
+    [
+     "y",
+     15
+    ],
+    [
+     "x",
+     25
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-027",
+   "category": "statistical",
+   "function": "MINIFS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "按文本条件取最小值的基线场景",
+    "en": "Baseline: MIN with a text criterion"
+   },
+   "formula": "=MINIFS(B1:B3,A1:A3,\"a\")",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     "a",
+     10
+    ],
+    [
+     "a",
+     25
+    ],
+    [
+     "b",
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-028",
+   "category": "statistical",
+   "function": "MINIFS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "不等于条件筛选后取最小值的边界场景",
+    "en": "Edge case: MIN after filtering with a not-equal criterion"
+   },
+   "formula": "=MINIFS(B1:B5,A1:A5,\"<>a\")",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     "a",
+     10
+    ],
+    [
+     "b",
+     25
+    ],
+    [
+     "b",
+     40
+    ],
+    [
+     "a",
+     5
+    ],
+    [
+     "c",
+     30
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-029",
+   "category": "statistical",
+   "function": "AVEDEV",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "五个数值的平均绝对偏差基线场景",
+    "en": "Baseline: mean absolute deviation of five values"
+   },
+   "formula": "=AVEDEV(A1:A5)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     4
+    ],
+    [
+     7
+    ],
+    [
+     9
+    ],
+    [
+     10
+    ],
+    [
+     15
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-030",
+   "category": "statistical",
+   "function": "AVEDEV",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "区域含文本与空值时忽略后计算平均绝对偏差",
+    "en": "Mean absolute deviation with text and blanks in the range ignored"
+   },
+   "formula": "=AVEDEV(A1:A5)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     3
+    ],
+    [
+     "x"
+    ],
+    [
+     5
+    ],
+    [
+     null
+    ],
+    [
+     7
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-031",
+   "category": "statistical",
+   "function": "STDEV.P",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "八个数值的总体标准偏差基线场景",
+    "en": "Baseline: population standard deviation of eight values"
+   },
+   "formula": "=STDEV.P(A1:A8)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     4
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     5
+    ],
+    [
+     7
+    ],
+    [
+     9
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-032",
+   "category": "statistical",
+   "function": "STDEV.P",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "区域含文本与空值时总体标准偏差忽略处理",
+    "en": "Population standard deviation ignoring text and blanks in the range"
+   },
+   "formula": "=STDEV.P(A1:A8)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     2
+    ],
+    [
+     "x"
+    ],
+    [
+     4
+    ],
+    [
+     null
+    ],
+    [
+     5
+    ],
+    [
+     5
+    ],
+    [
+     7
+    ],
+    [
+     9
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-033",
+   "category": "statistical",
+   "function": "STDEV.S",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "八个数值的样本标准偏差基线场景",
+    "en": "Baseline: sample standard deviation of eight values"
+   },
+   "formula": "=STDEV.S(A1:A8)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     4
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     5
+    ],
+    [
+     7
+    ],
+    [
+     9
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-034",
+   "category": "statistical",
+   "function": "STDEV.S",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "仅两个数值的样本标准偏差边界场景",
+    "en": "Edge case: sample standard deviation of only two values"
+   },
+   "formula": "=STDEV.S(A1:A2)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     14
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-035",
+   "category": "statistical",
+   "function": "VAR.P",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "八个数值的总体方差基线场景",
+    "en": "Baseline: population variance of eight values"
+   },
+   "formula": "=VAR.P(A1:A8)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     4
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     5
+    ],
+    [
+     7
+    ],
+    [
+     9
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-036",
+   "category": "statistical",
+   "function": "VAR.P",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "含负数的数值区域计算总体方差",
+    "en": "Population variance of a numeric range containing negatives"
+   },
+   "formula": "=VAR.P(A1:A4)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     -3
+    ],
+    [
+     -1
+    ],
+    [
+     2
+    ],
+    [
+     6
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-037",
+   "category": "statistical",
+   "function": "VAR.S",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "八个数值的样本方差基线场景",
+    "en": "Baseline: sample variance of eight values"
+   },
+   "formula": "=VAR.S(A1:A8)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     4
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     5
+    ],
+    [
+     7
+    ],
+    [
+     9
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-038",
+   "category": "statistical",
+   "function": "VAR.S",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "含小数的三个数值计算样本方差",
+    "en": "Sample variance of three decimal values"
+   },
+   "formula": "=VAR.S(A1:A3)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1.5
+    ],
+    [
+     2.5
+    ],
+    [
+     3.5
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-039",
+   "category": "statistical",
+   "function": "GEOMEAN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "两个字面量正数的几何平均值基线",
+    "en": "Baseline: geometric mean of two positive literal numbers"
+   },
+   "formula": "=GEOMEAN(2,8)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-040",
+   "category": "statistical",
+   "function": "GEOMEAN",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "三个增长率数据的几何平均值边界",
+    "en": "Edge case: geometric mean of three growth-rate values"
+   },
+   "formula": "=GEOMEAN(A1:A3)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1.1
+    ],
+    [
+     1.2
+    ],
+    [
+     1.3
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-041",
+   "category": "statistical",
+   "function": "AVERAGEA",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "混合类型区域按 AVERAGEA 计算平均值",
+    "en": "AVERAGEA over a mixed-type range"
+   },
+   "formula": "=AVERAGEA(A1:A4)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     "x"
+    ],
+    [
+     true
+    ],
+    [
+     20
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-042",
+   "category": "statistical",
+   "function": "HARMEAN",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "三个正数的调和平均值基线场景",
+    "en": "Baseline: harmonic mean of three positive values"
+   },
+   "formula": "=HARMEAN(A1:A3)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     8
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-043",
+   "category": "statistical",
+   "function": "DEVSQ",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "五个连续整数的偏差平方和基线",
+    "en": "Baseline: sum of squared deviations for five consecutive integers"
+   },
+   "formula": "=DEVSQ(A1:A5)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-044",
+   "category": "statistical",
+   "function": "STDEVA",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "文本与数值混合区域估算样本标准差",
+    "en": "Estimate the sample standard deviation from a mixed text and numeric range"
+   },
+   "formula": "=STDEVA(A1:A5)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     6
+    ],
+    [
+     "x"
+    ],
+    [
+     8
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-045",
+   "category": "statistical",
+   "function": "STDEVPA",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "文本与数值混合区域计算总体标准差",
+    "en": "Population standard deviation over a mixed text and numeric range"
+   },
+   "formula": "=STDEVPA(A1:A5)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     6
+    ],
+    [
+     "x"
+    ],
+    [
+     8
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-046",
+   "category": "statistical",
+   "function": "VARA",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "文本与数值混合区域估算样本方差",
+    "en": "Estimate the sample variance from a mixed text and numeric range"
+   },
+   "formula": "=VARA(A1:A5)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     6
+    ],
+    [
+     "x"
+    ],
+    [
+     8
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-047",
+   "category": "statistical",
+   "function": "VARPA",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "文本与数值混合区域计算总体方差",
+    "en": "Population variance over a mixed text and numeric range"
+   },
+   "formula": "=VARPA(A1:A5)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     6
+    ],
+    [
+     "x"
+    ],
+    [
+     8
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-048",
+   "category": "statistical",
+   "function": "KURT",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "八个数值的峰度基线场景",
+    "en": "Baseline: kurtosis of eight values"
+   },
+   "formula": "=KURT(A1:A8)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     4
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     5
+    ],
+    [
+     7
+    ],
+    [
+     9
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-049",
+   "category": "statistical",
+   "function": "SKEW",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "含重复值的样本偏斜度基线场景",
+    "en": "Baseline: sample skewness of values containing duplicates"
+   },
+   "formula": "=SKEW(A1:A8)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     4
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     5
+    ],
+    [
+     7
+    ],
+    [
+     9
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-050",
+   "category": "statistical",
+   "function": "STANDARDIZE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "指定均值与标准差计算标准化值",
+    "en": "Standardized value from a specified mean and standard deviation"
+   },
+   "formula": "=STANDARDIZE(42,40,1.5)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-051",
+   "category": "statistical",
+   "function": "STEYX",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两组线性数据计算预测标准误差",
+    "en": "Standard error of the predicted value for two linear data sets"
+   },
+   "formula": "=STEYX(B1:B5,A1:A5)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     5,
+     11
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-052",
+   "category": "statistical",
+   "function": "TRIMMEAN",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "十个数值截尾 20% 后求内部平均值",
+    "en": "Interior mean of ten values after 20% trimming"
+   },
+   "formula": "=TRIMMEAN(A1:A10,0.2)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ],
+    [
+     9
+    ],
+    [
+     100
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-053",
+   "category": "statistical",
+   "function": "MAXA",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "含文本与逻辑值的区域按 MAXA 取最大",
+    "en": "MAXA over a range containing text and logical values"
+   },
+   "formula": "=MAXA(A1:A4)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     -5
+    ],
+    [
+     "100"
+    ],
+    [
+     true
+    ],
+    [
+     -2
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-054",
+   "category": "statistical",
+   "function": "MINA",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "含文本与逻辑值的区域按 MINA 取最小",
+    "en": "MINA over a range containing text and logical values"
+   },
+   "formula": "=MINA(A1:A4)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     -5
+    ],
+    [
+     "100"
+    ],
+    [
+     true
+    ],
+    [
+     -2
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-055",
+   "category": "statistical",
+   "function": "LARGE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "区域内第 2 大数值的基线场景",
+    "en": "Baseline: second largest value in a range"
+   },
+   "formula": "=LARGE(A1:A5,2)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     20
+    ],
+    [
+     30
+    ],
+    [
+     40
+    ],
+    [
+     50
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-056",
+   "category": "statistical",
+   "function": "LARGE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "含重复最大值时取第 2 大值",
+    "en": "Second largest value when the maximum is duplicated"
+   },
+   "formula": "=LARGE(A1:A5,2)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     5
+    ],
+    [
+     5
+    ],
+    [
+     3
+    ],
+    [
+     2
+    ],
+    [
+     1
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-057",
+   "category": "statistical",
+   "function": "SMALL",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "区域内第 2 小数值的基线场景",
+    "en": "Baseline: second smallest value in a range"
+   },
+   "formula": "=SMALL(A1:A5,2)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     20
+    ],
+    [
+     30
+    ],
+    [
+     40
+    ],
+    [
+     50
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-058",
+   "category": "statistical",
+   "function": "SMALL",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "含重复最小值时取第 2 小值",
+    "en": "Second smallest value when the minimum is duplicated"
+   },
+   "formula": "=SMALL(A1:A5,2)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     2
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-059",
+   "category": "statistical",
+   "function": "PERCENTILE.INC",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "五个数值取第 50 百分位的基线",
+    "en": "Baseline: 50th percentile of five values"
+   },
+   "formula": "=PERCENTILE.INC(A1:A5,0.5)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-060",
+   "category": "statistical",
+   "function": "PERCENTILE.INC",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "偶数个数值取第 25 百分位的边界",
+    "en": "Edge case: 25th percentile of an even number of values"
+   },
+   "formula": "=PERCENTILE.INC(A1:A4,0.25)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     20
+    ],
+    [
+     30
+    ],
+    [
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-061",
+   "category": "statistical",
+   "function": "RANK.EQ",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "降序排名并列时返回等值排名基线",
+    "en": "Baseline: descending rank returns the same rank for ties"
+   },
+   "formula": "=RANK.EQ(20,A1:A5,0)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     30
+    ],
+    [
+     20
+    ],
+    [
+     40
+    ],
+    [
+     20
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-062",
+   "category": "statistical",
+   "function": "RANK.AVG",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "降序排名并列时返回平均排名的边界",
+    "en": "Edge case: descending rank returns the average rank for ties"
+   },
+   "formula": "=RANK.AVG(20,A1:A5,0)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     30
+    ],
+    [
+     20
+    ],
+    [
+     40
+    ],
+    [
+     20
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-063",
+   "category": "statistical",
+   "function": "QUARTILE.INC",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "八个连续整数取包含性第一四分位",
+    "en": "Inclusive first quartile of eight consecutive integers"
+   },
+   "formula": "=QUARTILE.INC(A1:A8,1)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-064",
+   "category": "statistical",
+   "function": "QUARTILE.EXC",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "八个连续整数取排他性第二四分位",
+    "en": "Exclusive second quartile of eight consecutive integers"
+   },
+   "formula": "=QUARTILE.EXC(A1:A8,2)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-065",
+   "category": "statistical",
+   "function": "PERCENTILE.EXC",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "十个数值取排他性第 50 百分位",
+    "en": "Exclusive 50th percentile of ten values"
+   },
+   "formula": "=PERCENTILE.EXC(A1:A10,0.5)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ],
+    [
+     9
+    ],
+    [
+     10
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-066",
+   "category": "statistical",
+   "function": "PERCENTRANK.INC",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "五个数值取包含性百分比排名基线",
+    "en": "Baseline: inclusive percent rank of five values"
+   },
+   "formula": "=PERCENTRANK.INC(A1:A5,3)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-067",
+   "category": "statistical",
+   "function": "MODE.MULT",
+   "dimension": "array",
+   "scenario": {
+    "zh": "两个众数的数组溢写结果读取",
+    "en": "Read the spilled array result for two modes"
+   },
+   "formula": "=MODE.MULT(A1:A6)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H2"
+  },
+  {
+   "id": "TC-STAT-068",
+   "category": "statistical",
+   "function": "CORREL",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两组正相关数据求相关系数基线",
+    "en": "Baseline: correlation coefficient of two positively correlated data sets"
+   },
+   "formula": "=CORREL(A1:A5,B1:B5)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     10
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-069",
+   "category": "statistical",
+   "function": "CORREL",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两组波动数据求相关系数的边界场景",
+    "en": "Edge case: correlation coefficient of two fluctuating data sets"
+   },
+   "formula": "=CORREL(A1:A5,B1:B5)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1,
+     5
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     2
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-070",
+   "category": "statistical",
+   "function": "SLOPE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "线性数据求回归斜率基线场景",
+    "en": "Baseline: regression slope for linear data"
+   },
+   "formula": "=SLOPE(B1:B5,A1:A5)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     5,
+     11
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-071",
+   "category": "statistical",
+   "function": "SLOPE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "含负数与小数数据的回归斜率边界",
+    "en": "Edge case: regression slope for data containing negatives and decimals"
+   },
+   "formula": "=SLOPE(B1:B5,A1:A5)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     -2,
+     5.5
+    ],
+    [
+     -1,
+     3.2
+    ],
+    [
+     0,
+     1.4
+    ],
+    [
+     1,
+     -0.6
+    ],
+    [
+     2,
+     -2.8
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-072",
+   "category": "statistical",
+   "function": "INTERCEPT",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "线性数据求回归截距基线场景",
+    "en": "Baseline: regression intercept for linear data"
+   },
+   "formula": "=INTERCEPT(B1:B5,A1:A5)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1,
+     3
+    ],
+    [
+     2,
+     5
+    ],
+    [
+     3,
+     7
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     5,
+     11
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-073",
+   "category": "statistical",
+   "function": "INTERCEPT",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "含负数与小数数据的回归截距边界",
+    "en": "Edge case: regression intercept for data containing negatives and decimals"
+   },
+   "formula": "=INTERCEPT(B1:B5,A1:A5)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     -2,
+     5.5
+    ],
+    [
+     -1,
+     3.2
+    ],
+    [
+     0,
+     1.4
+    ],
+    [
+     1,
+     -0.6
+    ],
+    [
+     2,
+     -2.8
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-074",
+   "category": "statistical",
+   "function": "TREND",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "给定新 x 值预测趋势值的基线",
+    "en": "Baseline: predict a trend value for a given new x"
+   },
+   "formula": "=TREND(B1:B5,A1:A5,6)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     10
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-075",
+   "category": "statistical",
+   "function": "TREND",
+   "dimension": "array",
+   "scenario": {
+    "zh": "仅拟合数据并读取溢写趋势值数组",
+    "en": "Fit the data only and read the spilled array of trend values"
+   },
+   "formula": "=TREND(B1:B5,A1:A5)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     10
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H5"
+  },
+  {
+   "id": "TC-STAT-076",
+   "category": "statistical",
+   "function": "PEARSON",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两组线性数据求 Pearson 相关系数",
+    "en": "Pearson correlation coefficient of two linear data sets"
+   },
+   "formula": "=PEARSON(A1:A5,B1:B5)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     10
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-077",
+   "category": "statistical",
+   "function": "RSQ",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两组线性数据求判定系数 R 平方",
+    "en": "Coefficient of determination R squared for two linear data sets"
+   },
+   "formula": "=RSQ(B1:B5,A1:A5)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1,
+     5
+    ],
+    [
+     2,
+     3
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     2
+    ],
+    [
+     5,
+     7
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-078",
+   "category": "statistical",
+   "function": "FORECAST",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "给定新 x 值做线性预测的基线",
+    "en": "Baseline: linear prediction for a given new x"
+   },
+   "formula": "=FORECAST(6,B1:B5,A1:A5)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     10
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-079",
+   "category": "statistical",
+   "function": "LINEST",
+   "dimension": "array",
+   "scenario": {
+    "zh": "完美共线样本的回归参数数组读取",
+    "en": "Read the regression parameter array for a perfectly collinear sample"
+   },
+   "formula": "=LINEST(B1:B5,A1:A5,TRUE,TRUE)",
+   "priority": "P2",
+   "source": "pilot-2026-10",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     4,
+     8
+    ],
+    [
+     5,
+     10
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I5",
+   "note": {
+    "zh": "完美共线（y=2x）：两侧首格均为 2；区域第 4 行第 1 列（F 统计量）Excel 因浮点残差得到 1.16E+32，SpreadJS 残差恰为 0 返回 #NUM!，其余单元格一致（差异 <1e-15）。",
+    "en": "Perfectly collinear (y=2x): the first cell is 2 on both sides; in row 4, column 1 of the range (F statistic) Excel gets 1.16E+32 from floating-point residuals while SpreadJS has exactly zero residual and returns #NUM!; all other cells agree (difference <1e-15)."
+   }
+  },
+  {
+   "id": "TC-STAT-080",
+   "category": "statistical",
+   "function": "FREQUENCY",
+   "dimension": "array",
+   "scenario": {
+    "zh": "十个数值按四个分段点统计频率分布",
+    "en": "Frequency distribution of ten values across four bin points"
+   },
+   "formula": "=FREQUENCY(A1:A10,B1:B4)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     5,
+     4
+    ],
+    [
+     3,
+     6
+    ],
+    [
+     8,
+     8
+    ],
+    [
+     4,
+     null
+    ],
+    [
+     9,
+     null
+    ],
+    [
+     2,
+     null
+    ],
+    [
+     7,
+     null
+    ],
+    [
+     6,
+     null
+    ],
+    [
+     3,
+     null
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H5"
+  },
+  {
+   "id": "TC-STAT-081",
+   "category": "statistical",
+   "function": "BINOM.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "二项分布非累积概率的基线场景",
+    "en": "Baseline: binomial non-cumulative probability"
+   },
+   "formula": "=BINOM.DIST(6,10,0.5,FALSE)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-082",
+   "category": "statistical",
+   "function": "BINOM.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "二项分布累积概率的边界场景",
+    "en": "Edge case: binomial cumulative probability"
+   },
+   "formula": "=BINOM.DIST(6,10,0.5,TRUE)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-083",
+   "category": "statistical",
+   "function": "NORM.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "正态分布累积概率的基线场景",
+    "en": "Baseline: normal cumulative probability"
+   },
+   "formula": "=NORM.DIST(42,40,1.5,TRUE)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-084",
+   "category": "statistical",
+   "function": "NORM.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "正态分布概率密度的边界场景",
+    "en": "Edge case: normal probability density"
+   },
+   "formula": "=NORM.DIST(42,40,1.5,FALSE)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-085",
+   "category": "statistical",
+   "function": "NORM.INV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "标准正态逆函数求 95% 分位点",
+    "en": "Standard normal inverse at the 95% quantile"
+   },
+   "formula": "=NORM.INV(0.95,0,1)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-086",
+   "category": "statistical",
+   "function": "NORM.INV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "均值 100 标准差 15 的正态逆函数",
+    "en": "Normal inverse with mean 100 and standard deviation 15"
+   },
+   "formula": "=NORM.INV(0.5,100,15)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-087",
+   "category": "statistical",
+   "function": "NORM.S.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "标准正态累积分布函数的基线",
+    "en": "Baseline: standard normal cumulative distribution"
+   },
+   "formula": "=NORM.S.DIST(1.333333,TRUE)",
+   "priority": "P0",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-088",
+   "category": "statistical",
+   "function": "NORM.S.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "标准正态概率密度在 0 处的取值",
+    "en": "Standard normal probability density at 0"
+   },
+   "formula": "=NORM.S.DIST(0,FALSE)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-089",
+   "category": "statistical",
+   "function": "BINOM.DIST.RANGE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "二项分布区间概率的基线场景",
+    "en": "Baseline: binomial probability over an interval"
+   },
+   "formula": "=BINOM.DIST.RANGE(10,0.5,4,6)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-090",
+   "category": "statistical",
+   "function": "BINOM.INV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "二项分布累积概率逆函数边界",
+    "en": "Edge case: inverse of the binomial cumulative probability"
+   },
+   "formula": "=BINOM.INV(10,0.5,0.8)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-091",
+   "category": "statistical",
+   "function": "CHISQ.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "卡方分布累积概率的基线场景",
+    "en": "Baseline: chi-squared cumulative probability"
+   },
+   "formula": "=CHISQ.DIST(3,4,TRUE)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-092",
+   "category": "statistical",
+   "function": "CHISQ.TEST",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两组列联数据做卡方独立性检验",
+    "en": "Chi-squared test of independence on two contingency data sets"
+   },
+   "formula": "=CHISQ.TEST(A1:B2,A4:B5)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     10,
+     12
+    ],
+    [
+     8,
+     9
+    ],
+    [
+     null,
+     null
+    ],
+    [
+     9,
+     11
+    ],
+    [
+     7,
+     10
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-093",
+   "category": "statistical",
+   "function": "CONFIDENCE.NORM",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "正态置信区间的基线计算",
+    "en": "Baseline: normal confidence interval"
+   },
+   "formula": "=CONFIDENCE.NORM(0.05,2.5,50)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-094",
+   "category": "statistical",
+   "function": "CONFIDENCE.T",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "t 分布置信区间的边界计算",
+    "en": "Edge case: t-distribution confidence interval"
+   },
+   "formula": "=CONFIDENCE.T(0.05,2.5,50)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-095",
+   "category": "statistical",
+   "function": "BETA.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "β 分布累积概率的基线场景",
+    "en": "Baseline: beta cumulative probability"
+   },
+   "formula": "=BETA.DIST(0.5,2,3,TRUE)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-096",
+   "category": "statistical",
+   "function": "EXPON.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "指数分布累积概率的基线场景",
+    "en": "Baseline: exponential cumulative probability"
+   },
+   "formula": "=EXPON.DIST(0.5,1,TRUE)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-097",
+   "category": "statistical",
+   "function": "GAMMA.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "伽玛分布累积概率的基线场景",
+    "en": "Baseline: gamma cumulative probability"
+   },
+   "formula": "=GAMMA.DIST(2,1,1,TRUE)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-098",
+   "category": "statistical",
+   "function": "LOGNORM.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "对数正态分布累积概率基线",
+    "en": "Baseline: lognormal cumulative probability"
+   },
+   "formula": "=LOGNORM.DIST(2,0,1,TRUE)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-099",
+   "category": "statistical",
+   "function": "POISSON.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "泊松分布累积概率的基线场景",
+    "en": "Baseline: Poisson cumulative probability"
+   },
+   "formula": "=POISSON.DIST(2,3,TRUE)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-100",
+   "category": "statistical",
+   "function": "T.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "t 分布累积概率的基线场景",
+    "en": "Baseline: t-distribution cumulative probability"
+   },
+   "formula": "=T.DIST(1,10,TRUE)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-101",
+   "category": "statistical",
+   "function": "WEIBULL.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "威布尔分布累积概率的基线场景",
+    "en": "Baseline: Weibull cumulative probability"
+   },
+   "formula": "=WEIBULL.DIST(2,3,1,TRUE)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-102",
+   "category": "statistical",
+   "function": "F.TEST",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两组样本做 F 检验的基线场景",
+    "en": "Baseline: F-test on two samples"
+   },
+   "formula": "=F.TEST(A1:A5,B1:B5)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     2,
+     3
+    ],
+    [
+     4,
+     5
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     8,
+     9
+    ],
+    [
+     10,
+     11
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-103",
+   "category": "statistical",
+   "function": "NORM.S.INV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "标准正态逆函数取 95% 分位点",
+    "en": "Standard normal inverse at the 95% quantile"
+   },
+   "formula": "=NORM.S.INV(0.95)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-104",
+   "category": "statistical",
+   "function": "GEOMEAN",
+   "dimension": "error",
+   "scenario": {
+    "zh": "负数输入几何平均返回 NUM 错误",
+    "en": "Geometric mean with a negative input returns a NUM error"
+   },
+   "formula": "=GEOMEAN(-1,2)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "formulaCell": "H1",
+   "expectError": true
+  },
+  {
+   "id": "TC-STAT-105",
+   "category": "statistical",
+   "function": "LARGE",
+   "dimension": "error",
+   "scenario": {
+    "zh": "k 超过数据个数时 LARGE 返回错误",
+    "en": "LARGE returns an error when k exceeds the number of data points"
+   },
+   "formula": "=LARGE(A1:A3,5)",
+   "priority": "P2",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ],
+   "formulaCell": "H1",
+   "expectError": true
+  },
+  {
+   "id": "TC-STAT-201",
+   "category": "statistical",
+   "function": "BETA.INV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "β 分布中位数的逆累积基线场景",
+    "en": "Baseline: inverse cumulative beta at the median"
+   },
+   "formula": "=BETA.INV(0.5,2,3)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-202",
+   "category": "statistical",
+   "function": "BETA.INV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "β 逆累积函数带 A/B 区间参数的边界计算",
+    "en": "Edge case: inverse beta cumulative with A/B interval parameters"
+   },
+   "formula": "=BETA.INV(0.5,2,3,2,5)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-203",
+   "category": "statistical",
+   "function": "CHISQ.DIST.RT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "卡方分布右尾概率的基线场景",
+    "en": "Baseline: chi-squared right-tail probability"
+   },
+   "formula": "=CHISQ.DIST.RT(3,4)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-204",
+   "category": "statistical",
+   "function": "CHISQ.DIST.RT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "较大卡方值与自由度的右尾概率边界",
+    "en": "Edge case: right-tail probability for a large chi-squared value and degrees of freedom"
+   },
+   "formula": "=CHISQ.DIST.RT(10,5)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-205",
+   "category": "statistical",
+   "function": "CHISQ.INV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "卡方逆累积函数取中位数的基线",
+    "en": "Baseline: inverse chi-squared cumulative at the median"
+   },
+   "formula": "=CHISQ.INV(0.5,4)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-206",
+   "category": "statistical",
+   "function": "CHISQ.INV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "卡方逆累积函数 95% 分位点的边界",
+    "en": "Edge case: inverse chi-squared cumulative at the 95% quantile"
+   },
+   "formula": "=CHISQ.INV(0.95,10)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-207",
+   "category": "statistical",
+   "function": "CHISQ.INV.RT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "卡方右尾逆函数 5% 显著性基线",
+    "en": "Baseline: inverse chi-squared right tail at 5% significance"
+   },
+   "formula": "=CHISQ.INV.RT(0.05,4)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-208",
+   "category": "statistical",
+   "function": "CHISQ.INV.RT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "卡方右尾逆函数取中位数的边界",
+    "en": "Edge case: inverse chi-squared right tail at the median"
+   },
+   "formula": "=CHISQ.INV.RT(0.5,10)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-209",
+   "category": "statistical",
+   "function": "COVARIANCE.P",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两组正相关数据的总体协方差基线",
+    "en": "Baseline: population covariance of two positively correlated data sets"
+   },
+   "formula": "=COVARIANCE.P(A1:A5,B1:B5)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "data": [
+    [
+     2,
+     5
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     8,
+     12
+    ],
+    [
+     10,
+     15
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-210",
+   "category": "statistical",
+   "function": "COVARIANCE.P",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "含负数数据的总体协方差边界场景",
+    "en": "Edge case: population covariance with negative data"
+   },
+   "formula": "=COVARIANCE.P(A1:A5,B1:B5)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "data": [
+    [
+     -2,
+     4
+    ],
+    [
+     -1,
+     3
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     -2
+    ],
+    [
+     2,
+     -3
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-211",
+   "category": "statistical",
+   "function": "COVARIANCE.S",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两组正相关数据的样本协方差基线",
+    "en": "Baseline: sample covariance of two positively correlated data sets"
+   },
+   "formula": "=COVARIANCE.S(A1:A5,B1:B5)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "data": [
+    [
+     2,
+     5
+    ],
+    [
+     4,
+     9
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     8,
+     12
+    ],
+    [
+     10,
+     15
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-212",
+   "category": "statistical",
+   "function": "COVARIANCE.S",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "含负数数据的样本协方差边界场景",
+    "en": "Edge case: sample covariance with negative data"
+   },
+   "formula": "=COVARIANCE.S(A1:A5,B1:B5)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "data": [
+    [
+     -2,
+     4
+    ],
+    [
+     -1,
+     3
+    ],
+    [
+     0,
+     1
+    ],
+    [
+     1,
+     -2
+    ],
+    [
+     2,
+     -3
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-213",
+   "category": "statistical",
+   "function": "F.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "F 分布累积概率的基线场景",
+    "en": "Baseline: F-distribution cumulative probability"
+   },
+   "formula": "=F.DIST(1,3,4,TRUE)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-214",
+   "category": "statistical",
+   "function": "F.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "F 分布概率密度的边界场景",
+    "en": "Edge case: F-distribution probability density"
+   },
+   "formula": "=F.DIST(2,5,10,FALSE)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-215",
+   "category": "statistical",
+   "function": "F.DIST.RT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "F 分布右尾概率的基线场景",
+    "en": "Baseline: F-distribution right-tail probability"
+   },
+   "formula": "=F.DIST.RT(1,3,4)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-216",
+   "category": "statistical",
+   "function": "F.DIST.RT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "较大 F 值右尾概率的边界场景",
+    "en": "Edge case: right-tail probability for a large F value"
+   },
+   "formula": "=F.DIST.RT(2.5,5,10)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-217",
+   "category": "statistical",
+   "function": "F.INV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "F 分布逆累积函数取中位数基线",
+    "en": "Baseline: inverse F cumulative at the median"
+   },
+   "formula": "=F.INV(0.5,3,4)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-218",
+   "category": "statistical",
+   "function": "F.INV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "F 分布逆累积函数 95% 分位点边界",
+    "en": "Edge case: inverse F cumulative at the 95% quantile"
+   },
+   "formula": "=F.INV(0.95,5,10)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-219",
+   "category": "statistical",
+   "function": "F.INV.RT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "F 分布右尾逆函数 5% 显著性基线",
+    "en": "Baseline: inverse F right tail at 5% significance"
+   },
+   "formula": "=F.INV.RT(0.05,3,4)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-220",
+   "category": "statistical",
+   "function": "F.INV.RT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "F 分布右尾逆函数取中位数边界",
+    "en": "Edge case: inverse F right tail at the median"
+   },
+   "formula": "=F.INV.RT(0.5,5,10)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-221",
+   "category": "statistical",
+   "function": "FISHER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "Fisher 变换正相关值的基线场景",
+    "en": "Baseline: Fisher transformation of a positive correlation"
+   },
+   "formula": "=FISHER(0.5)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-222",
+   "category": "statistical",
+   "function": "FISHER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "Fisher 变换负相关值的边界场景",
+    "en": "Edge case: Fisher transformation of a negative correlation"
+   },
+   "formula": "=FISHER(-0.5)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-223",
+   "category": "statistical",
+   "function": "FISHERINV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "逆 Fisher 变换的基线场景",
+    "en": "Baseline: inverse Fisher transformation"
+   },
+   "formula": "=FISHERINV(0.5)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-224",
+   "category": "statistical",
+   "function": "FISHERINV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "逆 Fisher 变换负值输入的边界场景",
+    "en": "Edge case: inverse Fisher transformation with a negative input"
+   },
+   "formula": "=FISHERINV(-1)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-225",
+   "category": "statistical",
+   "function": "GAMMA",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "伽玛函数在 2.5 处的取值基线",
+    "en": "Baseline: gamma function at 2.5"
+   },
+   "formula": "=GAMMA(2.5)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-226",
+   "category": "statistical",
+   "function": "GAMMA",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "伽玛函数在 0.5 处的边界取值",
+    "en": "Edge case: gamma function at 0.5"
+   },
+   "formula": "=GAMMA(0.5)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-227",
+   "category": "statistical",
+   "function": "GAMMA.INV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "伽玛分布逆累积函数取中位数基线",
+    "en": "Baseline: inverse gamma cumulative at the median"
+   },
+   "formula": "=GAMMA.INV(0.5,2,1)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-228",
+   "category": "statistical",
+   "function": "GAMMA.INV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "伽玛分布逆累积函数 95% 分位点",
+    "en": "Inverse gamma cumulative at the 95% quantile"
+   },
+   "formula": "=GAMMA.INV(0.95,3,2)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-229",
+   "category": "statistical",
+   "function": "GAMMALN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "伽玛函数自然对数的基线场景",
+    "en": "Baseline: natural logarithm of the gamma function"
+   },
+   "formula": "=GAMMALN(4)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-230",
+   "category": "statistical",
+   "function": "GAMMALN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "伽玛函数自然对数在 0.5 处的取值",
+    "en": "Natural logarithm of the gamma function at 0.5"
+   },
+   "formula": "=GAMMALN(0.5)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-231",
+   "category": "statistical",
+   "function": "GAMMALN.PRECISE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "精确伽玛自然对数的基线场景",
+    "en": "Baseline: exact natural logarithm of gamma"
+   },
+   "formula": "=GAMMALN.PRECISE(4)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-232",
+   "category": "statistical",
+   "function": "GAMMALN.PRECISE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "精确伽玛自然对数在 0.5 处的取值",
+    "en": "Exact natural logarithm of gamma at 0.5"
+   },
+   "formula": "=GAMMALN.PRECISE(0.5)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-233",
+   "category": "statistical",
+   "function": "GAUSS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "标准正态累积值减 0.5 的基线场景",
+    "en": "Baseline: standard normal cumulative value minus 0.5"
+   },
+   "formula": "=GAUSS(1.5)",
+   "priority": "P1",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-234",
+   "category": "statistical",
+   "function": "GAUSS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "GAUSS 函数负值输入的边界场景",
+    "en": "Edge case: GAUSS with a negative input"
+   },
+   "formula": "=GAUSS(-1)",
+   "priority": "P2",
+   "source": "cases-cov-g5a-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-241",
+   "category": "statistical",
+   "function": "GROWTH",
+   "dimension": "array",
+   "scenario": {
+    "zh": "指数趋势按新 x 值外推，读取两行溢写预测值",
+    "en": "Extrapolate an exponential trend to new x values and read the two-row spilled predictions"
+   },
+   "formula": "=GROWTH(B1:B5,A1:A5,C1:C2)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "data": [
+    [
+     1,
+     2,
+     6
+    ],
+    [
+     2,
+     4,
+     7
+    ],
+    [
+     3,
+     8,
+     null
+    ],
+    [
+     4,
+     16,
+     null
+    ],
+    [
+     5,
+     32,
+     null
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:H2"
+  },
+  {
+   "id": "TC-STAT-242",
+   "category": "statistical",
+   "function": "GROWTH",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "给定单个新 x 值预测指数趋势值",
+    "en": "Predict the exponential trend value for a single new x"
+   },
+   "formula": "=GROWTH(B1:B5,A1:A5,6)",
+   "priority": "P2",
+   "source": "cases-cov-g5b-stats.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     4,
+     16
+    ],
+    [
+     5,
+     32
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-243",
+   "category": "statistical",
+   "function": "HYPGEOM.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "超几何分布累积概率的基线场景",
+    "en": "Baseline: hypergeometric cumulative probability"
+   },
+   "formula": "=HYPGEOM.DIST(2,5,3,10,TRUE)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-244",
+   "category": "statistical",
+   "function": "HYPGEOM.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "超几何分布非累积概率的边界场景",
+    "en": "Edge case: hypergeometric non-cumulative probability"
+   },
+   "formula": "=HYPGEOM.DIST(2,5,3,10,FALSE)",
+   "priority": "P2",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-245",
+   "category": "statistical",
+   "function": "LOGEST",
+   "dimension": "array",
+   "scenario": {
+    "zh": "指数回归参数及统计量的数组读取",
+    "en": "Read the array of exponential regression parameters and statistics"
+   },
+   "formula": "=LOGEST(B1:B5,A1:A5,TRUE,TRUE)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     4.1
+    ],
+    [
+     3,
+     7.9
+    ],
+    [
+     4,
+     16.3
+    ],
+    [
+     5,
+     32.4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I5",
+   "note": {
+    "zh": "用带噪声的指数序列，避免完美拟合时统计量退化",
+    "en": "Uses a noisy exponential series so the statistics do not degenerate under a perfect fit"
+   }
+  },
+  {
+   "id": "TC-STAT-246",
+   "category": "statistical",
+   "function": "LOGEST",
+   "dimension": "array",
+   "scenario": {
+    "zh": "仅返回指数回归斜率和截距两个参数",
+    "en": "Return only the exponential regression slope and intercept"
+   },
+   "formula": "=LOGEST(B1:B5,A1:A5,TRUE,FALSE)",
+   "priority": "P2",
+   "source": "cases-cov-g5b-stats.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     3,
+     8
+    ],
+    [
+     4,
+     16
+    ],
+    [
+     5,
+     32
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I1"
+  },
+  {
+   "id": "TC-STAT-247",
+   "category": "statistical",
+   "function": "LOGNORM.INV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "对数正态逆函数取中位数的基线场景",
+    "en": "Baseline: inverse lognormal at the median"
+   },
+   "formula": "=LOGNORM.INV(0.5,0,1)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-248",
+   "category": "statistical",
+   "function": "LOGNORM.INV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "对数正态逆函数 95% 分位点的边界",
+    "en": "Edge case: inverse lognormal at the 95% quantile"
+   },
+   "formula": "=LOGNORM.INV(0.95,3,0.5)",
+   "priority": "P2",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-249",
+   "category": "statistical",
+   "function": "NEGBINOM.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负二项分布累积概率的基线场景",
+    "en": "Baseline: negative binomial cumulative probability"
+   },
+   "formula": "=NEGBINOM.DIST(10,5,0.25,TRUE)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-250",
+   "category": "statistical",
+   "function": "NEGBINOM.DIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负二项分布非累积概率的边界场景",
+    "en": "Edge case: negative binomial non-cumulative probability"
+   },
+   "formula": "=NEGBINOM.DIST(10,5,0.25,FALSE)",
+   "priority": "P2",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-251",
+   "category": "statistical",
+   "function": "PERCENTRANK.EXC",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "五个数值取排他性百分比排名",
+    "en": "Exclusive percent rank of five values"
+   },
+   "formula": "=PERCENTRANK.EXC(A1:A5,3)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-252",
+   "category": "statistical",
+   "function": "PERMUT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "十个对象取三个的排列数基线",
+    "en": "Baseline: number of permutations of 3 objects chosen from 10"
+   },
+   "formula": "=PERMUT(10,3)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-253",
+   "category": "statistical",
+   "function": "PERMUT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "五个对象取两个的排列数边界场景",
+    "en": "Edge case: number of permutations of 2 objects chosen from 5"
+   },
+   "formula": "=PERMUT(5,2)",
+   "priority": "P2",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-254",
+   "category": "statistical",
+   "function": "PERMUTATIONA",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "可重复排列数的基线场景",
+    "en": "Baseline: number of permutations with repetition"
+   },
+   "formula": "=PERMUTATIONA(10,3)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-255",
+   "category": "statistical",
+   "function": "PHI",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "标准正态密度在 1.5 处的取值",
+    "en": "Standard normal density at 1.5"
+   },
+   "formula": "=PHI(1.5)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-256",
+   "category": "statistical",
+   "function": "PHI",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "标准正态密度在 0 处的边界取值",
+    "en": "Edge case: standard normal density at 0"
+   },
+   "formula": "=PHI(0)",
+   "priority": "P2",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-257",
+   "category": "statistical",
+   "function": "PROB",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "概率区间 [2,3] 的累积概率计算",
+    "en": "Cumulative probability over the interval [2,3]"
+   },
+   "formula": "=PROB(A1:A4,B1:B4,2,3)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "data": [
+    [
+     1,
+     0.25
+    ],
+    [
+     2,
+     0.25
+    ],
+    [
+     3,
+     0.25
+    ],
+    [
+     4,
+     0.25
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-258",
+   "category": "statistical",
+   "function": "PROB",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "全区间概率之和的边界验证",
+    "en": "Edge check: probabilities over the full interval sum to one"
+   },
+   "formula": "=PROB(A1:A4,B1:B4,1,4)",
+   "priority": "P2",
+   "source": "cases-cov-g5b-stats.json",
+   "data": [
+    [
+     1,
+     0.25
+    ],
+    [
+     2,
+     0.25
+    ],
+    [
+     3,
+     0.25
+    ],
+    [
+     4,
+     0.25
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-259",
+   "category": "statistical",
+   "function": "SKEW.P",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "八个数值的总体偏斜度基线",
+    "en": "Baseline: population skewness of eight values"
+   },
+   "formula": "=SKEW.P(A1:A8)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "data": [
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     4
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     5
+    ],
+    [
+     7
+    ],
+    [
+     9
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-260",
+   "category": "statistical",
+   "function": "SKEW.P",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "右偏长尾数据的总体偏斜度边界",
+    "en": "Edge case: population skewness of right-skewed long-tail data"
+   },
+   "formula": "=SKEW.P(A1:A5)",
+   "priority": "P2",
+   "source": "cases-cov-g5b-stats.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     10
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-261",
+   "category": "statistical",
+   "function": "T.DIST.2T",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "双尾 t 分布概率的基线场景",
+    "en": "Baseline: two-tailed t-distribution probability"
+   },
+   "formula": "=T.DIST.2T(1.9599,10)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-262",
+   "category": "statistical",
+   "function": "T.DIST.2T",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "小 t 值与低自由度的双尾概率边界",
+    "en": "Edge case: two-tailed probability for a small t and low degrees of freedom"
+   },
+   "formula": "=T.DIST.2T(0.5,5)",
+   "priority": "P2",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-263",
+   "category": "statistical",
+   "function": "T.DIST.RT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "右尾 t 分布概率的基线场景",
+    "en": "Baseline: right-tailed t-distribution probability"
+   },
+   "formula": "=T.DIST.RT(1.9599,10)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-264",
+   "category": "statistical",
+   "function": "T.DIST.RT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "较大 t 值与高自由度的右尾概率",
+    "en": "Right-tail probability for a larger t and high degrees of freedom"
+   },
+   "formula": "=T.DIST.RT(2.5,20)",
+   "priority": "P2",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-265",
+   "category": "statistical",
+   "function": "T.INV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "t 分布单尾逆函数求 95% 分位",
+    "en": "One-tailed inverse t at the 95% quantile"
+   },
+   "formula": "=T.INV(0.95,10)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-266",
+   "category": "statistical",
+   "function": "T.INV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "t 分布单尾逆函数求 5% 分位",
+    "en": "One-tailed inverse t at the 5% quantile"
+   },
+   "formula": "=T.INV(0.05,20)",
+   "priority": "P2",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-267",
+   "category": "statistical",
+   "function": "T.INV.2T",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "t 分布双尾逆函数 0.05 显著性",
+    "en": "Two-tailed inverse t at 0.05 significance"
+   },
+   "formula": "=T.INV.2T(0.05,10)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1",
+   "tolerance": {
+    "rel": 1e-06
+   }
+  },
+  {
+   "id": "TC-STAT-268",
+   "category": "statistical",
+   "function": "T.INV.2T",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "t 分布双尾逆函数 0.01 显著性",
+    "en": "Two-tailed inverse t at 0.01 significance"
+   },
+   "formula": "=T.INV.2T(0.01,20)",
+   "priority": "P2",
+   "source": "cases-cov-g5b-stats.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-269",
+   "category": "statistical",
+   "function": "T.TEST",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两样本等方差 t 检验双尾基线",
+    "en": "Baseline: two-sample equal-variance t-test, two-tailed"
+   },
+   "formula": "=T.TEST(A1:A8,B1:B8,2,2)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "data": [
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     5
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     7,
+     9
+    ],
+    [
+     8,
+     8
+    ],
+    [
+     9,
+     10
+    ],
+    [
+     10,
+     12
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-270",
+   "category": "statistical",
+   "function": "T.TEST",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "配对样本单尾 t 检验的边界场景",
+    "en": "Edge case: paired-sample one-tailed t-test"
+   },
+   "formula": "=T.TEST(A1:A8,B1:B8,1,1)",
+   "priority": "P2",
+   "source": "cases-cov-g5b-stats.json",
+   "data": [
+    [
+     3,
+     4
+    ],
+    [
+     4,
+     6
+    ],
+    [
+     5,
+     5
+    ],
+    [
+     6,
+     7
+    ],
+    [
+     7,
+     9
+    ],
+    [
+     8,
+     8
+    ],
+    [
+     9,
+     10
+    ],
+    [
+     10,
+     12
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-271",
+   "category": "statistical",
+   "function": "Z.TEST",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "未指定 sigma 的 z 检验基线场景",
+    "en": "Baseline: z-test without a specified sigma"
+   },
+   "formula": "=Z.TEST(A1:A10,5)",
+   "priority": "P1",
+   "source": "cases-cov-g5b-stats.json",
+   "data": [
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ],
+    [
+     9
+    ],
+    [
+     10
+    ],
+    [
+     11
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-272",
+   "category": "statistical",
+   "function": "Z.TEST",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "显式指定 sigma 的 z 检验边界场景",
+    "en": "Edge case: z-test with an explicitly specified sigma"
+   },
+   "formula": "=Z.TEST(A1:A10,5,2.5)",
+   "priority": "P2",
+   "source": "cases-cov-g5b-stats.json",
+   "data": [
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ],
+    [
+     9
+    ],
+    [
+     10
+    ],
+    [
+     11
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-STAT-280",
+   "category": "statistical",
+   "function": "LINEST",
+   "dimension": "array",
+   "scenario": {
+    "zh": "带噪声样本的回归统计量读取",
+    "en": "Read regression statistics from a noisy sample"
+   },
+   "formula": "=LINEST(B1:B5,A1:A5,TRUE,TRUE)",
+   "priority": "P1",
+   "source": "cases-stats.json",
+   "data": [
+    [
+     1,
+     2.1
+    ],
+    [
+     2,
+     3.9
+    ],
+    [
+     3,
+     6.2
+    ],
+    [
+     4,
+     7.8
+    ],
+    [
+     5,
+     10.1
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I5"
+  }
+ ]
+}

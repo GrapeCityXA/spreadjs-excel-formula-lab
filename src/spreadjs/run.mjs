@@ -30,7 +30,7 @@ import { createHash } from 'node:crypto';
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const PROJECT_ROOT = path.resolve(HERE, '..', '..');
 
-const DEFAULT_CASES = path.join(PROJECT_ROOT, 'cases', 'public', 'starter.json');
+const DEFAULT_CASES = path.join(PROJECT_ROOT, 'cases', 'public', 'corpus.json');
 const DEFAULT_OUT = path.join(PROJECT_ROOT, 'out', 'default', 'spreadjs-results.json');
 // Resolve the installed SpreadJS distribution from the project dependency.
 // The CN distribution (@grapecity-software/spread-sheets) is the default target;

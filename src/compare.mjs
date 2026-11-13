@@ -49,16 +49,18 @@ export function classifyDifference(item, excel, spread) {
   if (ex?.type === 'error' && sp?.type === 'error') {
     return { code: 'ERROR_CODE_DIFF', label: `错误码不同（Excel ${ex.value} / SpreadJS ${sp.value}）`, attribution: 'product' };
   }
-  if (ex && sp && ex.type !== sp.type) {
-    return { code: 'TYPE_DIFF', label: `结果类型不同（Excel ${ex.type} / SpreadJS ${sp.type}）`, attribution: 'product' };
-  }
-  if (ex?.type === 'number' && sp?.type === 'number') {
-    const abs = Math.abs(ex.value - sp.value);
-    const rel = abs / Math.max(Math.abs(ex.value), Math.abs(sp.value), 1e-300);
+  // Excel returns a plain number while SpreadJS returns a Date for the same
+  // serial value; both are numeric at the comparison layer.
+  if (ex && sp && ['number', 'date'].includes(ex.type) && ['number', 'date'].includes(sp.type)) {
+    const abs = Math.abs(Number(ex.value) - Number(sp.value));
+    const rel = abs / Math.max(Math.abs(Number(ex.value)), Math.abs(Number(sp.value)), 1e-300);
     if (rel <= 1e-6) {
       return { code: 'PRECISION_DIFF', label: `数值精度差异（相对 ${rel.toExponential(2)}）`, attribution: 'product', abs, rel };
     }
     return { code: 'VALUE_DIFF', label: `数值不同（Excel ${ex.value} / SpreadJS ${sp.value}）`, attribution: 'product', abs, rel };
+  }
+  if (ex && sp && ex.type !== sp.type) {
+    return { code: 'TYPE_DIFF', label: `结果类型不同（Excel ${ex.type} / SpreadJS ${sp.type}）`, attribution: 'product' };
   }
   if (ex?.type === 'text' && sp?.type === 'text') {
     const looksLocalized = /[¥$€£]/.test(String(ex.value) + String(sp.value));

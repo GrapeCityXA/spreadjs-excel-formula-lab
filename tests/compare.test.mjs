@@ -74,12 +74,17 @@ test('compareCase: range values are compared cell by cell', () => {
 });
 
 test('validateCases: rejects overlapping data and formula cell', () => {
-  const errors = validateCases({ cases: [{ id: 'X-1', category: 'math', function: 'SUM', scenario: 'x', formula: '=SUM(A1:A2)', data: [[1], [2]], formulaCell: 'A1' }] });
+  const errors = validateCases({ cases: [{ id: 'X-1', category: 'math', function: 'SUM', scenario: { zh: 'x', en: 'x' }, formula: '=SUM(A1:A2)', data: [[1], [2]], formulaCell: 'A1' }] });
   assert.ok(errors.length > 0);
 });
 
-test('validateCases: accepts the committed starter corpus', async () => {
+test('validateCases: rejects a missing English scenario', () => {
+  const errors = validateCases({ cases: [{ id: 'X-2', category: 'math', function: 'SUM', scenario: { zh: 'x', en: '' }, formula: '=SUM(1,2)' }] });
+  assert.ok(errors.some(error => error.includes('scenario.en')));
+});
+
+test('validateCases: accepts the committed bilingual corpus', async () => {
   const { readFileSync } = await import('node:fs');
-  const document = JSON.parse(readFileSync(new URL('../cases/public/starter.json', import.meta.url), 'utf8'));
+  const document = JSON.parse(readFileSync(new URL('../cases/public/corpus.json', import.meta.url), 'utf8'));
   assert.deepEqual(validateCases(document), []);
 });

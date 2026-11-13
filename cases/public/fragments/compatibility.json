@@ -1,0 +1,958 @@
+{
+ "category": "compatibility",
+ "description": {
+  "zh": "compatibility 类公式用例",
+  "en": "compatibility formula cases"
+ },
+ "cases": [
+  {
+   "id": "M2-COMPAT-001",
+   "category": "compatibility",
+   "function": "RANK",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "兼容函数的升序排名",
+    "en": "Ascending rank in a compatibility function"
+   },
+   "formula": "=RANK(1,A1:A3,1)",
+   "priority": "P1",
+   "source": "m2-design",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ]
+   ]
+  },
+  {
+   "id": "M2-COMPAT-002",
+   "category": "compatibility",
+   "function": "QUARTILE",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "兼容函数的三分位",
+    "en": "Third quartile in a compatibility function"
+   },
+   "formula": "=QUARTILE({1,2,3,4},3)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "TC-COMPAT-001",
+   "category": "compatibility",
+   "function": "CEILING",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "正数按指定基数向上舍入",
+    "en": "Round a positive number up to the given significance"
+   },
+   "formula": "=CEILING(2.5,1)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-002",
+   "category": "compatibility",
+   "function": "CEILING",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数按指定基数向正无穷方向舍入",
+    "en": "Round a negative number up toward positive infinity to the given significance"
+   },
+   "formula": "=CEILING(-2.5,2)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-003",
+   "category": "compatibility",
+   "function": "FLOOR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "正数按指定基数向下舍入",
+    "en": "Round a positive number down to the given significance"
+   },
+   "formula": "=FLOOR(3.7,2)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-004",
+   "category": "compatibility",
+   "function": "FLOOR",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数按指定基数向负无穷方向舍入",
+    "en": "Round a negative number down toward negative infinity to the given significance"
+   },
+   "formula": "=FLOOR(-3.7,2)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-005",
+   "category": "compatibility",
+   "function": "QUARTILE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "1 到 8 数据的第 1 四分位数",
+    "en": "First quartile of the data 1 to 8"
+   },
+   "formula": "=QUARTILE(A1:A8,1)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-006",
+   "category": "compatibility",
+   "function": "QUARTILE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "第 4 四分位数等于最大值边界",
+    "en": "Fourth quartile equals the maximum boundary"
+   },
+   "formula": "=QUARTILE(A1:A8,4)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ],
+    [
+     7
+    ],
+    [
+     8
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-007",
+   "category": "compatibility",
+   "function": "RANK",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "默认降序排序返回名次",
+    "en": "Rank returned under the default descending order"
+   },
+   "formula": "=RANK(A2,A1:A5)",
+   "priority": "P0",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     30
+    ],
+    [
+     20
+    ],
+    [
+     50
+    ],
+    [
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-008",
+   "category": "compatibility",
+   "function": "RANK",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "升序排序返回排名名次",
+    "en": "Rank returned under ascending order"
+   },
+   "formula": "=RANK(A4,A1:A5,1)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     30
+    ],
+    [
+     20
+    ],
+    [
+     50
+    ],
+    [
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-009",
+   "category": "compatibility",
+   "function": "MODE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "返回出现次数最多的众数",
+    "en": "Return the most frequent mode"
+   },
+   "formula": "=MODE(A1:A6)",
+   "priority": "P1",
+   "source": "cases-lookup.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     3
+    ],
+    [
+     3
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-010",
+   "category": "compatibility",
+   "function": "STDEV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "对参数列表计算样本标准偏差",
+    "en": "Sample standard deviation of an argument list"
+   },
+   "formula": "=STDEV(1,2,3,4)",
+   "priority": "P2",
+   "source": "cases-lookup.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-201",
+   "category": "compatibility",
+   "function": "BETADIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "β 累积分布在 x=0.5 处的取值",
+    "en": "Cumulative beta distribution at x=0.5"
+   },
+   "formula": "=BETADIST(0.5,2,3)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-202",
+   "category": "compatibility",
+   "function": "BETAINV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "由累积概率反解 β 分布分位数",
+    "en": "Inverse beta quantile from a cumulative probability"
+   },
+   "formula": "=BETAINV(0.5,2,3)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-203",
+   "category": "compatibility",
+   "function": "BINOMDIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "二项分布 10 次试验 6 次成功的非累积概率",
+    "en": "Non-cumulative binomial probability of 6 successes in 10 trials"
+   },
+   "formula": "=BINOMDIST(6,10,0.5,FALSE)",
+   "priority": "P0",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-204",
+   "category": "compatibility",
+   "function": "CHIDIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "卡方分布单尾概率的基线计算",
+    "en": "Baseline one-tailed chi-squared probability"
+   },
+   "formula": "=CHIDIST(18.307,10)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-205",
+   "category": "compatibility",
+   "function": "CHIINV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "由单尾概率反解卡方分布临界值",
+    "en": "Inverse chi-squared critical value from a one-tailed probability"
+   },
+   "formula": "=CHIINV(0.05,10)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-206",
+   "category": "compatibility",
+   "function": "CHITEST",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两个 2x2 区域计算独立性检验概率",
+    "en": "Independence test probability for two 2x2 ranges"
+   },
+   "formula": "=CHITEST(A1:B2,A4:B5)",
+   "priority": "P2",
+   "source": "cases-cov-g6-compat.json",
+   "data": [
+    [
+     10,
+     20
+    ],
+    [
+     30,
+     40
+    ],
+    [
+     null,
+     null
+    ],
+    [
+     12,
+     18
+    ],
+    [
+     28,
+     42
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-207",
+   "category": "compatibility",
+   "function": "CONFIDENCE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "总体均值 95% 置信区间半宽",
+    "en": "Half-width of the 95% confidence interval for a population mean"
+   },
+   "formula": "=CONFIDENCE(0.05,2.5,50)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-208",
+   "category": "compatibility",
+   "function": "COVAR",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两组等长数据的协方差",
+    "en": "Covariance of two equally sized data sets"
+   },
+   "formula": "=COVAR(A1:A5,B1:B5)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "data": [
+    [
+     3,
+     9
+    ],
+    [
+     2,
+     7
+    ],
+    [
+     4,
+     12
+    ],
+    [
+     5,
+     15
+    ],
+    [
+     6,
+     17
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-209",
+   "category": "compatibility",
+   "function": "CRITBINOM",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "累积概率达到 0.75 的最小成功次数",
+    "en": "Smallest number of successes reaching a cumulative probability of 0.75"
+   },
+   "formula": "=CRITBINOM(10,0.5,0.75)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-210",
+   "category": "compatibility",
+   "function": "EXPONDIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "指数分布累积概率在 x=0.5 处的取值",
+    "en": "Cumulative exponential distribution at x=0.5"
+   },
+   "formula": "=EXPONDIST(0.5,2,TRUE)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-211",
+   "category": "compatibility",
+   "function": "FDIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "F 分布右尾概率的基线计算",
+    "en": "Baseline right-tailed F distribution probability"
+   },
+   "formula": "=FDIST(2.5,3,10)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-212",
+   "category": "compatibility",
+   "function": "FINV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "由右尾概率反解 F 分布临界值",
+    "en": "Inverse F critical value from a right-tailed probability"
+   },
+   "formula": "=FINV(0.05,3,10)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-213",
+   "category": "compatibility",
+   "function": "FTEST",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两组数据的 F 检验双尾概率",
+    "en": "Two-tailed F-test probability for two data sets"
+   },
+   "formula": "=FTEST(A1:A5,B1:B5)",
+   "priority": "P2",
+   "source": "cases-cov-g6-compat.json",
+   "data": [
+    [
+     3,
+     5
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     6,
+     9
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-214",
+   "category": "compatibility",
+   "function": "GAMMADIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "伽玛分布累积概率的基线计算",
+    "en": "Baseline cumulative gamma distribution probability"
+   },
+   "formula": "=GAMMADIST(2,2,1,TRUE)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-215",
+   "category": "compatibility",
+   "function": "GAMMAINV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "由累积概率反解伽玛分布分位数",
+    "en": "Inverse gamma quantile from a cumulative probability"
+   },
+   "formula": "=GAMMAINV(0.5,2,1)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-216",
+   "category": "compatibility",
+   "function": "HYPGEOMDIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "超几何分布单点概率计算",
+    "en": "Single-point hypergeometric probability"
+   },
+   "formula": "=HYPGEOMDIST(1,4,8,20)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-217",
+   "category": "compatibility",
+   "function": "LOGINV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "对数正态分布中位数处反解",
+    "en": "Inverse lognormal value at the median"
+   },
+   "formula": "=LOGINV(0.5,0,1)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-218",
+   "category": "compatibility",
+   "function": "LOGNORMDIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "x=1 处对数正态累积概率",
+    "en": "Cumulative lognormal probability at x=1"
+   },
+   "formula": "=LOGNORMDIST(1,0,1)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-219",
+   "category": "compatibility",
+   "function": "NEGBINOMDIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负二项分布单点概率计算",
+    "en": "Single-point negative binomial probability"
+   },
+   "formula": "=NEGBINOMDIST(10,5,0.25)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-220",
+   "category": "compatibility",
+   "function": "NORMDIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "标准正态分布 x=0 处的累积概率",
+    "en": "Cumulative standard normal probability at x=0"
+   },
+   "formula": "=NORMDIST(0,0,1,TRUE)",
+   "priority": "P0",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-221",
+   "category": "compatibility",
+   "function": "NORMINV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "标准正态分布中位数处反解",
+    "en": "Inverse standard normal value at the median"
+   },
+   "formula": "=NORMINV(0.5,0,1)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-222",
+   "category": "compatibility",
+   "function": "NORMSDIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "标准正态累积分布在 z=0 处的取值",
+    "en": "Cumulative standard normal distribution at z=0"
+   },
+   "formula": "=NORMSDIST(0)",
+   "priority": "P0",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-223",
+   "category": "compatibility",
+   "function": "NORMSINV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "标准正态分布中位数处反解",
+    "en": "Inverse standard normal value at the median"
+   },
+   "formula": "=NORMSINV(0.5)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-224",
+   "category": "compatibility",
+   "function": "PERCENTILE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "升序 1 到 50 区域的中位数百分位",
+    "en": "Median percentile of an ascending range from 1 to 50"
+   },
+   "formula": "=PERCENTILE(A1:A5,0.5)",
+   "priority": "P0",
+   "source": "cases-cov-g6-compat.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     20
+    ],
+    [
+     30
+    ],
+    [
+     40
+    ],
+    [
+     50
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-225",
+   "category": "compatibility",
+   "function": "PERCENTRANK",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "区域内数值 30 的百分比排名",
+    "en": "Percent rank of the value 30 within a range"
+   },
+   "formula": "=PERCENTRANK(A1:A5,30)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     20
+    ],
+    [
+     30
+    ],
+    [
+     40
+    ],
+    [
+     50
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-226",
+   "category": "compatibility",
+   "function": "POISSON",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "泊松分布累积概率的基线计算",
+    "en": "Baseline cumulative Poisson probability"
+   },
+   "formula": "=POISSON(3,2,TRUE)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-227",
+   "category": "compatibility",
+   "function": "STDEVP",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "五个数的总体标准偏差",
+    "en": "Population standard deviation of five numbers"
+   },
+   "formula": "=STDEVP(A1:A5)",
+   "priority": "P0",
+   "source": "cases-cov-g6-compat.json",
+   "data": [
+    [
+     3
+    ],
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-228",
+   "category": "compatibility",
+   "function": "TDIST",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "t 分布双尾概率的基线计算",
+    "en": "Baseline two-tailed t distribution probability"
+   },
+   "formula": "=TDIST(2,10,2)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-229",
+   "category": "compatibility",
+   "function": "TINV",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "由双尾概率反解 t 分布临界值",
+    "en": "Inverse t critical value from a two-tailed probability"
+   },
+   "formula": "=TINV(0.05,10)",
+   "priority": "P1",
+   "source": "pilot-2026-10",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-230",
+   "category": "compatibility",
+   "function": "TTEST",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两组数据的配对双尾 t 检验",
+    "en": "Paired two-tailed t-test for two data sets"
+   },
+   "formula": "=TTEST(A1:A5,B1:B5,2,1)",
+   "priority": "P2",
+   "source": "cases-cov-g6-compat.json",
+   "data": [
+    [
+     3,
+     5
+    ],
+    [
+     2,
+     4
+    ],
+    [
+     4,
+     7
+    ],
+    [
+     5,
+     6
+    ],
+    [
+     6,
+     9
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-231",
+   "category": "compatibility",
+   "function": "VAR",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "五个数的样本方差",
+    "en": "Sample variance of five numbers"
+   },
+   "formula": "=VAR(A1:A5)",
+   "priority": "P0",
+   "source": "cases-cov-g6-compat.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     20
+    ],
+    [
+     30
+    ],
+    [
+     40
+    ],
+    [
+     50
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-232",
+   "category": "compatibility",
+   "function": "VARP",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "五个数的总体方差",
+    "en": "Population variance of five numbers"
+   },
+   "formula": "=VARP(A1:A5)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     20
+    ],
+    [
+     30
+    ],
+    [
+     40
+    ],
+    [
+     50
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-233",
+   "category": "compatibility",
+   "function": "WEIBULL",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "威布尔分布累积概率的基线计算",
+    "en": "Baseline cumulative Weibull probability"
+   },
+   "formula": "=WEIBULL(2,1.5,1,TRUE)",
+   "priority": "P1",
+   "source": "cases-cov-g6-compat.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-COMPAT-234",
+   "category": "compatibility",
+   "function": "ZTEST",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "样本均值等于假设均值时的单尾检验概率",
+    "en": "One-tailed test probability when the sample mean equals the hypothesized mean"
+   },
+   "formula": "=ZTEST(A1:A5,4)",
+   "priority": "P2",
+   "source": "cases-cov-g6-compat.json",
+   "data": [
+    [
+     3
+    ],
+    [
+     2
+    ],
+    [
+     4
+    ],
+    [
+     5
+    ],
+    [
+     6
+    ]
+   ],
+   "formulaCell": "H1"
+  }
+ ]
+}

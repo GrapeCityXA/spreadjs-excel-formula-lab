@@ -12,7 +12,9 @@
     "check": "node src/pipeline.mjs check",
     "refresh": "node src/pipeline.mjs refresh",
     "report": "node src/pipeline.mjs report",
-    "validate": "node src/validate.mjs cases/public/starter.json",
+    "build:cases": "node src/cases/build.mjs",
+    "cli": "node src/cli.mjs",
+    "validate": "node src/validate.mjs cases/public/corpus.json",
     "test": "node --test tests/*.test.mjs",
     "release-check": "node scripts/release-check.mjs"
   },

@@ -1,0 +1,2241 @@
+{
+ "category": "math",
+ "description": {
+  "zh": "math 类公式用例",
+  "en": "math formula cases"
+ },
+ "cases": [
+  {
+   "id": "CFG-SUM-001",
+   "category": "math",
+   "function": "SUM",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "直接参数中的文本数字求和",
+    "en": "Sum text numbers passed as direct arguments"
+   },
+   "formula": "=SUM(1,\"2\")",
+   "priority": "P1",
+   "source": "config-sensitive"
+  },
+  {
+   "id": "M2-MATH-001",
+   "category": "math",
+   "function": "ROUND",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "0.5 边界正数四舍五入",
+    "en": "Round a positive value at the .5 boundary"
+   },
+   "formula": "=ROUND(2.5,0)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-MATH-002",
+   "category": "math",
+   "function": "ROUND",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "0.5 边界负数四舍五入",
+    "en": "Round a negative value at the .5 boundary"
+   },
+   "formula": "=ROUND(-2.5,0)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-MATH-003",
+   "category": "math",
+   "function": "ROUND",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "浮点误差下的四舍五入：1.005 保留两位",
+    "en": "Round 1.005 to two decimals despite binary floating point"
+   },
+   "formula": "=ROUND(1.005,2)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-MATH-004",
+   "category": "math",
+   "function": "INT",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "负数取整向零反方向截断",
+    "en": "INT rounds a negative number down"
+   },
+   "formula": "=INT(-2.5)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-MATH-005",
+   "category": "math",
+   "function": "TRUNC",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "负数截断向零",
+    "en": "TRUNC truncates a negative number toward zero"
+   },
+   "formula": "=TRUNC(-2.5)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-MATH-006",
+   "category": "math",
+   "function": "MOD",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "负被除数的取模符号",
+    "en": "MOD with a negative dividend"
+   },
+   "formula": "=MOD(-10,3)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-MATH-007",
+   "category": "math",
+   "function": "MOD",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "负除数的取模符号",
+    "en": "MOD with a negative divisor"
+   },
+   "formula": "=MOD(10,-3)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-MATH-008",
+   "category": "math",
+   "function": "POWER",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "POWER(0,0) 返回 #NUM!",
+    "en": "POWER(0,0) returns #NUM!"
+   },
+   "formula": "=POWER(0,0)",
+   "priority": "P1",
+   "source": "m2-design",
+   "expectError": true
+  },
+  {
+   "id": "M2-MATH-009",
+   "category": "math",
+   "function": "POWER",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "0 的 0 次方返回 #NUM!",
+    "en": "0^0 returns #NUM!"
+   },
+   "formula": "=0^0",
+   "priority": "P1",
+   "source": "m2-design",
+   "expectError": true
+  },
+  {
+   "id": "M2-MATH-010",
+   "category": "math",
+   "function": "SQRT",
+   "dimension": "error",
+   "scenario": {
+    "zh": "负数开方返回 #NUM!",
+    "en": "SQRT of a negative number returns #NUM!"
+   },
+   "formula": "=SQRT(-1)",
+   "priority": "P1",
+   "source": "m2-design",
+   "expectError": true
+  },
+  {
+   "id": "M2-MATH-011",
+   "category": "math",
+   "function": "LOG",
+   "dimension": "error",
+   "scenario": {
+    "zh": "LOG(0) 返回 #NUM!",
+    "en": "LOG(0) returns #NUM!"
+   },
+   "formula": "=LOG(0)",
+   "priority": "P1",
+   "source": "m2-design",
+   "expectError": true
+  },
+  {
+   "id": "M2-MATH-012",
+   "category": "math",
+   "function": "FLOOR",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "负数向负无穷方向取整",
+    "en": "FLOOR rounds a negative number toward negative infinity"
+   },
+   "formula": "=FLOOR(-2.5,1)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-MATH-013",
+   "category": "math",
+   "function": "CEILING",
+   "dimension": "boundary",
+   "scenario": {
+    "zh": "负数向正无穷方向取整",
+    "en": "CEILING rounds a negative number toward positive infinity"
+   },
+   "formula": "=CEILING(-2.5,1)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-MATH-014",
+   "category": "math",
+   "function": "SUM",
+   "dimension": "precision",
+   "scenario": {
+    "zh": "0.1+0.2-0.3 的浮点残差",
+    "en": "Floating point residue of 0.1+0.2-0.3"
+   },
+   "formula": "=0.1+0.2-0.3",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-MATH-015",
+   "category": "math",
+   "function": "POWER",
+   "dimension": "error",
+   "scenario": {
+    "zh": "10^308 再乘 10 溢出为 #NUM!",
+    "en": "10^308 multiplied by 10 overflows to #NUM!"
+   },
+   "formula": "=10^308*10",
+   "priority": "P2",
+   "source": "m2-design",
+   "expectError": true
+  },
+  {
+   "id": "M2-MATH-016",
+   "category": "math",
+   "function": "SUM",
+   "dimension": "type-coercion",
+   "scenario": {
+    "zh": "SUM 直接参数中的布尔值",
+    "en": "SUM with a boolean direct argument"
+   },
+   "formula": "=SUM(TRUE,1)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-MATH-017",
+   "category": "math",
+   "function": "POWER",
+   "dimension": "type-coercion",
+   "scenario": {
+    "zh": "POWER 直接参数中的文本数字",
+    "en": "POWER with a text-number direct argument"
+   },
+   "formula": "=POWER(\"2\",3)",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-MATH-018",
+   "category": "math",
+   "function": "ABS",
+   "dimension": "type-coercion",
+   "scenario": {
+    "zh": "ABS 直接参数中的负数字符串",
+    "en": "ABS with a negative number as text"
+   },
+   "formula": "=ABS(\"-2\")",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-MATH-019",
+   "category": "math",
+   "function": "IFERROR",
+   "dimension": "combination",
+   "scenario": {
+    "zh": "IFERROR 包裹错误公式",
+    "en": "IFERROR wraps a failing formula"
+   },
+   "formula": "=IFERROR(SQRT(-1),\"err\")",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "M2-MATH-020",
+   "category": "math",
+   "function": "SUMPRODUCT",
+   "dimension": "array",
+   "scenario": {
+    "zh": "数组常量之间的 SUMPRODUCT",
+    "en": "SUMPRODUCT over numeric array constants"
+   },
+   "formula": "=SUMPRODUCT({1,2},{3,4})",
+   "priority": "P1",
+   "source": "m2-design"
+  },
+  {
+   "id": "PUB-MATH-001",
+   "category": "math",
+   "function": "SUM",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "对一列数值求和",
+    "en": "Sum a column of values"
+   },
+   "formula": "=SUM(A1:A4)",
+   "priority": "P0",
+   "source": "public-starter",
+   "data": [
+    [
+     12
+    ],
+    [
+     3
+    ],
+    [
+     -2
+    ],
+    [
+     7
+    ]
+   ]
+  },
+  {
+   "id": "PUB-MATH-002",
+   "category": "math",
+   "function": "ROUND",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "四舍五入到两位小数",
+    "en": "Round to two decimal places"
+   },
+   "formula": "=ROUND(12.345,2)",
+   "priority": "P0",
+   "source": "public-starter"
+  },
+  {
+   "id": "TC-MATH-001",
+   "category": "math",
+   "function": "SUM",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "三个整数相加的基线场景",
+    "en": "Baseline case summing three integers"
+   },
+   "formula": "=SUM(1,2,3)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-002",
+   "category": "math",
+   "function": "SUM",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "对 A1:B2 区域内的数值求和",
+    "en": "Sums the numbers in range A1:B2"
+   },
+   "formula": "=SUM(A1:B2)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "data": [
+    [
+     10,
+     20
+    ],
+    [
+     30,
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-003",
+   "category": "math",
+   "function": "SUM",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "区域含文本数字与空单元格时只累加数值",
+    "en": "A range with text numbers and empty cells sums only the numbers"
+   },
+   "formula": "=SUM(A1:A4)",
+   "priority": "P1",
+   "source": "pilot-2026-10",
+   "data": [
+    [
+     1
+    ],
+    [
+     "5"
+    ],
+    [
+     null
+    ],
+    [
+     4
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-004",
+   "category": "math",
+   "function": "ABS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数取绝对值的基线场景",
+    "en": "Baseline case taking the absolute value of a negative number"
+   },
+   "formula": "=ABS(-12.5)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-005",
+   "category": "math",
+   "function": "ABS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "文本数字 \"5\" 作为参数的隐式类型转换",
+    "en": "Implicit type conversion of the text number \"5\" passed as an argument"
+   },
+   "formula": "=ABS(\"5\")",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-006",
+   "category": "math",
+   "function": "ROUND",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "圆周率保留两位小数的基线舍入",
+    "en": "Baseline rounding of pi to two decimal places"
+   },
+   "formula": "=ROUND(3.14159,2)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-007",
+   "category": "math",
+   "function": "ROUND",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "2.675 保留两位小数的浮点舍入边界",
+    "en": "Floating-point rounding boundary for 2.675 at two decimal places"
+   },
+   "formula": "=ROUND(2.675,2)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-008",
+   "category": "math",
+   "function": "ROUND",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数半数按远离零方向舍入",
+    "en": "A negative half rounds away from zero"
+   },
+   "formula": "=ROUND(-2.5,0)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-009",
+   "category": "math",
+   "function": "ROUNDDOWN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "正数直接舍去小数位的基线场景",
+    "en": "Baseline case discarding the decimals of a positive number"
+   },
+   "formula": "=ROUNDDOWN(3.9,0)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-010",
+   "category": "math",
+   "function": "ROUNDDOWN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数向零方向舍去小数位",
+    "en": "Truncates a negative number toward zero"
+   },
+   "formula": "=ROUNDDOWN(-3.9,0)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-011",
+   "category": "math",
+   "function": "ROUNDUP",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "正数有小数即向远离零方向进位的基线",
+    "en": "Baseline: any decimal rounds a positive number away from zero"
+   },
+   "formula": "=ROUNDUP(3.1,0)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-012",
+   "category": "math",
+   "function": "ROUNDUP",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数向远离零方向进位",
+    "en": "Rounds a negative number away from zero"
+   },
+   "formula": "=ROUNDUP(-3.1,0)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-013",
+   "category": "math",
+   "function": "INT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "正小数向下取整的基线场景",
+    "en": "Baseline case rounding a positive decimal down"
+   },
+   "formula": "=INT(7.9)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-014",
+   "category": "math",
+   "function": "INT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数向下取整到更小的整数",
+    "en": "Rounds a negative number down to the smaller integer"
+   },
+   "formula": "=INT(-7.1)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-015",
+   "category": "math",
+   "function": "TRUNC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "正数截断小数部分的基线场景",
+    "en": "Baseline case truncating the decimal part of a positive number"
+   },
+   "formula": "=TRUNC(8.9)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-016",
+   "category": "math",
+   "function": "TRUNC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数截断小数部分保留整数位",
+    "en": "Truncating a negative number keeps the integer part"
+   },
+   "formula": "=TRUNC(-8.9)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-017",
+   "category": "math",
+   "function": "MOD",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "两个正整数取余的基线场景",
+    "en": "Baseline case taking the remainder of two positive integers"
+   },
+   "formula": "=MOD(10,3)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-018",
+   "category": "math",
+   "function": "MOD",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "被除数为负数时余数符号跟随除数",
+    "en": "With a negative dividend the remainder takes the sign of the divisor"
+   },
+   "formula": "=MOD(-10,3)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-019",
+   "category": "math",
+   "function": "MROUND",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "10 按 3 的倍数舍入的基线场景",
+    "en": "Baseline case rounding 10 to a multiple of 3"
+   },
+   "formula": "=MROUND(10,3)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-020",
+   "category": "math",
+   "function": "MROUND",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数按同号倍数舍入到 -8",
+    "en": "Rounds a negative number to -8 at a same-sign multiple"
+   },
+   "formula": "=MROUND(-7,-4)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-021",
+   "category": "math",
+   "function": "POWER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "2 的 10 次幂基线计算",
+    "en": "Baseline: 2 raised to the 10th power"
+   },
+   "formula": "=POWER(2,10)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-022",
+   "category": "math",
+   "function": "POWER",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负底数配奇数次幂的符号处理",
+    "en": "Sign handling for a negative base with an odd exponent"
+   },
+   "formula": "=POWER(-2,3)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-023",
+   "category": "math",
+   "function": "SQRT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "完全平方数开方的基线场景",
+    "en": "Baseline case taking the square root of a perfect square"
+   },
+   "formula": "=SQRT(16)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-024",
+   "category": "math",
+   "function": "SQRT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "非完全平方数开方的近似结果",
+    "en": "Approximate square root of a non-perfect square"
+   },
+   "formula": "=SQRT(2)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-025",
+   "category": "math",
+   "function": "SQRT",
+   "dimension": "error",
+   "scenario": {
+    "zh": "对负数开方应返回数值错误",
+    "en": "Square root of a negative number should return a numeric error"
+   },
+   "formula": "=SQRT(-1)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1",
+   "expectError": true
+  },
+  {
+   "id": "TC-MATH-026",
+   "category": "math",
+   "function": "EXP",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "自然常数 e 的 1 次幂基线",
+    "en": "Baseline: e raised to the 1st power"
+   },
+   "formula": "=EXP(1)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-027",
+   "category": "math",
+   "function": "EXP",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负指数 e 的 -2 次幂",
+    "en": "e raised to the -2 power with a negative exponent"
+   },
+   "formula": "=EXP(-2)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-028",
+   "category": "math",
+   "function": "LN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "正数 10 的自然对数基线",
+    "en": "Baseline natural logarithm of the positive number 10"
+   },
+   "formula": "=LN(10)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-029",
+   "category": "math",
+   "function": "LN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1 的自然对数为零的边界",
+    "en": "Boundary where the natural logarithm of 1 is zero"
+   },
+   "formula": "=LN(1)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-030",
+   "category": "math",
+   "function": "LOG",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "以 2 为底 8 的对数基线",
+    "en": "Baseline logarithm of 8 to base 2"
+   },
+   "formula": "=LOG(8,2)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-031",
+   "category": "math",
+   "function": "LOG",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "省略底数时按 10 计算对数",
+    "en": "Omitting the base computes the base-10 logarithm"
+   },
+   "formula": "=LOG(100)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-032",
+   "category": "math",
+   "function": "LOG",
+   "dimension": "error",
+   "scenario": {
+    "zh": "真数为零时返回数值错误",
+    "en": "Returns a numeric error when the number is zero"
+   },
+   "formula": "=LOG(0)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1",
+   "expectError": true
+  },
+  {
+   "id": "TC-MATH-033",
+   "category": "math",
+   "function": "LOG10",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1000 的常用对数为 3 的基线",
+    "en": "Baseline: the common logarithm of 1000 is 3"
+   },
+   "formula": "=LOG10(1000)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-034",
+   "category": "math",
+   "function": "LOG10",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "小于 1 的数其常用对数为负",
+    "en": "The common logarithm of a number below 1 is negative"
+   },
+   "formula": "=LOG10(0.1)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-035",
+   "category": "math",
+   "function": "PI",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "返回圆周率 π 的基线值",
+    "en": "Baseline value of pi"
+   },
+   "formula": "=PI()",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-036",
+   "category": "math",
+   "function": "PI",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "圆周率除以 2 的取值",
+    "en": "Pi divided by 2"
+   },
+   "formula": "=PI()/2",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-037",
+   "category": "math",
+   "function": "DEGREES",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "π 弧度转换为 180 度的基线",
+    "en": "Baseline converting π radians to 180 degrees"
+   },
+   "formula": "=DEGREES(PI())",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-038",
+   "category": "math",
+   "function": "DEGREES",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1 弧度转换为角度值",
+    "en": "Converts 1 radian to degrees"
+   },
+   "formula": "=DEGREES(1)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-039",
+   "category": "math",
+   "function": "RADIANS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "180 度转换为 π 弧度的基线",
+    "en": "Baseline converting 180 degrees to π radians"
+   },
+   "formula": "=RADIANS(180)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-040",
+   "category": "math",
+   "function": "RADIANS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负角度 -90 度转换为弧度",
+    "en": "Converts the negative angle -90 degrees to radians"
+   },
+   "formula": "=RADIANS(-90)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-041",
+   "category": "math",
+   "function": "SIN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "二分之 π 的正弦值基线",
+    "en": "Baseline sine of π/2 radians"
+   },
+   "formula": "=SIN(PI()/2)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-042",
+   "category": "math",
+   "function": "SIN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "0 弧度的正弦值为零",
+    "en": "The sine of 0 radians is zero"
+   },
+   "formula": "=SIN(0)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-043",
+   "category": "math",
+   "function": "COS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "0 弧度的余弦值基线",
+    "en": "Baseline cosine of 0 radians"
+   },
+   "formula": "=COS(0)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-044",
+   "category": "math",
+   "function": "COS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "π 弧度的余弦值边界",
+    "en": "Cosine boundary at π radians"
+   },
+   "formula": "=COS(PI())",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-045",
+   "category": "math",
+   "function": "TAN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1 弧度的正切值基线",
+    "en": "Baseline tangent of 1 radian"
+   },
+   "formula": "=TAN(1)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-046",
+   "category": "math",
+   "function": "TAN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "0 弧度的正切值为零",
+    "en": "The tangent of 0 radians is zero"
+   },
+   "formula": "=TAN(0)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-047",
+   "category": "math",
+   "function": "ASIN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "0.5 的反正弦值基线",
+    "en": "Baseline arcsine of 0.5"
+   },
+   "formula": "=ASIN(0.5)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-048",
+   "category": "math",
+   "function": "ASIN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1 的反正弦边界值",
+    "en": "Arcsine boundary value of 1"
+   },
+   "formula": "=ASIN(1)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-049",
+   "category": "math",
+   "function": "ACOS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "0.5 的反余弦值基线",
+    "en": "Baseline arccosine of 0.5"
+   },
+   "formula": "=ACOS(0.5)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-050",
+   "category": "math",
+   "function": "ACOS",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "-1 的反余弦边界值 π",
+    "en": "Arccosine boundary value π for -1"
+   },
+   "formula": "=ACOS(-1)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-051",
+   "category": "math",
+   "function": "ATAN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1 的反正切值基线",
+    "en": "Baseline arctangent of 1"
+   },
+   "formula": "=ATAN(1)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-052",
+   "category": "math",
+   "function": "ATAN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "-1 的反正切值符号边界",
+    "en": "Sign boundary of the arctangent of -1"
+   },
+   "formula": "=ATAN(-1)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-053",
+   "category": "math",
+   "function": "ATAN2",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "第一象限坐标 (1,1) 求反正切",
+    "en": "Arctangent from first-quadrant coordinates (1,1)"
+   },
+   "formula": "=ATAN2(1,1)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-054",
+   "category": "math",
+   "function": "ATAN2",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "第三象限坐标 (-1,-1) 求反正切",
+    "en": "Arctangent from third-quadrant coordinates (-1,-1)"
+   },
+   "formula": "=ATAN2(-1,-1)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-055",
+   "category": "math",
+   "function": "SIGN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数返回符号 -1 的基线",
+    "en": "Baseline: a negative number returns the sign -1"
+   },
+   "formula": "=SIGN(-42)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-056",
+   "category": "math",
+   "function": "SIGN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "0 的符号为 0 的边界",
+    "en": "Boundary where the sign of 0 is 0"
+   },
+   "formula": "=SIGN(0)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-057",
+   "category": "math",
+   "function": "SUMIF",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "按类别条件对数值区域求和",
+    "en": "Sums a numeric range by category condition"
+   },
+   "formula": "=SUMIF(A1:A5,\"apple\",B1:B5)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "data": [
+    [
+     "apple",
+     10
+    ],
+    [
+     "banana",
+     20
+    ],
+    [
+     "apple",
+     15
+    ],
+    [
+     "cherry",
+     5
+    ],
+    [
+     "banana",
+     30
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-058",
+   "category": "math",
+   "function": "SUMIF",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "文本条件匹配香蕉类求和",
+    "en": "Text condition sums the banana category"
+   },
+   "formula": "=SUMIF(A1:A5,\"banana\",B1:B5)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "data": [
+    [
+     "apple",
+     10
+    ],
+    [
+     "banana",
+     20
+    ],
+    [
+     "apple",
+     15
+    ],
+    [
+     "cherry",
+     5
+    ],
+    [
+     "banana",
+     30
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-059",
+   "category": "math",
+   "function": "SUMIFS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "类别与区域两个条件同时满足求和",
+    "en": "Sum where the category and region conditions both hold"
+   },
+   "formula": "=SUMIFS(C1:C5,A1:A5,\"apple\",B1:B5,\"east\")",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "data": [
+    [
+     "apple",
+     "east",
+     10
+    ],
+    [
+     "banana",
+     "east",
+     20
+    ],
+    [
+     "apple",
+     "west",
+     15
+    ],
+    [
+     "cherry",
+     "east",
+     5
+    ],
+    [
+     "banana",
+     "west",
+     30
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-060",
+   "category": "math",
+   "function": "SUMIFS",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "类别 banana 与区域 west 双条件求和",
+    "en": "Two-condition sum for category banana and region west"
+   },
+   "formula": "=SUMIFS(C1:C5,A1:A5,\"banana\",B1:B5,\"west\")",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "data": [
+    [
+     "apple",
+     "east",
+     10
+    ],
+    [
+     "banana",
+     "east",
+     20
+    ],
+    [
+     "apple",
+     "west",
+     15
+    ],
+    [
+     "cherry",
+     "east",
+     5
+    ],
+    [
+     "banana",
+     "west",
+     30
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-061",
+   "category": "math",
+   "function": "SUMPRODUCT",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两个区域对应元素乘积之和",
+    "en": "Sum of the products of corresponding elements in two ranges"
+   },
+   "formula": "=SUMPRODUCT(A1:A3,B1:B3)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ],
+    [
+     5,
+     6
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-062",
+   "category": "math",
+   "function": "SUMPRODUCT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "对数组常量对应乘积求和",
+    "en": "Sums the products of corresponding array-constant elements"
+   },
+   "formula": "=SUMPRODUCT({1,2,3},{4,5,6})",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-063",
+   "category": "math",
+   "function": "RANDBETWEEN",
+   "dimension": "volatile",
+   "scenario": {
+    "zh": "1 到 2 之间随机整数只验证类型与区间",
+    "en": "Random integer between 1 and 2, checking only type and range"
+   },
+   "formula": "=RANDBETWEEN(1,2)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1",
+   "volatile": true
+  },
+  {
+   "id": "TC-MATH-064",
+   "category": "math",
+   "function": "RANDBETWEEN",
+   "dimension": "volatile",
+   "scenario": {
+    "zh": "上下限相等时返回唯一整数 5",
+    "en": "Equal lower and upper bounds return the single integer 5"
+   },
+   "formula": "=RANDBETWEEN(5,5)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1",
+   "volatile": true
+  },
+  {
+   "id": "TC-MATH-065",
+   "category": "math",
+   "function": "SEQUENCE",
+   "dimension": "array",
+   "scenario": {
+    "zh": "生成 1 到 3 的纵向溢出序列",
+    "en": "Generates a vertical spill sequence from 1 to 3"
+   },
+   "formula": "=SEQUENCE(3)",
+   "priority": "P0",
+   "source": "cases-math.json",
+   "formulaCell": "H1",
+   "readRange": "H1:H3"
+  },
+  {
+   "id": "TC-MATH-066",
+   "category": "math",
+   "function": "SEQUENCE",
+   "dimension": "array",
+   "scenario": {
+    "zh": "生成 2 行 3 列起始 10 步长 5 的序列",
+    "en": "Generates a 2-row by 3-column sequence starting at 10 with step 5"
+   },
+   "formula": "=SEQUENCE(2,3,10,5)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1",
+   "readRange": "H1:J2"
+  },
+  {
+   "id": "TC-MATH-067",
+   "category": "math",
+   "function": "ACOSH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "2 的反双曲余弦值",
+    "en": "Inverse hyperbolic cosine of 2"
+   },
+   "formula": "=ACOSH(2)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-068",
+   "category": "math",
+   "function": "ACOT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1 的反余切值",
+    "en": "Inverse cotangent of 1"
+   },
+   "formula": "=ACOT(1)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-069",
+   "category": "math",
+   "function": "ACOTH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "2 的反双曲余切值",
+    "en": "Inverse hyperbolic cotangent of 2"
+   },
+   "formula": "=ACOTH(2)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-070",
+   "category": "math",
+   "function": "AGGREGATE",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "对区域按 SUM 方式聚合数值",
+    "en": "Aggregates the numbers in a range the way SUM does"
+   },
+   "formula": "=AGGREGATE(9,0,A1:A4)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     20
+    ],
+    [
+     30
+    ],
+    [
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-071",
+   "category": "math",
+   "function": "ARABIC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "罗马数字 MCMXCIX 转阿拉伯数字",
+    "en": "Converts the Roman numeral MCMXCIX to Arabic"
+   },
+   "formula": "=ARABIC(\"MCMXCIX\")",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-072",
+   "category": "math",
+   "function": "ASINH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1 的反双曲正弦值",
+    "en": "Inverse hyperbolic sine of 1"
+   },
+   "formula": "=ASINH(1)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-073",
+   "category": "math",
+   "function": "ATANH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "0.5 的反双曲正切值",
+    "en": "Inverse hyperbolic tangent of 0.5"
+   },
+   "formula": "=ATANH(0.5)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-074",
+   "category": "math",
+   "function": "BASE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "十进制 255 转十六进制文本",
+    "en": "Converts decimal 255 to hexadecimal text"
+   },
+   "formula": "=BASE(255,16)",
+   "priority": "P2",
+   "source": "pilot-2026-10",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-075",
+   "category": "math",
+   "function": "CEILING.MATH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "正小数 3.2 向上舍入到整数",
+    "en": "Rounds the positive decimal 3.2 up to an integer"
+   },
+   "formula": "=CEILING.MATH(3.2)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-076",
+   "category": "math",
+   "function": "CEILING.MATH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数 -3.2 按正数倍率向零方向舍入",
+    "en": "Rounds -3.2 toward zero at a positive multiple"
+   },
+   "formula": "=CEILING.MATH(-3.2,1)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-077",
+   "category": "math",
+   "function": "CEILING.PRECISE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "2.1 按 1 的倍数严格向上舍入",
+    "en": "Rounds 2.1 strictly up to a multiple of 1"
+   },
+   "formula": "=CEILING.PRECISE(2.1,1)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-078",
+   "category": "math",
+   "function": "COMBIN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "从 5 个中取 2 个的组合数",
+    "en": "Number of combinations of 2 items chosen from 5"
+   },
+   "formula": "=COMBIN(5,2)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-079",
+   "category": "math",
+   "function": "COMBINA",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "4 个取 2 个的可重复组合数",
+    "en": "Number of combinations with repetition of 2 items chosen from 4"
+   },
+   "formula": "=COMBINA(4,2)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-080",
+   "category": "math",
+   "function": "COSH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1 的双曲余弦值",
+    "en": "Hyperbolic cosine of 1"
+   },
+   "formula": "=COSH(1)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-081",
+   "category": "math",
+   "function": "COT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "四分之 π 弧度的余切值",
+    "en": "Cotangent of π/4 radians"
+   },
+   "formula": "=COT(PI()/4)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-082",
+   "category": "math",
+   "function": "COTH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1 的双曲余切值",
+    "en": "Hyperbolic cotangent of 1"
+   },
+   "formula": "=COTH(1)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-083",
+   "category": "math",
+   "function": "CSC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "六分之 π 弧度的余割值",
+    "en": "Cosecant of π/6 radians"
+   },
+   "formula": "=CSC(PI()/6)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-084",
+   "category": "math",
+   "function": "CSCH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1 的双曲余割值",
+    "en": "Hyperbolic cosecant of 1"
+   },
+   "formula": "=CSCH(1)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-085",
+   "category": "math",
+   "function": "DECIMAL",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "十六进制文本 FF 转十进制",
+    "en": "Converts the hexadecimal text FF to decimal"
+   },
+   "formula": "=DECIMAL(\"FF\",16)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-086",
+   "category": "math",
+   "function": "EVEN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数 -1.5 向上舍入到最近偶数",
+    "en": "Rounds -1.5 up to the nearest even integer"
+   },
+   "formula": "=EVEN(-1.5)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-087",
+   "category": "math",
+   "function": "FACT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "6 的阶乘计算",
+    "en": "Factorial of 6"
+   },
+   "formula": "=FACT(6)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-088",
+   "category": "math",
+   "function": "FACTDOUBLE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "7 的双阶乘计算",
+    "en": "Double factorial of 7"
+   },
+   "formula": "=FACTDOUBLE(7)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-089",
+   "category": "math",
+   "function": "FLOOR.MATH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "正小数 3.7 向下舍入到整数",
+    "en": "Rounds the positive decimal 3.7 down to an integer"
+   },
+   "formula": "=FLOOR.MATH(3.7)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-090",
+   "category": "math",
+   "function": "FLOOR.MATH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数 -3.7 向下舍入到更小整数",
+    "en": "Rounds -3.7 down to the smaller integer"
+   },
+   "formula": "=FLOOR.MATH(-3.7)",
+   "priority": "P1",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-091",
+   "category": "math",
+   "function": "FLOOR.PRECISE",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "3.7 按 2 的倍数严格向下舍入",
+    "en": "Rounds 3.7 strictly down to a multiple of 2"
+   },
+   "formula": "=FLOOR.PRECISE(3.7,2)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-092",
+   "category": "math",
+   "function": "GCD",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "三个整数的最大公约数",
+    "en": "Greatest common divisor of three integers"
+   },
+   "formula": "=GCD(24,36,60)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-093",
+   "category": "math",
+   "function": "ISO.CEILING",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "2.3 按 ISO 规则向上舍入",
+    "en": "Rounds 2.3 up per ISO rules"
+   },
+   "formula": "=ISO.CEILING(2.3,1)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-094",
+   "category": "math",
+   "function": "LCM",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "三个整数的最小公倍数",
+    "en": "Least common multiple of three integers"
+   },
+   "formula": "=LCM(4,6,10)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-095",
+   "category": "math",
+   "function": "MDETERM",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "2x2 矩阵行列式的计算",
+    "en": "Determinant of a 2x2 matrix"
+   },
+   "formula": "=MDETERM(A1:B2)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-096",
+   "category": "math",
+   "function": "MINVERSE",
+   "dimension": "array",
+   "scenario": {
+    "zh": "2x2 对角矩阵求逆矩阵",
+    "en": "Inverse of a 2x2 diagonal matrix"
+   },
+   "formula": "=MINVERSE(A1:B2)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "data": [
+    [
+     2,
+     0
+    ],
+    [
+     0,
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I2"
+  },
+  {
+   "id": "TC-MATH-097",
+   "category": "math",
+   "function": "MMULT",
+   "dimension": "array",
+   "scenario": {
+    "zh": "2x2 矩阵与自身相乘",
+    "en": "Multiplies a 2x2 matrix by itself"
+   },
+   "formula": "=MMULT(A1:B2,A1:B2)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "data": [
+    [
+     1,
+     2
+    ],
+    [
+     3,
+     4
+    ]
+   ],
+   "formulaCell": "H1",
+   "readRange": "H1:I2"
+  },
+  {
+   "id": "TC-MATH-098",
+   "category": "math",
+   "function": "MULTINOMIAL",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "分组为 2、3、4 的多项式系数",
+    "en": "Polynomial coefficients grouped as 2, 3, 4"
+   },
+   "formula": "=MULTINOMIAL(2,3,4)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-099",
+   "category": "math",
+   "function": "MUNIT",
+   "dimension": "array",
+   "scenario": {
+    "zh": "生成 3x3 单位矩阵并溢出显示",
+    "en": "Generates a 3x3 identity matrix and spills it"
+   },
+   "formula": "=MUNIT(3)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1",
+   "readRange": "H1:J3"
+  },
+  {
+   "id": "TC-MATH-100",
+   "category": "math",
+   "function": "ODD",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "正小数 2.1 向上舍入到最近奇数",
+    "en": "Rounds the positive decimal 2.1 up to the nearest odd integer"
+   },
+   "formula": "=ODD(2.1)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-101",
+   "category": "math",
+   "function": "PRODUCT",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "对区域内的数值连乘",
+    "en": "Multiplies together the numbers in a range"
+   },
+   "formula": "=PRODUCT(A1:A4)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-102",
+   "category": "math",
+   "function": "QUOTIENT",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "负数除法取整数商向零截断",
+    "en": "Integer quotient of a division with a negative number truncates toward zero"
+   },
+   "formula": "=QUOTIENT(-10,3)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-103",
+   "category": "math",
+   "function": "RAND",
+   "dimension": "volatile",
+   "scenario": {
+    "zh": "生成 0 到 1 之间随机数只验证类型",
+    "en": "Random number between 0 and 1, checking only the type"
+   },
+   "formula": "=RAND()",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1",
+   "volatile": true
+  },
+  {
+   "id": "TC-MATH-104",
+   "category": "math",
+   "function": "ROMAN",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "阿拉伯数字 2024 转罗马数字",
+    "en": "Converts the Arabic number 2024 to Roman numerals"
+   },
+   "formula": "=ROMAN(2024)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-105",
+   "category": "math",
+   "function": "SEC",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "0 弧度的正割值",
+    "en": "Secant of 0 radians"
+   },
+   "formula": "=SEC(0)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-106",
+   "category": "math",
+   "function": "SECH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1 的双曲正割值",
+    "en": "Hyperbolic secant of 1"
+   },
+   "formula": "=SECH(1)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-107",
+   "category": "math",
+   "function": "SERIESSUM",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "系数区域 [1,2,3] 在 x=2 处的幂级数和",
+    "en": "Power series sum for the coefficient range [1,2,3] at x=2"
+   },
+   "formula": "=SERIESSUM(2,1,1,A1:C1)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "data": [
+    [
+     1,
+     2,
+     3
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-108",
+   "category": "math",
+   "function": "SINH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1 的双曲正弦值",
+    "en": "Hyperbolic sine of 1"
+   },
+   "formula": "=SINH(1)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-109",
+   "category": "math",
+   "function": "SQRTPI",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "2π 的平方根计算",
+    "en": "Square root of 2π"
+   },
+   "formula": "=SQRTPI(2)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-110",
+   "category": "math",
+   "function": "SUBTOTAL",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "对区域按 SUM 分类汇总",
+    "en": "Subtotal a range with SUM"
+   },
+   "formula": "=SUBTOTAL(9,A1:A4)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "data": [
+    [
+     10
+    ],
+    [
+     20
+    ],
+    [
+     30
+    ],
+    [
+     40
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-111",
+   "category": "math",
+   "function": "SUMSQ",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "对区域内数值求平方和",
+    "en": "Sum of squares of the values in a range"
+   },
+   "formula": "=SUMSQ(A1:A4)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "data": [
+    [
+     1
+    ],
+    [
+     2
+    ],
+    [
+     3
+    ],
+    [
+     4
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-112",
+   "category": "math",
+   "function": "SUMX2MY2",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两行区域的平方差之和",
+    "en": "Sum of squared differences across a two-row range"
+   },
+   "formula": "=SUMX2MY2(A1:C1,A2:C2)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "data": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5,
+     6
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-113",
+   "category": "math",
+   "function": "SUMX2PY2",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两行区域的平方和之和",
+    "en": "Sum of the sums of squares for a two-row range"
+   },
+   "formula": "=SUMX2PY2(A1:C1,A2:C2)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "data": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5,
+     6
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-114",
+   "category": "math",
+   "function": "SUMXMY2",
+   "dimension": "reference",
+   "scenario": {
+    "zh": "两行区域对应差的平方和",
+    "en": "Sum of squares of the differences between corresponding values in a two-row range"
+   },
+   "formula": "=SUMXMY2(A1:C1,A2:C2)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "data": [
+    [
+     1,
+     2,
+     3
+    ],
+    [
+     4,
+     5,
+     6
+    ]
+   ],
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-115",
+   "category": "math",
+   "function": "TANH",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "1 的双曲正切值",
+    "en": "Hyperbolic tangent of 1"
+   },
+   "formula": "=TANH(1)",
+   "priority": "P2",
+   "source": "cases-math.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-201",
+   "category": "math",
+   "function": "PERCENTOF",
+   "dimension": "baseline",
+   "scenario": {
+    "zh": "计算子集 25 占总体 200 的百分比",
+    "en": "Percentage of subset 25 out of total 200"
+   },
+   "formula": "=PERCENTOF(25,200)",
+   "priority": "P1",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1"
+  },
+  {
+   "id": "TC-MATH-202",
+   "category": "math",
+   "function": "RANDARRAY",
+   "dimension": "volatile",
+   "scenario": {
+    "zh": "生成 1x1 随机数组，上下界固定为 5 便于两侧比对",
+    "en": "Generate a 1x1 random array with both bounds fixed at 5 for side-by-side comparison"
+   },
+   "formula": "=RANDARRAY(1,1,5,5)",
+   "priority": "P2",
+   "source": "cases-cov-g3-text.json",
+   "formulaCell": "H1",
+   "volatile": true
+  }
+ ]
+}

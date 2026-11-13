@@ -13,7 +13,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const CASES = 'cases/public/starter.json';
+const CASES = 'cases/public/corpus.json';
 const ORACLE = 'oracle/excel-results.json';
 const MANIFEST = 'oracle/manifest.json';
 const MODES = [
