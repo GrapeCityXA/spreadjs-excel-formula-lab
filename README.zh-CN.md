@@ -1,3 +1,5 @@
+[![ci](https://github.com/GrapeCityXA/spreadjs-excel-formula-lab/actions/workflows/ci.yml/badge.svg)](https://github.com/GrapeCityXA/spreadjs-excel-formula-lab/actions/workflows/ci.yml)
+
 # SpreadJS × Excel 公式兼容性实验台
 
 [English](README.md) | 简体中文
