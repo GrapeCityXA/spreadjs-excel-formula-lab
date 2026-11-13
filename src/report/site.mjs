@@ -244,7 +244,7 @@ const I18N = {
     cols: { status: '状态', id: '用例', function: '函数', category: '分类', dimension: '维度', scenario: '场景', formula: '公式', diff: '差异分类', cases: '用例数', passCol: '通过', failCol: '差异', otherCol: '其他', attribution: '归因', note: '说明', excel: 'Excel 结果', sjs: 'SpreadJS 结果', inputs: '输入数据', value: '值', display: '显示文本', elapsed: '耗时', diffCells: '区域差异单元格', defaultMode: '默认模式', compatibleMode: '兼容模式' },
     categories: { math: '数学与三角函数', statistical: '统计函数', text: '文本函数', date: '日期与时间函数', logical: '逻辑函数', lookup: '查找与引用函数', information: '信息函数', financial: '财务函数', engineering: '工程函数', database: '数据库函数', compatibility: '兼容函数', web: '网络函数', addin: '加载项函数' },
     dimensions: { baseline: '基线', boundary: '边界', 'type-coercion': '类型转换', reference: '引用', array: '数组', error: '错误', date: '日期', text: '文本', precision: '精度', lookup: '查找', config: '配置', combination: '组合', volatile: '易变' },
-    attribution: { environment: '环境', product: '产品', unknown: '待定' },
+    attribution: { environment: '环境', product: '产品', config: '配置相关', 'excel-legacy': 'Excel 遗留', unknown: '待定' },
     classes: {
       EXCEL_FUNCTION_UNAVAILABLE: { label: 'Excel 未提供该函数（加载项/版本差异）' },
       EXCEL_ERROR_ONLY: { label: 'Excel 报错而 SpreadJS 正常返回' },
@@ -286,7 +286,7 @@ const I18N = {
     cols: { status: 'Status', id: 'Case', function: 'Function', category: 'Category', dimension: 'Dimension', scenario: 'Scenario', formula: 'Formula', diff: 'Classification', cases: 'Cases', passCol: 'Pass', failCol: 'Diff', otherCol: 'Other', attribution: 'Attribution', note: 'Note', excel: 'Excel', sjs: 'SpreadJS', inputs: 'Inputs', value: 'Value', display: 'Display text', elapsed: 'Time', diffCells: 'Differing cells', defaultMode: 'Default mode', compatibleMode: 'Compatible mode' },
     categories: { math: 'Math & Trig', statistical: 'Statistical', text: 'Text', date: 'Date & Time', logical: 'Logical', lookup: 'Lookup & Reference', information: 'Information', financial: 'Financial', engineering: 'Engineering', database: 'Database', compatibility: 'Compatibility', web: 'Web', addin: 'Add-in' },
     dimensions: { baseline: 'Baseline', boundary: 'Boundary', 'type-coercion': 'Type coercion', reference: 'Reference', array: 'Array', error: 'Error', date: 'Date', text: 'Text', precision: 'Precision', lookup: 'Lookup', config: 'Config', combination: 'Combination', volatile: 'Volatile' },
-    attribution: { environment: 'Environment', product: 'Product', unknown: 'Unknown' },
+    attribution: { environment: 'Environment', product: 'Product', config: 'Config-dependent', 'excel-legacy': 'Excel legacy', unknown: 'Unknown' },
     classes: {
       EXCEL_FUNCTION_UNAVAILABLE: { label: 'Excel lacks this function (add-in/version gap)' },
       EXCEL_ERROR_ONLY: { label: 'Excel errors, SpreadJS returns a value' },
@@ -474,7 +474,7 @@ function renderMatrix() {
 function renderKnown() {
   $('knownNote').textContent = t('knownNote');
   $('knownHead').innerHTML = '<tr><th>#</th><th>' + t('cols.id') + '</th><th>' + t('cols.function') + '</th><th>' + t('cols.formula') + '</th><th>Excel</th><th>SpreadJS</th><th>' + t('cols.attribution') + '</th><th>' + t('cols.note') + '</th></tr>';
-  $('knownBody').innerHTML = (DATA.knownDifferences || []).map((item, index) => '<tr><td>' + (index + 1) + '</td><td class="mono nowrap">' + esc(item.id) + '</td><td class="mono">' + esc(item.function) + '</td><td class="formula mono" title="' + esc(item.formula) + '">' + esc(item.formula) + '</td><td class="mono">' + esc(item.excel) + '</td><td class="mono">' + esc(item.spreadjs) + '</td><td><span class="badge ' + (item.attribution === 'environment' ? 'info' : 'fail') + '">' + label('attribution', item.attribution) + '</span></td><td class="scenario">' + esc(item[state.lang] || item.zh) + '</td></tr>').join('');
+  $('knownBody').innerHTML = (DATA.knownDifferences || []).map((item, index) => '<tr><td>' + (index + 1) + '</td><td class="mono nowrap">' + esc(item.id) + '</td><td class="mono">' + esc(item.function) + '</td><td class="formula mono" title="' + esc(item.formula) + '">' + esc(item.formula) + '</td><td class="mono">' + esc(item.excel) + '</td><td class="mono">' + esc(item.spreadjs) + '</td><td><span class="badge ' + (item.attribution === 'product' ? 'fail' : item.attribution === 'excel-legacy' ? 'warn' : 'info') + '">' + label('attribution', item.attribution) + '</span></td><td class="scenario">' + esc(item[state.lang] || item.zh) + '</td></tr>').join('');
 
   const configIds = Object.keys(DATA.crossMode || {}).sort();
   const extraRows = configIds.map(id => {

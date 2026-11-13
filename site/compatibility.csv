@@ -124,7 +124,7 @@ TC-MATH-099,default,math,MUNIT,array,生成 3x3 单位矩阵并溢出显示,Gene
 TC-MATH-100,default,math,ODD,baseline,正小数 2.1 向上舍入到最近奇数,Rounds the positive decimal 2.1 up to the nearest odd integer,=ODD(2.1),PASS,,,number,3,number,3
 TC-MATH-101,default,math,PRODUCT,reference,对区域内的数值连乘,Multiplies together the numbers in a range,=PRODUCT(A1:A4),PASS,,,number,24,number,24
 TC-MATH-102,default,math,QUOTIENT,baseline,负数除法取整数商向零截断,Integer quotient of a division with a negative number truncates toward zero,"=QUOTIENT(-10,3)",PASS,,,number,-3,number,-3
-TC-MATH-103,default,math,RAND,volatile,生成 0 到 1 之间随机数只验证类型,"Random number between 0 and 1, checking only the type",=RAND(),INCONCLUSIVE,,,number,0.5215500263193167,number,0.211072940217562
+TC-MATH-103,default,math,RAND,volatile,生成 0 到 1 之间随机数只验证类型,"Random number between 0 and 1, checking only the type",=RAND(),INCONCLUSIVE,,,number,0.5215500263193167,number,0.358314502829091
 TC-MATH-104,default,math,ROMAN,baseline,阿拉伯数字 2024 转罗马数字,Converts the Arabic number 2024 to Roman numerals,=ROMAN(2024),PASS,,,text,"""MMXXIV""",text,"""MMXXIV"""
 TC-MATH-105,default,math,SEC,baseline,0 弧度的正割值,Secant of 0 radians,=SEC(0),PASS,,,number,1,number,1
 TC-MATH-106,default,math,SECH,baseline,1 的双曲正割值,Hyperbolic secant of 1,=SECH(1),PASS,,,number,0.6480542736638855,number,0.648054273663885
@@ -451,7 +451,7 @@ TC-DATE-016,default,date,SECOND,baseline,对 0.5 取秒数，整点后应为 0,"
 TC-DATE-017,default,date,TIME,baseline,构造 14:30:15 的时间序列小数,Build the time serial fraction for 14:30:15,"=TIME(14,30,15)",PASS,,,number,0.6043402777777778,date,0.604340278
 TC-DATE-018,default,date,TIME,baseline,小时数 25 超过 24 时按回绕处理,Hour 25 wraps around beyond 24,"=TIME(25,0,0)",PASS,,,number,0.04166666666666674,date,0.041666667
 TC-DATE-019,default,date,TODAY,volatile,返回当天日期的序列值，仅校验类型与区间,"Return today's date serial value, checking only type and range",=TODAY(),INCONCLUSIVE,,,number,46339,date,46339
-TC-DATE-020,default,date,NOW,volatile,返回当前日期时间序列值，仅校验类型与区间,"Return the current date-time serial value, checking only type and range",=NOW(),INCONCLUSIVE,,,number,46339.41361157408,date,46339.416182685
+TC-DATE-020,default,date,NOW,volatile,返回当前日期时间序列值，仅校验类型与区间,"Return the current date-time serial value, checking only type and range",=NOW(),INCONCLUSIVE,,,number,46339.41361157408,date,46339.493227477
 TC-DATE-021,default,date,WEEKDAY,baseline,默认返回类型下求 2024-01-15 的星期序号,Weekday number of 2024-01-15 under the default return type,"=WEEKDAY(DATE(2024,1,15))",PASS,,,number,2,number,2
 TC-DATE-022,default,date,WEEKDAY,baseline,返回类型 2 下周一为 1，验证返回类型参数,"Monday is 1 under return type 2, verifying the return type argument","=WEEKDAY(DATE(2024,1,15),2)",PASS,,,number,1,number,1
 TC-DATE-023,default,date,WEEKNUM,baseline,默认返回类型下求年初日期的周数,Week number of an early-year date under the default return type,"=WEEKNUM(DATE(2024,1,1))",PASS,,,number,1,number,1
@@ -1012,7 +1012,7 @@ TC-MATH-099,compatible,math,MUNIT,array,生成 3x3 单位矩阵并溢出显示,G
 TC-MATH-100,compatible,math,ODD,baseline,正小数 2.1 向上舍入到最近奇数,Rounds the positive decimal 2.1 up to the nearest odd integer,=ODD(2.1),PASS,,,number,3,number,3
 TC-MATH-101,compatible,math,PRODUCT,reference,对区域内的数值连乘,Multiplies together the numbers in a range,=PRODUCT(A1:A4),PASS,,,number,24,number,24
 TC-MATH-102,compatible,math,QUOTIENT,baseline,负数除法取整数商向零截断,Integer quotient of a division with a negative number truncates toward zero,"=QUOTIENT(-10,3)",PASS,,,number,-3,number,-3
-TC-MATH-103,compatible,math,RAND,volatile,生成 0 到 1 之间随机数只验证类型,"Random number between 0 and 1, checking only the type",=RAND(),INCONCLUSIVE,,,number,0.5215500263193167,number,0.437915522217796
+TC-MATH-103,compatible,math,RAND,volatile,生成 0 到 1 之间随机数只验证类型,"Random number between 0 and 1, checking only the type",=RAND(),INCONCLUSIVE,,,number,0.5215500263193167,number,0.9800647236284
 TC-MATH-104,compatible,math,ROMAN,baseline,阿拉伯数字 2024 转罗马数字,Converts the Arabic number 2024 to Roman numerals,=ROMAN(2024),PASS,,,text,"""MMXXIV""",text,"""MMXXIV"""
 TC-MATH-105,compatible,math,SEC,baseline,0 弧度的正割值,Secant of 0 radians,=SEC(0),PASS,,,number,1,number,1
 TC-MATH-106,compatible,math,SECH,baseline,1 的双曲正割值,Hyperbolic secant of 1,=SECH(1),PASS,,,number,0.6480542736638855,number,0.648054273663885
@@ -1339,7 +1339,7 @@ TC-DATE-016,compatible,date,SECOND,baseline,对 0.5 取秒数，整点后应为 
 TC-DATE-017,compatible,date,TIME,baseline,构造 14:30:15 的时间序列小数,Build the time serial fraction for 14:30:15,"=TIME(14,30,15)",PASS,,,number,0.6043402777777778,date,0.604340278
 TC-DATE-018,compatible,date,TIME,baseline,小时数 25 超过 24 时按回绕处理,Hour 25 wraps around beyond 24,"=TIME(25,0,0)",PASS,,,number,0.04166666666666674,date,0.041666667
 TC-DATE-019,compatible,date,TODAY,volatile,返回当天日期的序列值，仅校验类型与区间,"Return today's date serial value, checking only type and range",=TODAY(),INCONCLUSIVE,,,number,46339,date,46339
-TC-DATE-020,compatible,date,NOW,volatile,返回当前日期时间序列值，仅校验类型与区间,"Return the current date-time serial value, checking only type and range",=NOW(),INCONCLUSIVE,,,number,46339.41361157408,date,46339.416209618
+TC-DATE-020,compatible,date,NOW,volatile,返回当前日期时间序列值，仅校验类型与区间,"Return the current date-time serial value, checking only type and range",=NOW(),INCONCLUSIVE,,,number,46339.41361157408,date,46339.493253299
 TC-DATE-021,compatible,date,WEEKDAY,baseline,默认返回类型下求 2024-01-15 的星期序号,Weekday number of 2024-01-15 under the default return type,"=WEEKDAY(DATE(2024,1,15))",PASS,,,number,2,number,2
 TC-DATE-022,compatible,date,WEEKDAY,baseline,返回类型 2 下周一为 1，验证返回类型参数,"Monday is 1 under return type 2, verifying the return type argument","=WEEKDAY(DATE(2024,1,15),2)",PASS,,,number,1,number,1
 TC-DATE-023,compatible,date,WEEKNUM,baseline,默认返回类型下求年初日期的周数,Week number of an early-year date under the default return type,"=WEEKNUM(DATE(2024,1,1))",PASS,,,number,1,number,1
