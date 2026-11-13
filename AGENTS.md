@@ -46,7 +46,7 @@ input error. `list`/`case` are read-only and never open Excel.
 
 ## How to read a result
 
-- `PASS` — both engines agree within the rules in `docs/METHODOLOGY.md`.
+- `PASS` — both engines agree within the rules in `docs/en/METHODOLOGY.md`.
 - `FAIL` — values differ. Check `classification.code` first:
   `EXCEL_FUNCTION_UNAVAILABLE`, `EXCEL_ERROR_ONLY`, `LOCALE_DIFF` are usually environment
   differences; `VALUE_DIFF`, `TYPE_DIFF`, `SPREADJS_ERROR`, `PRECISION_DIFF` are candidate
@@ -65,7 +65,7 @@ input error. `list`/`case` are read-only and never open Excel.
    Without Excel, only a maintainer can refresh the baseline; do not hand-edit `oracle/`.
 4. Never change a case's meaning under an existing id; add a new id and keep the old one.
 
-See `docs/CASE-DESIGN.md` for the design rules and `docs/METHODOLOGY.md` for judgement rules.
+See `docs/en/CASE-DESIGN.md` for the design rules and `docs/en/METHODOLOGY.md` for judgement rules.
 
 ## Rules
 

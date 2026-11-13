@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T01:59:21.325Z",
+  "generatedAt": "2026-11-13T02:02:39.013Z",
   "product": {
     "name": "spreadjs-excel-formula-compat",
     "version": "0.1.0"
@@ -720,6 +720,32 @@
       "en": "DBCS byte-boundary handling differs."
     }
   ],
+  "crossMode": {
+    "TC-MATH-003": {
+      "default": "FAIL",
+      "compatible": "PASS"
+    },
+    "CFG-AVG-001": {
+      "default": "FAIL",
+      "compatible": "PASS"
+    },
+    "M2-STAT-004": {
+      "default": "FAIL",
+      "compatible": "PASS"
+    },
+    "M2-STAT-005": {
+      "default": "FAIL",
+      "compatible": "PASS"
+    },
+    "CFG-ISNUM-001": {
+      "default": "FAIL",
+      "compatible": "PASS"
+    },
+    "TC-INFO-010": {
+      "default": "FAIL",
+      "compatible": "PASS"
+    }
+  },
   "cases": {
     "CFG-SUM-001": {
       "id": "CFG-SUM-001",

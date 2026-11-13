@@ -8,7 +8,7 @@ as a static bilingual report. The repository is designed to be cloned and driven
 by an AI coding agent: there is no server, no interactive prompt and no Excel requirement for
 the default check.
 
-> Status: **M2 public corpus** — 888 cases, 496 functions, 13 categories, bilingual cases,
+> Status: **M3 release candidate** — public-ready: 888 cases, 496 functions, 13 categories, bilingual cases,
 > two SpreadJS configurations, committed Excel baseline.
 
 ## Snapshot (SpreadJS 19.2.2, Excel 16.0 build 20527, zh-CN)
@@ -85,16 +85,18 @@ These are the two things that matter most:
 
 - **Case design** — one semantic point per case, twelve dimensions (baseline, boundary, type
   coercion, reference, array, error, date, text, precision, lookup, config, combination),
-  explicit priority, review checklist. See [`docs/CASE-DESIGN.md`](docs/CASE-DESIGN.md).
+  explicit priority, review checklist. See [`docs/en/CASE-DESIGN.md`](docs/en/CASE-DESIGN.md) (English) or [`docs/CASE-DESIGN.md`](docs/CASE-DESIGN.md) (中文).
 - **Excel version** — the committed baseline reflects one Excel environment. Users with a
   different Excel version can either use the committed baseline (`check`) or generate their own
   (`refresh`, Windows only). Results are always tied to the recorded environment; this project
   does not claim compatibility across all Excel versions or functions. See
-  [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md).
+  [`docs/en/METHODOLOGY.md`](docs/en/METHODOLOGY.md) (English) or [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md) (中文).
 
 Current corpus: 888 cases / 496 functions, 13 categories; dimension mix: baseline 502, reference
 181, array 57, precision 40, boundary 28, error 27, type-coercion 14, date 14, lookup 10,
 text 6, volatile 6, config 2, combination 1. Priority mix: P0 224, P1 486, P2 178.
+
+Docs are bilingual: English under `docs/en/`, Chinese at `docs/*.md`. Maintainer release steps are in [`docs/RELEASE-CHECKLIST.md`](docs/RELEASE-CHECKLIST.md).
 
 ## Repository layout
 

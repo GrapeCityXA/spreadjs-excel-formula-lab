@@ -1,3 +1,5 @@
+[English](en/KNOWN-DIFFERENCES.md) | 简体中文
+
 # 已知差异（试点种子）
 
 > 来源：2026-10 的 760 条试点用例（SpreadJS 19.2.1 / Excel 365 16.0.20527）。

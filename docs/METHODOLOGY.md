@@ -1,3 +1,5 @@
+[English](en/METHODOLOGY.md) | 简体中文
+
 # 方法与判定口径
 
 ## 1. 流水线

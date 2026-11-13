@@ -72,6 +72,18 @@ const modes = MODES.map(mode => {
   };
 });
 
+// Cases whose verdict changes between the two SpreadJS configurations are
+// configuration-sensitive, not necessarily product differences.
+const modeRows = Object.fromEntries(modes.map(mode => [mode.id, Object.fromEntries(mode.rows.map(row => [row.id, row]))]));
+const crossMode = {};
+for (const id of Object.keys(caseIndex)) {
+  const defaultOutcome = modeRows.default?.[id]?.outcome;
+  const compatibleOutcome = modeRows.compatible?.[id]?.outcome;
+  if (defaultOutcome && compatibleOutcome && defaultOutcome !== compatibleOutcome) {
+    crossMode[id] = { default: defaultOutcome, compatible: compatibleOutcome };
+  }
+}
+
 const data = {
   generatedAt: new Date().toISOString(),
   product: { name: pkg.name, version: pkg.version },
@@ -85,6 +97,7 @@ const data = {
     dimensions: Object.fromEntries([...new Set(corpus.cases.map(item => item.dimension || 'baseline'))].map(dimension => [dimension, corpus.cases.filter(item => (item.dimension || 'baseline') === dimension).length])),
   },
   knownDifferences: known.items || [],
+  crossMode,
   cases: caseIndex,
   modes,
 };
@@ -200,6 +213,7 @@ footer{margin-top:26px;color:var(--muted);font-size:12px;line-height:1.7}
 <section id="viewKnown" class="hidden">
   <div class="note" id="knownNote"></div>
   <table><thead id="knownHead"></thead><tbody id="knownBody"></tbody></table>
+  <div id="knownExtra"></div>
 </section>
 
 <footer>
@@ -217,14 +231,17 @@ const I18N = {
     subtitle: '可复现的公式计算结果对比',
     env: '被测：<b>SpreadJS {sjs}</b>（{pkg}）· 基线：<b>Microsoft Excel {excel}</b> build {build} · 区域 {culture} · 1900 日期系统',
     run: '用例 {cases} 条 · 函数 {functions} 个<br>生成于 {time} UTC',
-    cards: { cases: '用例总数', functions: '覆盖函数', pass: '通过', fail: '差异', inconclusive: '待判定', env: '环境类差异' },
+    cards: { cases: '用例总数', functions: '覆盖函数', pass: '通过', fail: '差异', inconclusive: '待判定', env: '环境类差异', config: '配置相关' },
+    configDependent: '配置相关',
+    knownConfigTitle: '当前运行中的配置相关用例',
+    knownConfigNote: '这些用例在默认模式与 ExcelCompatibleCalcMode 下结论不同，应视为配置敏感，不能直接算作产品缺陷。',
     nav: { detail: '用例明细', matrix: '函数矩阵', known: '已知差异' },
     mode: { default: '默认模式', compatible: 'ExcelCompatibleCalcMode' },
     search: '搜索 ID、函数、公式、场景…',
     allStatus: '全部状态', allCategory: '全部分类', allDimension: '全部维度',
     showing: '显示 {n} / {total} 条',
     status: { PASS: '通过', FAIL: '差异', INCONCLUSIVE: '待判定', INVALID: '无效用例', EXEC_FAIL: '执行失败' },
-    cols: { status: '状态', id: '用例', function: '函数', category: '分类', dimension: '维度', scenario: '场景', formula: '公式', diff: '差异分类', cases: '用例数', passCol: '通过', failCol: '差异', otherCol: '其他', attribution: '归因', note: '说明', excel: 'Excel 结果', sjs: 'SpreadJS 结果', inputs: '输入数据', value: '值', display: '显示文本', elapsed: '耗时', diffCells: '区域差异单元格' },
+    cols: { status: '状态', id: '用例', function: '函数', category: '分类', dimension: '维度', scenario: '场景', formula: '公式', diff: '差异分类', cases: '用例数', passCol: '通过', failCol: '差异', otherCol: '其他', attribution: '归因', note: '说明', excel: 'Excel 结果', sjs: 'SpreadJS 结果', inputs: '输入数据', value: '值', display: '显示文本', elapsed: '耗时', diffCells: '区域差异单元格', defaultMode: '默认模式', compatibleMode: '兼容模式' },
     categories: { math: '数学与三角函数', statistical: '统计函数', text: '文本函数', date: '日期与时间函数', logical: '逻辑函数', lookup: '查找与引用函数', information: '信息函数', financial: '财务函数', engineering: '工程函数', database: '数据库函数', compatibility: '兼容函数', web: '网络函数', addin: '加载项函数' },
     dimensions: { baseline: '基线', boundary: '边界', 'type-coercion': '类型转换', reference: '引用', array: '数组', error: '错误', date: '日期', text: '文本', precision: '精度', lookup: '查找', config: '配置', combination: '组合', volatile: '易变' },
     attribution: { environment: '环境', product: '产品', unknown: '待定' },
@@ -256,14 +273,17 @@ const I18N = {
     subtitle: 'A reproducible comparison of calculated formula results',
     env: 'Tested: <b>SpreadJS {sjs}</b> ({pkg}) · Baseline: <b>Microsoft Excel {excel}</b> build {build} · culture {culture} · 1900 date system',
     run: '{cases} cases · {functions} functions<br>generated {time} UTC',
-    cards: { cases: 'Cases', functions: 'Functions', pass: 'Pass', fail: 'Diff', inconclusive: 'Inconclusive', env: 'Environment diffs' },
+    cards: { cases: 'Cases', functions: 'Functions', pass: 'Pass', fail: 'Diff', inconclusive: 'Inconclusive', env: 'Environment diffs', config: 'Config-dependent' },
+    configDependent: 'Config-dependent',
+    knownConfigTitle: 'Config-dependent cases in the current run',
+    knownConfigNote: 'These cases produce different verdicts in default mode and ExcelCompatibleCalcMode. Treat them as configuration-sensitive, not confirmed product defects.',
     nav: { detail: 'Cases', matrix: 'Function matrix', known: 'Known differences' },
     mode: { default: 'Default mode', compatible: 'ExcelCompatibleCalcMode' },
     search: 'Search id, function, formula, scenario…',
     allStatus: 'All statuses', allCategory: 'All categories', allDimension: 'All dimensions',
     showing: '{n} of {total}',
     status: { PASS: 'Pass', FAIL: 'Diff', INCONCLUSIVE: 'Inconclusive', INVALID: 'Invalid case', EXEC_FAIL: 'Execution failed' },
-    cols: { status: 'Status', id: 'Case', function: 'Function', category: 'Category', dimension: 'Dimension', scenario: 'Scenario', formula: 'Formula', diff: 'Classification', cases: 'Cases', passCol: 'Pass', failCol: 'Diff', otherCol: 'Other', attribution: 'Attribution', note: 'Note', excel: 'Excel', sjs: 'SpreadJS', inputs: 'Inputs', value: 'Value', display: 'Display text', elapsed: 'Time', diffCells: 'Differing cells' },
+    cols: { status: 'Status', id: 'Case', function: 'Function', category: 'Category', dimension: 'Dimension', scenario: 'Scenario', formula: 'Formula', diff: 'Classification', cases: 'Cases', passCol: 'Pass', failCol: 'Diff', otherCol: 'Other', attribution: 'Attribution', note: 'Note', excel: 'Excel', sjs: 'SpreadJS', inputs: 'Inputs', value: 'Value', display: 'Display text', elapsed: 'Time', diffCells: 'Differing cells', defaultMode: 'Default mode', compatibleMode: 'Compatible mode' },
     categories: { math: 'Math & Trig', statistical: 'Statistical', text: 'Text', date: 'Date & Time', logical: 'Logical', lookup: 'Lookup & Reference', information: 'Information', financial: 'Financial', engineering: 'Engineering', database: 'Database', compatibility: 'Compatibility', web: 'Web', addin: 'Add-in' },
     dimensions: { baseline: 'Baseline', boundary: 'Boundary', 'type-coercion': 'Type coercion', reference: 'Reference', array: 'Array', error: 'Error', date: 'Date', text: 'Text', precision: 'Precision', lookup: 'Lookup', config: 'Config', combination: 'Combination', volatile: 'Volatile' },
     attribution: { environment: 'Environment', product: 'Product', unknown: 'Unknown' },
@@ -304,6 +324,7 @@ const esc = value => String(value ?? '').replaceAll('&', '&amp;').replaceAll('<'
 const label = (group, key) => (I18N[state.lang][group] && I18N[state.lang][group][key]) || key;
 const caseMeta = id => DATA.cases[id] || { id: id, function: '', category: '', dimension: '', scenario: { zh: '', en: '' }, formula: '' };
 const currentMode = () => DATA.modes.find(mode => mode.id === state.mode) || DATA.modes[0];
+const rowOf = (modeId, id) => (DATA.modes.find(mode => mode.id === modeId)?.rows || []).find(row => row.id === id);
 const valueText = value => {
   if (!value) return t('unknown');
   if (value.type === 'empty') return t('empty');
@@ -350,6 +371,7 @@ function renderCards() {
     [t('cards.fail'), mode.counts.FAIL, ''],
     [t('cards.inconclusive'), mode.counts.INCONCLUSIVE, ''],
     [t('cards.env'), envDiffs, ''],
+    [t('cards.config'), Object.keys(DATA.crossMode || {}).length, ''],
   ];
   $('cards').innerHTML = cards.map(([key, value]) => '<div class="card"><div class="k">' + key + '</div><div class="v">' + value + '</div></div>').join('');
 }
@@ -394,7 +416,7 @@ function renderDetail() {
       : '<span class="muted">' + t('noData') + '</span>';
     const diffCells = row.differences ? '<div class="panel" style="margin-top:8px"><div class="k muted">' + t('cols.diffCells') + '</div><pre>' + esc(JSON.stringify(row.differences, null, 1)) + '</pre></div>' : '';
     return '<tr class="row" data-target="' + detailId + '">' +
-      '<td><span class="badge ' + STATUS_CLASS[row.outcome] + '">' + label('status', row.outcome) + '</span></td>' +
+      '<td><span class="badge ' + STATUS_CLASS[row.outcome] + '">' + label('status', row.outcome) + '</span>' + (DATA.crossMode[row.id] ? ' <span class="badge warn">' + t('configDependent') + '</span>' : '') + '</td>' +
       '<td class="mono nowrap">' + esc(row.id) + '</td>' +
       '<td class="mono nowrap">' + esc(meta.function) + '</td>' +
       '<td class="scenario">' + esc(meta.scenario[state.lang] || meta.scenario.zh) + '</td>' +
@@ -453,6 +475,20 @@ function renderKnown() {
   $('knownNote').textContent = t('knownNote');
   $('knownHead').innerHTML = '<tr><th>#</th><th>' + t('cols.id') + '</th><th>' + t('cols.function') + '</th><th>' + t('cols.formula') + '</th><th>Excel</th><th>SpreadJS</th><th>' + t('cols.attribution') + '</th><th>' + t('cols.note') + '</th></tr>';
   $('knownBody').innerHTML = (DATA.knownDifferences || []).map((item, index) => '<tr><td>' + (index + 1) + '</td><td class="mono nowrap">' + esc(item.id) + '</td><td class="mono">' + esc(item.function) + '</td><td class="formula mono" title="' + esc(item.formula) + '">' + esc(item.formula) + '</td><td class="mono">' + esc(item.excel) + '</td><td class="mono">' + esc(item.spreadjs) + '</td><td><span class="badge ' + (item.attribution === 'environment' ? 'info' : 'fail') + '">' + label('attribution', item.attribution) + '</span></td><td class="scenario">' + esc(item[state.lang] || item.zh) + '</td></tr>').join('');
+
+  const configIds = Object.keys(DATA.crossMode || {}).sort();
+  const extraRows = configIds.map(id => {
+    const meta = caseMeta(id);
+    const def = rowOf('default', id);
+    const comp = rowOf('compatible', id);
+    const outcomeBadge = (row) => '<span class="badge ' + (STATUS_CLASS[row?.outcome] || 'warn') + '">' + label('status', row?.outcome) + '</span>';
+    return '<tr><td class="mono nowrap">' + esc(id) + '</td><td class="mono">' + esc(meta.function) + '</td><td class="formula mono" title="' + esc(meta.formula) + '">' + esc(meta.formula) + '</td><td>' + outcomeBadge(def) + '</td><td>' + outcomeBadge(comp) + '</td><td class="mono">' + esc(valueText(def?.excel?.value)) + '</td><td class="mono">' + esc(valueText(def?.spreadjs?.value)) + '</td></tr>';
+  }).join('');
+  $('knownExtra').innerHTML = '<h2>' + t('knownConfigTitle') + ' (' + configIds.length + ')</h2>' +
+    '<div class="note">' + t('knownConfigNote') + '</div>' +
+    (configIds.length
+      ? '<table><thead><tr><th>' + t('cols.id') + '</th><th>' + t('cols.function') + '</th><th>' + t('cols.formula') + '</th><th>' + t('cols.defaultMode') + '</th><th>' + t('cols.compatibleMode') + '</th><th>Excel</th><th>SpreadJS</th></tr></thead><tbody>' + extraRows + '</tbody></table>'
+      : '<div class="muted">' + t('unknown') + '</div>');
 }
 
 function render() {

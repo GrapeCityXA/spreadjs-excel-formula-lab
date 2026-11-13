@@ -6,7 +6,7 @@
 逐格比较结果，并发布一份静态的中英双语报告。仓库设计为可以 clone 后直接交给 AI 代理执行：
 不需要服务器、没有交互式提问，默认的 check 流程也不需要安装 Excel。
 
-> 状态：**M2 公共语料** — 888 条用例、496 个函数、13 个分类、用例中英双语、
+> 状态：**M3 发布候选** — 已可公开：888 条用例、496 个函数、13 个分类、用例中英双语、
 > 两种 SpreadJS 配置、已提交 Excel 基线。
 
 ## 结果快照（SpreadJS 19.2.2，Excel 16.0 build 20527，zh-CN）
@@ -76,15 +76,17 @@ CLI 无交互、输出 JSON；完整机器可读结果在 `out/<mode>/comparison
 
 - **用例设计**：每条用例只验证一个语义点；12 个维度（基线、边界、类型转换、引用、数组、
   错误、日期、文本、精度、查找、配置、组合）；显式优先级与评审清单。见
-  [`docs/CASE-DESIGN.md`](docs/CASE-DESIGN.md)。
+  [`docs/CASE-DESIGN.md`](docs/CASE-DESIGN.md)（中文）或 [`docs/en/CASE-DESIGN.md`](docs/en/CASE-DESIGN.md)（English）。
 - **Excel 版本**：提交的基线只代表一个 Excel 环境。用户 Excel 版本不同时，可以直接用
   已提交基线（`check`），也可以在自己的机器上重建基线（`refresh`，仅 Windows）。结论
   始终与环境绑定，不承诺覆盖所有 Excel 版本或全部函数。见
-  [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md)。
+  [`docs/METHODOLOGY.md`](docs/METHODOLOGY.md)（中文）或 [`docs/en/METHODOLOGY.md`](docs/en/METHODOLOGY.md)（English）。
 
 当前语料：888 条 / 496 个函数 / 13 个分类；维度分布：基线 502、引用 181、数组 57、
 精度 40、边界 28、错误 27、类型转换 14、日期 14、查找 10、文本 6、易变 6、配置 2、
 组合 1。优先级：P0 224、P1 486、P2 178。
+
+文档中英双语：英文在 `docs/en/`，中文在 `docs/*.md`；维护者发布步骤见 [`docs/RELEASE-CHECKLIST.md`](docs/RELEASE-CHECKLIST.md)。
 
 ## 仓库结构
 

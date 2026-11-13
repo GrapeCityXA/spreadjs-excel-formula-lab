@@ -1,0 +1,23 @@
+name: ci
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm test
+      - run: npm run validate
+      - run: npm run release-check
+      - name: Build the corpus from fragments
+        run: npm run build:cases
+      - name: Ensure the committed corpus is up to date
+        run: git diff --exit-code -- cases/public/corpus.json
