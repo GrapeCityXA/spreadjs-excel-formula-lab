@@ -1,11 +1,11 @@
 {
   "engine": "excel",
   "engineVersion": "16.0",
-  "casesSha256": "a4594cb2b72964b0c0e339eb14cebf1e9fed30666f7c6f348db94942aadd6afe",
-  "startedAt": "2026-11-13T04:33:19.0439992Z",
-  "finishedAt": "2026-11-13T04:33:56.0502308Z",
+  "casesSha256": "183fe7e69651d85243d48a7a757b33acfc46fbc82f69c42c446c9f4c824d4a4e",
+  "startedAt": "2026-11-13T07:51:48.4638469Z",
+  "finishedAt": "2026-11-13T07:53:11.1680978Z",
   "caseCount": 892,
-  "totalElapsedMs": 34720.1,
+  "totalElapsedMs": 77679.2,
   "meta": {
     "excelVersion": "16.0",
     "excelBuild": "20527",
@@ -15,8 +15,8 @@
     "culture": "zh-CN",
     "workbookSheets": 893,
     "dynamicArraySpill": "readRange cases use CSE array formulas; native spill behavior is not tested",
-    "totalMs": 34720.1,
-    "avgCaseMs": 38.924
+    "totalMs": 77679.2,
+    "avgCaseMs": 87.084
   },
   "selfCheck": {
     "formula": "=1+1",
@@ -34,7 +34,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 46.596,
+      "elapsedMs": 115.84,
       "message": "",
       "inputs": []
     },
@@ -46,7 +46,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 14.847,
+      "elapsedMs": 23.148,
       "message": "",
       "inputs": []
     },
@@ -58,7 +58,7 @@
       },
       "displayText": "-3",
       "range": null,
-      "elapsedMs": 8.018,
+      "elapsedMs": 14.645,
       "message": "",
       "inputs": []
     },
@@ -70,7 +70,7 @@
       },
       "displayText": "1.01",
       "range": null,
-      "elapsedMs": 7.989,
+      "elapsedMs": 13.375,
       "message": "",
       "inputs": []
     },
@@ -82,7 +82,7 @@
       },
       "displayText": "-3",
       "range": null,
-      "elapsedMs": 7.702,
+      "elapsedMs": 23.462,
       "message": "",
       "inputs": []
     },
@@ -94,7 +94,7 @@
       },
       "displayText": "-2",
       "range": null,
-      "elapsedMs": 8.912,
+      "elapsedMs": 14.851,
       "message": "",
       "inputs": []
     },
@@ -106,7 +106,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 7.84,
+      "elapsedMs": 29.65,
       "message": "",
       "inputs": []
     },
@@ -118,7 +118,7 @@
       },
       "displayText": "-2",
       "range": null,
-      "elapsedMs": 9.608,
+      "elapsedMs": 19.572,
       "message": "",
       "inputs": []
     },
@@ -130,7 +130,7 @@
       },
       "displayText": "#NUM!",
       "range": null,
-      "elapsedMs": 12.682,
+      "elapsedMs": 29.753,
       "message": "",
       "inputs": []
     },
@@ -142,7 +142,7 @@
       },
       "displayText": "#NUM!",
       "range": null,
-      "elapsedMs": 8.569,
+      "elapsedMs": 18.75,
       "message": "",
       "inputs": []
     },
@@ -154,7 +154,7 @@
       },
       "displayText": "#NUM!",
       "range": null,
-      "elapsedMs": 7.452,
+      "elapsedMs": 34.238,
       "message": "",
       "inputs": []
     },
@@ -166,7 +166,7 @@
       },
       "displayText": "#NUM!",
       "range": null,
-      "elapsedMs": 6.711,
+      "elapsedMs": 20.883,
       "message": "",
       "inputs": []
     },
@@ -178,7 +178,7 @@
       },
       "displayText": "-3",
       "range": null,
-      "elapsedMs": 6.926,
+      "elapsedMs": 22.319,
       "message": "",
       "inputs": []
     },
@@ -190,7 +190,7 @@
       },
       "displayText": "-2",
       "range": null,
-      "elapsedMs": 7.238,
+      "elapsedMs": 19.26,
       "message": "",
       "inputs": []
     },
@@ -202,7 +202,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 6.078,
+      "elapsedMs": 16.494,
       "message": "",
       "inputs": []
     },
@@ -214,7 +214,7 @@
       },
       "displayText": "#NUM!",
       "range": null,
-      "elapsedMs": 8.043,
+      "elapsedMs": 23.897,
       "message": "",
       "inputs": []
     },
@@ -226,7 +226,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 8.039,
+      "elapsedMs": 21.575,
       "message": "",
       "inputs": []
     },
@@ -238,7 +238,7 @@
       },
       "displayText": "8",
       "range": null,
-      "elapsedMs": 8.649,
+      "elapsedMs": 18.314,
       "message": "",
       "inputs": []
     },
@@ -250,7 +250,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 6.704,
+      "elapsedMs": 17.722,
       "message": "",
       "inputs": []
     },
@@ -262,7 +262,7 @@
       },
       "displayText": "err",
       "range": null,
-      "elapsedMs": 9.383,
+      "elapsedMs": 37.6,
       "message": "",
       "inputs": []
     },
@@ -274,7 +274,7 @@
       },
       "displayText": "11",
       "range": null,
-      "elapsedMs": 8.178,
+      "elapsedMs": 32.912,
       "message": "",
       "inputs": []
     },
@@ -286,7 +286,7 @@
       },
       "displayText": "20",
       "range": null,
-      "elapsedMs": 48.566,
+      "elapsedMs": 155.496,
       "message": "",
       "inputs": [
         [
@@ -323,7 +323,7 @@
       },
       "displayText": "12.35",
       "range": null,
-      "elapsedMs": 7.703,
+      "elapsedMs": 21.522,
       "message": "",
       "inputs": []
     },
@@ -335,7 +335,7 @@
       },
       "displayText": "6",
       "range": null,
-      "elapsedMs": 9.022,
+      "elapsedMs": 30.961,
       "message": "",
       "inputs": []
     },
@@ -347,7 +347,7 @@
       },
       "displayText": "100",
       "range": null,
-      "elapsedMs": 17.416,
+      "elapsedMs": 65.818,
       "message": "",
       "inputs": [
         [
@@ -380,7 +380,7 @@
       },
       "displayText": "5",
       "range": null,
-      "elapsedMs": 41.49,
+      "elapsedMs": 294.653,
       "message": "",
       "inputs": [
         [
@@ -416,7 +416,7 @@
       },
       "displayText": "12.5",
       "range": null,
-      "elapsedMs": 6.564,
+      "elapsedMs": 14.891,
       "message": "",
       "inputs": []
     },
@@ -428,7 +428,7 @@
       },
       "displayText": "5",
       "range": null,
-      "elapsedMs": 7.539,
+      "elapsedMs": 17.248,
       "message": "",
       "inputs": []
     },
@@ -440,7 +440,7 @@
       },
       "displayText": "3.14",
       "range": null,
-      "elapsedMs": 7.119,
+      "elapsedMs": 17.096,
       "message": "",
       "inputs": []
     },
@@ -452,7 +452,7 @@
       },
       "displayText": "2.68",
       "range": null,
-      "elapsedMs": 6.924,
+      "elapsedMs": 21.874,
       "message": "",
       "inputs": []
     },
@@ -464,7 +464,7 @@
       },
       "displayText": "-3",
       "range": null,
-      "elapsedMs": 9.25,
+      "elapsedMs": 18.682,
       "message": "",
       "inputs": []
     },
@@ -476,7 +476,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 7.449,
+      "elapsedMs": 18.56,
       "message": "",
       "inputs": []
     },
@@ -488,7 +488,7 @@
       },
       "displayText": "-3",
       "range": null,
-      "elapsedMs": 7.961,
+      "elapsedMs": 21.053,
       "message": "",
       "inputs": []
     },
@@ -500,7 +500,7 @@
       },
       "displayText": "4",
       "range": null,
-      "elapsedMs": 8.658,
+      "elapsedMs": 22.578,
       "message": "",
       "inputs": []
     },
@@ -512,7 +512,7 @@
       },
       "displayText": "-4",
       "range": null,
-      "elapsedMs": 7.637,
+      "elapsedMs": 17.944,
       "message": "",
       "inputs": []
     },
@@ -524,7 +524,7 @@
       },
       "displayText": "7",
       "range": null,
-      "elapsedMs": 6.426,
+      "elapsedMs": 15.938,
       "message": "",
       "inputs": []
     },
@@ -536,7 +536,7 @@
       },
       "displayText": "-8",
       "range": null,
-      "elapsedMs": 9.127,
+      "elapsedMs": 17.727,
       "message": "",
       "inputs": []
     },
@@ -548,7 +548,7 @@
       },
       "displayText": "8",
       "range": null,
-      "elapsedMs": 7.298,
+      "elapsedMs": 18.053,
       "message": "",
       "inputs": []
     },
@@ -560,7 +560,7 @@
       },
       "displayText": "-8",
       "range": null,
-      "elapsedMs": 7.539,
+      "elapsedMs": 17.151,
       "message": "",
       "inputs": []
     },
@@ -572,7 +572,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 5.96,
+      "elapsedMs": 16.334,
       "message": "",
       "inputs": []
     },
@@ -584,7 +584,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 7.76,
+      "elapsedMs": 14.849,
       "message": "",
       "inputs": []
     },
@@ -596,7 +596,7 @@
       },
       "displayText": "9",
       "range": null,
-      "elapsedMs": 7.782,
+      "elapsedMs": 41.457,
       "message": "",
       "inputs": []
     },
@@ -608,7 +608,7 @@
       },
       "displayText": "-8",
       "range": null,
-      "elapsedMs": 7.1,
+      "elapsedMs": 16.618,
       "message": "",
       "inputs": []
     },
@@ -620,7 +620,7 @@
       },
       "displayText": "1024",
       "range": null,
-      "elapsedMs": 6.858,
+      "elapsedMs": 14.98,
       "message": "",
       "inputs": []
     },
@@ -632,7 +632,7 @@
       },
       "displayText": "-8",
       "range": null,
-      "elapsedMs": 6.86,
+      "elapsedMs": 15.429,
       "message": "",
       "inputs": []
     },
@@ -644,7 +644,7 @@
       },
       "displayText": "4",
       "range": null,
-      "elapsedMs": 7.37,
+      "elapsedMs": 16.3,
       "message": "",
       "inputs": []
     },
@@ -656,7 +656,7 @@
       },
       "displayText": "1.414213562",
       "range": null,
-      "elapsedMs": 6.378,
+      "elapsedMs": 18.233,
       "message": "",
       "inputs": []
     },
@@ -668,7 +668,7 @@
       },
       "displayText": "#NUM!",
       "range": null,
-      "elapsedMs": 7.172,
+      "elapsedMs": 17.402,
       "message": "",
       "inputs": []
     },
@@ -680,7 +680,7 @@
       },
       "displayText": "2.718281828",
       "range": null,
-      "elapsedMs": 6.641,
+      "elapsedMs": 18.155,
       "message": "",
       "inputs": []
     },
@@ -692,7 +692,7 @@
       },
       "displayText": "0.135335283",
       "range": null,
-      "elapsedMs": 7.647,
+      "elapsedMs": 17.806,
       "message": "",
       "inputs": []
     },
@@ -704,7 +704,7 @@
       },
       "displayText": "2.302585093",
       "range": null,
-      "elapsedMs": 9.445,
+      "elapsedMs": 20.808,
       "message": "",
       "inputs": []
     },
@@ -716,7 +716,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 9.714,
+      "elapsedMs": 17.281,
       "message": "",
       "inputs": []
     },
@@ -728,7 +728,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 9.236,
+      "elapsedMs": 16.902,
       "message": "",
       "inputs": []
     },
@@ -740,7 +740,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 8.133,
+      "elapsedMs": 18.22,
       "message": "",
       "inputs": []
     },
@@ -752,7 +752,7 @@
       },
       "displayText": "#NUM!",
       "range": null,
-      "elapsedMs": 7.447,
+      "elapsedMs": 16.897,
       "message": "",
       "inputs": []
     },
@@ -764,7 +764,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 6.468,
+      "elapsedMs": 17.54,
       "message": "",
       "inputs": []
     },
@@ -776,7 +776,7 @@
       },
       "displayText": "-1",
       "range": null,
-      "elapsedMs": 6.804,
+      "elapsedMs": 17.786,
       "message": "",
       "inputs": []
     },
@@ -788,7 +788,7 @@
       },
       "displayText": "3.141592654",
       "range": null,
-      "elapsedMs": 9.292,
+      "elapsedMs": 23.522,
       "message": "",
       "inputs": []
     },
@@ -800,7 +800,7 @@
       },
       "displayText": "1.570796327",
       "range": null,
-      "elapsedMs": 9.17,
+      "elapsedMs": 17.982,
       "message": "",
       "inputs": []
     },
@@ -812,7 +812,7 @@
       },
       "displayText": "180",
       "range": null,
-      "elapsedMs": 7.518,
+      "elapsedMs": 56.309,
       "message": "",
       "inputs": []
     },
@@ -824,7 +824,7 @@
       },
       "displayText": "57.29577951",
       "range": null,
-      "elapsedMs": 9.294,
+      "elapsedMs": 17.413,
       "message": "",
       "inputs": []
     },
@@ -836,7 +836,7 @@
       },
       "displayText": "3.141592654",
       "range": null,
-      "elapsedMs": 8.501,
+      "elapsedMs": 16.169,
       "message": "",
       "inputs": []
     },
@@ -848,7 +848,7 @@
       },
       "displayText": "-1.570796327",
       "range": null,
-      "elapsedMs": 10.302,
+      "elapsedMs": 15.328,
       "message": "",
       "inputs": []
     },
@@ -860,7 +860,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 6.579,
+      "elapsedMs": 17.036,
       "message": "",
       "inputs": []
     },
@@ -872,7 +872,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 7.923,
+      "elapsedMs": 15.236,
       "message": "",
       "inputs": []
     },
@@ -884,7 +884,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 8.367,
+      "elapsedMs": 16.207,
       "message": "",
       "inputs": []
     },
@@ -896,7 +896,7 @@
       },
       "displayText": "-1",
       "range": null,
-      "elapsedMs": 8.745,
+      "elapsedMs": 15.076,
       "message": "",
       "inputs": []
     },
@@ -908,7 +908,7 @@
       },
       "displayText": "1.557407725",
       "range": null,
-      "elapsedMs": 9.143,
+      "elapsedMs": 13.763,
       "message": "",
       "inputs": []
     },
@@ -920,7 +920,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 9.151,
+      "elapsedMs": 15.351,
       "message": "",
       "inputs": []
     },
@@ -932,7 +932,7 @@
       },
       "displayText": "0.523598776",
       "range": null,
-      "elapsedMs": 12.181,
+      "elapsedMs": 14.539,
       "message": "",
       "inputs": []
     },
@@ -944,7 +944,7 @@
       },
       "displayText": "1.570796327",
       "range": null,
-      "elapsedMs": 9.598,
+      "elapsedMs": 15.11,
       "message": "",
       "inputs": []
     },
@@ -956,7 +956,7 @@
       },
       "displayText": "1.047197551",
       "range": null,
-      "elapsedMs": 7.398,
+      "elapsedMs": 15.372,
       "message": "",
       "inputs": []
     },
@@ -968,7 +968,7 @@
       },
       "displayText": "3.141592654",
       "range": null,
-      "elapsedMs": 8.751,
+      "elapsedMs": 16.749,
       "message": "",
       "inputs": []
     },
@@ -980,7 +980,7 @@
       },
       "displayText": "0.785398163",
       "range": null,
-      "elapsedMs": 6.739,
+      "elapsedMs": 17.462,
       "message": "",
       "inputs": []
     },
@@ -992,7 +992,7 @@
       },
       "displayText": "-0.785398163",
       "range": null,
-      "elapsedMs": 8.027,
+      "elapsedMs": 15.389,
       "message": "",
       "inputs": []
     },
@@ -1004,7 +1004,7 @@
       },
       "displayText": "0.785398163",
       "range": null,
-      "elapsedMs": 6.756,
+      "elapsedMs": 17.42,
       "message": "",
       "inputs": []
     },
@@ -1016,7 +1016,7 @@
       },
       "displayText": "-2.35619449",
       "range": null,
-      "elapsedMs": 9.503,
+      "elapsedMs": 18.552,
       "message": "",
       "inputs": []
     },
@@ -1028,7 +1028,7 @@
       },
       "displayText": "-1",
       "range": null,
-      "elapsedMs": 10.483,
+      "elapsedMs": 18.862,
       "message": "",
       "inputs": []
     },
@@ -1040,7 +1040,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 7.488,
+      "elapsedMs": 19.731,
       "message": "",
       "inputs": []
     },
@@ -1052,7 +1052,7 @@
       },
       "displayText": "25",
       "range": null,
-      "elapsedMs": 41.622,
+      "elapsedMs": 226.348,
       "message": "",
       "inputs": [
         [
@@ -1115,7 +1115,7 @@
       },
       "displayText": "50",
       "range": null,
-      "elapsedMs": 39.344,
+      "elapsedMs": 117.98,
       "message": "",
       "inputs": [
         [
@@ -1178,7 +1178,7 @@
       },
       "displayText": "10",
       "range": null,
-      "elapsedMs": 56.429,
+      "elapsedMs": 132.77,
       "message": "",
       "inputs": [
         [
@@ -1261,7 +1261,7 @@
       },
       "displayText": "30",
       "range": null,
-      "elapsedMs": 56.972,
+      "elapsedMs": 117.218,
       "message": "",
       "inputs": [
         [
@@ -1344,7 +1344,7 @@
       },
       "displayText": "44",
       "range": null,
-      "elapsedMs": 23.758,
+      "elapsedMs": 55.109,
       "message": "",
       "inputs": [
         [
@@ -1387,7 +1387,7 @@
       },
       "displayText": "32",
       "range": null,
-      "elapsedMs": 8.503,
+      "elapsedMs": 21.561,
       "message": "",
       "inputs": []
     },
@@ -1399,7 +1399,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 8.693,
+      "elapsedMs": 19.144,
       "message": "",
       "inputs": []
     },
@@ -1411,7 +1411,7 @@
       },
       "displayText": "5",
       "range": null,
-      "elapsedMs": 9.529,
+      "elapsedMs": 18.32,
       "message": "",
       "inputs": []
     },
@@ -1442,7 +1442,7 @@
           }
         ]
       ],
-      "elapsedMs": 37.513,
+      "elapsedMs": 70.353,
       "message": "",
       "inputs": []
     },
@@ -1483,7 +1483,7 @@
           }
         ]
       ],
-      "elapsedMs": 21.562,
+      "elapsedMs": 47.466,
       "message": "",
       "inputs": []
     },
@@ -1495,7 +1495,7 @@
       },
       "displayText": "1.316957897",
       "range": null,
-      "elapsedMs": 9.576,
+      "elapsedMs": 19.068,
       "message": "",
       "inputs": []
     },
@@ -1507,7 +1507,7 @@
       },
       "displayText": "0.785398163",
       "range": null,
-      "elapsedMs": 10.3,
+      "elapsedMs": 21.276,
       "message": "",
       "inputs": []
     },
@@ -1519,7 +1519,7 @@
       },
       "displayText": "0.549306144",
       "range": null,
-      "elapsedMs": 12.106,
+      "elapsedMs": 20.744,
       "message": "",
       "inputs": []
     },
@@ -1531,7 +1531,7 @@
       },
       "displayText": "100",
       "range": null,
-      "elapsedMs": 20.956,
+      "elapsedMs": 48.202,
       "message": "",
       "inputs": [
         [
@@ -1568,7 +1568,7 @@
       },
       "displayText": "1999",
       "range": null,
-      "elapsedMs": 8.966,
+      "elapsedMs": 48.621,
       "message": "",
       "inputs": []
     },
@@ -1580,7 +1580,7 @@
       },
       "displayText": "0.881373587",
       "range": null,
-      "elapsedMs": 7.723,
+      "elapsedMs": 23.824,
       "message": "",
       "inputs": []
     },
@@ -1592,7 +1592,7 @@
       },
       "displayText": "0.549306144",
       "range": null,
-      "elapsedMs": 9.541,
+      "elapsedMs": 22.488,
       "message": "",
       "inputs": []
     },
@@ -1604,7 +1604,7 @@
       },
       "displayText": "FF",
       "range": null,
-      "elapsedMs": 8.134,
+      "elapsedMs": 23.838,
       "message": "",
       "inputs": []
     },
@@ -1616,7 +1616,7 @@
       },
       "displayText": "4",
       "range": null,
-      "elapsedMs": 8.267,
+      "elapsedMs": 19.391,
       "message": "",
       "inputs": []
     },
@@ -1628,7 +1628,7 @@
       },
       "displayText": "-3",
       "range": null,
-      "elapsedMs": 9.727,
+      "elapsedMs": 21.345,
       "message": "",
       "inputs": []
     },
@@ -1640,7 +1640,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 9.835,
+      "elapsedMs": 21.174,
       "message": "",
       "inputs": []
     },
@@ -1652,7 +1652,7 @@
       },
       "displayText": "10",
       "range": null,
-      "elapsedMs": 9.909,
+      "elapsedMs": 22.171,
       "message": "",
       "inputs": []
     },
@@ -1664,7 +1664,7 @@
       },
       "displayText": "10",
       "range": null,
-      "elapsedMs": 11.296,
+      "elapsedMs": 20.239,
       "message": "",
       "inputs": []
     },
@@ -1676,7 +1676,7 @@
       },
       "displayText": "1.543080635",
       "range": null,
-      "elapsedMs": 9.752,
+      "elapsedMs": 16.263,
       "message": "",
       "inputs": []
     },
@@ -1688,7 +1688,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 9.65,
+      "elapsedMs": 17.56,
       "message": "",
       "inputs": []
     },
@@ -1700,7 +1700,7 @@
       },
       "displayText": "1.313035285",
       "range": null,
-      "elapsedMs": 8.317,
+      "elapsedMs": 16.905,
       "message": "",
       "inputs": []
     },
@@ -1712,7 +1712,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 8.483,
+      "elapsedMs": 17.835,
       "message": "",
       "inputs": []
     },
@@ -1724,7 +1724,7 @@
       },
       "displayText": "0.850918128",
       "range": null,
-      "elapsedMs": 7.527,
+      "elapsedMs": 20.007,
       "message": "",
       "inputs": []
     },
@@ -1736,7 +1736,7 @@
       },
       "displayText": "255",
       "range": null,
-      "elapsedMs": 13.987,
+      "elapsedMs": 20.577,
       "message": "",
       "inputs": []
     },
@@ -1748,7 +1748,7 @@
       },
       "displayText": "-2",
       "range": null,
-      "elapsedMs": 9.994,
+      "elapsedMs": 17.841,
       "message": "",
       "inputs": []
     },
@@ -1760,7 +1760,7 @@
       },
       "displayText": "720",
       "range": null,
-      "elapsedMs": 7.746,
+      "elapsedMs": 17.215,
       "message": "",
       "inputs": []
     },
@@ -1772,7 +1772,7 @@
       },
       "displayText": "105",
       "range": null,
-      "elapsedMs": 9.456,
+      "elapsedMs": 21.196,
       "message": "",
       "inputs": []
     },
@@ -1784,7 +1784,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 9.567,
+      "elapsedMs": 18.265,
       "message": "",
       "inputs": []
     },
@@ -1796,7 +1796,7 @@
       },
       "displayText": "-4",
       "range": null,
-      "elapsedMs": 12.164,
+      "elapsedMs": 20.178,
       "message": "",
       "inputs": []
     },
@@ -1808,7 +1808,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 9.935,
+      "elapsedMs": 18.809,
       "message": "",
       "inputs": []
     },
@@ -1820,7 +1820,7 @@
       },
       "displayText": "12",
       "range": null,
-      "elapsedMs": 8.864,
+      "elapsedMs": 19.507,
       "message": "",
       "inputs": []
     },
@@ -1832,7 +1832,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 9.728,
+      "elapsedMs": 17.71,
       "message": "",
       "inputs": []
     },
@@ -1844,7 +1844,7 @@
       },
       "displayText": "60",
       "range": null,
-      "elapsedMs": 9.368,
+      "elapsedMs": 21.178,
       "message": "",
       "inputs": []
     },
@@ -1856,7 +1856,7 @@
       },
       "displayText": "-2",
       "range": null,
-      "elapsedMs": 20.638,
+      "elapsedMs": 54.851,
       "message": "",
       "inputs": [
         [
@@ -1910,7 +1910,7 @@
           }
         ]
       ],
-      "elapsedMs": 30.62,
+      "elapsedMs": 117.598,
       "message": "",
       "inputs": [
         [
@@ -1964,7 +1964,7 @@
           }
         ]
       ],
-      "elapsedMs": 27.791,
+      "elapsedMs": 126.844,
       "message": "",
       "inputs": [
         [
@@ -1997,7 +1997,7 @@
       },
       "displayText": "1260",
       "range": null,
-      "elapsedMs": 12.021,
+      "elapsedMs": 31.417,
       "message": "",
       "inputs": []
     },
@@ -2052,7 +2052,7 @@
           }
         ]
       ],
-      "elapsedMs": 26.65,
+      "elapsedMs": 100.04,
       "message": "",
       "inputs": []
     },
@@ -2064,7 +2064,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 11.45,
+      "elapsedMs": 34.448,
       "message": "",
       "inputs": []
     },
@@ -2076,7 +2076,7 @@
       },
       "displayText": "24",
       "range": null,
-      "elapsedMs": 20.934,
+      "elapsedMs": 50.88,
       "message": "",
       "inputs": [
         [
@@ -2113,7 +2113,7 @@
       },
       "displayText": "-3",
       "range": null,
-      "elapsedMs": 12.711,
+      "elapsedMs": 18.151,
       "message": "",
       "inputs": []
     },
@@ -2121,11 +2121,11 @@
       "status": "ok",
       "value": {
         "type": "number",
-        "value": 0.6058844118209794
+        "value": 0.06088045388461538
       },
-      "displayText": "0.605884412",
+      "displayText": "0.060880454",
       "range": null,
-      "elapsedMs": 11.341,
+      "elapsedMs": 22.838,
       "message": "",
       "inputs": []
     },
@@ -2137,7 +2137,7 @@
       },
       "displayText": "MMXXIV",
       "range": null,
-      "elapsedMs": 10.659,
+      "elapsedMs": 21.016,
       "message": "",
       "inputs": []
     },
@@ -2149,7 +2149,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 9.562,
+      "elapsedMs": 18.816,
       "message": "",
       "inputs": []
     },
@@ -2161,7 +2161,7 @@
       },
       "displayText": "0.648054274",
       "range": null,
-      "elapsedMs": 9.743,
+      "elapsedMs": 24.072,
       "message": "",
       "inputs": []
     },
@@ -2173,7 +2173,7 @@
       },
       "displayText": "34",
       "range": null,
-      "elapsedMs": 17.472,
+      "elapsedMs": 41.584,
       "message": "",
       "inputs": [
         [
@@ -2200,7 +2200,7 @@
       },
       "displayText": "1.175201194",
       "range": null,
-      "elapsedMs": 9.941,
+      "elapsedMs": 20.008,
       "message": "",
       "inputs": []
     },
@@ -2212,7 +2212,7 @@
       },
       "displayText": "2.506628275",
       "range": null,
-      "elapsedMs": 8.968,
+      "elapsedMs": 20.019,
       "message": "",
       "inputs": []
     },
@@ -2224,7 +2224,7 @@
       },
       "displayText": "100",
       "range": null,
-      "elapsedMs": 21.982,
+      "elapsedMs": 46.189,
       "message": "",
       "inputs": [
         [
@@ -2261,7 +2261,7 @@
       },
       "displayText": "30",
       "range": null,
-      "elapsedMs": 22.302,
+      "elapsedMs": 46.806,
       "message": "",
       "inputs": [
         [
@@ -2298,7 +2298,7 @@
       },
       "displayText": "-63",
       "range": null,
-      "elapsedMs": 24.698,
+      "elapsedMs": 54.757,
       "message": "",
       "inputs": [
         [
@@ -2339,7 +2339,7 @@
       },
       "displayText": "91",
       "range": null,
-      "elapsedMs": 22.808,
+      "elapsedMs": 52.569,
       "message": "",
       "inputs": [
         [
@@ -2380,7 +2380,7 @@
       },
       "displayText": "27",
       "range": null,
-      "elapsedMs": 156.452,
+      "elapsedMs": 308.138,
       "message": "",
       "inputs": [
         [
@@ -2421,7 +2421,7 @@
       },
       "displayText": "0.761594156",
       "range": null,
-      "elapsedMs": 9.56,
+      "elapsedMs": 15.873,
       "message": "",
       "inputs": []
     },
@@ -2433,7 +2433,7 @@
       },
       "displayText": "0.125",
       "range": null,
-      "elapsedMs": 10.222,
+      "elapsedMs": 49.44,
       "message": "",
       "inputs": []
     },
@@ -2445,7 +2445,7 @@
       },
       "displayText": "5",
       "range": null,
-      "elapsedMs": 10.102,
+      "elapsedMs": 19.661,
       "message": "",
       "inputs": []
     },
@@ -2457,7 +2457,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 10.282,
+      "elapsedMs": 20.664,
       "message": "",
       "inputs": []
     },
@@ -2469,7 +2469,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 10.133,
+      "elapsedMs": 23.257,
       "message": "",
       "inputs": []
     },
@@ -2481,7 +2481,7 @@
       },
       "displayText": "#DIV/0!",
       "range": null,
-      "elapsedMs": 16.956,
+      "elapsedMs": 38.684,
       "message": "",
       "inputs": [
         [
@@ -2504,7 +2504,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 12.112,
+      "elapsedMs": 24.44,
       "message": "",
       "inputs": []
     },
@@ -2516,7 +2516,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 8.517,
+      "elapsedMs": 22.767,
       "message": "",
       "inputs": []
     },
@@ -2528,7 +2528,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 9.114,
+      "elapsedMs": 22.068,
       "message": "",
       "inputs": []
     },
@@ -2540,7 +2540,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 8.188,
+      "elapsedMs": 20.895,
       "message": "",
       "inputs": []
     },
@@ -2552,7 +2552,7 @@
       },
       "displayText": "2.5",
       "range": null,
-      "elapsedMs": 9.876,
+      "elapsedMs": 50.509,
       "message": "",
       "inputs": []
     },
@@ -2564,7 +2564,7 @@
       },
       "displayText": "1.290994449",
       "range": null,
-      "elapsedMs": 8.416,
+      "elapsedMs": 24.287,
       "message": "",
       "inputs": []
     },
@@ -2576,7 +2576,7 @@
       },
       "displayText": "1.75",
       "range": null,
-      "elapsedMs": 9.929,
+      "elapsedMs": 23.518,
       "message": "",
       "inputs": []
     },
@@ -2588,7 +2588,7 @@
       },
       "displayText": "3.25",
       "range": null,
-      "elapsedMs": 10.584,
+      "elapsedMs": 25.702,
       "message": "",
       "inputs": []
     },
@@ -2600,7 +2600,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 17.044,
+      "elapsedMs": 40.312,
       "message": "",
       "inputs": [
         [
@@ -2631,7 +2631,7 @@
       },
       "displayText": "0.5",
       "range": null,
-      "elapsedMs": 19.52,
+      "elapsedMs": 68.618,
       "message": "",
       "inputs": [
         [
@@ -2661,7 +2661,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 17.577,
+      "elapsedMs": 44.746,
       "message": "",
       "inputs": [
         [
@@ -2690,7 +2690,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 9.06,
+      "elapsedMs": 19.091,
       "message": "",
       "inputs": []
     },
@@ -2702,7 +2702,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 10.455,
+      "elapsedMs": 20.137,
       "message": "",
       "inputs": []
     },
@@ -2714,7 +2714,7 @@
       },
       "displayText": "5",
       "range": null,
-      "elapsedMs": 24.63,
+      "elapsedMs": 47.053,
       "message": "",
       "inputs": [
         [
@@ -2747,7 +2747,7 @@
       },
       "displayText": "2.5",
       "range": null,
-      "elapsedMs": 25.053,
+      "elapsedMs": 53.582,
       "message": "",
       "inputs": [
         [
@@ -2783,7 +2783,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 26.491,
+      "elapsedMs": 60.283,
       "message": "",
       "inputs": [
         [
@@ -2825,7 +2825,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 23.597,
+      "elapsedMs": 51.84,
       "message": "",
       "inputs": [
         [
@@ -2867,7 +2867,7 @@
       },
       "displayText": "4",
       "range": null,
-      "elapsedMs": 26.379,
+      "elapsedMs": 56.332,
       "message": "",
       "inputs": [
         [
@@ -2909,7 +2909,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 9.795,
+      "elapsedMs": 21.582,
       "message": "",
       "inputs": []
     },
@@ -2921,7 +2921,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 24.34,
+      "elapsedMs": 61.929,
       "message": "",
       "inputs": [
         [
@@ -2962,7 +2962,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 26.642,
+      "elapsedMs": 53.12,
       "message": "",
       "inputs": [
         [
@@ -2998,7 +2998,7 @@
       },
       "displayText": "45",
       "range": null,
-      "elapsedMs": 22.556,
+      "elapsedMs": 47.91,
       "message": "",
       "inputs": [
         [
@@ -3041,7 +3041,7 @@
       },
       "displayText": "-2",
       "range": null,
-      "elapsedMs": 26.378,
+      "elapsedMs": 52.511,
       "message": "",
       "inputs": [
         [
@@ -3083,7 +3083,7 @@
       },
       "displayText": "7",
       "range": null,
-      "elapsedMs": 20.22,
+      "elapsedMs": 43.86,
       "message": "",
       "inputs": [
         [
@@ -3120,7 +3120,7 @@
       },
       "displayText": "-8",
       "range": null,
-      "elapsedMs": 10.434,
+      "elapsedMs": 18.835,
       "message": "",
       "inputs": []
     },
@@ -3132,7 +3132,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 21.305,
+      "elapsedMs": 45.064,
       "message": "",
       "inputs": [
         [
@@ -3175,7 +3175,7 @@
       },
       "displayText": "6",
       "range": null,
-      "elapsedMs": 21.699,
+      "elapsedMs": 41.171,
       "message": "",
       "inputs": [
         [
@@ -3212,7 +3212,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 25.987,
+      "elapsedMs": 68.582,
       "message": "",
       "inputs": [
         [
@@ -3261,7 +3261,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 27.166,
+      "elapsedMs": 58.045,
       "message": "",
       "inputs": [
         [
@@ -3304,7 +3304,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 24.776,
+      "elapsedMs": 50.748,
       "message": "",
       "inputs": [
         [
@@ -3347,7 +3347,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 34.816,
+      "elapsedMs": 71.189,
       "message": "",
       "inputs": [
         [
@@ -3390,7 +3390,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 43.667,
+      "elapsedMs": 104.681,
       "message": "",
       "inputs": [
         [
@@ -3453,7 +3453,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 42.693,
+      "elapsedMs": 103.532,
       "message": "",
       "inputs": [
         [
@@ -3516,7 +3516,7 @@
       },
       "displayText": "20",
       "range": null,
-      "elapsedMs": 33.838,
+      "elapsedMs": 99.812,
       "message": "",
       "inputs": [
         [
@@ -3559,7 +3559,7 @@
       },
       "displayText": "30",
       "range": null,
-      "elapsedMs": 42.85,
+      "elapsedMs": 87.551,
       "message": "",
       "inputs": [
         [
@@ -3612,7 +3612,7 @@
       },
       "displayText": "15",
       "range": null,
-      "elapsedMs": 47.551,
+      "elapsedMs": 82.541,
       "message": "",
       "inputs": [
         [
@@ -3665,7 +3665,7 @@
       },
       "displayText": "40",
       "range": null,
-      "elapsedMs": 42.966,
+      "elapsedMs": 86.466,
       "message": "",
       "inputs": [
         [
@@ -3718,7 +3718,7 @@
       },
       "displayText": "25",
       "range": null,
-      "elapsedMs": 40.101,
+      "elapsedMs": 72.992,
       "message": "",
       "inputs": [
         [
@@ -3761,7 +3761,7 @@
       },
       "displayText": "20",
       "range": null,
-      "elapsedMs": 46.661,
+      "elapsedMs": 109.917,
       "message": "",
       "inputs": [
         [
@@ -3824,7 +3824,7 @@
       },
       "displayText": "10",
       "range": null,
-      "elapsedMs": 37.513,
+      "elapsedMs": 79.118,
       "message": "",
       "inputs": [
         [
@@ -3867,7 +3867,7 @@
       },
       "displayText": "25",
       "range": null,
-      "elapsedMs": 52.121,
+      "elapsedMs": 101.852,
       "message": "",
       "inputs": [
         [
@@ -3930,7 +3930,7 @@
       },
       "displayText": "2.8",
       "range": null,
-      "elapsedMs": 23.746,
+      "elapsedMs": 50.335,
       "message": "",
       "inputs": [
         [
@@ -3973,7 +3973,7 @@
       },
       "displayText": "1.333333333",
       "range": null,
-      "elapsedMs": 29.68,
+      "elapsedMs": 60.27,
       "message": "",
       "inputs": [
         [
@@ -4015,7 +4015,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 31.121,
+      "elapsedMs": 72.043,
       "message": "",
       "inputs": [
         [
@@ -4076,7 +4076,7 @@
       },
       "displayText": "2.211083194",
       "range": null,
-      "elapsedMs": 31.715,
+      "elapsedMs": 77.835,
       "message": "",
       "inputs": [
         [
@@ -4136,7 +4136,7 @@
       },
       "displayText": "2.138089935",
       "range": null,
-      "elapsedMs": 33.318,
+      "elapsedMs": 68.497,
       "message": "",
       "inputs": [
         [
@@ -4197,7 +4197,7 @@
       },
       "displayText": "2.828427125",
       "range": null,
-      "elapsedMs": 20.938,
+      "elapsedMs": 37.657,
       "message": "",
       "inputs": [
         [
@@ -4222,7 +4222,7 @@
       },
       "displayText": "4",
       "range": null,
-      "elapsedMs": 33.332,
+      "elapsedMs": 66.268,
       "message": "",
       "inputs": [
         [
@@ -4283,7 +4283,7 @@
       },
       "displayText": "11.5",
       "range": null,
-      "elapsedMs": 22.916,
+      "elapsedMs": 47.63,
       "message": "",
       "inputs": [
         [
@@ -4320,7 +4320,7 @@
       },
       "displayText": "4.571428571",
       "range": null,
-      "elapsedMs": 33.357,
+      "elapsedMs": 66.765,
       "message": "",
       "inputs": [
         [
@@ -4381,7 +4381,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 24.664,
+      "elapsedMs": 42.73,
       "message": "",
       "inputs": [
         [
@@ -4412,7 +4412,7 @@
       },
       "displayText": "4",
       "range": null,
-      "elapsedMs": 11.484,
+      "elapsedMs": 21.746,
       "message": "",
       "inputs": []
     },
@@ -4424,7 +4424,7 @@
       },
       "displayText": "1.197215767",
       "range": null,
-      "elapsedMs": 30.767,
+      "elapsedMs": 40.788,
       "message": "",
       "inputs": [
         [
@@ -4455,7 +4455,7 @@
       },
       "displayText": "7.75",
       "range": null,
-      "elapsedMs": 33.932,
+      "elapsedMs": 55.035,
       "message": "",
       "inputs": [
         [
@@ -4492,7 +4492,7 @@
       },
       "displayText": "3.428571429",
       "range": null,
-      "elapsedMs": 25.16,
+      "elapsedMs": 42.184,
       "message": "",
       "inputs": [
         [
@@ -4523,7 +4523,7 @@
       },
       "displayText": "10",
       "range": null,
-      "elapsedMs": 32.923,
+      "elapsedMs": 50.602,
       "message": "",
       "inputs": [
         [
@@ -4566,7 +4566,7 @@
       },
       "displayText": "3.16227766",
       "range": null,
-      "elapsedMs": 30.871,
+      "elapsedMs": 58.355,
       "message": "",
       "inputs": [
         [
@@ -4609,7 +4609,7 @@
       },
       "displayText": "2.828427125",
       "range": null,
-      "elapsedMs": 31.337,
+      "elapsedMs": 58.133,
       "message": "",
       "inputs": [
         [
@@ -4652,7 +4652,7 @@
       },
       "displayText": "10",
       "range": null,
-      "elapsedMs": 30.282,
+      "elapsedMs": 61.771,
       "message": "",
       "inputs": [
         [
@@ -4695,7 +4695,7 @@
       },
       "displayText": "8",
       "range": null,
-      "elapsedMs": 30.184,
+      "elapsedMs": 63.717,
       "message": "",
       "inputs": [
         [
@@ -4738,7 +4738,7 @@
       },
       "displayText": "0.940625",
       "range": null,
-      "elapsedMs": 32.879,
+      "elapsedMs": 66.476,
       "message": "",
       "inputs": [
         [
@@ -4799,7 +4799,7 @@
       },
       "displayText": "0.818487553",
       "range": null,
-      "elapsedMs": 32.089,
+      "elapsedMs": 70.629,
       "message": "",
       "inputs": [
         [
@@ -4860,7 +4860,7 @@
       },
       "displayText": "1.333333333",
       "range": null,
-      "elapsedMs": 10.812,
+      "elapsedMs": 54.508,
       "message": "",
       "inputs": []
     },
@@ -4872,7 +4872,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 42.197,
+      "elapsedMs": 75.201,
       "message": "",
       "inputs": [
         [
@@ -4935,7 +4935,7 @@
       },
       "displayText": "5.5",
       "range": null,
-      "elapsedMs": 200.546,
+      "elapsedMs": 417.649,
       "message": "",
       "inputs": [
         [
@@ -5008,7 +5008,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 28.471,
+      "elapsedMs": 60.326,
       "message": "",
       "inputs": [
         [
@@ -5045,7 +5045,7 @@
       },
       "displayText": "-5",
       "range": null,
-      "elapsedMs": 29.848,
+      "elapsedMs": 56.396,
       "message": "",
       "inputs": [
         [
@@ -5082,7 +5082,7 @@
       },
       "displayText": "40",
       "range": null,
-      "elapsedMs": 25.783,
+      "elapsedMs": 50.359,
       "message": "",
       "inputs": [
         [
@@ -5125,7 +5125,7 @@
       },
       "displayText": "5",
       "range": null,
-      "elapsedMs": 23.977,
+      "elapsedMs": 46.941,
       "message": "",
       "inputs": [
         [
@@ -5168,7 +5168,7 @@
       },
       "displayText": "20",
       "range": null,
-      "elapsedMs": 23.55,
+      "elapsedMs": 50.097,
       "message": "",
       "inputs": [
         [
@@ -5211,7 +5211,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 23.631,
+      "elapsedMs": 49.29,
       "message": "",
       "inputs": [
         [
@@ -5254,7 +5254,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 24.51,
+      "elapsedMs": 48.253,
       "message": "",
       "inputs": [
         [
@@ -5297,7 +5297,7 @@
       },
       "displayText": "17.5",
       "range": null,
-      "elapsedMs": 22.523,
+      "elapsedMs": 49.184,
       "message": "",
       "inputs": [
         [
@@ -5334,7 +5334,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 31.364,
+      "elapsedMs": 45.881,
       "message": "",
       "inputs": [
         [
@@ -5377,7 +5377,7 @@
       },
       "displayText": "3.5",
       "range": null,
-      "elapsedMs": 27.328,
+      "elapsedMs": 49.527,
       "message": "",
       "inputs": [
         [
@@ -5420,7 +5420,7 @@
       },
       "displayText": "2.75",
       "range": null,
-      "elapsedMs": 33.313,
+      "elapsedMs": 60.837,
       "message": "",
       "inputs": [
         [
@@ -5481,7 +5481,7 @@
       },
       "displayText": "4.5",
       "range": null,
-      "elapsedMs": 34.964,
+      "elapsedMs": 66.202,
       "message": "",
       "inputs": [
         [
@@ -5542,7 +5542,7 @@
       },
       "displayText": "5.5",
       "range": null,
-      "elapsedMs": 57.601,
+      "elapsedMs": 74.647,
       "message": "",
       "inputs": [
         [
@@ -5615,7 +5615,7 @@
       },
       "displayText": "0.5",
       "range": null,
-      "elapsedMs": 32.542,
+      "elapsedMs": 48.509,
       "message": "",
       "inputs": [
         [
@@ -5671,7 +5671,7 @@
           }
         ]
       ],
-      "elapsedMs": 41.678,
+      "elapsedMs": 63.986,
       "message": "",
       "inputs": [
         [
@@ -5720,7 +5720,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 39.609,
+      "elapsedMs": 90.938,
       "message": "",
       "inputs": [
         [
@@ -5783,7 +5783,7 @@
       },
       "displayText": "0.228747855",
       "range": null,
-      "elapsedMs": 42.573,
+      "elapsedMs": 73.532,
       "message": "",
       "inputs": [
         [
@@ -5846,7 +5846,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 43.826,
+      "elapsedMs": 73.233,
       "message": "",
       "inputs": [
         [
@@ -5909,7 +5909,7 @@
       },
       "displayText": "-2.04",
       "range": null,
-      "elapsedMs": 42.874,
+      "elapsedMs": 89.781,
       "message": "",
       "inputs": [
         [
@@ -5972,7 +5972,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 40.218,
+      "elapsedMs": 71.393,
       "message": "",
       "inputs": [
         [
@@ -6035,7 +6035,7 @@
       },
       "displayText": "1.34",
       "range": null,
-      "elapsedMs": 36.276,
+      "elapsedMs": 71.195,
       "message": "",
       "inputs": [
         [
@@ -6098,7 +6098,7 @@
       },
       "displayText": "12",
       "range": null,
-      "elapsedMs": 41.859,
+      "elapsedMs": 79.645,
       "message": "",
       "inputs": [
         [
@@ -6192,7 +6192,7 @@
           }
         ]
       ],
-      "elapsedMs": 52.44,
+      "elapsedMs": 99.7,
       "message": "",
       "inputs": [
         [
@@ -6255,7 +6255,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 41.069,
+      "elapsedMs": 71.09,
       "message": "",
       "inputs": [
         [
@@ -6318,7 +6318,7 @@
       },
       "displayText": "0.052325581",
       "range": null,
-      "elapsedMs": 36.456,
+      "elapsedMs": 70.705,
       "message": "",
       "inputs": [
         [
@@ -6381,7 +6381,7 @@
       },
       "displayText": "12",
       "range": null,
-      "elapsedMs": 33.859,
+      "elapsedMs": 68.662,
       "message": "",
       "inputs": [
         [
@@ -6495,7 +6495,7 @@
           }
         ]
       ],
-      "elapsedMs": 48.767,
+      "elapsedMs": 110.397,
       "message": "",
       "inputs": [
         [
@@ -6589,7 +6589,7 @@
           }
         ]
       ],
-      "elapsedMs": 62.742,
+      "elapsedMs": 132.843,
       "message": "",
       "inputs": [
         [
@@ -6696,7 +6696,7 @@
       },
       "displayText": "0.205078125",
       "range": null,
-      "elapsedMs": 12.368,
+      "elapsedMs": 52.251,
       "message": "",
       "inputs": []
     },
@@ -6708,7 +6708,7 @@
       },
       "displayText": "0.828125",
       "range": null,
-      "elapsedMs": 11.664,
+      "elapsedMs": 31.599,
       "message": "",
       "inputs": []
     },
@@ -6720,7 +6720,7 @@
       },
       "displayText": "0.90878878",
       "range": null,
-      "elapsedMs": 11.649,
+      "elapsedMs": 28.947,
       "message": "",
       "inputs": []
     },
@@ -6732,7 +6732,7 @@
       },
       "displayText": "0.10934005",
       "range": null,
-      "elapsedMs": 13.191,
+      "elapsedMs": 26.692,
       "message": "",
       "inputs": []
     },
@@ -6744,7 +6744,7 @@
       },
       "displayText": "1.644853627",
       "range": null,
-      "elapsedMs": 14.967,
+      "elapsedMs": 29.159,
       "message": "",
       "inputs": []
     },
@@ -6756,7 +6756,7 @@
       },
       "displayText": "100",
       "range": null,
-      "elapsedMs": 14.943,
+      "elapsedMs": 28.579,
       "message": "",
       "inputs": []
     },
@@ -6768,7 +6768,7 @@
       },
       "displayText": "0.908788726",
       "range": null,
-      "elapsedMs": 13.324,
+      "elapsedMs": 30.229,
       "message": "",
       "inputs": []
     },
@@ -6780,7 +6780,7 @@
       },
       "displayText": "0.39894228",
       "range": null,
-      "elapsedMs": 15.281,
+      "elapsedMs": 23.853,
       "message": "",
       "inputs": []
     },
@@ -6792,7 +6792,7 @@
       },
       "displayText": "0.65625",
       "range": null,
-      "elapsedMs": 25.616,
+      "elapsedMs": 27.706,
       "message": "",
       "inputs": []
     },
@@ -6804,7 +6804,7 @@
       },
       "displayText": "6",
       "range": null,
-      "elapsedMs": 19.622,
+      "elapsedMs": 27.976,
       "message": "",
       "inputs": []
     },
@@ -6816,7 +6816,7 @@
       },
       "displayText": "0.4421746",
       "range": null,
-      "elapsedMs": 15.079,
+      "elapsedMs": 29.915,
       "message": "",
       "inputs": []
     },
@@ -6828,7 +6828,7 @@
       },
       "displayText": "0.504777714",
       "range": null,
-      "elapsedMs": 39.986,
+      "elapsedMs": 89.944,
       "message": "",
       "inputs": [
         [
@@ -6889,7 +6889,7 @@
       },
       "displayText": "0.692951912",
       "range": null,
-      "elapsedMs": 13.34,
+      "elapsedMs": 29.318,
       "message": "",
       "inputs": []
     },
@@ -6901,7 +6901,7 @@
       },
       "displayText": "0.710492139",
       "range": null,
-      "elapsedMs": 14.654,
+      "elapsedMs": 32.827,
       "message": "",
       "inputs": []
     },
@@ -6913,7 +6913,7 @@
       },
       "displayText": "0.6875",
       "range": null,
-      "elapsedMs": 14.399,
+      "elapsedMs": 28.569,
       "message": "",
       "inputs": []
     },
@@ -6925,7 +6925,7 @@
       },
       "displayText": "0.39346934",
       "range": null,
-      "elapsedMs": 13.036,
+      "elapsedMs": 30.063,
       "message": "",
       "inputs": []
     },
@@ -6937,7 +6937,7 @@
       },
       "displayText": "0.864664717",
       "range": null,
-      "elapsedMs": 12.918,
+      "elapsedMs": 41.198,
       "message": "",
       "inputs": []
     },
@@ -6949,7 +6949,7 @@
       },
       "displayText": "0.755891404",
       "range": null,
-      "elapsedMs": 12.173,
+      "elapsedMs": 31.189,
       "message": "",
       "inputs": []
     },
@@ -6961,7 +6961,7 @@
       },
       "displayText": "0.423190081",
       "range": null,
-      "elapsedMs": 12.024,
+      "elapsedMs": 37.339,
       "message": "",
       "inputs": []
     },
@@ -6973,7 +6973,7 @@
       },
       "displayText": "0.829553434",
       "range": null,
-      "elapsedMs": 12.435,
+      "elapsedMs": 26.276,
       "message": "",
       "inputs": []
     },
@@ -6985,7 +6985,7 @@
       },
       "displayText": "0.999664537",
       "range": null,
-      "elapsedMs": 11.802,
+      "elapsedMs": 25.5,
       "message": "",
       "inputs": []
     },
@@ -6997,7 +6997,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 34.021,
+      "elapsedMs": 85.6,
       "message": "",
       "inputs": [
         [
@@ -7060,7 +7060,7 @@
       },
       "displayText": "1.644853627",
       "range": null,
-      "elapsedMs": 12.056,
+      "elapsedMs": 26.18,
       "message": "",
       "inputs": []
     },
@@ -7072,7 +7072,7 @@
       },
       "displayText": "#NUM!",
       "range": null,
-      "elapsedMs": 11.678,
+      "elapsedMs": 30.077,
       "message": "",
       "inputs": []
     },
@@ -7084,7 +7084,7 @@
       },
       "displayText": "#NUM!",
       "range": null,
-      "elapsedMs": 20.825,
+      "elapsedMs": 53.813,
       "message": "",
       "inputs": [
         [
@@ -7115,7 +7115,7 @@
       },
       "displayText": "0.385727568",
       "range": null,
-      "elapsedMs": 13.071,
+      "elapsedMs": 24.684,
       "message": "",
       "inputs": []
     },
@@ -7127,7 +7127,7 @@
       },
       "displayText": "3.157182704",
       "range": null,
-      "elapsedMs": 12.665,
+      "elapsedMs": 26.936,
       "message": "",
       "inputs": []
     },
@@ -7139,7 +7139,7 @@
       },
       "displayText": "0.5578254",
       "range": null,
-      "elapsedMs": 12.426,
+      "elapsedMs": 25.688,
       "message": "",
       "inputs": []
     },
@@ -7151,7 +7151,7 @@
       },
       "displayText": "0.075235246",
       "range": null,
-      "elapsedMs": 12.327,
+      "elapsedMs": 28.743,
       "message": "",
       "inputs": []
     },
@@ -7163,7 +7163,7 @@
       },
       "displayText": "3.35669398",
       "range": null,
-      "elapsedMs": 12.737,
+      "elapsedMs": 33.464,
       "message": "",
       "inputs": []
     },
@@ -7175,7 +7175,7 @@
       },
       "displayText": "18.30703805",
       "range": null,
-      "elapsedMs": 12.537,
+      "elapsedMs": 34.971,
       "message": "",
       "inputs": []
     },
@@ -7187,7 +7187,7 @@
       },
       "displayText": "9.487729037",
       "range": null,
-      "elapsedMs": 12.788,
+      "elapsedMs": 32.471,
       "message": "",
       "inputs": []
     },
@@ -7199,7 +7199,7 @@
       },
       "displayText": "9.341817766",
       "range": null,
-      "elapsedMs": 13.418,
+      "elapsedMs": 31.596,
       "message": "",
       "inputs": []
     },
@@ -7211,7 +7211,7 @@
       },
       "displayText": "9.2",
       "range": null,
-      "elapsedMs": 35.528,
+      "elapsedMs": 88.486,
       "message": "",
       "inputs": [
         [
@@ -7274,7 +7274,7 @@
       },
       "displayText": "-3.8",
       "range": null,
-      "elapsedMs": 35.761,
+      "elapsedMs": 90.987,
       "message": "",
       "inputs": [
         [
@@ -7337,7 +7337,7 @@
       },
       "displayText": "11.5",
       "range": null,
-      "elapsedMs": 35.888,
+      "elapsedMs": 78.185,
       "message": "",
       "inputs": [
         [
@@ -7400,7 +7400,7 @@
       },
       "displayText": "-4.75",
       "range": null,
-      "elapsedMs": 36.72,
+      "elapsedMs": 80.132,
       "message": "",
       "inputs": [
         [
@@ -7463,7 +7463,7 @@
       },
       "displayText": "0.521050881",
       "range": null,
-      "elapsedMs": 13.046,
+      "elapsedMs": 29.034,
       "message": "",
       "inputs": []
     },
@@ -7475,7 +7475,7 @@
       },
       "displayText": "0.162005742",
       "range": null,
-      "elapsedMs": 12.697,
+      "elapsedMs": 29.418,
       "message": "",
       "inputs": []
     },
@@ -7487,7 +7487,7 @@
       },
       "displayText": "0.478949119",
       "range": null,
-      "elapsedMs": 12.485,
+      "elapsedMs": 31.978,
       "message": "",
       "inputs": []
     },
@@ -7499,7 +7499,7 @@
       },
       "displayText": "0.102002277",
       "range": null,
-      "elapsedMs": 12.884,
+      "elapsedMs": 30.424,
       "message": "",
       "inputs": []
     },
@@ -7511,7 +7511,7 @@
       },
       "displayText": "0.940534076",
       "range": null,
-      "elapsedMs": 13.02,
+      "elapsedMs": 26.968,
       "message": "",
       "inputs": []
     },
@@ -7523,7 +7523,7 @@
       },
       "displayText": "3.32583453",
       "range": null,
-      "elapsedMs": 13.471,
+      "elapsedMs": 28.682,
       "message": "",
       "inputs": []
     },
@@ -7535,7 +7535,7 @@
       },
       "displayText": "6.591382116",
       "range": null,
-      "elapsedMs": 14.712,
+      "elapsedMs": 29.212,
       "message": "",
       "inputs": []
     },
@@ -7547,7 +7547,7 @@
       },
       "displayText": "0.931933161",
       "range": null,
-      "elapsedMs": 13.656,
+      "elapsedMs": 27.693,
       "message": "",
       "inputs": []
     },
@@ -7559,7 +7559,7 @@
       },
       "displayText": "0.549306144",
       "range": null,
-      "elapsedMs": 12.821,
+      "elapsedMs": 30.034,
       "message": "",
       "inputs": []
     },
@@ -7571,7 +7571,7 @@
       },
       "displayText": "-0.549306144",
       "range": null,
-      "elapsedMs": 12.619,
+      "elapsedMs": 29.528,
       "message": "",
       "inputs": []
     },
@@ -7583,7 +7583,7 @@
       },
       "displayText": "0.462117157",
       "range": null,
-      "elapsedMs": 12.722,
+      "elapsedMs": 29.0,
       "message": "",
       "inputs": []
     },
@@ -7595,7 +7595,7 @@
       },
       "displayText": "-0.761594156",
       "range": null,
-      "elapsedMs": 13.858,
+      "elapsedMs": 26.467,
       "message": "",
       "inputs": []
     },
@@ -7607,7 +7607,7 @@
       },
       "displayText": "1.329340388",
       "range": null,
-      "elapsedMs": 13.601,
+      "elapsedMs": 30.839,
       "message": "",
       "inputs": []
     },
@@ -7619,7 +7619,7 @@
       },
       "displayText": "1.772453851",
       "range": null,
-      "elapsedMs": 13.533,
+      "elapsedMs": 30.483,
       "message": "",
       "inputs": []
     },
@@ -7631,7 +7631,7 @@
       },
       "displayText": "1.67834699",
       "range": null,
-      "elapsedMs": 14.0,
+      "elapsedMs": 29.706,
       "message": "",
       "inputs": []
     },
@@ -7643,7 +7643,7 @@
       },
       "displayText": "12.59158724",
       "range": null,
-      "elapsedMs": 13.371,
+      "elapsedMs": 28.947,
       "message": "",
       "inputs": []
     },
@@ -7655,7 +7655,7 @@
       },
       "displayText": "1.791759469",
       "range": null,
-      "elapsedMs": 13.135,
+      "elapsedMs": 33.358,
       "message": "",
       "inputs": []
     },
@@ -7667,7 +7667,7 @@
       },
       "displayText": "0.572364943",
       "range": null,
-      "elapsedMs": 13.448,
+      "elapsedMs": 33.689,
       "message": "",
       "inputs": []
     },
@@ -7679,7 +7679,7 @@
       },
       "displayText": "1.791759469",
       "range": null,
-      "elapsedMs": 14.321,
+      "elapsedMs": 35.447,
       "message": "",
       "inputs": []
     },
@@ -7691,7 +7691,7 @@
       },
       "displayText": "0.572364943",
       "range": null,
-      "elapsedMs": 13.513,
+      "elapsedMs": 29.563,
       "message": "",
       "inputs": []
     },
@@ -7703,7 +7703,7 @@
       },
       "displayText": "0.433192799",
       "range": null,
-      "elapsedMs": 13.664,
+      "elapsedMs": 29.447,
       "message": "",
       "inputs": []
     },
@@ -7715,7 +7715,7 @@
       },
       "displayText": "-0.341344746",
       "range": null,
-      "elapsedMs": 14.166,
+      "elapsedMs": 31.268,
       "message": "",
       "inputs": []
     },
@@ -7740,7 +7740,7 @@
           }
         ]
       ],
-      "elapsedMs": 53.64,
+      "elapsedMs": 143.269,
       "message": "",
       "inputs": [
         [
@@ -7820,7 +7820,7 @@
       },
       "displayText": "64",
       "range": null,
-      "elapsedMs": 207.777,
+      "elapsedMs": 455.408,
       "message": "",
       "inputs": [
         [
@@ -7883,7 +7883,7 @@
       },
       "displayText": "0.916666667",
       "range": null,
-      "elapsedMs": 14.265,
+      "elapsedMs": 26.906,
       "message": "",
       "inputs": []
     },
@@ -7895,7 +7895,7 @@
       },
       "displayText": "0.416666667",
       "range": null,
-      "elapsedMs": 14.287,
+      "elapsedMs": 30.119,
       "message": "",
       "inputs": []
     },
@@ -7958,7 +7958,7 @@
           }
         ]
       ],
-      "elapsedMs": 52.174,
+      "elapsedMs": 107.538,
       "message": "",
       "inputs": [
         [
@@ -8032,7 +8032,7 @@
           }
         ]
       ],
-      "elapsedMs": 46.182,
+      "elapsedMs": 88.817,
       "message": "",
       "inputs": [
         [
@@ -8095,7 +8095,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 15.046,
+      "elapsedMs": 26.67,
       "message": "",
       "inputs": []
     },
@@ -8107,7 +8107,7 @@
       },
       "displayText": "45.71501563",
       "range": null,
-      "elapsedMs": 17.758,
+      "elapsedMs": 27.821,
       "message": "",
       "inputs": []
     },
@@ -8119,7 +8119,7 @@
       },
       "displayText": "0.313514058",
       "range": null,
-      "elapsedMs": 14.083,
+      "elapsedMs": 27.631,
       "message": "",
       "inputs": []
     },
@@ -8131,7 +8131,7 @@
       },
       "displayText": "0.05504866",
       "range": null,
-      "elapsedMs": 14.388,
+      "elapsedMs": 29.235,
       "message": "",
       "inputs": []
     },
@@ -8143,7 +8143,7 @@
       },
       "displayText": "0.5",
       "range": null,
-      "elapsedMs": 29.68,
+      "elapsedMs": 58.797,
       "message": "",
       "inputs": [
         [
@@ -8186,7 +8186,7 @@
       },
       "displayText": "720",
       "range": null,
-      "elapsedMs": 15.614,
+      "elapsedMs": 36.354,
       "message": "",
       "inputs": []
     },
@@ -8198,7 +8198,7 @@
       },
       "displayText": "20",
       "range": null,
-      "elapsedMs": 15.0,
+      "elapsedMs": 28.11,
       "message": "",
       "inputs": []
     },
@@ -8210,7 +8210,7 @@
       },
       "displayText": "1000",
       "range": null,
-      "elapsedMs": 20.406,
+      "elapsedMs": 28.471,
       "message": "",
       "inputs": []
     },
@@ -8222,7 +8222,7 @@
       },
       "displayText": "0.129517596",
       "range": null,
-      "elapsedMs": 16.862,
+      "elapsedMs": 31.441,
       "message": "",
       "inputs": []
     },
@@ -8234,7 +8234,7 @@
       },
       "displayText": "0.39894228",
       "range": null,
-      "elapsedMs": 16.962,
+      "elapsedMs": 27.481,
       "message": "",
       "inputs": []
     },
@@ -8246,7 +8246,7 @@
       },
       "displayText": "0.5",
       "range": null,
-      "elapsedMs": 36.165,
+      "elapsedMs": 73.861,
       "message": "",
       "inputs": [
         [
@@ -8299,7 +8299,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 40.542,
+      "elapsedMs": 77.006,
       "message": "",
       "inputs": [
         [
@@ -8352,7 +8352,7 @@
       },
       "displayText": "0.65625",
       "range": null,
-      "elapsedMs": 41.066,
+      "elapsedMs": 70.773,
       "message": "",
       "inputs": [
         [
@@ -8413,7 +8413,7 @@
       },
       "displayText": "1.328592118",
       "range": null,
-      "elapsedMs": 35.473,
+      "elapsedMs": 69.955,
       "message": "",
       "inputs": [
         [
@@ -8456,7 +8456,7 @@
       },
       "displayText": "0.07844926",
       "range": null,
-      "elapsedMs": 15.891,
+      "elapsedMs": 31.952,
       "message": "",
       "inputs": []
     },
@@ -8468,7 +8468,7 @@
       },
       "displayText": "0.638298872",
       "range": null,
-      "elapsedMs": 16.524,
+      "elapsedMs": 31.832,
       "message": "",
       "inputs": []
     },
@@ -8480,7 +8480,7 @@
       },
       "displayText": "0.03922463",
       "range": null,
-      "elapsedMs": 15.416,
+      "elapsedMs": 32.816,
       "message": "",
       "inputs": []
     },
@@ -8492,7 +8492,7 @@
       },
       "displayText": "0.010616773",
       "range": null,
-      "elapsedMs": 14.116,
+      "elapsedMs": 32.545,
       "message": "",
       "inputs": []
     },
@@ -8504,7 +8504,7 @@
       },
       "displayText": "1.812461123",
       "range": null,
-      "elapsedMs": 16.11,
+      "elapsedMs": 30.129,
       "message": "",
       "inputs": []
     },
@@ -8516,7 +8516,7 @@
       },
       "displayText": "-1.724718243",
       "range": null,
-      "elapsedMs": 14.626,
+      "elapsedMs": 28.53,
       "message": "",
       "inputs": []
     },
@@ -8528,7 +8528,7 @@
       },
       "displayText": "2.228138852",
       "range": null,
-      "elapsedMs": 13.976,
+      "elapsedMs": 27.431,
       "message": "",
       "inputs": []
     },
@@ -8540,7 +8540,7 @@
       },
       "displayText": "2.84533971",
       "range": null,
-      "elapsedMs": 13.261,
+      "elapsedMs": 35.096,
       "message": "",
       "inputs": []
     },
@@ -8552,7 +8552,7 @@
       },
       "displayText": "0.394599782",
       "range": null,
-      "elapsedMs": 45.989,
+      "elapsedMs": 112.936,
       "message": "",
       "inputs": [
         [
@@ -8645,7 +8645,7 @@
       },
       "displayText": "0.003301328",
       "range": null,
-      "elapsedMs": 46.672,
+      "elapsedMs": 118.615,
       "message": "",
       "inputs": [
         [
@@ -8738,7 +8738,7 @@
       },
       "displayText": "0.058592544",
       "range": null,
-      "elapsedMs": 35.787,
+      "elapsedMs": 88.459,
       "message": "",
       "inputs": [
         [
@@ -8811,7 +8811,7 @@
       },
       "displayText": "0.028889786",
       "range": null,
-      "elapsedMs": 38.038,
+      "elapsedMs": 84.608,
       "message": "",
       "inputs": [
         [
@@ -8935,7 +8935,7 @@
           }
         ]
       ],
-      "elapsedMs": 51.192,
+      "elapsedMs": 120.997,
       "message": "",
       "inputs": [
         [
@@ -8998,7 +8998,7 @@
       },
       "displayText": "",
       "range": null,
-      "elapsedMs": 14.241,
+      "elapsedMs": 33.943,
       "message": "",
       "inputs": []
     },
@@ -9010,7 +9010,7 @@
       },
       "displayText": "#VALUE!",
       "range": null,
-      "elapsedMs": 14.66,
+      "elapsedMs": 35.805,
       "message": "",
       "inputs": []
     },
@@ -9022,7 +9022,7 @@
       },
       "displayText": "#VALUE!",
       "range": null,
-      "elapsedMs": 14.122,
+      "elapsedMs": 35.369,
       "message": "",
       "inputs": []
     },
@@ -9034,7 +9034,7 @@
       },
       "displayText": "7",
       "range": null,
-      "elapsedMs": 15.087,
+      "elapsedMs": 32.738,
       "message": "",
       "inputs": []
     },
@@ -9046,7 +9046,7 @@
       },
       "displayText": "中文",
       "range": null,
-      "elapsedMs": 23.957,
+      "elapsedMs": 53.815,
       "message": "",
       "inputs": []
     },
@@ -9058,7 +9058,7 @@
       },
       "displayText": "abc",
       "range": null,
-      "elapsedMs": 14.442,
+      "elapsedMs": 36.083,
       "message": "",
       "inputs": []
     },
@@ -9070,7 +9070,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 14.58,
+      "elapsedMs": 35.881,
       "message": "",
       "inputs": []
     },
@@ -9082,7 +9082,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 14.295,
+      "elapsedMs": 31.285,
       "message": "",
       "inputs": []
     },
@@ -9094,7 +9094,7 @@
       },
       "displayText": "a b",
       "range": null,
-      "elapsedMs": 14.854,
+      "elapsedMs": 32.608,
       "message": "",
       "inputs": []
     },
@@ -9106,7 +9106,7 @@
       },
       "displayText": "abc",
       "range": null,
-      "elapsedMs": 15.643,
+      "elapsedMs": 31.767,
       "message": "",
       "inputs": []
     },
@@ -9118,7 +9118,7 @@
       },
       "displayText": "#VALUE!",
       "range": null,
-      "elapsedMs": 14.986,
+      "elapsedMs": 33.381,
       "message": "",
       "inputs": []
     },
@@ -9130,7 +9130,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 14.36,
+      "elapsedMs": 34.715,
       "message": "",
       "inputs": []
     },
@@ -9142,7 +9142,7 @@
       },
       "displayText": "ababab",
       "range": null,
-      "elapsedMs": 14.292,
+      "elapsedMs": 32.445,
       "message": "",
       "inputs": []
     },
@@ -9154,7 +9154,7 @@
       },
       "displayText": "1TRUE",
       "range": null,
-      "elapsedMs": 14.305,
+      "elapsedMs": 31.312,
       "message": "",
       "inputs": []
     },
@@ -9166,7 +9166,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 14.822,
+      "elapsedMs": 30.733,
       "message": "",
       "inputs": []
     },
@@ -9178,7 +9178,7 @@
       },
       "displayText": "1,234.50",
       "range": null,
-      "elapsedMs": 14.724,
+      "elapsedMs": 35.741,
       "message": "",
       "inputs": []
     },
@@ -9190,7 +9190,7 @@
       },
       "displayText": "Hello World",
       "range": null,
-      "elapsedMs": 15.058,
+      "elapsedMs": 29.656,
       "message": "",
       "inputs": []
     },
@@ -9202,7 +9202,7 @@
       },
       "displayText": "1, 2, 3, 4",
       "range": null,
-      "elapsedMs": 26.605,
+      "elapsedMs": 92.326,
       "message": "",
       "inputs": [
         [
@@ -9235,7 +9235,7 @@
       },
       "displayText": "{1,2;3,4}",
       "range": null,
-      "elapsedMs": 27.247,
+      "elapsedMs": 68.79,
       "message": "",
       "inputs": [
         [
@@ -9268,7 +9268,7 @@
       },
       "displayText": "123",
       "range": null,
-      "elapsedMs": 15.176,
+      "elapsedMs": 33.968,
       "message": "",
       "inputs": []
     },
@@ -9280,7 +9280,7 @@
       },
       "displayText": "abc",
       "range": null,
-      "elapsedMs": 14.899,
+      "elapsedMs": 36.026,
       "message": "",
       "inputs": []
     },
@@ -9292,7 +9292,7 @@
       },
       "displayText": "spread",
       "range": null,
-      "elapsedMs": 14.747,
+      "elapsedMs": 34.615,
       "message": "",
       "inputs": []
     },
@@ -9304,7 +9304,7 @@
       },
       "displayText": "Spread",
       "range": null,
-      "elapsedMs": 16.143,
+      "elapsedMs": 36.955,
       "message": "",
       "inputs": []
     },
@@ -9316,7 +9316,7 @@
       },
       "displayText": "中文",
       "range": null,
-      "elapsedMs": 15.311,
+      "elapsedMs": 33.689,
       "message": "",
       "inputs": []
     },
@@ -9328,7 +9328,7 @@
       },
       "displayText": "JS",
       "range": null,
-      "elapsedMs": 14.949,
+      "elapsedMs": 32.575,
       "message": "",
       "inputs": []
     },
@@ -9340,7 +9340,7 @@
       },
       "displayText": "c",
       "range": null,
-      "elapsedMs": 15.377,
+      "elapsedMs": 31.236,
       "message": "",
       "inputs": []
     },
@@ -9352,7 +9352,7 @@
       },
       "displayText": "prea",
       "range": null,
-      "elapsedMs": 16.127,
+      "elapsedMs": 32.919,
       "message": "",
       "inputs": []
     },
@@ -9364,7 +9364,7 @@
       },
       "displayText": "",
       "range": null,
-      "elapsedMs": 15.182,
+      "elapsedMs": 31.085,
       "message": "",
       "inputs": []
     },
@@ -9376,7 +9376,7 @@
       },
       "displayText": "11",
       "range": null,
-      "elapsedMs": 16.52,
+      "elapsedMs": 34.452,
       "message": "",
       "inputs": []
     },
@@ -9388,7 +9388,7 @@
       },
       "displayText": "6",
       "range": null,
-      "elapsedMs": 15.814,
+      "elapsedMs": 36.2,
       "message": "",
       "inputs": []
     },
@@ -9400,7 +9400,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 15.995,
+      "elapsedMs": 32.514,
       "message": "",
       "inputs": []
     },
@@ -9412,7 +9412,7 @@
       },
       "displayText": "8",
       "range": null,
-      "elapsedMs": 15.998,
+      "elapsedMs": 33.317,
       "message": "",
       "inputs": []
     },
@@ -9424,7 +9424,7 @@
       },
       "displayText": "7",
       "range": null,
-      "elapsedMs": 15.504,
+      "elapsedMs": 34.934,
       "message": "",
       "inputs": []
     },
@@ -9436,7 +9436,7 @@
       },
       "displayText": "4",
       "range": null,
-      "elapsedMs": 15.887,
+      "elapsedMs": 35.571,
       "message": "",
       "inputs": []
     },
@@ -9448,7 +9448,7 @@
       },
       "displayText": "a+b+c",
       "range": null,
-      "elapsedMs": 15.895,
+      "elapsedMs": 44.497,
       "message": "",
       "inputs": []
     },
@@ -9460,7 +9460,7 @@
       },
       "displayText": "a-b+c",
       "range": null,
-      "elapsedMs": 15.191,
+      "elapsedMs": 34.299,
       "message": "",
       "inputs": []
     },
@@ -9472,7 +9472,7 @@
       },
       "displayText": "SpreadSheet",
       "range": null,
-      "elapsedMs": 15.457,
+      "elapsedMs": 34.186,
       "message": "",
       "inputs": []
     },
@@ -9484,7 +9484,7 @@
       },
       "displayText": "2024-0115",
       "range": null,
-      "elapsedMs": 15.577,
+      "elapsedMs": 34.283,
       "message": "",
       "inputs": []
     },
@@ -9496,7 +9496,7 @@
       },
       "displayText": "hello world",
       "range": null,
-      "elapsedMs": 15.162,
+      "elapsedMs": 34.062,
       "message": "",
       "inputs": []
     },
@@ -9508,7 +9508,7 @@
       },
       "displayText": "a b",
       "range": null,
-      "elapsedMs": 16.287,
+      "elapsedMs": 36.798,
       "message": "",
       "inputs": []
     },
@@ -9520,7 +9520,7 @@
       },
       "displayText": "SPREADJS",
       "range": null,
-      "elapsedMs": 16.215,
+      "elapsedMs": 37.558,
       "message": "",
       "inputs": []
     },
@@ -9532,7 +9532,7 @@
       },
       "displayText": "中文ABC123",
       "range": null,
-      "elapsedMs": 16.198,
+      "elapsedMs": 37.536,
       "message": "",
       "inputs": []
     },
@@ -9544,7 +9544,7 @@
       },
       "displayText": "spreadjs",
       "range": null,
-      "elapsedMs": 17.516,
+      "elapsedMs": 35.774,
       "message": "",
       "inputs": []
     },
@@ -9556,7 +9556,7 @@
       },
       "displayText": "abc-def 123",
       "range": null,
-      "elapsedMs": 16.278,
+      "elapsedMs": 34.078,
       "message": "",
       "inputs": []
     },
@@ -9568,7 +9568,7 @@
       },
       "displayText": "Hello World",
       "range": null,
-      "elapsedMs": 17.191,
+      "elapsedMs": 32.351,
       "message": "",
       "inputs": []
     },
@@ -9580,7 +9580,7 @@
       },
       "displayText": "O'Neil-Smith",
       "range": null,
-      "elapsedMs": 16.171,
+      "elapsedMs": 32.165,
       "message": "",
       "inputs": []
     },
@@ -9592,7 +9592,7 @@
       },
       "displayText": "abc",
       "range": null,
-      "elapsedMs": 17.035,
+      "elapsedMs": 33.465,
       "message": "",
       "inputs": []
     },
@@ -9604,7 +9604,7 @@
       },
       "displayText": "1234",
       "range": null,
-      "elapsedMs": 28.644,
+      "elapsedMs": 60.662,
       "message": "",
       "inputs": [
         [
@@ -9637,7 +9637,7 @@
       },
       "displayText": "Total: 100",
       "range": null,
-      "elapsedMs": 16.509,
+      "elapsedMs": 35.234,
       "message": "",
       "inputs": []
     },
@@ -9649,7 +9649,7 @@
       },
       "displayText": "x-y",
       "range": null,
-      "elapsedMs": 34.611,
+      "elapsedMs": 84.335,
       "message": "",
       "inputs": [
         [
@@ -9672,7 +9672,7 @@
       },
       "displayText": "a-b",
       "range": null,
-      "elapsedMs": 37.139,
+      "elapsedMs": 85.423,
       "message": "",
       "inputs": [
         [
@@ -9702,7 +9702,7 @@
       },
       "displayText": "a--b",
       "range": null,
-      "elapsedMs": 17.376,
+      "elapsedMs": 37.011,
       "message": "",
       "inputs": []
     },
@@ -9714,7 +9714,7 @@
       },
       "displayText": "1,234.50",
       "range": null,
-      "elapsedMs": 16.639,
+      "elapsedMs": 37.094,
       "message": "",
       "inputs": []
     },
@@ -9726,7 +9726,7 @@
       },
       "displayText": "12.34%",
       "range": null,
-      "elapsedMs": 16.561,
+      "elapsedMs": 36.296,
       "message": "",
       "inputs": []
     },
@@ -9738,7 +9738,7 @@
       },
       "displayText": "1234.5",
       "range": null,
-      "elapsedMs": 16.628,
+      "elapsedMs": 39.792,
       "message": "",
       "inputs": []
     },
@@ -9750,7 +9750,7 @@
       },
       "displayText": "0.5",
       "range": null,
-      "elapsedMs": 17.497,
+      "elapsedMs": 35.801,
       "message": "",
       "inputs": []
     },
@@ -9762,7 +9762,7 @@
       },
       "displayText": "ababab",
       "range": null,
-      "elapsedMs": 16.773,
+      "elapsedMs": 31.131,
       "message": "",
       "inputs": []
     },
@@ -9774,7 +9774,7 @@
       },
       "displayText": "",
       "range": null,
-      "elapsedMs": 16.305,
+      "elapsedMs": 32.53,
       "message": "",
       "inputs": []
     },
@@ -9786,7 +9786,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 16.866,
+      "elapsedMs": 34.377,
       "message": "",
       "inputs": []
     },
@@ -9798,7 +9798,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 16.761,
+      "elapsedMs": 39.441,
       "message": "",
       "inputs": []
     },
@@ -9810,7 +9810,7 @@
       },
       "displayText": "A",
       "range": null,
-      "elapsedMs": 17.08,
+      "elapsedMs": 36.982,
       "message": "",
       "inputs": []
     },
@@ -9822,7 +9822,7 @@
       },
       "displayText": "\n",
       "range": null,
-      "elapsedMs": 23.789,
+      "elapsedMs": 53.872,
       "message": "",
       "inputs": []
     },
@@ -9834,7 +9834,7 @@
       },
       "displayText": "65",
       "range": null,
-      "elapsedMs": 17.309,
+      "elapsedMs": 39.082,
       "message": "",
       "inputs": []
     },
@@ -9846,7 +9846,7 @@
       },
       "displayText": "97",
       "range": null,
-      "elapsedMs": 17.044,
+      "elapsedMs": 35.559,
       "message": "",
       "inputs": []
     },
@@ -9858,7 +9858,7 @@
       },
       "displayText": "abc",
       "range": null,
-      "elapsedMs": 17.322,
+      "elapsedMs": 40.457,
       "message": "",
       "inputs": []
     },
@@ -9870,7 +9870,7 @@
       },
       "displayText": "ab",
       "range": null,
-      "elapsedMs": 17.48,
+      "elapsedMs": 35.217,
       "message": "",
       "inputs": []
     },
@@ -9882,7 +9882,7 @@
       },
       "displayText": "ABC123",
       "range": null,
-      "elapsedMs": 16.79,
+      "elapsedMs": 34.656,
       "message": "",
       "inputs": []
     },
@@ -9894,7 +9894,7 @@
       },
       "displayText": "หนึ่งพันสองร้อยสามสิบสี่บาทห้าสิบสตางค์",
       "range": null,
-      "elapsedMs": 29.905,
+      "elapsedMs": 55.949,
       "message": "",
       "inputs": []
     },
@@ -9906,7 +9906,7 @@
       },
       "displayText": "ＡＢＣ１２３",
       "range": null,
-      "elapsedMs": 19.645,
+      "elapsedMs": 45.476,
       "message": "",
       "inputs": []
     },
@@ -9918,7 +9918,7 @@
       },
       "displayText": "¥1,234.57",
       "range": null,
-      "elapsedMs": 17.548,
+      "elapsedMs": 42.482,
       "message": "",
       "inputs": []
     },
@@ -9930,7 +9930,7 @@
       },
       "displayText": "¥-1,234.50",
       "range": null,
-      "elapsedMs": 17.219,
+      "elapsedMs": 39.344,
       "message": "",
       "inputs": []
     },
@@ -9942,7 +9942,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 17.802,
+      "elapsedMs": 33.629,
       "message": "",
       "inputs": []
     },
@@ -9954,7 +9954,7 @@
       },
       "displayText": "1,234.57",
       "range": null,
-      "elapsedMs": 18.698,
+      "elapsedMs": 39.315,
       "message": "",
       "inputs": []
     },
@@ -9966,7 +9966,7 @@
       },
       "displayText": "1234.57",
       "range": null,
-      "elapsedMs": 18.049,
+      "elapsedMs": 40.133,
       "message": "",
       "inputs": []
     },
@@ -9978,7 +9978,7 @@
       },
       "displayText": "中文",
       "range": null,
-      "elapsedMs": 17.325,
+      "elapsedMs": 36.51,
       "message": "",
       "inputs": []
     },
@@ -9990,7 +9990,7 @@
       },
       "displayText": "7",
       "range": null,
-      "elapsedMs": 17.455,
+      "elapsedMs": 39.694,
       "message": "",
       "inputs": []
     },
@@ -10002,7 +10002,7 @@
       },
       "displayText": "文",
       "range": null,
-      "elapsedMs": 18.028,
+      "elapsedMs": 56.884,
       "message": "",
       "inputs": []
     },
@@ -10014,7 +10014,7 @@
       },
       "displayText": "A123",
       "range": null,
-      "elapsedMs": 18.103,
+      "elapsedMs": 82.243,
       "message": "",
       "inputs": []
     },
@@ -10026,7 +10026,7 @@
       },
       "displayText": "a#b#c#",
       "range": null,
-      "elapsedMs": 18.319,
+      "elapsedMs": 35.865,
       "message": "",
       "inputs": []
     },
@@ -10038,7 +10038,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 18.187,
+      "elapsedMs": 38.003,
       "message": "",
       "inputs": []
     },
@@ -10050,7 +10050,7 @@
       },
       "displayText": "AB文文本",
       "range": null,
-      "elapsedMs": 22.808,
+      "elapsedMs": 47.695,
       "message": "",
       "inputs": []
     },
@@ -10062,7 +10062,7 @@
       },
       "displayText": "文本",
       "range": null,
-      "elapsedMs": 17.837,
+      "elapsedMs": 45.058,
       "message": "",
       "inputs": []
     },
@@ -10074,7 +10074,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 17.557,
+      "elapsedMs": 41.149,
       "message": "",
       "inputs": []
     },
@@ -10086,7 +10086,7 @@
       },
       "displayText": "文本",
       "range": null,
-      "elapsedMs": 18.09,
+      "elapsedMs": 47.106,
       "message": "",
       "inputs": []
     },
@@ -10098,7 +10098,7 @@
       },
       "displayText": "",
       "range": null,
-      "elapsedMs": 18.555,
+      "elapsedMs": 43.666,
       "message": "",
       "inputs": []
     },
@@ -10110,7 +10110,7 @@
       },
       "displayText": "b-c",
       "range": null,
-      "elapsedMs": 17.425,
+      "elapsedMs": 41.314,
       "message": "",
       "inputs": []
     },
@@ -10122,7 +10122,7 @@
       },
       "displayText": "c",
       "range": null,
-      "elapsedMs": 19.224,
+      "elapsedMs": 42.126,
       "message": "",
       "inputs": []
     },
@@ -10134,7 +10134,7 @@
       },
       "displayText": "a",
       "range": null,
-      "elapsedMs": 18.27,
+      "elapsedMs": 41.428,
       "message": "",
       "inputs": []
     },
@@ -10146,7 +10146,7 @@
       },
       "displayText": "a-b",
       "range": null,
-      "elapsedMs": 17.956,
+      "elapsedMs": 38.146,
       "message": "",
       "inputs": []
     },
@@ -10173,7 +10173,7 @@
           }
         ]
       ],
-      "elapsedMs": 25.285,
+      "elapsedMs": 58.949,
       "message": "",
       "inputs": []
     },
@@ -10206,7 +10206,7 @@
           }
         ]
       ],
-      "elapsedMs": 26.44,
+      "elapsedMs": 63.453,
       "message": "",
       "inputs": []
     },
@@ -10218,7 +10218,7 @@
       },
       "displayText": "中",
       "range": null,
-      "elapsedMs": 19.555,
+      "elapsedMs": 41.443,
       "message": "",
       "inputs": []
     },
@@ -10230,7 +10230,7 @@
       },
       "displayText": "20013",
       "range": null,
-      "elapsedMs": 18.391,
+      "elapsedMs": 41.2,
       "message": "",
       "inputs": []
     },
@@ -10242,7 +10242,7 @@
       },
       "displayText": "65",
       "range": null,
-      "elapsedMs": 18.309,
+      "elapsedMs": 41.616,
       "message": "",
       "inputs": []
     },
@@ -10254,7 +10254,7 @@
       },
       "displayText": "1900/1/1",
       "range": null,
-      "elapsedMs": 18.511,
+      "elapsedMs": 44.171,
       "message": "",
       "inputs": []
     },
@@ -10266,7 +10266,7 @@
       },
       "displayText": "1900/2/28",
       "range": null,
-      "elapsedMs": 18.91,
+      "elapsedMs": 42.571,
       "message": "",
       "inputs": []
     },
@@ -10278,7 +10278,7 @@
       },
       "displayText": "1900/2/29",
       "range": null,
-      "elapsedMs": 18.587,
+      "elapsedMs": 39.153,
       "message": "",
       "inputs": []
     },
@@ -10290,7 +10290,7 @@
       },
       "displayText": "1900/3/1",
       "range": null,
-      "elapsedMs": 17.983,
+      "elapsedMs": 46.131,
       "message": "",
       "inputs": []
     },
@@ -10302,7 +10302,7 @@
       },
       "displayText": "29",
       "range": null,
-      "elapsedMs": 18.515,
+      "elapsedMs": 34.805,
       "message": "",
       "inputs": []
     },
@@ -10314,7 +10314,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 19.323,
+      "elapsedMs": 34.954,
       "message": "",
       "inputs": []
     },
@@ -10326,7 +10326,7 @@
       },
       "displayText": "1900",
       "range": null,
-      "elapsedMs": 18.64,
+      "elapsedMs": 39.486,
       "message": "",
       "inputs": []
     },
@@ -10338,7 +10338,7 @@
       },
       "displayText": "12:00 PM",
       "range": null,
-      "elapsedMs": 18.369,
+      "elapsedMs": 44.191,
       "message": "",
       "inputs": []
     },
@@ -10350,7 +10350,7 @@
       },
       "displayText": "2024/3/1",
       "range": null,
-      "elapsedMs": 19.621,
+      "elapsedMs": 47.147,
       "message": "",
       "inputs": []
     },
@@ -10362,7 +10362,7 @@
       },
       "displayText": "45351",
       "range": null,
-      "elapsedMs": 19.196,
+      "elapsedMs": 36.871,
       "message": "",
       "inputs": []
     },
@@ -10374,7 +10374,7 @@
       },
       "displayText": "45351",
       "range": null,
-      "elapsedMs": 19.299,
+      "elapsedMs": 37.434,
       "message": "",
       "inputs": []
     },
@@ -10386,7 +10386,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 18.133,
+      "elapsedMs": 43.435,
       "message": "",
       "inputs": []
     },
@@ -10398,7 +10398,7 @@
       },
       "displayText": "365",
       "range": null,
-      "elapsedMs": 18.495,
+      "elapsedMs": 43.217,
       "message": "",
       "inputs": []
     },
@@ -10410,7 +10410,7 @@
       },
       "displayText": "5",
       "range": null,
-      "elapsedMs": 18.783,
+      "elapsedMs": 74.111,
       "message": "",
       "inputs": []
     },
@@ -10422,7 +10422,7 @@
       },
       "displayText": "2024/2/29",
       "range": null,
-      "elapsedMs": 19.298,
+      "elapsedMs": 43.114,
       "message": "",
       "inputs": []
     },
@@ -10434,7 +10434,7 @@
       },
       "displayText": "2024/2/29",
       "range": null,
-      "elapsedMs": 19.441,
+      "elapsedMs": 44.839,
       "message": "",
       "inputs": []
     },
@@ -10446,7 +10446,7 @@
       },
       "displayText": "1900/1/1",
       "range": null,
-      "elapsedMs": 19.104,
+      "elapsedMs": 42.639,
       "message": "",
       "inputs": []
     },
@@ -10458,7 +10458,7 @@
       },
       "displayText": "1900/2/28",
       "range": null,
-      "elapsedMs": 19.022,
+      "elapsedMs": 43.69,
       "message": "",
       "inputs": []
     },
@@ -10470,7 +10470,7 @@
       },
       "displayText": "1900/3/1",
       "range": null,
-      "elapsedMs": 18.843,
+      "elapsedMs": 43.724,
       "message": "",
       "inputs": []
     },
@@ -10482,7 +10482,7 @@
       },
       "displayText": "2024",
       "range": null,
-      "elapsedMs": 19.028,
+      "elapsedMs": 45.673,
       "message": "",
       "inputs": []
     },
@@ -10494,7 +10494,7 @@
       },
       "displayText": "2024",
       "range": null,
-      "elapsedMs": 28.417,
+      "elapsedMs": 63.792,
       "message": "",
       "inputs": [
         [
@@ -10513,7 +10513,7 @@
       },
       "displayText": "12",
       "range": null,
-      "elapsedMs": 19.779,
+      "elapsedMs": 45.711,
       "message": "",
       "inputs": []
     },
@@ -10525,7 +10525,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 20.061,
+      "elapsedMs": 41.071,
       "message": "",
       "inputs": []
     },
@@ -10537,7 +10537,7 @@
       },
       "displayText": "28",
       "range": null,
-      "elapsedMs": 19.117,
+      "elapsedMs": 42.633,
       "message": "",
       "inputs": []
     },
@@ -10549,7 +10549,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 18.783,
+      "elapsedMs": 43.88,
       "message": "",
       "inputs": []
     },
@@ -10561,7 +10561,7 @@
       },
       "displayText": "14",
       "range": null,
-      "elapsedMs": 19.73,
+      "elapsedMs": 45.862,
       "message": "",
       "inputs": []
     },
@@ -10573,7 +10573,7 @@
       },
       "displayText": "12",
       "range": null,
-      "elapsedMs": 19.682,
+      "elapsedMs": 49.049,
       "message": "",
       "inputs": []
     },
@@ -10585,7 +10585,7 @@
       },
       "displayText": "30",
       "range": null,
-      "elapsedMs": 19.298,
+      "elapsedMs": 43.492,
       "message": "",
       "inputs": []
     },
@@ -10597,7 +10597,7 @@
       },
       "displayText": "59",
       "range": null,
-      "elapsedMs": 21.699,
+      "elapsedMs": 51.057,
       "message": "",
       "inputs": []
     },
@@ -10609,7 +10609,7 @@
       },
       "displayText": "15",
       "range": null,
-      "elapsedMs": 19.973,
+      "elapsedMs": 48.013,
       "message": "",
       "inputs": []
     },
@@ -10621,7 +10621,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 20.291,
+      "elapsedMs": 47.524,
       "message": "",
       "inputs": []
     },
@@ -10633,7 +10633,7 @@
       },
       "displayText": "2:30 PM",
       "range": null,
-      "elapsedMs": 20.215,
+      "elapsedMs": 49.156,
       "message": "",
       "inputs": []
     },
@@ -10645,7 +10645,7 @@
       },
       "displayText": "1:00 AM",
       "range": null,
-      "elapsedMs": 19.852,
+      "elapsedMs": 48.03,
       "message": "",
       "inputs": []
     },
@@ -10657,7 +10657,7 @@
       },
       "displayText": "2026/11/13",
       "range": null,
-      "elapsedMs": 20.798,
+      "elapsedMs": 53.002,
       "message": "",
       "inputs": []
     },
@@ -10665,11 +10665,11 @@
       "status": "ok",
       "value": {
         "type": "number",
-        "value": 46339.523252314815
+        "value": 46339.66124363426
       },
-      "displayText": "2026/11/13 12:33",
+      "displayText": "2026/11/13 15:52",
       "range": null,
-      "elapsedMs": 20.16,
+      "elapsedMs": 42.619,
       "message": "",
       "inputs": []
     },
@@ -10681,7 +10681,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 20.332,
+      "elapsedMs": 45.365,
       "message": "",
       "inputs": []
     },
@@ -10693,7 +10693,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 19.573,
+      "elapsedMs": 49.401,
       "message": "",
       "inputs": []
     },
@@ -10705,7 +10705,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 20.459,
+      "elapsedMs": 50.571,
       "message": "",
       "inputs": []
     },
@@ -10717,7 +10717,7 @@
       },
       "displayText": "53",
       "range": null,
-      "elapsedMs": 21.51,
+      "elapsedMs": 45.999,
       "message": "",
       "inputs": []
     },
@@ -10729,7 +10729,7 @@
       },
       "displayText": "45351",
       "range": null,
-      "elapsedMs": 20.809,
+      "elapsedMs": 43.919,
       "message": "",
       "inputs": []
     },
@@ -10741,7 +10741,7 @@
       },
       "displayText": "45245",
       "range": null,
-      "elapsedMs": 20.278,
+      "elapsedMs": 38.7,
       "message": "",
       "inputs": []
     },
@@ -10753,7 +10753,7 @@
       },
       "displayText": "45351",
       "range": null,
-      "elapsedMs": 20.598,
+      "elapsedMs": 48.321,
       "message": "",
       "inputs": []
     },
@@ -10765,7 +10765,7 @@
       },
       "displayText": "45260",
       "range": null,
-      "elapsedMs": 20.488,
+      "elapsedMs": 47.309,
       "message": "",
       "inputs": []
     },
@@ -10777,7 +10777,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 21.029,
+      "elapsedMs": 43.332,
       "message": "",
       "inputs": []
     },
@@ -10789,7 +10789,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 20.832,
+      "elapsedMs": 50.2,
       "message": "",
       "inputs": []
     },
@@ -10801,7 +10801,7 @@
       },
       "displayText": "29",
       "range": null,
-      "elapsedMs": 21.096,
+      "elapsedMs": 45.056,
       "message": "",
       "inputs": []
     },
@@ -10813,7 +10813,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 20.459,
+      "elapsedMs": 43.941,
       "message": "",
       "inputs": []
     },
@@ -10825,7 +10825,7 @@
       },
       "displayText": "23",
       "range": null,
-      "elapsedMs": 20.426,
+      "elapsedMs": 44.149,
       "message": "",
       "inputs": []
     },
@@ -10837,7 +10837,7 @@
       },
       "displayText": "22",
       "range": null,
-      "elapsedMs": 20.27,
+      "elapsedMs": 44.813,
       "message": "",
       "inputs": []
     },
@@ -10849,7 +10849,7 @@
       },
       "displayText": "45306",
       "range": null,
-      "elapsedMs": 20.545,
+      "elapsedMs": 44.007,
       "message": "",
       "inputs": []
     },
@@ -10861,7 +10861,7 @@
       },
       "displayText": "45306",
       "range": null,
-      "elapsedMs": 21.223,
+      "elapsedMs": 43.137,
       "message": "",
       "inputs": []
     },
@@ -10873,7 +10873,7 @@
       },
       "displayText": "0.5",
       "range": null,
-      "elapsedMs": 22.179,
+      "elapsedMs": 48.012,
       "message": "",
       "inputs": []
     },
@@ -10885,7 +10885,7 @@
       },
       "displayText": "0.498630137",
       "range": null,
-      "elapsedMs": 23.254,
+      "elapsedMs": 45.778,
       "message": "",
       "inputs": []
     },
@@ -10897,7 +10897,7 @@
       },
       "displayText": "45351",
       "range": null,
-      "elapsedMs": 20.918,
+      "elapsedMs": 51.785,
       "message": "",
       "inputs": []
     },
@@ -10909,7 +10909,7 @@
       },
       "displayText": "61",
       "range": null,
-      "elapsedMs": 21.688,
+      "elapsedMs": 45.557,
       "message": "",
       "inputs": []
     },
@@ -10921,7 +10921,7 @@
       },
       "displayText": "0.604340278",
       "range": null,
-      "elapsedMs": 21.672,
+      "elapsedMs": 44.947,
       "message": "",
       "inputs": []
     },
@@ -10933,7 +10933,7 @@
       },
       "displayText": "0.999988426",
       "range": null,
-      "elapsedMs": 20.952,
+      "elapsedMs": 53.005,
       "message": "",
       "inputs": []
     },
@@ -10945,7 +10945,7 @@
       },
       "displayText": "360",
       "range": null,
-      "elapsedMs": 21.549,
+      "elapsedMs": 48.299,
       "message": "",
       "inputs": []
     },
@@ -10957,7 +10957,7 @@
       },
       "displayText": "60",
       "range": null,
-      "elapsedMs": 21.312,
+      "elapsedMs": 50.651,
       "message": "",
       "inputs": []
     },
@@ -10969,7 +10969,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 20.886,
+      "elapsedMs": 52.155,
       "message": "",
       "inputs": []
     },
@@ -10981,7 +10981,7 @@
       },
       "displayText": "23",
       "range": null,
-      "elapsedMs": 21.818,
+      "elapsedMs": 49.499,
       "message": "",
       "inputs": []
     },
@@ -10993,7 +10993,7 @@
       },
       "displayText": "27",
       "range": null,
-      "elapsedMs": 21.269,
+      "elapsedMs": 58.529,
       "message": "",
       "inputs": []
     },
@@ -11005,7 +11005,7 @@
       },
       "displayText": "45306",
       "range": null,
-      "elapsedMs": 21.282,
+      "elapsedMs": 51.445,
       "message": "",
       "inputs": []
     },
@@ -11017,7 +11017,7 @@
       },
       "displayText": "45297",
       "range": null,
-      "elapsedMs": 22.987,
+      "elapsedMs": 51.272,
       "message": "",
       "inputs": []
     },
@@ -11029,7 +11029,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 22.163,
+      "elapsedMs": 45.258,
       "message": "",
       "inputs": []
     },
@@ -11041,7 +11041,7 @@
       },
       "displayText": "#VALUE!",
       "range": null,
-      "elapsedMs": 22.244,
+      "elapsedMs": 50.548,
       "message": "",
       "inputs": []
     },
@@ -11053,7 +11053,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 24.0,
+      "elapsedMs": 79.454,
       "message": "",
       "inputs": []
     },
@@ -11065,7 +11065,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 22.381,
+      "elapsedMs": 61.566,
       "message": "",
       "inputs": []
     },
@@ -11077,7 +11077,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 21.488,
+      "elapsedMs": 58.094,
       "message": "",
       "inputs": []
     },
@@ -11089,7 +11089,7 @@
       },
       "displayText": "b",
       "range": null,
-      "elapsedMs": 22.114,
+      "elapsedMs": 83.841,
       "message": "",
       "inputs": []
     },
@@ -11101,7 +11101,7 @@
       },
       "displayText": "b",
       "range": null,
-      "elapsedMs": 21.584,
+      "elapsedMs": 59.325,
       "message": "",
       "inputs": []
     },
@@ -11113,7 +11113,7 @@
       },
       "displayText": "yes",
       "range": null,
-      "elapsedMs": 22.156,
+      "elapsedMs": 60.329,
       "message": "",
       "inputs": []
     },
@@ -11125,7 +11125,7 @@
       },
       "displayText": "ok",
       "range": null,
-      "elapsedMs": 22.286,
+      "elapsedMs": 57.89,
       "message": "",
       "inputs": []
     },
@@ -11137,7 +11137,7 @@
       },
       "displayText": "#VALUE!",
       "range": null,
-      "elapsedMs": 23.226,
+      "elapsedMs": 62.973,
       "message": "",
       "inputs": []
     },
@@ -11149,7 +11149,7 @@
       },
       "displayText": "b",
       "range": null,
-      "elapsedMs": 23.171,
+      "elapsedMs": 57.726,
       "message": "",
       "inputs": []
     },
@@ -11161,7 +11161,7 @@
       },
       "displayText": "B",
       "range": null,
-      "elapsedMs": 31.767,
+      "elapsedMs": 74.637,
       "message": "",
       "inputs": [
         [
@@ -11180,7 +11180,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 23.294,
+      "elapsedMs": 43.316,
       "message": "",
       "inputs": []
     },
@@ -11192,7 +11192,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 23.019,
+      "elapsedMs": 56.656,
       "message": "",
       "inputs": []
     },
@@ -11204,7 +11204,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 23.677,
+      "elapsedMs": 51.254,
       "message": "",
       "inputs": []
     },
@@ -11216,7 +11216,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 22.496,
+      "elapsedMs": 51.042,
       "message": "",
       "inputs": []
     },
@@ -11228,7 +11228,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 23.849,
+      "elapsedMs": 51.785,
       "message": "",
       "inputs": []
     },
@@ -11240,7 +11240,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 22.935,
+      "elapsedMs": 58.541,
       "message": "",
       "inputs": []
     },
@@ -11252,7 +11252,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 22.681,
+      "elapsedMs": 65.887,
       "message": "",
       "inputs": []
     },
@@ -11264,7 +11264,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 23.956,
+      "elapsedMs": 55.212,
       "message": "",
       "inputs": []
     },
@@ -11276,7 +11276,7 @@
       },
       "displayText": "c",
       "range": null,
-      "elapsedMs": 24.321,
+      "elapsedMs": 53.221,
       "message": "",
       "inputs": []
     },
@@ -11288,7 +11288,7 @@
       },
       "displayText": "default",
       "range": null,
-      "elapsedMs": 23.57,
+      "elapsedMs": 55.669,
       "message": "",
       "inputs": []
     },
@@ -11300,7 +11300,7 @@
       },
       "displayText": "err",
       "range": null,
-      "elapsedMs": 23.066,
+      "elapsedMs": 51.915,
       "message": "",
       "inputs": []
     },
@@ -11312,7 +11312,7 @@
       },
       "displayText": "10",
       "range": null,
-      "elapsedMs": 23.457,
+      "elapsedMs": 48.311,
       "message": "",
       "inputs": []
     },
@@ -11324,7 +11324,7 @@
       },
       "displayText": "na",
       "range": null,
-      "elapsedMs": 23.585,
+      "elapsedMs": 57.255,
       "message": "",
       "inputs": []
     },
@@ -11336,7 +11336,7 @@
       },
       "displayText": "#DIV/0!",
       "range": null,
-      "elapsedMs": 25.968,
+      "elapsedMs": 55.795,
       "message": "",
       "inputs": []
     },
@@ -11348,7 +11348,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 23.498,
+      "elapsedMs": 52.048,
       "message": "",
       "inputs": []
     },
@@ -11360,7 +11360,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 22.469,
+      "elapsedMs": 54.562,
       "message": "",
       "inputs": []
     },
@@ -11387,7 +11387,7 @@
           }
         ]
       ],
-      "elapsedMs": 226.585,
+      "elapsedMs": 168.05,
       "message": "",
       "inputs": [
         [
@@ -11447,7 +11447,7 @@
           }
         ]
       ],
-      "elapsedMs": 50.505,
+      "elapsedMs": 491.582,
       "message": "",
       "inputs": [
         [
@@ -11490,7 +11490,7 @@
       },
       "displayText": "25",
       "range": null,
-      "elapsedMs": 24.245,
+      "elapsedMs": 48.773,
       "message": "",
       "inputs": []
     },
@@ -11502,7 +11502,7 @@
       },
       "displayText": "6",
       "range": null,
-      "elapsedMs": 26.587,
+      "elapsedMs": 61.648,
       "message": "",
       "inputs": []
     },
@@ -11543,7 +11543,7 @@
           }
         ]
       ],
-      "elapsedMs": 34.126,
+      "elapsedMs": 80.341,
       "message": "",
       "inputs": []
     },
@@ -11574,7 +11574,7 @@
           }
         ]
       ],
-      "elapsedMs": 44.227,
+      "elapsedMs": 96.918,
       "message": "",
       "inputs": [
         [
@@ -11605,7 +11605,7 @@
       },
       "displayText": "6",
       "range": null,
-      "elapsedMs": 37.403,
+      "elapsedMs": 77.365,
       "message": "",
       "inputs": [
         [
@@ -11655,7 +11655,7 @@
           }
         ]
       ],
-      "elapsedMs": 45.025,
+      "elapsedMs": 109.641,
       "message": "",
       "inputs": [
         [
@@ -11705,7 +11705,7 @@
           }
         ]
       ],
-      "elapsedMs": 30.945,
+      "elapsedMs": 73.634,
       "message": "",
       "inputs": []
     },
@@ -11738,7 +11738,7 @@
           }
         ]
       ],
-      "elapsedMs": 32.53,
+      "elapsedMs": 89.61,
       "message": "",
       "inputs": []
     },
@@ -11775,7 +11775,7 @@
           }
         ]
       ],
-      "elapsedMs": 47.025,
+      "elapsedMs": 154.515,
       "message": "",
       "inputs": [
         [
@@ -11831,7 +11831,7 @@
           }
         ]
       ],
-      "elapsedMs": 46.357,
+      "elapsedMs": 123.25,
       "message": "",
       "inputs": [
         [
@@ -11889,7 +11889,7 @@
           }
         ]
       ],
-      "elapsedMs": 48.295,
+      "elapsedMs": 118.604,
       "message": "",
       "inputs": [
         [
@@ -11943,7 +11943,7 @@
           }
         ]
       ],
-      "elapsedMs": 31.301,
+      "elapsedMs": 82.289,
       "message": "",
       "inputs": []
     },
@@ -11980,7 +11980,7 @@
           }
         ]
       ],
-      "elapsedMs": 48.492,
+      "elapsedMs": 123.718,
       "message": "",
       "inputs": [
         [
@@ -12034,7 +12034,7 @@
           }
         ]
       ],
-      "elapsedMs": 50.069,
+      "elapsedMs": 121.449,
       "message": "",
       "inputs": [
         [
@@ -12067,7 +12067,7 @@
       },
       "displayText": "14",
       "range": null,
-      "elapsedMs": 39.575,
+      "elapsedMs": 97.739,
       "message": "",
       "inputs": [
         [
@@ -12100,7 +12100,7 @@
       },
       "displayText": "20",
       "range": null,
-      "elapsedMs": 45.855,
+      "elapsedMs": 105.432,
       "message": "",
       "inputs": [
         [
@@ -12143,7 +12143,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 69.203,
+      "elapsedMs": 153.967,
       "message": "",
       "inputs": [
         [
@@ -12186,7 +12186,7 @@
       },
       "displayText": "10",
       "range": null,
-      "elapsedMs": 68.555,
+      "elapsedMs": 216.303,
       "message": "",
       "inputs": [
         [
@@ -12229,7 +12229,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 27.305,
+      "elapsedMs": 64.541,
       "message": "",
       "inputs": []
     },
@@ -12241,7 +12241,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 24.169,
+      "elapsedMs": 64.806,
       "message": "",
       "inputs": []
     },
@@ -12253,7 +12253,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 25.894,
+      "elapsedMs": 70.463,
       "message": "",
       "inputs": []
     },
@@ -12265,7 +12265,7 @@
       },
       "displayText": "20",
       "range": null,
-      "elapsedMs": 46.709,
+      "elapsedMs": 118.887,
       "message": "",
       "inputs": [
         [
@@ -12308,7 +12308,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 69.933,
+      "elapsedMs": 175.776,
       "message": "",
       "inputs": [
         [
@@ -12349,7 +12349,7 @@
       },
       "displayText": "20",
       "range": null,
-      "elapsedMs": 69.564,
+      "elapsedMs": 186.252,
       "message": "",
       "inputs": [
         [
@@ -12392,7 +12392,7 @@
       },
       "displayText": "#N/A",
       "range": null,
-      "elapsedMs": 70.611,
+      "elapsedMs": 186.724,
       "message": "",
       "inputs": [
         [
@@ -12435,7 +12435,7 @@
       },
       "displayText": "b",
       "range": null,
-      "elapsedMs": 25.317,
+      "elapsedMs": 62.821,
       "message": "",
       "inputs": []
     },
@@ -12466,7 +12466,7 @@
           }
         ]
       ],
-      "elapsedMs": 82.936,
+      "elapsedMs": 230.05,
       "message": "",
       "inputs": [
         [
@@ -12503,7 +12503,7 @@
       },
       "displayText": "20",
       "range": null,
-      "elapsedMs": 69.487,
+      "elapsedMs": 204.116,
       "message": "",
       "inputs": [
         [
@@ -12546,7 +12546,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 81.739,
+      "elapsedMs": 236.41,
       "message": "",
       "inputs": [
         [
@@ -12599,7 +12599,7 @@
       },
       "displayText": "30",
       "range": null,
-      "elapsedMs": 47.818,
+      "elapsedMs": 136.423,
       "message": "",
       "inputs": [
         [
@@ -12652,7 +12652,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 80.845,
+      "elapsedMs": 221.968,
       "message": "",
       "inputs": [
         [
@@ -12705,7 +12705,7 @@
       },
       "displayText": "#N/A",
       "range": null,
-      "elapsedMs": 84.866,
+      "elapsedMs": 245.256,
       "message": "",
       "inputs": [
         [
@@ -12758,7 +12758,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 70.285,
+      "elapsedMs": 204.843,
       "message": "",
       "inputs": [
         [
@@ -12799,7 +12799,7 @@
       },
       "displayText": "30",
       "range": null,
-      "elapsedMs": 45.014,
+      "elapsedMs": 138.833,
       "message": "",
       "inputs": [
         [
@@ -12840,7 +12840,7 @@
       },
       "displayText": "20",
       "range": null,
-      "elapsedMs": 77.798,
+      "elapsedMs": 200.438,
       "message": "",
       "inputs": [
         [
@@ -12895,7 +12895,7 @@
       },
       "displayText": "#REF!",
       "range": null,
-      "elapsedMs": 76.49,
+      "elapsedMs": 189.48,
       "message": "",
       "inputs": [
         [
@@ -12950,7 +12950,7 @@
       },
       "displayText": "40",
       "range": null,
-      "elapsedMs": 91.499,
+      "elapsedMs": 220.211,
       "message": "",
       "inputs": [
         [
@@ -13019,7 +13019,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 44.454,
+      "elapsedMs": 105.253,
       "message": "",
       "inputs": [
         [
@@ -13062,7 +13062,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 44.355,
+      "elapsedMs": 123.592,
       "message": "",
       "inputs": [
         [
@@ -13105,7 +13105,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 43.331,
+      "elapsedMs": 110.139,
       "message": "",
       "inputs": [
         [
@@ -13148,7 +13148,7 @@
       },
       "displayText": "30",
       "range": null,
-      "elapsedMs": 84.555,
+      "elapsedMs": 208.472,
       "message": "",
       "inputs": [
         [
@@ -13201,7 +13201,7 @@
       },
       "displayText": "未找到",
       "range": null,
-      "elapsedMs": 91.12,
+      "elapsedMs": 246.524,
       "message": "",
       "inputs": [
         [
@@ -13254,7 +13254,7 @@
       },
       "displayText": "#N/A",
       "range": null,
-      "elapsedMs": 87.474,
+      "elapsedMs": 251.053,
       "message": "",
       "inputs": [
         [
@@ -13307,7 +13307,7 @@
       },
       "displayText": "200",
       "range": null,
-      "elapsedMs": 48.965,
+      "elapsedMs": 163.441,
       "message": "",
       "inputs": [
         [
@@ -13360,7 +13360,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 43.999,
+      "elapsedMs": 120.142,
       "message": "",
       "inputs": [
         [
@@ -13397,7 +13397,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 42.553,
+      "elapsedMs": 128.484,
       "message": "",
       "inputs": [
         [
@@ -13434,7 +13434,7 @@
       },
       "displayText": "c",
       "range": null,
-      "elapsedMs": 88.975,
+      "elapsedMs": 247.374,
       "message": "",
       "inputs": [
         [
@@ -13487,7 +13487,7 @@
       },
       "displayText": "b",
       "range": null,
-      "elapsedMs": 86.618,
+      "elapsedMs": 244.062,
       "message": "",
       "inputs": [
         [
@@ -13540,7 +13540,7 @@
       },
       "displayText": "绿色",
       "range": null,
-      "elapsedMs": 37.112,
+      "elapsedMs": 117.706,
       "message": "",
       "inputs": []
     },
@@ -13552,7 +13552,7 @@
       },
       "displayText": "30",
       "range": null,
-      "elapsedMs": 42.232,
+      "elapsedMs": 110.967,
       "message": "",
       "inputs": [
         [
@@ -13583,7 +13583,7 @@
       },
       "displayText": "6",
       "range": null,
-      "elapsedMs": 52.12,
+      "elapsedMs": 152.485,
       "message": "",
       "inputs": [
         [
@@ -13638,7 +13638,7 @@
       },
       "displayText": "28",
       "range": null,
-      "elapsedMs": 52.504,
+      "elapsedMs": 161.592,
       "message": "",
       "inputs": [
         [
@@ -13693,7 +13693,7 @@
       },
       "displayText": "42",
       "range": null,
-      "elapsedMs": 42.983,
+      "elapsedMs": 114.392,
       "message": "",
       "inputs": [
         [
@@ -13726,7 +13726,7 @@
       },
       "displayText": "40",
       "range": null,
-      "elapsedMs": 44.199,
+      "elapsedMs": 125.813,
       "message": "",
       "inputs": [
         [
@@ -13759,7 +13759,7 @@
       },
       "displayText": "5",
       "range": null,
-      "elapsedMs": 26.22,
+      "elapsedMs": 72.022,
       "message": "",
       "inputs": []
     },
@@ -13771,7 +13771,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 26.419,
+      "elapsedMs": 78.724,
       "message": "",
       "inputs": []
     },
@@ -13783,7 +13783,7 @@
       },
       "displayText": "4",
       "range": null,
-      "elapsedMs": 26.568,
+      "elapsedMs": 72.191,
       "message": "",
       "inputs": []
     },
@@ -13795,7 +13795,7 @@
       },
       "displayText": "8",
       "range": null,
-      "elapsedMs": 26.079,
+      "elapsedMs": 76.157,
       "message": "",
       "inputs": []
     },
@@ -13807,7 +13807,7 @@
       },
       "displayText": "5",
       "range": null,
-      "elapsedMs": 45.318,
+      "elapsedMs": 131.072,
       "message": "",
       "inputs": [
         [
@@ -13850,7 +13850,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 56.777,
+      "elapsedMs": 149.648,
       "message": "",
       "inputs": [
         [
@@ -13905,7 +13905,7 @@
       },
       "displayText": "4",
       "range": null,
-      "elapsedMs": 50.744,
+      "elapsedMs": 150.385,
       "message": "",
       "inputs": [
         [
@@ -13954,7 +13954,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 47.461,
+      "elapsedMs": 130.946,
       "message": "",
       "inputs": [
         [
@@ -14026,7 +14026,7 @@
           }
         ]
       ],
-      "elapsedMs": 59.098,
+      "elapsedMs": 193.245,
       "message": "",
       "inputs": [
         [
@@ -14082,7 +14082,7 @@
           }
         ]
       ],
-      "elapsedMs": 49.373,
+      "elapsedMs": 136.947,
       "message": "",
       "inputs": [
         [
@@ -14132,7 +14132,7 @@
           }
         ]
       ],
-      "elapsedMs": 103.809,
+      "elapsedMs": 264.736,
       "message": "",
       "inputs": [
         [
@@ -14182,7 +14182,7 @@
           }
         ]
       ],
-      "elapsedMs": 255.128,
+      "elapsedMs": 684.289,
       "message": "",
       "inputs": [
         [
@@ -14250,7 +14250,7 @@
           }
         ]
       ],
-      "elapsedMs": 55.964,
+      "elapsedMs": 138.781,
       "message": "",
       "inputs": [
         [
@@ -14334,7 +14334,7 @@
           }
         ]
       ],
-      "elapsedMs": 106.567,
+      "elapsedMs": 226.831,
       "message": "",
       "inputs": [
         [
@@ -14412,7 +14412,7 @@
           }
         ]
       ],
-      "elapsedMs": 98.535,
+      "elapsedMs": 260.738,
       "message": "",
       "inputs": [
         [
@@ -14490,7 +14490,7 @@
           }
         ]
       ],
-      "elapsedMs": 96.428,
+      "elapsedMs": 233.277,
       "message": "",
       "inputs": [
         [
@@ -14574,7 +14574,7 @@
           }
         ]
       ],
-      "elapsedMs": 98.903,
+      "elapsedMs": 257.335,
       "message": "",
       "inputs": [
         [
@@ -14634,7 +14634,7 @@
           }
         ]
       ],
-      "elapsedMs": 105.825,
+      "elapsedMs": 279.217,
       "message": "",
       "inputs": [
         [
@@ -14716,7 +14716,7 @@
           }
         ]
       ],
-      "elapsedMs": 70.745,
+      "elapsedMs": 206.387,
       "message": "",
       "inputs": [
         [
@@ -14826,7 +14826,7 @@
           }
         ]
       ],
-      "elapsedMs": 71.234,
+      "elapsedMs": 184.426,
       "message": "",
       "inputs": [
         [
@@ -14938,7 +14938,7 @@
           }
         ]
       ],
-      "elapsedMs": 74.858,
+      "elapsedMs": 177.785,
       "message": "",
       "inputs": [
         [
@@ -15026,7 +15026,7 @@
           }
         ]
       ],
-      "elapsedMs": 67.057,
+      "elapsedMs": 149.115,
       "message": "",
       "inputs": [
         [
@@ -15095,7 +15095,7 @@
       },
       "displayText": "$C$2",
       "range": null,
-      "elapsedMs": 26.974,
+      "elapsedMs": 62.7,
       "message": "",
       "inputs": []
     },
@@ -15107,7 +15107,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 44.281,
+      "elapsedMs": 105.011,
       "message": "",
       "inputs": [
         [
@@ -15171,7 +15171,7 @@
           }
         ]
       ],
-      "elapsedMs": 63.354,
+      "elapsedMs": 153.854,
       "message": "",
       "inputs": [
         [
@@ -15255,7 +15255,7 @@
           }
         ]
       ],
-      "elapsedMs": 65.687,
+      "elapsedMs": 150.238,
       "message": "",
       "inputs": [
         [
@@ -15353,7 +15353,7 @@
           }
         ]
       ],
-      "elapsedMs": 62.311,
+      "elapsedMs": 137.245,
       "message": "",
       "inputs": [
         [
@@ -15386,7 +15386,7 @@
       },
       "displayText": "#N/A",
       "range": null,
-      "elapsedMs": 40.765,
+      "elapsedMs": 95.222,
       "message": "",
       "inputs": [
         [
@@ -15405,7 +15405,7 @@
       },
       "displayText": "#REF!",
       "range": null,
-      "elapsedMs": 39.29,
+      "elapsedMs": 93.357,
       "message": "",
       "inputs": [
         [
@@ -15445,7 +15445,7 @@
           }
         ]
       ],
-      "elapsedMs": 101.49,
+      "elapsedMs": 275.917,
       "message": "",
       "inputs": [
         [
@@ -15519,7 +15519,7 @@
           }
         ]
       ],
-      "elapsedMs": 54.822,
+      "elapsedMs": 147.608,
       "message": "",
       "inputs": [
         [
@@ -15552,7 +15552,7 @@
       },
       "displayText": "示例",
       "range": null,
-      "elapsedMs": 38.326,
+      "elapsedMs": 111.902,
       "message": "",
       "inputs": []
     },
@@ -15564,7 +15564,7 @@
       },
       "displayText": "#VALUE!",
       "range": null,
-      "elapsedMs": 28.611,
+      "elapsedMs": 81.746,
       "message": "",
       "inputs": []
     },
@@ -15619,7 +15619,7 @@
           }
         ]
       ],
-      "elapsedMs": 157.613,
+      "elapsedMs": 433.946,
       "message": "",
       "inputs": [
         [
@@ -15713,7 +15713,7 @@
           }
         ]
       ],
-      "elapsedMs": 54.664,
+      "elapsedMs": 171.089,
       "message": "",
       "inputs": [
         [
@@ -15765,7 +15765,7 @@
           }
         ]
       ],
-      "elapsedMs": 54.33,
+      "elapsedMs": 144.797,
       "message": "",
       "inputs": [
         [
@@ -15819,7 +15819,7 @@
           }
         ]
       ],
-      "elapsedMs": 54.203,
+      "elapsedMs": 154.081,
       "message": "",
       "inputs": [
         [
@@ -15873,7 +15873,7 @@
           }
         ]
       ],
-      "elapsedMs": 56.192,
+      "elapsedMs": 148.528,
       "message": "",
       "inputs": [
         [
@@ -15927,7 +15927,7 @@
           }
         ]
       ],
-      "elapsedMs": 54.886,
+      "elapsedMs": 151.291,
       "message": "",
       "inputs": [
         [
@@ -15985,7 +15985,7 @@
           }
         ]
       ],
-      "elapsedMs": 54.893,
+      "elapsedMs": 126.98,
       "message": "",
       "inputs": [
         [
@@ -16022,7 +16022,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 28.417,
+      "elapsedMs": 71.328,
       "message": "",
       "inputs": []
     },
@@ -16034,7 +16034,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 44.124,
+      "elapsedMs": 136.732,
       "message": "",
       "inputs": [
         [
@@ -16052,7 +16052,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 49.479,
+      "elapsedMs": 132.508,
       "message": "",
       "inputs": [
         [
@@ -16071,7 +16071,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 29.495,
+      "elapsedMs": 66.032,
       "message": "",
       "inputs": []
     },
@@ -16083,7 +16083,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 28.316,
+      "elapsedMs": 65.319,
       "message": "",
       "inputs": []
     },
@@ -16095,7 +16095,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 29.729,
+      "elapsedMs": 70.155,
       "message": "",
       "inputs": []
     },
@@ -16107,7 +16107,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 28.775,
+      "elapsedMs": 73.331,
       "message": "",
       "inputs": []
     },
@@ -16119,7 +16119,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 29.01,
+      "elapsedMs": 79.556,
       "message": "",
       "inputs": []
     },
@@ -16131,7 +16131,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 28.66,
+      "elapsedMs": 64.355,
       "message": "",
       "inputs": []
     },
@@ -16143,7 +16143,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 27.85,
+      "elapsedMs": 67.829,
       "message": "",
       "inputs": []
     },
@@ -16155,7 +16155,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 29.49,
+      "elapsedMs": 62.782,
       "message": "",
       "inputs": []
     },
@@ -16167,7 +16167,7 @@
       },
       "displayText": "#NUM!",
       "range": null,
-      "elapsedMs": 28.752,
+      "elapsedMs": 64.074,
       "message": "",
       "inputs": []
     },
@@ -16179,7 +16179,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 41.192,
+      "elapsedMs": 103.915,
       "message": "",
       "inputs": [
         [
@@ -16197,7 +16197,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 29.748,
+      "elapsedMs": 67.691,
       "message": "",
       "inputs": []
     },
@@ -16209,7 +16209,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 29.314,
+      "elapsedMs": 69.019,
       "message": "",
       "inputs": []
     },
@@ -16221,7 +16221,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 29.59,
+      "elapsedMs": 70.591,
       "message": "",
       "inputs": []
     },
@@ -16233,7 +16233,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 29.86,
+      "elapsedMs": 79.786,
       "message": "",
       "inputs": []
     },
@@ -16245,7 +16245,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 29.239,
+      "elapsedMs": 66.471,
       "message": "",
       "inputs": []
     },
@@ -16257,7 +16257,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 29.975,
+      "elapsedMs": 72.117,
       "message": "",
       "inputs": []
     },
@@ -16269,7 +16269,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 30.298,
+      "elapsedMs": 72.203,
       "message": "",
       "inputs": []
     },
@@ -16281,7 +16281,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 30.247,
+      "elapsedMs": 69.708,
       "message": "",
       "inputs": []
     },
@@ -16293,7 +16293,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 29.296,
+      "elapsedMs": 69.714,
       "message": "",
       "inputs": []
     },
@@ -16305,7 +16305,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 29.881,
+      "elapsedMs": 77.26,
       "message": "",
       "inputs": []
     },
@@ -16317,7 +16317,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 31.443,
+      "elapsedMs": 75.186,
       "message": "",
       "inputs": []
     },
@@ -16329,7 +16329,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 29.83,
+      "elapsedMs": 69.471,
       "message": "",
       "inputs": []
     },
@@ -16341,7 +16341,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 30.478,
+      "elapsedMs": 73.255,
       "message": "",
       "inputs": []
     },
@@ -16353,7 +16353,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 30.317,
+      "elapsedMs": 71.199,
       "message": "",
       "inputs": []
     },
@@ -16365,7 +16365,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 29.859,
+      "elapsedMs": 77.501,
       "message": "",
       "inputs": []
     },
@@ -16377,7 +16377,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 29.945,
+      "elapsedMs": 76.189,
       "message": "",
       "inputs": []
     },
@@ -16389,7 +16389,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 31.015,
+      "elapsedMs": 74.076,
       "message": "",
       "inputs": []
     },
@@ -16401,7 +16401,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 44.537,
+      "elapsedMs": 99.441,
       "message": "",
       "inputs": [
         [
@@ -16420,7 +16420,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 32.932,
+      "elapsedMs": 71.683,
       "message": "",
       "inputs": []
     },
@@ -16432,7 +16432,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 30.607,
+      "elapsedMs": 69.427,
       "message": "",
       "inputs": []
     },
@@ -16444,7 +16444,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 30.992,
+      "elapsedMs": 88.112,
       "message": "",
       "inputs": []
     },
@@ -16456,7 +16456,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 30.086,
+      "elapsedMs": 109.046,
       "message": "",
       "inputs": []
     },
@@ -16468,7 +16468,7 @@
       },
       "displayText": "7",
       "range": null,
-      "elapsedMs": 30.86,
+      "elapsedMs": 78.488,
       "message": "",
       "inputs": []
     },
@@ -16480,7 +16480,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 30.2,
+      "elapsedMs": 64.528,
       "message": "",
       "inputs": []
     },
@@ -16492,7 +16492,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 31.95,
+      "elapsedMs": 68.383,
       "message": "",
       "inputs": []
     },
@@ -16504,7 +16504,7 @@
       },
       "displayText": "#N/A",
       "range": null,
-      "elapsedMs": 32.253,
+      "elapsedMs": 69.798,
       "message": "",
       "inputs": []
     },
@@ -16516,7 +16516,7 @@
       },
       "displayText": "caught",
       "range": null,
-      "elapsedMs": 32.848,
+      "elapsedMs": 71.883,
       "message": "",
       "inputs": []
     },
@@ -16528,7 +16528,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 45.957,
+      "elapsedMs": 114.824,
       "message": "",
       "inputs": [
         [
@@ -16547,7 +16547,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 44.386,
+      "elapsedMs": 97.77,
       "message": "",
       "inputs": [
         [
@@ -16566,7 +16566,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 55.945,
+      "elapsedMs": 140.518,
       "message": "",
       "inputs": [
         [
@@ -16585,7 +16585,7 @@
       },
       "displayText": "#VALUE!",
       "range": null,
-      "elapsedMs": 31.747,
+      "elapsedMs": 98.243,
       "message": "",
       "inputs": []
     },
@@ -16597,7 +16597,7 @@
       },
       "displayText": "FALSE",
       "range": null,
-      "elapsedMs": 31.248,
+      "elapsedMs": 88.431,
       "message": "",
       "inputs": []
     },
@@ -16609,7 +16609,7 @@
       },
       "displayText": "TRUE",
       "range": null,
-      "elapsedMs": 32.729,
+      "elapsedMs": 75.771,
       "message": "",
       "inputs": []
     },
@@ -16621,7 +16621,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 32.812,
+      "elapsedMs": 72.489,
       "message": "",
       "inputs": []
     },
@@ -16633,7 +16633,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 51.272,
+      "elapsedMs": 132.52,
       "message": "",
       "inputs": [
         [
@@ -16666,7 +16666,7 @@
       },
       "displayText": "¥368.33",
       "range": null,
-      "elapsedMs": 32.016,
+      "elapsedMs": 68.13,
       "message": "",
       "inputs": []
     },
@@ -16678,7 +16678,7 @@
       },
       "displayText": "9%",
       "range": null,
-      "elapsedMs": 32.699,
+      "elapsedMs": 110.277,
       "message": "",
       "inputs": []
     },
@@ -16690,7 +16690,7 @@
       },
       "displayText": "¥256.20",
       "range": null,
-      "elapsedMs": 31.806,
+      "elapsedMs": 78.717,
       "message": "",
       "inputs": []
     },
@@ -16702,7 +16702,7 @@
       },
       "displayText": "¥1,257.79",
       "range": null,
-      "elapsedMs": 32.575,
+      "elapsedMs": 73.746,
       "message": "",
       "inputs": []
     },
@@ -16714,7 +16714,7 @@
       },
       "displayText": "1%",
       "range": null,
-      "elapsedMs": 32.208,
+      "elapsedMs": 79.647,
       "message": "",
       "inputs": []
     },
@@ -16726,7 +16726,7 @@
       },
       "displayText": "16.66666667",
       "range": null,
-      "elapsedMs": 31.852,
+      "elapsedMs": 90.145,
       "message": "",
       "inputs": []
     },
@@ -16738,7 +16738,7 @@
       },
       "displayText": "¥377.42",
       "range": null,
-      "elapsedMs": 32.258,
+      "elapsedMs": 84.158,
       "message": "",
       "inputs": []
     },
@@ -16750,7 +16750,7 @@
       },
       "displayText": "¥50.00",
       "range": null,
-      "elapsedMs": 33.813,
+      "elapsedMs": 91.451,
       "message": "",
       "inputs": []
     },
@@ -16762,7 +16762,7 @@
       },
       "displayText": "¥294.09",
       "range": null,
-      "elapsedMs": 34.439,
+      "elapsedMs": 111.553,
       "message": "",
       "inputs": []
     },
@@ -16774,7 +16774,7 @@
       },
       "displayText": "¥375.86",
       "range": null,
-      "elapsedMs": 35.489,
+      "elapsedMs": 76.518,
       "message": "",
       "inputs": []
     },
@@ -16786,7 +16786,7 @@
       },
       "displayText": "¥83.33",
       "range": null,
-      "elapsedMs": 34.569,
+      "elapsedMs": 71.77,
       "message": "",
       "inputs": []
     },
@@ -16798,7 +16798,7 @@
       },
       "displayText": "¥1.57",
       "range": null,
-      "elapsedMs": 34.607,
+      "elapsedMs": 78.153,
       "message": "",
       "inputs": []
     },
@@ -16810,7 +16810,7 @@
       },
       "displayText": "¥15,897.21",
       "range": null,
-      "elapsedMs": 33.722,
+      "elapsedMs": 79.611,
       "message": "",
       "inputs": []
     },
@@ -16822,7 +16822,7 @@
       },
       "displayText": "¥1,200.00",
       "range": null,
-      "elapsedMs": 34.137,
+      "elapsedMs": 76.354,
       "message": "",
       "inputs": []
     },
@@ -16834,7 +16834,7 @@
       },
       "displayText": "¥26,818.62",
       "range": null,
-      "elapsedMs": 32.593,
+      "elapsedMs": 82.18,
       "message": "",
       "inputs": []
     },
@@ -16846,7 +16846,7 @@
       },
       "displayText": "¥1,200.00",
       "range": null,
-      "elapsedMs": 33.395,
+      "elapsedMs": 77.899,
       "message": "",
       "inputs": []
     },
@@ -16858,7 +16858,7 @@
       },
       "displayText": "56.18429076",
       "range": null,
-      "elapsedMs": 36.858,
+      "elapsedMs": 81.32,
       "message": "",
       "inputs": []
     },
@@ -16870,7 +16870,7 @@
       },
       "displayText": "10",
       "range": null,
-      "elapsedMs": 33.086,
+      "elapsedMs": 81.027,
       "message": "",
       "inputs": []
     },
@@ -16882,7 +16882,7 @@
       },
       "displayText": "1%",
       "range": null,
-      "elapsedMs": 34.149,
+      "elapsedMs": 77.194,
       "message": "",
       "inputs": []
     },
@@ -16894,7 +16894,7 @@
       },
       "displayText": "3%",
       "range": null,
-      "elapsedMs": 35.924,
+      "elapsedMs": 82.851,
       "message": "",
       "inputs": []
     },
@@ -16906,7 +16906,7 @@
       },
       "displayText": "¥-19.12",
       "range": null,
-      "elapsedMs": 33.194,
+      "elapsedMs": 76.435,
       "message": "",
       "inputs": []
     },
@@ -16918,7 +16918,7 @@
       },
       "displayText": "¥600.00",
       "range": null,
-      "elapsedMs": 34.562,
+      "elapsedMs": 90.528,
       "message": "",
       "inputs": []
     },
@@ -16930,7 +16930,7 @@
       },
       "displayText": "9%",
       "range": null,
-      "elapsedMs": 35.799,
+      "elapsedMs": 84.571,
       "message": "",
       "inputs": []
     },
@@ -16942,7 +16942,7 @@
       },
       "displayText": "8%",
       "range": null,
-      "elapsedMs": 67.39,
+      "elapsedMs": 154.005,
       "message": "",
       "inputs": [
         [
@@ -16985,7 +16985,7 @@
       },
       "displayText": "0.088829741",
       "range": null,
-      "elapsedMs": 66.552,
+      "elapsedMs": 144.767,
       "message": "",
       "inputs": [
         [
@@ -17038,7 +17038,7 @@
       },
       "displayText": "0.099999994",
       "range": null,
-      "elapsedMs": 69.697,
+      "elapsedMs": 133.063,
       "message": "",
       "inputs": [
         [
@@ -17071,7 +17071,7 @@
       },
       "displayText": "-213.1926001",
       "range": null,
-      "elapsedMs": 129.067,
+      "elapsedMs": 151.39,
       "message": "",
       "inputs": [
         [
@@ -17124,7 +17124,7 @@
       },
       "displayText": "¥1,800.00",
       "range": null,
-      "elapsedMs": 44.169,
+      "elapsedMs": 72.646,
       "message": "",
       "inputs": []
     },
@@ -17136,7 +17136,7 @@
       },
       "displayText": "¥-400.00",
       "range": null,
-      "elapsedMs": 39.183,
+      "elapsedMs": 84.602,
       "message": "",
       "inputs": []
     },
@@ -17148,7 +17148,7 @@
       },
       "displayText": "¥3,000.00",
       "range": null,
-      "elapsedMs": 36.312,
+      "elapsedMs": 78.09,
       "message": "",
       "inputs": []
     },
@@ -17160,7 +17160,7 @@
       },
       "displayText": "¥600.00",
       "range": null,
-      "elapsedMs": 37.104,
+      "elapsedMs": 71.901,
       "message": "",
       "inputs": []
     },
@@ -17172,7 +17172,7 @@
       },
       "displayText": "¥3,690.00",
       "range": null,
-      "elapsedMs": 38.12,
+      "elapsedMs": 79.328,
       "message": "",
       "inputs": []
     },
@@ -17184,7 +17184,7 @@
       },
       "displayText": "¥2,767.50",
       "range": null,
-      "elapsedMs": 37.968,
+      "elapsedMs": 81.902,
       "message": "",
       "inputs": []
     },
@@ -17196,7 +17196,7 @@
       },
       "displayText": "¥4,000.00",
       "range": null,
-      "elapsedMs": 35.474,
+      "elapsedMs": 93.751,
       "message": "",
       "inputs": []
     },
@@ -17208,7 +17208,7 @@
       },
       "displayText": "¥2,100.00",
       "range": null,
-      "elapsedMs": 34.651,
+      "elapsedMs": 80.977,
       "message": "",
       "inputs": []
     },
@@ -17220,7 +17220,7 @@
       },
       "displayText": "0.051161898",
       "range": null,
-      "elapsedMs": 34.469,
+      "elapsedMs": 82.114,
       "message": "",
       "inputs": []
     },
@@ -17232,7 +17232,7 @@
       },
       "displayText": "0.05",
       "range": null,
-      "elapsedMs": 35.606,
+      "elapsedMs": 80.72,
       "message": "",
       "inputs": []
     },
@@ -17244,7 +17244,7 @@
       },
       "displayText": "0.050036398",
       "range": null,
-      "elapsedMs": 34.894,
+      "elapsedMs": 80.205,
       "message": "",
       "inputs": []
     },
@@ -17256,7 +17256,7 @@
       },
       "displayText": "0.1",
       "range": null,
-      "elapsedMs": 35.61,
+      "elapsedMs": 83.746,
       "message": "",
       "inputs": []
     },
@@ -17268,7 +17268,7 @@
       },
       "displayText": "16.66666667",
       "range": null,
-      "elapsedMs": 35.163,
+      "elapsedMs": 85.305,
       "message": "",
       "inputs": []
     },
@@ -17280,7 +17280,7 @@
       },
       "displayText": "20.54794521",
       "range": null,
-      "elapsedMs": 34.257,
+      "elapsedMs": 94.689,
       "message": "",
       "inputs": []
     },
@@ -17292,7 +17292,7 @@
       },
       "displayText": "776",
       "range": null,
-      "elapsedMs": 34.835,
+      "elapsedMs": 86.478,
       "message": "",
       "inputs": []
     },
@@ -17304,7 +17304,7 @@
       },
       "displayText": "360",
       "range": null,
-      "elapsedMs": 37.08,
+      "elapsedMs": 420.668,
       "message": "",
       "inputs": []
     },
@@ -17316,7 +17316,7 @@
       },
       "displayText": "71",
       "range": null,
-      "elapsedMs": 34.86,
+      "elapsedMs": 78.401,
       "message": "",
       "inputs": []
     },
@@ -17328,7 +17328,7 @@
       },
       "displayText": "181",
       "range": null,
-      "elapsedMs": 33.899,
+      "elapsedMs": 79.764,
       "message": "",
       "inputs": []
     },
@@ -17340,7 +17340,7 @@
       },
       "displayText": "110",
       "range": null,
-      "elapsedMs": 34.313,
+      "elapsedMs": 90.014,
       "message": "",
       "inputs": []
     },
@@ -17352,7 +17352,7 @@
       },
       "displayText": "2011",
       "range": null,
-      "elapsedMs": 34.884,
+      "elapsedMs": 82.822,
       "message": "",
       "inputs": []
     },
@@ -17364,7 +17364,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 197.567,
+      "elapsedMs": 85.716,
       "message": "",
       "inputs": []
     },
@@ -17376,7 +17376,7 @@
       },
       "displayText": "2010",
       "range": null,
-      "elapsedMs": 36.048,
+      "elapsedMs": 99.948,
       "message": "",
       "inputs": []
     },
@@ -17388,7 +17388,7 @@
       },
       "displayText": "-11135.23213",
       "range": null,
-      "elapsedMs": 34.609,
+      "elapsedMs": 81.11,
       "message": "",
       "inputs": []
     },
@@ -17400,7 +17400,7 @@
       },
       "displayText": "-934.1071234",
       "range": null,
-      "elapsedMs": 34.084,
+      "elapsedMs": 81.731,
       "message": "",
       "inputs": []
     },
@@ -17412,7 +17412,7 @@
       },
       "displayText": "0.052420213",
       "range": null,
-      "elapsedMs": 34.246,
+      "elapsedMs": 87.162,
       "message": "",
       "inputs": []
     },
@@ -17424,7 +17424,7 @@
       },
       "displayText": "1.125",
       "range": null,
-      "elapsedMs": 35.12,
+      "elapsedMs": 85.891,
       "message": "",
       "inputs": []
     },
@@ -17436,7 +17436,7 @@
       },
       "displayText": "1.02",
       "range": null,
-      "elapsedMs": 38.79,
+      "elapsedMs": 118.831,
       "message": "",
       "inputs": []
     },
@@ -17448,7 +17448,7 @@
       },
       "displayText": "5.993774956",
       "range": null,
-      "elapsedMs": 36.367,
+      "elapsedMs": 94.428,
       "message": "",
       "inputs": []
     },
@@ -17460,7 +17460,7 @@
       },
       "displayText": "1.33089",
       "range": null,
-      "elapsedMs": 58.008,
+      "elapsedMs": 130.845,
       "message": "",
       "inputs": [
         [
@@ -17491,7 +17491,7 @@
       },
       "displayText": "0.05768",
       "range": null,
-      "elapsedMs": 37.111,
+      "elapsedMs": 84.117,
       "message": "",
       "inputs": []
     },
@@ -17503,7 +17503,7 @@
       },
       "displayText": "-66512.34568",
       "range": null,
-      "elapsedMs": 36.124,
+      "elapsedMs": 91.768,
       "message": "",
       "inputs": []
     },
@@ -17515,7 +17515,7 @@
       },
       "displayText": "5.735669814",
       "range": null,
-      "elapsedMs": 36.645,
+      "elapsedMs": 88.745,
       "message": "",
       "inputs": []
     },
@@ -17527,7 +17527,7 @@
       },
       "displayText": "6%",
       "range": null,
-      "elapsedMs": 65.962,
+      "elapsedMs": 151.962,
       "message": "",
       "inputs": [
         [
@@ -17570,7 +17570,7 @@
       },
       "displayText": "113.5977175",
       "range": null,
-      "elapsedMs": 40.035,
+      "elapsedMs": 88.734,
       "message": "",
       "inputs": []
     },
@@ -17582,7 +17582,7 @@
       },
       "displayText": "0.062500019",
       "range": null,
-      "elapsedMs": 53.48,
+      "elapsedMs": 90.531,
       "message": "",
       "inputs": []
     },
@@ -17594,7 +17594,7 @@
       },
       "displayText": "99.87828601",
       "range": null,
-      "elapsedMs": 80.258,
+      "elapsedMs": 87.702,
       "message": "",
       "inputs": []
     },
@@ -17606,7 +17606,7 @@
       },
       "displayText": "0.040592784",
       "range": null,
-      "elapsedMs": 85.0,
+      "elapsedMs": 85.593,
       "message": "",
       "inputs": []
     },
@@ -17618,7 +17618,7 @@
       },
       "displayText": "3.859866163",
       "range": null,
-      "elapsedMs": 77.608,
+      "elapsedMs": 83.589,
       "message": "",
       "inputs": []
     },
@@ -17630,7 +17630,7 @@
       },
       "displayText": "94.63436162",
       "range": null,
-      "elapsedMs": 72.874,
+      "elapsedMs": 93.008,
       "message": "",
       "inputs": []
     },
@@ -17642,7 +17642,7 @@
       },
       "displayText": "99.79583333",
       "range": null,
-      "elapsedMs": 48.054,
+      "elapsedMs": 83.328,
       "message": "",
       "inputs": []
     },
@@ -17654,7 +17654,7 @@
       },
       "displayText": "99.98449888",
       "range": null,
-      "elapsedMs": 38.56,
+      "elapsedMs": 95.471,
       "message": "",
       "inputs": []
     },
@@ -17666,7 +17666,7 @@
       },
       "displayText": "1014584.654",
       "range": null,
-      "elapsedMs": 36.221,
+      "elapsedMs": 77.186,
       "message": "",
       "inputs": []
     },
@@ -17678,7 +17678,7 @@
       },
       "displayText": "0.000993307",
       "range": null,
-      "elapsedMs": 38.872,
+      "elapsedMs": 78.757,
       "message": "",
       "inputs": []
     },
@@ -17690,7 +17690,7 @@
       },
       "displayText": "0.094151494",
       "range": null,
-      "elapsedMs": 37.732,
+      "elapsedMs": 102.48,
       "message": "",
       "inputs": []
     },
@@ -17702,7 +17702,7 @@
       },
       "displayText": "98.45",
       "range": null,
-      "elapsedMs": 41.196,
+      "elapsedMs": 101.522,
       "message": "",
       "inputs": []
     },
@@ -17714,7 +17714,7 @@
       },
       "displayText": "0.091416963",
       "range": null,
-      "elapsedMs": 36.068,
+      "elapsedMs": 102.649,
       "message": "",
       "inputs": []
     },
@@ -17726,7 +17726,7 @@
       },
       "displayText": "¥40.00",
       "range": null,
-      "elapsedMs": 37.55,
+      "elapsedMs": 89.733,
       "message": "",
       "inputs": []
     },
@@ -17738,7 +17738,7 @@
       },
       "displayText": "0.065000007",
       "range": null,
-      "elapsedMs": 37.394,
+      "elapsedMs": 84.679,
       "message": "",
       "inputs": []
     },
@@ -17750,7 +17750,7 @@
       },
       "displayText": "0.052822572",
       "range": null,
-      "elapsedMs": 38.456,
+      "elapsedMs": 78.976,
       "message": "",
       "inputs": []
     },
@@ -17762,7 +17762,7 @@
       },
       "displayText": "0.063982798",
       "range": null,
-      "elapsedMs": 39.732,
+      "elapsedMs": 76.776,
       "message": "",
       "inputs": []
     },
@@ -17774,7 +17774,7 @@
       },
       "displayText": "16.71232877",
       "range": null,
-      "elapsedMs": 37.644,
+      "elapsedMs": 88.095,
       "message": "",
       "inputs": []
     },
@@ -17786,7 +17786,7 @@
       },
       "displayText": "94.67215001",
       "range": null,
-      "elapsedMs": 37.696,
+      "elapsedMs": 86.871,
       "message": "",
       "inputs": []
     },
@@ -17798,7 +17798,7 @@
       },
       "displayText": "0.06505568",
       "range": null,
-      "elapsedMs": 39.105,
+      "elapsedMs": 94.705,
       "message": "",
       "inputs": []
     },
@@ -17810,7 +17810,7 @@
       },
       "displayText": "¥329.15",
       "range": null,
-      "elapsedMs": 41.299,
+      "elapsedMs": 100.1,
       "message": "",
       "inputs": []
     },
@@ -17822,7 +17822,7 @@
       },
       "displayText": "1.3125",
       "range": null,
-      "elapsedMs": 38.033,
+      "elapsedMs": 92.474,
       "message": "",
       "inputs": []
     },
@@ -17834,7 +17834,7 @@
       },
       "displayText": "24",
       "range": null,
-      "elapsedMs": 41.675,
+      "elapsedMs": 84.475,
       "message": "",
       "inputs": []
     },
@@ -17846,7 +17846,7 @@
       },
       "displayText": "5%",
       "range": null,
-      "elapsedMs": 80.236,
+      "elapsedMs": 141.819,
       "message": "",
       "inputs": [
         [
@@ -17889,7 +17889,7 @@
       },
       "displayText": "1.33089",
       "range": null,
-      "elapsedMs": 45.237,
+      "elapsedMs": 78.628,
       "message": "",
       "inputs": []
     },
@@ -17901,7 +17901,7 @@
       },
       "displayText": "5.914653009",
       "range": null,
-      "elapsedMs": 38.409,
+      "elapsedMs": 82.288,
       "message": "",
       "inputs": []
     },
@@ -17913,7 +17913,7 @@
       },
       "displayText": "1010",
       "range": null,
-      "elapsedMs": 60.618,
+      "elapsedMs": 88.452,
       "message": "",
       "inputs": []
     },
@@ -17925,7 +17925,7 @@
       },
       "displayText": "255",
       "range": null,
-      "elapsedMs": 49.04,
+      "elapsedMs": 93.569,
       "message": "",
       "inputs": []
     },
@@ -17937,7 +17937,7 @@
       },
       "displayText": "1+2i",
       "range": null,
-      "elapsedMs": 54.829,
+      "elapsedMs": 89.59,
       "message": "",
       "inputs": []
     },
@@ -17949,7 +17949,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 41.605,
+      "elapsedMs": 74.287,
       "message": "",
       "inputs": []
     },
@@ -17961,7 +17961,7 @@
       },
       "displayText": "100",
       "range": null,
-      "elapsedMs": 48.234,
+      "elapsedMs": 81.4,
       "message": "",
       "inputs": []
     },
@@ -17973,7 +17973,7 @@
       },
       "displayText": "-1",
       "range": null,
-      "elapsedMs": 40.711,
+      "elapsedMs": 94.361,
       "message": "",
       "inputs": []
     },
@@ -17985,7 +17985,7 @@
       },
       "displayText": "9",
       "range": null,
-      "elapsedMs": 44.172,
+      "elapsedMs": 108.242,
       "message": "",
       "inputs": []
     },
@@ -17997,7 +17997,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 39.854,
+      "elapsedMs": 90.343,
       "message": "",
       "inputs": []
     },
@@ -18009,7 +18009,7 @@
       },
       "displayText": "31",
       "range": null,
-      "elapsedMs": 44.521,
+      "elapsedMs": 83.991,
       "message": "",
       "inputs": []
     },
@@ -18021,7 +18021,7 @@
       },
       "displayText": "7",
       "range": null,
-      "elapsedMs": 41.14,
+      "elapsedMs": 86.987,
       "message": "",
       "inputs": []
     },
@@ -18033,7 +18033,7 @@
       },
       "displayText": "6",
       "range": null,
-      "elapsedMs": 39.926,
+      "elapsedMs": 89.408,
       "message": "",
       "inputs": []
     },
@@ -18045,7 +18045,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 39.788,
+      "elapsedMs": 86.806,
       "message": "",
       "inputs": []
     },
@@ -18057,7 +18057,7 @@
       },
       "displayText": "3+4i",
       "range": null,
-      "elapsedMs": 69.746,
+      "elapsedMs": 93.355,
       "message": "",
       "inputs": []
     },
@@ -18069,7 +18069,7 @@
       },
       "displayText": "3-4j",
       "range": null,
-      "elapsedMs": 52.604,
+      "elapsedMs": 90.256,
       "message": "",
       "inputs": []
     },
@@ -18081,7 +18081,7 @@
       },
       "displayText": "1000",
       "range": null,
-      "elapsedMs": 58.623,
+      "elapsedMs": 122.442,
       "message": "",
       "inputs": []
     },
@@ -18093,7 +18093,7 @@
       },
       "displayText": "212",
       "range": null,
-      "elapsedMs": 49.617,
+      "elapsedMs": 98.666,
       "message": "",
       "inputs": []
     },
@@ -18105,7 +18105,7 @@
       },
       "displayText": "1100100",
       "range": null,
-      "elapsedMs": 91.448,
+      "elapsedMs": 98.57,
       "message": "",
       "inputs": []
     },
@@ -18117,7 +18117,7 @@
       },
       "displayText": "00001001",
       "range": null,
-      "elapsedMs": 64.221,
+      "elapsedMs": 99.954,
       "message": "",
       "inputs": []
     },
@@ -18129,7 +18129,7 @@
       },
       "displayText": "FF",
       "range": null,
-      "elapsedMs": 47.812,
+      "elapsedMs": 96.362,
       "message": "",
       "inputs": []
     },
@@ -18141,7 +18141,7 @@
       },
       "displayText": "FFFFFFFFFF",
       "range": null,
-      "elapsedMs": 45.343,
+      "elapsedMs": 88.269,
       "message": "",
       "inputs": []
     },
@@ -18153,7 +18153,7 @@
       },
       "displayText": "144",
       "range": null,
-      "elapsedMs": 46.021,
+      "elapsedMs": 86.442,
       "message": "",
       "inputs": []
     },
@@ -18165,7 +18165,7 @@
       },
       "displayText": "7777777777",
       "range": null,
-      "elapsedMs": 42.358,
+      "elapsedMs": 85.267,
       "message": "",
       "inputs": []
     },
@@ -18177,7 +18177,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 42.949,
+      "elapsedMs": 87.321,
       "message": "",
       "inputs": []
     },
@@ -18189,7 +18189,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 43.416,
+      "elapsedMs": 87.129,
       "message": "",
       "inputs": []
     },
@@ -18201,7 +18201,7 @@
       },
       "displayText": "0.842700793",
       "range": null,
-      "elapsedMs": 43.783,
+      "elapsedMs": 100.32,
       "message": "",
       "inputs": []
     },
@@ -18213,7 +18213,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 42.96,
+      "elapsedMs": 92.729,
       "message": "",
       "inputs": []
     },
@@ -18225,7 +18225,7 @@
       },
       "displayText": "0.157299207",
       "range": null,
-      "elapsedMs": 42.146,
+      "elapsedMs": 96.604,
       "message": "",
       "inputs": []
     },
@@ -18237,7 +18237,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 43.053,
+      "elapsedMs": 96.267,
       "message": "",
       "inputs": []
     },
@@ -18249,7 +18249,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 58.346,
+      "elapsedMs": 85.343,
       "message": "",
       "inputs": []
     },
@@ -18261,7 +18261,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 53.053,
+      "elapsedMs": 87.85,
       "message": "",
       "inputs": []
     },
@@ -18273,7 +18273,7 @@
       },
       "displayText": "165",
       "range": null,
-      "elapsedMs": 49.742,
+      "elapsedMs": 87.142,
       "message": "",
       "inputs": []
     },
@@ -18285,7 +18285,7 @@
       },
       "displayText": "-1",
       "range": null,
-      "elapsedMs": 46.119,
+      "elapsedMs": 88.407,
       "message": "",
       "inputs": []
     },
@@ -18297,7 +18297,7 @@
       },
       "displayText": "5",
       "range": null,
-      "elapsedMs": 60.076,
+      "elapsedMs": 85.514,
       "message": "",
       "inputs": []
     },
@@ -18309,7 +18309,7 @@
       },
       "displayText": "5",
       "range": null,
-      "elapsedMs": 55.264,
+      "elapsedMs": 99.589,
       "message": "",
       "inputs": []
     },
@@ -18321,7 +18321,7 @@
       },
       "displayText": "4",
       "range": null,
-      "elapsedMs": 48.745,
+      "elapsedMs": 95.566,
       "message": "",
       "inputs": []
     },
@@ -18333,7 +18333,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 44.73,
+      "elapsedMs": 90.606,
       "message": "",
       "inputs": []
     },
@@ -18345,7 +18345,7 @@
       },
       "displayText": "-5+10i",
       "range": null,
-      "elapsedMs": 45.905,
+      "elapsedMs": 83.398,
       "message": "",
       "inputs": []
     },
@@ -18357,7 +18357,7 @@
       },
       "displayText": "-6",
       "range": null,
-      "elapsedMs": 50.334,
+      "elapsedMs": 93.119,
       "message": "",
       "inputs": []
     },
@@ -18369,7 +18369,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 45.723,
+      "elapsedMs": 95.504,
       "message": "",
       "inputs": []
     },
@@ -18381,7 +18381,7 @@
       },
       "displayText": "6",
       "range": null,
-      "elapsedMs": 46.877,
+      "elapsedMs": 87.849,
       "message": "",
       "inputs": []
     },
@@ -18393,7 +18393,7 @@
       },
       "displayText": "4+6i",
       "range": null,
-      "elapsedMs": 46.199,
+      "elapsedMs": 126.691,
       "message": "",
       "inputs": []
     },
@@ -18405,7 +18405,7 @@
       },
       "displayText": "7+2i",
       "range": null,
-      "elapsedMs": 45.8,
+      "elapsedMs": 98.507,
       "message": "",
       "inputs": []
     },
@@ -18417,7 +18417,7 @@
       },
       "displayText": "100",
       "range": null,
-      "elapsedMs": 49.452,
+      "elapsedMs": 96.348,
       "message": "",
       "inputs": []
     },
@@ -18429,7 +18429,7 @@
       },
       "displayText": "-1",
       "range": null,
-      "elapsedMs": 45.882,
+      "elapsedMs": 92.638,
       "message": "",
       "inputs": []
     },
@@ -18441,7 +18441,7 @@
       },
       "displayText": "3-4i",
       "range": null,
-      "elapsedMs": 57.367,
+      "elapsedMs": 127.027,
       "message": "",
       "inputs": []
     },
@@ -18453,7 +18453,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 49.28,
+      "elapsedMs": 97.488,
       "message": "",
       "inputs": []
     },
@@ -18465,7 +18465,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 56.701,
+      "elapsedMs": 89.386,
       "message": "",
       "inputs": []
     },
@@ -18477,7 +18477,7 @@
       },
       "displayText": "0.421024421",
       "range": null,
-      "elapsedMs": 47.716,
+      "elapsedMs": 105.195,
       "message": "",
       "inputs": []
     },
@@ -18489,7 +18489,7 @@
       },
       "displayText": "0.088256971",
       "range": null,
-      "elapsedMs": 49.239,
+      "elapsedMs": 97.908,
       "message": "",
       "inputs": []
     },
@@ -18501,7 +18501,7 @@
       },
       "displayText": "F",
       "range": null,
-      "elapsedMs": 45.995,
+      "elapsedMs": 100.802,
       "message": "",
       "inputs": []
     },
@@ -18513,7 +18513,7 @@
       },
       "displayText": "17",
       "range": null,
-      "elapsedMs": 47.226,
+      "elapsedMs": 99.223,
       "message": "",
       "inputs": []
     },
@@ -18525,7 +18525,7 @@
       },
       "displayText": "16",
       "range": null,
-      "elapsedMs": 45.98,
+      "elapsedMs": 100.86,
       "message": "",
       "inputs": []
     },
@@ -18537,7 +18537,7 @@
       },
       "displayText": "4",
       "range": null,
-      "elapsedMs": 48.815,
+      "elapsedMs": 103.408,
       "message": "",
       "inputs": []
     },
@@ -18549,7 +18549,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 47.825,
+      "elapsedMs": 95.348,
       "message": "",
       "inputs": []
     },
@@ -18561,7 +18561,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 51.255,
+      "elapsedMs": 87.444,
       "message": "",
       "inputs": []
     },
@@ -18573,7 +18573,7 @@
       },
       "displayText": "1111",
       "range": null,
-      "elapsedMs": 51.716,
+      "elapsedMs": 102.201,
       "message": "",
       "inputs": []
     },
@@ -18585,7 +18585,7 @@
       },
       "displayText": "17",
       "range": null,
-      "elapsedMs": 46.112,
+      "elapsedMs": 92.873,
       "message": "",
       "inputs": []
     },
@@ -18597,7 +18597,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 48.006,
+      "elapsedMs": 95.968,
       "message": "",
       "inputs": []
     },
@@ -18609,7 +18609,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 49.941,
+      "elapsedMs": 96.757,
       "message": "",
       "inputs": []
     },
@@ -18621,7 +18621,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 47.172,
+      "elapsedMs": 98.845,
       "message": "",
       "inputs": []
     },
@@ -18633,7 +18633,7 @@
       },
       "displayText": "0.642092615934331",
       "range": null,
-      "elapsedMs": 46.474,
+      "elapsedMs": 108.276,
       "message": "",
       "inputs": []
     },
@@ -18645,7 +18645,7 @@
       },
       "displayText": "1.18839510577812",
       "range": null,
-      "elapsedMs": 50.129,
+      "elapsedMs": 102.452,
       "message": "",
       "inputs": []
     },
@@ -18657,7 +18657,7 @@
       },
       "displayText": "0.850918128239322",
       "range": null,
-      "elapsedMs": 49.866,
+      "elapsedMs": 95.064,
       "message": "",
       "inputs": []
     },
@@ -18669,7 +18669,7 @@
       },
       "displayText": "2+i",
       "range": null,
-      "elapsedMs": 48.843,
+      "elapsedMs": 100.772,
       "message": "",
       "inputs": []
     },
@@ -18681,7 +18681,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 49.197,
+      "elapsedMs": 87.186,
       "message": "",
       "inputs": []
     },
@@ -18693,7 +18693,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 48.887,
+      "elapsedMs": 100.532,
       "message": "",
       "inputs": []
     },
@@ -18705,7 +18705,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 49.733,
+      "elapsedMs": 94.983,
       "message": "",
       "inputs": []
     },
@@ -18717,7 +18717,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 47.118,
+      "elapsedMs": 95.914,
       "message": "",
       "inputs": []
     },
@@ -18729,7 +18729,7 @@
       },
       "displayText": "8",
       "range": null,
-      "elapsedMs": 51.911,
+      "elapsedMs": 93.749,
       "message": "",
       "inputs": []
     },
@@ -18741,7 +18741,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 47.89,
+      "elapsedMs": 95.22,
       "message": "",
       "inputs": []
     },
@@ -18753,7 +18753,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 48.802,
+      "elapsedMs": 94.898,
       "message": "",
       "inputs": []
     },
@@ -18765,7 +18765,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 47.58,
+      "elapsedMs": 93.677,
       "message": "",
       "inputs": []
     },
@@ -18777,7 +18777,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 50.494,
+      "elapsedMs": 103.192,
       "message": "",
       "inputs": []
     },
@@ -18789,7 +18789,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 49.056,
+      "elapsedMs": 98.385,
       "message": "",
       "inputs": []
     },
@@ -18801,7 +18801,7 @@
       },
       "displayText": "2i",
       "range": null,
-      "elapsedMs": 51.632,
+      "elapsedMs": 101.481,
       "message": "",
       "inputs": []
     },
@@ -18813,7 +18813,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 52.954,
+      "elapsedMs": 106.128,
       "message": "",
       "inputs": []
     },
@@ -18825,7 +18825,7 @@
       },
       "displayText": "1111",
       "range": null,
-      "elapsedMs": 51.53,
+      "elapsedMs": 93.36,
       "message": "",
       "inputs": []
     },
@@ -18837,7 +18837,7 @@
       },
       "displayText": "F",
       "range": null,
-      "elapsedMs": 62.817,
+      "elapsedMs": 93.499,
       "message": "",
       "inputs": []
     },
@@ -18849,7 +18849,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 264.15,
+      "elapsedMs": 566.432,
       "message": "",
       "inputs": [
         [
@@ -18944,7 +18944,7 @@
       },
       "displayText": "30",
       "range": null,
-      "elapsedMs": 262.853,
+      "elapsedMs": 586.187,
       "message": "",
       "inputs": [
         [
@@ -19039,7 +19039,7 @@
       },
       "displayText": "90",
       "range": null,
-      "elapsedMs": 229.246,
+      "elapsedMs": 520.904,
       "message": "",
       "inputs": [
         [
@@ -19134,7 +19134,7 @@
       },
       "displayText": "40",
       "range": null,
-      "elapsedMs": 237.763,
+      "elapsedMs": 536.754,
       "message": "",
       "inputs": [
         [
@@ -19229,7 +19229,7 @@
       },
       "displayText": "30",
       "range": null,
-      "elapsedMs": 236.542,
+      "elapsedMs": 527.057,
       "message": "",
       "inputs": [
         [
@@ -19324,7 +19324,7 @@
       },
       "displayText": "20",
       "range": null,
-      "elapsedMs": 232.372,
+      "elapsedMs": 564.873,
       "message": "",
       "inputs": [
         [
@@ -19419,7 +19419,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 259.402,
+      "elapsedMs": 598.97,
       "message": "",
       "inputs": [
         [
@@ -19514,7 +19514,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 267.063,
+      "elapsedMs": 557.647,
       "message": "",
       "inputs": [
         [
@@ -19609,7 +19609,7 @@
       },
       "displayText": "40",
       "range": null,
-      "elapsedMs": 267.925,
+      "elapsedMs": 562.062,
       "message": "",
       "inputs": [
         [
@@ -19704,7 +19704,7 @@
       },
       "displayText": "40",
       "range": null,
-      "elapsedMs": 276.287,
+      "elapsedMs": 526.585,
       "message": "",
       "inputs": [
         [
@@ -19799,7 +19799,7 @@
       },
       "displayText": "40",
       "range": null,
-      "elapsedMs": 284.765,
+      "elapsedMs": 527.24,
       "message": "",
       "inputs": [
         [
@@ -19894,7 +19894,7 @@
       },
       "displayText": "30",
       "range": null,
-      "elapsedMs": 285.812,
+      "elapsedMs": 579.08,
       "message": "",
       "inputs": [
         [
@@ -19989,7 +19989,7 @@
       },
       "displayText": "20",
       "range": null,
-      "elapsedMs": 271.149,
+      "elapsedMs": 579.962,
       "message": "",
       "inputs": [
         [
@@ -20084,7 +20084,7 @@
       },
       "displayText": "10",
       "range": null,
-      "elapsedMs": 271.764,
+      "elapsedMs": 578.947,
       "message": "",
       "inputs": [
         [
@@ -20179,7 +20179,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 352.269,
+      "elapsedMs": 681.752,
       "message": "",
       "inputs": [
         [
@@ -20290,7 +20290,7 @@
       },
       "displayText": "15000",
       "range": null,
-      "elapsedMs": 307.008,
+      "elapsedMs": 633.221,
       "message": "",
       "inputs": [
         [
@@ -20401,7 +20401,7 @@
       },
       "displayText": "20",
       "range": null,
-      "elapsedMs": 312.96,
+      "elapsedMs": 605.952,
       "message": "",
       "inputs": [
         [
@@ -20512,7 +20512,7 @@
       },
       "displayText": "10",
       "range": null,
-      "elapsedMs": 514.355,
+      "elapsedMs": 1098.448,
       "message": "",
       "inputs": [
         [
@@ -20623,7 +20623,7 @@
       },
       "displayText": "400",
       "range": null,
-      "elapsedMs": 305.789,
+      "elapsedMs": 611.236,
       "message": "",
       "inputs": [
         [
@@ -20734,7 +20734,7 @@
       },
       "displayText": "100",
       "range": null,
-      "elapsedMs": 295.587,
+      "elapsedMs": 622.786,
       "message": "",
       "inputs": [
         [
@@ -20845,7 +20845,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 78.349,
+      "elapsedMs": 169.683,
       "message": "",
       "inputs": [
         [
@@ -20876,7 +20876,7 @@
       },
       "displayText": "3.25",
       "range": null,
-      "elapsedMs": 50.925,
+      "elapsedMs": 112.791,
       "message": "",
       "inputs": []
     },
@@ -20888,7 +20888,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 51.365,
+      "elapsedMs": 107.411,
       "message": "",
       "inputs": []
     },
@@ -20900,7 +20900,7 @@
       },
       "displayText": "-2",
       "range": null,
-      "elapsedMs": 50.205,
+      "elapsedMs": 110.735,
       "message": "",
       "inputs": []
     },
@@ -20912,7 +20912,7 @@
       },
       "displayText": "2",
       "range": null,
-      "elapsedMs": 53.302,
+      "elapsedMs": 109.147,
       "message": "",
       "inputs": []
     },
@@ -20924,7 +20924,7 @@
       },
       "displayText": "-4",
       "range": null,
-      "elapsedMs": 53.396,
+      "elapsedMs": 90.088,
       "message": "",
       "inputs": []
     },
@@ -20936,7 +20936,7 @@
       },
       "displayText": "2.75",
       "range": null,
-      "elapsedMs": 90.287,
+      "elapsedMs": 172.044,
       "message": "",
       "inputs": [
         [
@@ -20997,7 +20997,7 @@
       },
       "displayText": "8",
       "range": null,
-      "elapsedMs": 89.192,
+      "elapsedMs": 172.096,
       "message": "",
       "inputs": [
         [
@@ -21058,7 +21058,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 92.329,
+      "elapsedMs": 166.48,
       "message": "",
       "inputs": [
         [
@@ -21101,7 +21101,7 @@
       },
       "displayText": "5",
       "range": null,
-      "elapsedMs": 81.074,
+      "elapsedMs": 168.75,
       "message": "",
       "inputs": [
         [
@@ -21144,7 +21144,7 @@
       },
       "displayText": "3",
       "range": null,
-      "elapsedMs": 87.516,
+      "elapsedMs": 164.923,
       "message": "",
       "inputs": [
         [
@@ -21193,7 +21193,7 @@
       },
       "displayText": "1.290994449",
       "range": null,
-      "elapsedMs": 52.575,
+      "elapsedMs": 97.441,
       "message": "",
       "inputs": []
     },
@@ -21205,7 +21205,7 @@
       },
       "displayText": "0.6875",
       "range": null,
-      "elapsedMs": 56.78,
+      "elapsedMs": 111.655,
       "message": "",
       "inputs": []
     },
@@ -21217,7 +21217,7 @@
       },
       "displayText": "0.385727568",
       "range": null,
-      "elapsedMs": 50.547,
+      "elapsedMs": 105.581,
       "message": "",
       "inputs": []
     },
@@ -21229,7 +21229,7 @@
       },
       "displayText": "0.205078125",
       "range": null,
-      "elapsedMs": 52.467,
+      "elapsedMs": 113.992,
       "message": "",
       "inputs": []
     },
@@ -21241,7 +21241,7 @@
       },
       "displayText": "0.050000589",
       "range": null,
-      "elapsedMs": 51.41,
+      "elapsedMs": 98.399,
       "message": "",
       "inputs": []
     },
@@ -21253,7 +21253,7 @@
       },
       "displayText": "18.30703805",
       "range": null,
-      "elapsedMs": 54.192,
+      "elapsedMs": 114.36,
       "message": "",
       "inputs": []
     },
@@ -21265,7 +21265,7 @@
       },
       "displayText": "0.372998484",
       "range": null,
-      "elapsedMs": 93.154,
+      "elapsedMs": 207.505,
       "message": "",
       "inputs": [
         [
@@ -21326,7 +21326,7 @@
       },
       "displayText": "0.692951912",
       "range": null,
-      "elapsedMs": 54.238,
+      "elapsedMs": 119.371,
       "message": "",
       "inputs": []
     },
@@ -21338,7 +21338,7 @@
       },
       "displayText": "5.2",
       "range": null,
-      "elapsedMs": 93.344,
+      "elapsedMs": 182.439,
       "message": "",
       "inputs": [
         [
@@ -21401,7 +21401,7 @@
       },
       "displayText": "6",
       "range": null,
-      "elapsedMs": 54.491,
+      "elapsedMs": 104.625,
       "message": "",
       "inputs": []
     },
@@ -21413,7 +21413,7 @@
       },
       "displayText": "0.632120559",
       "range": null,
-      "elapsedMs": 52.473,
+      "elapsedMs": 99.538,
       "message": "",
       "inputs": []
     },
@@ -21425,7 +21425,7 @@
       },
       "displayText": "0.119039563",
       "range": null,
-      "elapsedMs": 53.421,
+      "elapsedMs": 108.22,
       "message": "",
       "inputs": []
     },
@@ -21437,7 +21437,7 @@
       },
       "displayText": "3.708264819",
       "range": null,
-      "elapsedMs": 53.5,
+      "elapsedMs": 110.974,
       "message": "",
       "inputs": []
     },
@@ -21449,7 +21449,7 @@
       },
       "displayText": "0.713302675",
       "range": null,
-      "elapsedMs": 100.569,
+      "elapsedMs": 207.198,
       "message": "",
       "inputs": [
         [
@@ -21512,7 +21512,7 @@
       },
       "displayText": "0.59399415",
       "range": null,
-      "elapsedMs": 55.184,
+      "elapsedMs": 106.468,
       "message": "",
       "inputs": []
     },
@@ -21524,7 +21524,7 @@
       },
       "displayText": "1.67834699",
       "range": null,
-      "elapsedMs": 51.21,
+      "elapsedMs": 99.568,
       "message": "",
       "inputs": []
     },
@@ -21536,7 +21536,7 @@
       },
       "displayText": "0.363261094",
       "range": null,
-      "elapsedMs": 52.889,
+      "elapsedMs": 140.573,
       "message": "",
       "inputs": []
     },
@@ -21548,7 +21548,7 @@
       },
       "displayText": "1",
       "range": null,
-      "elapsedMs": 55.028,
+      "elapsedMs": 97.456,
       "message": "",
       "inputs": []
     },
@@ -21560,7 +21560,7 @@
       },
       "displayText": "0.5",
       "range": null,
-      "elapsedMs": 66.927,
+      "elapsedMs": 111.925,
       "message": "",
       "inputs": []
     },
@@ -21572,7 +21572,7 @@
       },
       "displayText": "0.05504866",
       "range": null,
-      "elapsedMs": 58.169,
+      "elapsedMs": 107.168,
       "message": "",
       "inputs": []
     },
@@ -21584,7 +21584,7 @@
       },
       "displayText": "0.5",
       "range": null,
-      "elapsedMs": 54.669,
+      "elapsedMs": 103.65,
       "message": "",
       "inputs": []
     },
@@ -21596,7 +21596,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 64.32,
+      "elapsedMs": 113.014,
       "message": "",
       "inputs": []
     },
@@ -21608,7 +21608,7 @@
       },
       "displayText": "0.5",
       "range": null,
-      "elapsedMs": 53.79,
+      "elapsedMs": 118.281,
       "message": "",
       "inputs": []
     },
@@ -21620,7 +21620,7 @@
       },
       "displayText": "0",
       "range": null,
-      "elapsedMs": 59.993,
+      "elapsedMs": 113.433,
       "message": "",
       "inputs": []
     },
@@ -21632,7 +21632,7 @@
       },
       "displayText": "30",
       "range": null,
-      "elapsedMs": 84.75,
+      "elapsedMs": 185.107,
       "message": "",
       "inputs": [
         [
@@ -21675,7 +21675,7 @@
       },
       "displayText": "0.5",
       "range": null,
-      "elapsedMs": 84.764,
+      "elapsedMs": 184.732,
       "message": "",
       "inputs": [
         [
@@ -21718,7 +21718,7 @@
       },
       "displayText": "0.85712346",
       "range": null,
-      "elapsedMs": 52.178,
+      "elapsedMs": 98.802,
       "message": "",
       "inputs": []
     },
@@ -21730,7 +21730,7 @@
       },
       "displayText": "1.414213562",
       "range": null,
-      "elapsedMs": 88.625,
+      "elapsedMs": 186.065,
       "message": "",
       "inputs": [
         [
@@ -21773,7 +21773,7 @@
       },
       "displayText": "0.073388035",
       "range": null,
-      "elapsedMs": 55.523,
+      "elapsedMs": 99.597,
       "message": "",
       "inputs": []
     },
@@ -21785,7 +21785,7 @@
       },
       "displayText": "2.228138852",
       "range": null,
-      "elapsedMs": 59.019,
+      "elapsedMs": 112.788,
       "message": "",
       "inputs": []
     },
@@ -21797,7 +21797,7 @@
       },
       "displayText": "0.004181072",
       "range": null,
-      "elapsedMs": 99.133,
+      "elapsedMs": 193.935,
       "message": "",
       "inputs": [
         [
@@ -21860,7 +21860,7 @@
       },
       "displayText": "250",
       "range": null,
-      "elapsedMs": 83.481,
+      "elapsedMs": 176.525,
       "message": "",
       "inputs": [
         [
@@ -21903,7 +21903,7 @@
       },
       "displayText": "200",
       "range": null,
-      "elapsedMs": 92.641,
+      "elapsedMs": 174.498,
       "message": "",
       "inputs": [
         [
@@ -21946,7 +21946,7 @@
       },
       "displayText": "0.940894253",
       "range": null,
-      "elapsedMs": 53.359,
+      "elapsedMs": 120.36,
       "message": "",
       "inputs": []
     },
@@ -21958,7 +21958,7 @@
       },
       "displayText": "0.5",
       "range": null,
-      "elapsedMs": 84.994,
+      "elapsedMs": 191.299,
       "message": "",
       "inputs": [
         [
@@ -22001,7 +22001,7 @@
       },
       "displayText": "https%3A%2F%2Fexample.com%2F%E4%B8%AD%E6%96%87%3Fa%3D1%26b%3D2",
       "range": null,
-      "elapsedMs": 58.885,
+      "elapsedMs": 104.944,
       "message": "",
       "inputs": []
     },
@@ -22013,7 +22013,7 @@
       },
       "displayText": "42",
       "range": null,
-      "elapsedMs": 58.631,
+      "elapsedMs": 129.455,
       "message": "",
       "inputs": []
     },
@@ -22025,7 +22025,7 @@
       },
       "displayText": "#VALUE!",
       "range": null,
-      "elapsedMs": 56.095,
+      "elapsedMs": 107.862,
       "message": "",
       "inputs": []
     },
@@ -22037,7 +22037,7 @@
       },
       "displayText": "#NAME?",
       "range": null,
-      "elapsedMs": 63.659,
+      "elapsedMs": 99.931,
       "message": "",
       "inputs": []
     }

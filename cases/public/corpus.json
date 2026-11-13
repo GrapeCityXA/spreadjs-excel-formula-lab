@@ -2775,7 +2775,12 @@
       },
       "formula": "=COUNT(\"2\",TRUE)",
       "priority": "P1",
-      "source": "config-sensitive"
+      "source": "config-sensitive",
+      "tier": "extended",
+      "note": {
+        "zh": "低频/边缘场景",
+        "en": "Low-frequency / edge case"
+      }
     },
     {
       "id": "M2-STAT-001",
@@ -2810,7 +2815,12 @@
       },
       "formula": "=COUNT(TRUE)",
       "priority": "P1",
-      "source": "m2-design"
+      "source": "m2-design",
+      "tier": "extended",
+      "note": {
+        "zh": "低频/边缘场景",
+        "en": "Low-frequency / edge case"
+      }
     },
     {
       "id": "M2-STAT-003",
@@ -2823,7 +2833,12 @@
       },
       "formula": "=COUNT(\"2\")",
       "priority": "P1",
-      "source": "m2-design"
+      "source": "m2-design",
+      "tier": "extended",
+      "note": {
+        "zh": "低频/边缘场景",
+        "en": "Low-frequency / edge case"
+      }
     },
     {
       "id": "M2-STAT-004",
@@ -8476,7 +8491,12 @@
       "formula": "=MIDB(\"中文文本\",3,2)",
       "priority": "P2",
       "source": "pilot-2026-10",
-      "formulaCell": "H1"
+      "formulaCell": "H1",
+      "tier": "extended",
+      "note": {
+        "zh": "低频/边缘场景",
+        "en": "Low-frequency / edge case"
+      }
     },
     {
       "id": "TC-TEXT-212",
@@ -14534,7 +14554,8 @@
       "note": {
         "zh": "已确认引擎差异：basis=2/3（实际/360、实际/365）下 SpreadJS 的 ACCRINT/PRICE/YIELD 计息天数处理与 Excel 不同（本用例 rel≈8.2e-3），作为已知差异保留",
         "en": "Confirmed engine difference: with basis=2/3 (actual/360, actual/365), day-count handling in SpreadJS ACCRINT/PRICE/YIELD differs from Excel (rel≈8.2e-3 here); kept as a known difference"
-      }
+      },
+      "tier": "extended"
     },
     {
       "id": "TC-FIN-240",

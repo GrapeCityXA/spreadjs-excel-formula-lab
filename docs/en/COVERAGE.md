@@ -13,6 +13,7 @@ functions **supported by both SpreadJS and Excel**, instead of carrying over an 
 | Excel function catalog | 521 | Excel function names from the v19.2 feature catalog (excluding SpreadJS-proprietary functions) |
 | Supported by both | 498 | Intersection of the two sets |
 | Public corpus | 892 cases / 498 functions | At least one case per shared function |
+| Tiers | 887 common + 5 low-frequency/edge cases | The default report counts common scenarios only; edge cases are visible under “All” |
 
 The 583 runtime names include SpreadJS-proprietary functions and aliases; Excel-only functions
 (CUBE, WEBSERVICE, etc.) are out of scope. Hence "supported by both" is 498, not 583 or 521.

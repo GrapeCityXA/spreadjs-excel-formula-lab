@@ -49,6 +49,7 @@ export function validateCases(document, options = {}) {
       if (typeof item.scenario.en !== 'string' || (!allowMissingEn && !isText(item.scenario.en))) error('scenario.en is required');
     }
     if (item.dimension !== undefined && !DIMENSIONS.includes(item.dimension)) error(`dimension must be one of ${DIMENSIONS.join(', ')}`);
+    if (item.tier !== undefined && !['core', 'extended'].includes(item.tier)) error('tier must be core or extended');
     if (item.priority !== undefined && !PRIORITIES.includes(item.priority)) error('priority must be P0, P1 or P2');
     if (item.note !== undefined) {
       if (!item.note || typeof item.note !== 'object' || Array.isArray(item.note) || !isText(item.note.zh)) error('note must be an object {zh, en}');

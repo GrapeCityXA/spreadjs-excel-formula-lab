@@ -29,7 +29,12 @@
    },
    "formula": "=COUNT(\"2\",TRUE)",
    "priority": "P1",
-   "source": "config-sensitive"
+   "source": "config-sensitive",
+   "tier": "extended",
+   "note": {
+    "zh": "低频/边缘场景",
+    "en": "Low-frequency / edge case"
+   }
   },
   {
    "id": "M2-STAT-001",
@@ -64,7 +69,12 @@
    },
    "formula": "=COUNT(TRUE)",
    "priority": "P1",
-   "source": "m2-design"
+   "source": "m2-design",
+   "tier": "extended",
+   "note": {
+    "zh": "低频/边缘场景",
+    "en": "Low-frequency / edge case"
+   }
   },
   {
    "id": "M2-STAT-003",
@@ -77,7 +87,12 @@
    },
    "formula": "=COUNT(\"2\")",
    "priority": "P1",
-   "source": "m2-design"
+   "source": "m2-design",
+   "tier": "extended",
+   "note": {
+    "zh": "低频/边缘场景",
+    "en": "Low-frequency / edge case"
+   }
   },
   {
    "id": "M2-STAT-004",

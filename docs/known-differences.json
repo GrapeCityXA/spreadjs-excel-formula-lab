@@ -79,8 +79,8 @@
       "formula": "=ACCRINT(DATE(2008,3,1),DATE(2008,6,1),DATE(2008,5,1),0.1,1000,4,3)",
       "excel": "16.7123287671233",
       "spreadjs": "16.5760869565217",
-      "zh": "basis=2/3 时付息期计息天数处理不同。",
-      "en": "Day-count handling differs for basis 2/3 in the accrual period."
+      "zh": "basis=3 的应计利息结果不同（低频/边缘）",
+      "en": "Different accrued-interest result for basis 3 (low-frequency/edge)"
     },
     {
       "id": "TC-INFO-010",
@@ -151,8 +151,8 @@
       "formula": "=MIDB(\"中文文本\",3,2)",
       "excel": "文",
       "spreadjs": "#VALUE!",
-      "zh": "DBCS 双字节边界处理不同。",
-      "en": "DBCS byte-boundary handling differs."
+      "zh": "DBCS 字节边界结果不同（低频/边缘）",
+      "en": "Different DBCS byte-boundary result (low-frequency/edge)"
     }
   ]
 }

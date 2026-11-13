@@ -48,6 +48,7 @@ const caseIndex = Object.fromEntries(corpus.cases.map(item => [item.id, {
   category: item.category,
   dimension: item.dimension || 'baseline',
   priority: item.priority || 'P1',
+  tier: item.tier || 'core',
   formula: item.formula,
   scenario: item.scenario,
 }]));
@@ -94,6 +95,8 @@ const data = {
     functionCount: corpus.functionCount,
     categories: corpus.categories,
     functions: corpus.functions,
+    coreCount: corpus.cases.filter(item => (item.tier || 'core') === 'core').length,
+    extendedCount: corpus.cases.filter(item => item.tier === 'extended').length,
     dimensions: Object.fromEntries([...new Set(corpus.cases.map(item => item.dimension || 'baseline'))].map(dimension => [dimension, corpus.cases.filter(item => (item.dimension || 'baseline') === dimension).length])),
   },
   knownDifferences: known.items || [],
@@ -106,14 +109,14 @@ function csvEscape(value) {
   const text = String(value ?? '');
   return /[",\n]/.test(text) ? `"${text.replaceAll('"', '""')}"` : text;
 }
-const csvRows = [['id', 'mode', 'category', 'function', 'dimension', 'scenario_zh', 'scenario_en', 'formula', 'outcome', 'classification', 'excel_type', 'excel_value', 'spreadjs_type', 'spreadjs_value']];
+const csvRows = [['id', 'mode', 'category', 'function', 'dimension', 'tier', 'scenario_zh', 'scenario_en', 'formula', 'outcome', 'classification', 'excel_type', 'excel_value', 'spreadjs_type', 'spreadjs_value']];
 for (const mode of modes) {
   for (const row of mode.rows) {
     const item = caseIndex[row.id] || {};
     const ex = row.excel?.value || {};
     const sp = row.spreadjs?.value || {};
     csvRows.push([
-      row.id, mode.id, item.category, item.function, item.dimension,
+      row.id, mode.id, item.category, item.function, item.dimension, item.tier || 'core',
       item.scenario?.zh, item.scenario?.en, item.formula, row.outcome,
       row.classification?.code || '',
       ex.type || '', JSON.stringify(ex.value ?? ''), sp.type || '', JSON.stringify(sp.value ?? ''),
@@ -193,6 +196,8 @@ footer{margin-top:26px;color:var(--muted);font-size:12px;line-height:1.7}
 
 <div class="nav" id="nav"></div>
 <div class="modes" id="modes"></div>
+<div class="modes" id="scopeTabs"></div>
+<div class="hint" id="scopeNote"></div>
 
 <section id="viewDetail">
   <div class="toolbar">
@@ -232,6 +237,7 @@ const I18N = {
     env: '被测：<b>SpreadJS {sjs}</b>（{pkg}）· 基线：<b>Microsoft Excel {excel}</b> build {build} · 区域 {culture} · 1900 日期系统',
     run: '用例 {cases} 条 · 函数 {functions} 个<br>生成于 {time} UTC',
     cards: { cases: '用例总数', functions: '覆盖函数', pass: '通过', fail: '差异', inconclusive: '待判定', env: '环境类差异', config: '跨配置差异' },
+    scope: { core: '常见场景', all: '全部（含边缘）', edge: '低频/边缘', matrixNote: '函数矩阵按完整语料统计', note: '统计口径：常见场景 {core}/{total} 条；完整语料另含 {extended} 条边缘用例（默认不参与上方通过率，可切到“全部”查看）。函数覆盖按完整语料 {functions} 个计。' },
     configDependent: '跨配置结果不同',
     knownConfigTitle: '两种配置下结果不同的用例',
     knownConfigNote: '这些用例在默认模式与 ExcelCompatibleCalcMode 下得到不同结果，报告按配置分别展示。',
@@ -262,7 +268,7 @@ const I18N = {
     },
     empty: '（空）',
     noData: '（该用例没有数据区）',
-    knownNote: '以下差异来自 2026-10 的试点基线，并在当前版本上复跑；数值为实测值，具体以对应版本和环境为准。',
+    knownNote: '以下差异来自 2026-10 的试点基线，并在当前版本上复跑；数值为实测值，具体以对应版本和环境为准。标注“低频/边缘”的条目属于低频或边界场景。',
     foot1: '判定口径：数值默认容差 1e-9；文本、布尔、错误码精确比较；日期按 Excel 1900 序列值比较；数组按 readRange 逐格比较。',
     foot2: '结果与环境绑定，由 npm run refresh / npm run check 生成，不代表对所有 Excel 版本或全部函数的兼容性承诺。',
     repro: '复现',
@@ -274,6 +280,7 @@ const I18N = {
     env: 'Tested: <b>SpreadJS {sjs}</b> ({pkg}) · Baseline: <b>Microsoft Excel {excel}</b> build {build} · culture {culture} · 1900 date system',
     run: '{cases} cases · {functions} functions<br>generated {time} UTC',
     cards: { cases: 'Cases', functions: 'Functions', pass: 'Pass', fail: 'Diff', inconclusive: 'Inconclusive', env: 'Environment diffs', config: 'Cross-config diffs' },
+    scope: { core: 'Common scenarios', all: 'All (incl. edge)', edge: 'Low-frequency', matrixNote: 'matrix uses the full corpus', note: 'Scope: {core}/{total} common scenarios; the full corpus adds {extended} edge cases (not included in the pass counts above by default; switch to “All” to view them). Function coverage is counted over the full corpus ({functions}).' },
     configDependent: 'Differs across configs',
     knownConfigTitle: 'Cases with different results across configurations',
     knownConfigNote: 'These cases produce different results in default mode and ExcelCompatibleCalcMode. The report shows each configuration separately.',
@@ -304,7 +311,7 @@ const I18N = {
     },
     empty: '(empty)',
     noData: '(no input data)',
-    knownNote: 'These differences come from the 2026-10 pilot baseline and were re-run on the current version. Values are measured; the exact result depends on the tested version and environment.',
+    knownNote: 'These differences come from the 2026-10 pilot baseline and were re-run on the current version. Values are measured; the exact result depends on the tested version and environment. Entries marked “low-frequency” are edge or less-common scenarios.',
     foot1: 'Rules: numeric tolerance 1e-9; exact text/boolean/error comparison; dates compared as Excel 1900 serials; array results compared cell by cell over readRange.',
     foot2: 'Results are tied to the recorded environment and generated by npm run refresh / npm run check. They are not a compatibility guarantee for every Excel version or function.',
     repro: 'Reproduce',
@@ -313,7 +320,7 @@ const I18N = {
 };
 
 const STATUS_CLASS = { PASS: 'pass', FAIL: 'fail', INCONCLUSIVE: 'warn', INVALID: 'warn', EXEC_FAIL: 'warn' };
-const state = { lang: 'zh', view: 'detail', mode: 'default', search: '', status: '', category: '', dimension: '', matrixSearch: '' };
+const state = { lang: 'zh', view: 'detail', mode: 'default', scope: 'core', search: '', status: '', category: '', dimension: '', matrixSearch: '' };
 const $ = id => document.getElementById(id);
 const t = key => {
   const value = key.split('.').reduce((node, part) => (node == null ? undefined : node[part]), I18N[state.lang]);
@@ -322,9 +329,12 @@ const t = key => {
 const fmt = (template, values) => template.replace(/\\{(\\w+)\\}/g, (_, key) => values[key] === undefined ? '' : values[key]);
 const esc = value => String(value ?? '').replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;');
 const label = (group, key) => (I18N[state.lang][group] && I18N[state.lang][group][key]) || key;
-const caseMeta = id => DATA.cases[id] || { id: id, function: '', category: '', dimension: '', scenario: { zh: '', en: '' }, formula: '' };
+const caseMeta = id => DATA.cases[id] || { id: id, function: '', category: '', dimension: '', tier: 'core', scenario: { zh: '', en: '' }, formula: '' };
 const currentMode = () => DATA.modes.find(mode => mode.id === state.mode) || DATA.modes[0];
 const rowOf = (modeId, id) => (DATA.modes.find(mode => mode.id === modeId)?.rows || []).find(row => row.id === id);
+const isExtended = id => (DATA.cases[id]?.tier || 'core') === 'extended';
+const scopedRows = mode => mode.rows.filter(row => state.scope === 'all' || !isExtended(row.id));
+const outcomeCounts = rows => Object.fromEntries(['PASS', 'FAIL', 'INCONCLUSIVE', 'INVALID', 'EXEC_FAIL'].map(key => [key, rows.filter(row => row.outcome === key).length]));
 const valueText = value => {
   if (!value) return t('unknown');
   if (value.type === 'empty') return t('empty');
@@ -361,13 +371,16 @@ function renderHeader() {
 
 function renderCards() {
   const mode = currentMode();
+  const rows = scopedRows(mode);
+  const counts = outcomeCounts(rows);
+  const configCount = Object.keys(DATA.crossMode || {}).filter(id => state.scope === 'all' || !isExtended(id)).length;
   const cards = [
-    [t('cards.cases'), DATA.corpus.caseCount, ''],
+    [t('cards.cases'), rows.length, ''],
     [t('cards.functions'), DATA.corpus.functionCount, ''],
-    [t('cards.pass'), mode.counts.PASS, ''],
-    [t('cards.fail'), mode.counts.FAIL, ''],
-    [t('cards.inconclusive'), mode.counts.INCONCLUSIVE, ''],
-    [t('cards.config'), Object.keys(DATA.crossMode || {}).length, ''],
+    [t('cards.pass'), counts.PASS, ''],
+    [t('cards.fail'), counts.FAIL, ''],
+    [t('cards.inconclusive'), counts.INCONCLUSIVE, ''],
+    [t('cards.config'), configCount, ''],
   ];
   $('cards').innerHTML = cards.map(([key, value]) => '<div class="card"><div class="k">' + key + '</div><div class="v">' + value + '</div></div>').join('');
 }
@@ -376,9 +389,20 @@ function renderNav() {
   const views = [['detail', t('nav.detail')], ['matrix', t('nav.matrix')], ['known', t('nav.known')]];
   $('nav').innerHTML = views.map(([id, text]) => '<button class="' + (state.view === id ? 'active' : '') + '" data-view="' + id + '">' + text + '</button>').join('');
   $('nav').querySelectorAll('button').forEach(button => button.onclick = () => { state.view = button.dataset.view; render(); });
-  $('modes').innerHTML = DATA.modes.map(mode => '<button class="' + (state.mode === mode.id ? 'active' : '') + '" data-mode="' + mode.id + '">' + esc(mode.label[state.lang]) + ' · ' + mode.counts.PASS + '/' + DATA.corpus.caseCount + '</button>').join('');
+  $('modes').innerHTML = DATA.modes.map(mode => {
+    const counts = outcomeCounts(scopedRows(mode));
+    const total = state.scope === 'all' ? DATA.corpus.caseCount : DATA.corpus.coreCount;
+    return '<button class="' + (state.mode === mode.id ? 'active' : '') + '" data-mode="' + mode.id + '">' + esc(mode.label[state.lang]) + ' · ' + counts.PASS + '/' + total + '</button>';
+  }).join('');
   $('modes').querySelectorAll('button').forEach(button => button.onclick = () => { state.mode = button.dataset.mode; render(); });
+  $('scopeTabs').innerHTML = [
+    ['core', t('scope.core') + ' (' + DATA.corpus.coreCount + ')'],
+    ['all', t('scope.all') + ' (' + DATA.corpus.caseCount + ')'],
+  ].map(([id, text]) => '<button class="' + (state.scope === id ? 'active' : '') + '" data-scope="' + id + '">' + esc(text) + '</button>').join('');
+  $('scopeTabs').querySelectorAll('button').forEach(button => button.onclick = () => { state.scope = button.dataset.scope; render(); });
+  $('scopeTabs').classList.toggle('hidden', state.view === 'known');
   $('modes').classList.toggle('hidden', state.view === 'known');
+  $('scopeNote').classList.toggle('hidden', state.view === 'known');
 }
 
 function renderDetail() {
@@ -394,7 +418,8 @@ function renderDetail() {
   $('dimension').value = state.dimension;
   $('detailHead').innerHTML = '<tr>' + ['status', 'id', 'function', 'scenario', 'dimension', 'formula', 'diff'].map(key => '<th>' + t('cols.' + key) + '</th>').join('') + '</tr>';
   const query = state.search.trim().toLowerCase();
-  const rows = mode.rows.filter(row => {
+  const scoped = scopedRows(mode);
+  const rows = scoped.filter(row => {
     const meta = caseMeta(row.id);
     if (state.status && row.outcome !== state.status) return false;
     if (state.category && meta.category !== state.category) return false;
@@ -402,7 +427,7 @@ function renderDetail() {
     if (!query) return true;
     return [row.id, meta.function, meta.formula, meta.scenario.zh, meta.scenario.en, row.classification?.code].join(' ').toLowerCase().includes(query);
   });
-  $('countLine').textContent = fmt(t('showing'), { n: rows.length, total: mode.rows.length });
+  $('countLine').textContent = fmt(t('showing'), { n: rows.length, total: scoped.length });
   $('detailBody').innerHTML = rows.map((row, index) => {
     const meta = caseMeta(row.id);
     const detailId = 'd-' + state.mode + '-' + index;
@@ -412,7 +437,7 @@ function renderDetail() {
       : '<span class="muted">' + t('noData') + '</span>';
     const diffCells = row.differences ? '<div class="panel" style="margin-top:8px"><div class="k muted">' + t('cols.diffCells') + '</div><pre>' + esc(JSON.stringify(row.differences, null, 1)) + '</pre></div>' : '';
     return '<tr class="row" data-target="' + detailId + '">' +
-      '<td><span class="badge ' + STATUS_CLASS[row.outcome] + '">' + label('status', row.outcome) + '</span>' + (DATA.crossMode[row.id] ? ' <span class="badge warn">' + t('configDependent') + '</span>' : '') + '</td>' +
+      '<td><span class="badge ' + STATUS_CLASS[row.outcome] + '">' + label('status', row.outcome) + '</span>' + (isExtended(row.id) ? ' <span class="badge warn">' + t('scope.edge') + '</span>' : '') + (DATA.crossMode[row.id] ? ' <span class="badge warn">' + t('configDependent') + '</span>' : '') + '</td>' +
       '<td class="mono nowrap">' + esc(row.id) + '</td>' +
       '<td class="mono nowrap">' + esc(meta.function) + '</td>' +
       '<td class="scenario">' + esc(meta.scenario[state.lang] || meta.scenario.zh) + '</td>' +
@@ -458,7 +483,7 @@ function renderMatrix() {
   const filtered = rows.filter(entry => !query || entry.function.toLowerCase().includes(query) || label('categories', entry.category).toLowerCase().includes(query));
   $('matrixSearch').placeholder = t('search');
   $('matrixSearch').value = state.matrixSearch;
-  $('matrixCount').textContent = fmt(t('showing'), { n: filtered.length, total: rows.length });
+  $('matrixCount').textContent = fmt(t('showing'), { n: filtered.length, total: rows.length }) + ' · ' + t('scope.matrixNote');
   $('matrixHead').innerHTML = '<tr><th>' + t('cols.function') + '</th><th>' + t('cols.category') + '</th><th>' + t('cols.cases') + '</th><th>' + t('cols.passCol') + '</th><th>' + t('cols.failCol') + '</th><th>' + t('cols.otherCol') + '</th><th>' + t('cols.diff') + '</th></tr>';
   $('matrixBody').innerHTML = filtered.map(entry => {
     const status = entry.FAIL ? 'fail' : (entry.other ? 'warn' : 'pass');
@@ -470,7 +495,7 @@ function renderMatrix() {
 function renderKnown() {
   $('knownNote').textContent = t('knownNote');
   $('knownHead').innerHTML = '<tr><th>#</th><th>' + t('cols.id') + '</th><th>' + t('cols.function') + '</th><th>' + t('cols.formula') + '</th><th>Excel</th><th>SpreadJS</th><th>' + t('cols.note') + '</th></tr>';
-  $('knownBody').innerHTML = (DATA.knownDifferences || []).map((item, index) => '<tr><td>' + (index + 1) + '</td><td class="mono nowrap">' + esc(item.id) + '</td><td class="mono">' + esc(item.function) + '</td><td class="formula mono" title="' + esc(item.formula) + '">' + esc(item.formula) + '</td><td class="mono">' + esc(item.excel) + '</td><td class="mono">' + esc(item.spreadjs) + '</td><td class="scenario">' + esc(item[state.lang] || item.zh) + '</td></tr>').join('');
+  $('knownBody').innerHTML = (DATA.knownDifferences || []).map((item, index) => '<tr><td>' + (index + 1) + '</td><td class="mono nowrap">' + esc(item.id) + (isExtended(item.id) ? ' <span class="badge warn">' + t('scope.edge') + '</span>' : '') + '</td><td class="mono">' + esc(item.function) + '</td><td class="formula mono" title="' + esc(item.formula) + '">' + esc(item.formula) + '</td><td class="mono">' + esc(item.excel) + '</td><td class="mono">' + esc(item.spreadjs) + '</td><td class="scenario">' + esc(item[state.lang] || item.zh) + '</td></tr>').join('');
 
   const configIds = Object.keys(DATA.crossMode || {}).sort();
   const extraRows = configIds.map(id => {
@@ -497,6 +522,12 @@ function render() {
   if (state.view === 'detail') renderDetail();
   if (state.view === 'matrix') renderMatrix();
   if (state.view === 'known') renderKnown();
+  $('scopeNote').textContent = fmt(t('scope.note'), {
+    core: DATA.corpus.coreCount,
+    total: DATA.corpus.caseCount,
+    extended: DATA.corpus.extendedCount,
+    functions: DATA.corpus.functionCount,
+  });
   $('foot1').textContent = t('foot1');
   $('foot2').textContent = t('foot2');
 }

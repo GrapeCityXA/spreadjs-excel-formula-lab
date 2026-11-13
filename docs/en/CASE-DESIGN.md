@@ -9,7 +9,7 @@ English | [简体中文](../CASE-DESIGN.md)
 
 | Metric | Value |
 | --- | --- |
-| Cases | 892 |
+| Cases | 892 (887 common + 5 edge) |
 | Functions | 498 (supported by both Excel and SpreadJS) |
 | Categories | 13 |
 | Priority | P0 225 / P1 489 / P2 178 |
@@ -70,6 +70,7 @@ Do not pass off "the number of functions" as "the depth of coverage". The report
   "formulaCell": "H1",
   "readRange": "H1:H1",
   "priority": "P1",
+  "tier": "core",
   "source": "m2-design",
   "note": "Verify whether text coming from a reference is coerced"
 }
@@ -85,11 +86,12 @@ Rules:
 6. Cases that are expected to return an error are marked `expectError: true`; otherwise an Excel error result is judged `INVALID`.
 7. Volatile functions are marked `volatile: true` and are excluded from numeric assertions.
 8. For iterative/approximation functions you may relax `tolerance`, but you must state the reason in `note`.
+9. `tier` is optional: `core` (default, common scenarios) or `extended` (low-frequency/edge). The default report counts core only; extended cases are available under “All”.
 
 ## 5. Excel version policy
 
 - The baseline is pinned to **the desktop Excel on the machine that ran `npm run refresh`**; the version, build, locale, and date system are written to `oracle/manifest.json` and shown at the top of the report.
-- The cases themselves do not assume an Excel version. If a function exists only in Excel 365 (for example dynamic arrays, `IMAGE`, or the `EUROCONVERT` add-in), say so in `note`; the report then classifies `#NAME?`-style differences as environment issues rather than judging them defects outright.
+- The cases themselves do not assume an Excel version. If a function exists only in Excel 365 (for example dynamic arrays, `IMAGE`, or the `EUROCONVERT` add-in), say so in `note`; the report keeps the difference and annotates it in the note.
 - When the user's Excel version differs:
   - `check` only: the baseline committed to the repository applies, and the conclusion carries the baseline environment fingerprint;
   - `refresh`: generate your own baseline; the results belong to that user's environment and are never mixed with the repository baseline.

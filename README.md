@@ -12,19 +12,20 @@ as a static bilingual report. The repository is designed to be cloned and driven
 by an AI coding agent: there is no server, no interactive prompt and no Excel requirement for
 the default check.
 
-> Status: **M3 release candidate** — public-ready: 892 cases, 498 functions, 13 categories, bilingual cases,
-> two SpreadJS configurations, committed Excel baseline.
+> Status: **M3 release candidate** — public-ready: 892 cases (887 common + 5 edge), 498 functions,
+> 13 categories, bilingual cases, two SpreadJS configurations, committed Excel baseline.
 
 ## Snapshot (SpreadJS 19.2.2, Excel 16.0 build 20527, zh-CN)
 
-| Configuration | Pass | Diff | Inconclusive |
-| --- | --- | --- | --- |
-| Default | 860 / 892 (96.4%) | 26 | 6 |
-| `ExcelCompatibleCalcMode = true` | 866 / 892 (97.1%) | 20 | 6 |
+| Configuration | Common scenarios (887) | Full corpus (892) |
+| --- | --- | --- |
+| Default | 860 pass / 21 diff | 860 pass / 26 diff |
+| `ExcelCompatibleCalcMode = true` | 866 pass / 15 diff | 866 pass / 20 diff |
 
-The corpus deliberately includes the 17 known differences from the 2026-10 pilot, so this
-is **not** a compatibility score. Read the report for the per-case detail and the classification
-of each difference.
+Both configurations also have 6 inconclusive volatile cases. The corpus deliberately includes the
+17 known differences from the 2026-10 pilot, so this is **not** a compatibility score. Five
+low-frequency/edge cases are excluded from the default common-scenario view; switch the report to
+“All (incl. edge)” to see them. Read the report for the per-case detail and classification.
 
 ## Quick start (no Excel required)
 
@@ -98,7 +99,7 @@ These are the two things that matter most:
 
 Coverage audit: [`docs/en/COVERAGE.md`](docs/en/COVERAGE.md) / [`docs/COVERAGE.md`](docs/COVERAGE.md).
 
-Current corpus: 892 cases / 498 functions, 13 categories; dimension mix: baseline 504, reference
+Current corpus: 892 cases (887 common + 5 edge) / 498 functions, 13 categories; dimension mix: baseline 504, reference
 181, array 57, precision 40, boundary 29, error 27, type-coercion 15, date 14, lookup 10,
 text 10, volatile 6, config 2, combination 1. Priority mix: P0 225, P1 489, P2 178.
 

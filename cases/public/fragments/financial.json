@@ -1265,7 +1265,8 @@
    "note": {
     "zh": "已确认引擎差异：basis=2/3（实际/360、实际/365）下 SpreadJS 的 ACCRINT/PRICE/YIELD 计息天数处理与 Excel 不同（本用例 rel≈8.2e-3），作为已知差异保留",
     "en": "Confirmed engine difference: with basis=2/3 (actual/360, actual/365), day-count handling in SpreadJS ACCRINT/PRICE/YIELD differs from Excel (rel≈8.2e-3 here); kept as a known difference"
-   }
+   },
+   "tier": "extended"
   },
   {
    "id": "TC-FIN-240",

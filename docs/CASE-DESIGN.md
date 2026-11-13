@@ -9,7 +9,7 @@
 
 | 指标 | 数值 |
 | --- | --- |
-| 用例 | 892 |
+| 用例 | 892（887 条常见场景 + 5 条边缘用例） |
 | 函数 | 498（Excel ∩ SpreadJS 共同支持） |
 | 分类 | 13 |
 | 优先级 | P0 225 / P1 489 / P2 178 |
@@ -70,6 +70,7 @@
   "formulaCell": "H1",
   "readRange": "H1:H1",
   "priority": "P1",
+  "tier": "core",
   "source": "m2-design",
   "note": "验证引用类型的文本是否被强制转换"
 }
@@ -85,14 +86,14 @@
 6. 会返回错误的用例标 `expectError: true`，否则 Excel 的错误结果会被判为 `INVALID`。
 7. 易变函数标 `volatile: true`，不参与数值断言。
 8. 迭代/近似类函数可放宽 `tolerance`，但必须在 `note` 写明原因。
+9. `tier` 可选：`core`（默认，常见场景）或 `extended`（低频/边缘）。默认报告只统计 core，extended 可在“全部”视图查看。
 
 ## 5. Excel 版本策略
 
 - 基线固定为**执行 `npm run refresh` 的那台机器上的 desktop Excel**；版本、build、区域、日期
   系统写入 `oracle/manifest.json`，报告顶部展示。
 - 用例本身不假设 Excel 版本；如果某函数是 Excel 365 才有的（如动态数组、`IMAGE`、
-  `EUROCONVERT` 加载项），在 `note` 里说明，报告中会把 `#NAME?` 类差异标成环境分类，而不是
-  直接判缺陷。
+  `EUROCONVERT` 加载项），在 `note` 里说明，报告中保留该差异并在说明中注明。
 - 用户 Excel 版本不同时：
   - 只做 `check`：以仓库提交的基线为准，结论带基线环境指纹；
   - 做 `refresh`：生成自己的基线，结果属于该用户环境，不与仓库基线混算。
