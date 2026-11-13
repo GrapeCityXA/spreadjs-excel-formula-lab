@@ -35,7 +35,8 @@ Use this list before pushing the repository or publishing a new result snapshot.
 ## 4. Publication
 
 - [ ] Confirm the public repository URL and owner; add the remote and push.
-- [ ] Enable GitHub Pages (serve from the repository root or `/site`; `site/index.html` is static).
+- [ ] Enable GitHub Pages from `main` / `(root)`; the root `index.html` redirects to the static report at `site/index.html`
+      (the branch-folder UI only offers `/ (root)` and `/docs`).
 - [ ] Confirm the CI workflow passes on the default branch.
 - [ ] Tag the release (for example `v0.2.0`) and keep the result snapshot at that tag.
 - [ ] Announce the scope honestly: tested versions, case count, known limitations.
